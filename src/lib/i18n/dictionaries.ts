@@ -392,7 +392,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       whyUsBullets: [
         "iGaming odaklı uzmanlık & çok kanallı trafik.",
         "Uzun vadeli SEO & blog ağı sistemleri.",
-        "Tek bir stack’te otomasyon, ölçeklenebilirlik ve marka koruması.",
+        "Tek pakette otomasyon, ölçeklenebilirlik ve marka koruması.",
       ],
     },
     growthPillars: {
@@ -411,7 +411,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "Belirtilmedikçe USD üzerinden aylık retainer. Telegram, PornHub, SEO, AI, kreatif, DMCA, özel yazılım—aşağıdan modül veya paket seçin. Paketler kapsamla ölçeklenir (trafik + kreatif hacim).",
       growthPackagesHeading: "Büyüme paketleri",
       growthPackagesDescription:
-        "Hazır paketler—her modülü tek tek birleştirmek yerine bir tier seçin.",
+        "Hazır paketler—her modülü tek tek birleştirmek yerine bir paket seviyesi seçin.",
       monthSuffix: " / ay",
       moSuffix: " / ay",
       serviceNavLabelsById: {
@@ -571,14 +571,14 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         ],
         extras: [
           "Türkiye ve komşu pazarlarda ölçekleyen operatörler için",
-          "Tek stack’te çok kanallı trafik + uzun vadeli SEO + otomasyon",
+          "Tek pakette çok kanallı trafik + uzun vadeli SEO + otomasyon",
         ],
       },
     },
     combo: {
       flagship: "Öne çıkan",
       description:
-        "Aylık öne çıkan stack'imiz: trafik, AI, SEO, koruma ve hands-on destek—Türkiye'de ciddi ölçek için tasarlandı.",
+        "Aylık öne çıkan paketimiz: trafik, AI, SEO, koruma ve birebir operasyonel destek—Türkiye'de ciddi ölçek için tasarlandı.",
       getStarted: "Bugün başlayın",
       messageTelegram: "Telegram'dan mesaj",
       fullGrowthSuiteByLocale: {
@@ -594,7 +594,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         ],
         extras: [
           "Türkiye ve komşu pazarlarda ölçekleyen operatörler için",
-          "Tek stack’te çok kanallı trafik + uzun vadeli SEO + otomasyon",
+          "Tek pakette çok kanallı trafik + uzun vadeli SEO + otomasyon",
         ],
       },
     },
@@ -613,7 +613,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     footer: {
       heading: "Jelibon Marketing",
       about:
-        "Türkiye'de iGaming için büyüme & yazılım—Telegram, PornHub, SEO, AI, DMCA ve özel stack'ler. Telegram'dan başlayın ya da e-posta gönderin.",
+        "Türkiye'de iGaming için büyüme & yazılım—Telegram, PornHub, SEO, AI, DMCA ve özel paketler. Telegram'dan başlayın ya da e-posta gönderin.",
       getStarted: "Hemen başlayın",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
@@ -629,7 +629,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
   ru: {
     header: { emailUs: "Написать нам", telegram: "Telegram" },
     marquee: {
-      copy: "Jelibon Marketing · iGaming acquisition · Реклама Telegram и сеть · PornHub · SEO · AI-бот · DMCA · Креативная студия · Custom dev · Масштабирование в Турции · ",
+      copy:
+        "Jelibon Marketing · iGaming · Реклама в Telegram и сеть каналов · PornHub · SEO · AI-чатбот и инфлюенсер · DMCA · Креативная студия · Индивидуальная разработка · Масштаб в Турции · ",
     },
     nav: {
       solutions: "Решения",
@@ -652,7 +653,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       whyUsBullets: [
         "Экспертиза в iGaming и многоканальный трафик.",
         "Долгосрочное SEO и система блог-сети.",
-        "Автоматизация, масштабирование и защита бренда в одном стеке.",
+        "Автоматизация, масштабирование и защита бренда в одном комплексе.",
       ],
     },
     growthPillars: {
@@ -663,7 +664,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     orbitalSection: {
       heading: "Орбита роста",
       description:
-        "Полный stack роста—кликайте по узлам, чтобы увидеть связи модулей.",
+        "Полная экосистема роста—кликайте по узлам, чтобы увидеть связи модулей.",
     },
     packages: {
       heading: "Услуги и цены",
@@ -671,7 +672,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "Ежемесячные ретейнеры в USD (если не указано иное). Telegram, PornHub, SEO, AI, креатив, DMCA, кастомный софт—выбирайте модули или пакеты ниже. Тиры масштабируются по объему (трафик + креатив).",
       growthPackagesHeading: "Пакеты роста",
       growthPackagesDescription:
-        "Готовые наборы—выберите tier вместо сборки каждого модуля.",
+        "Готовые наборы—выберите уровень пакета вместо сборки каждого модуля.",
       monthSuffix: " / мес.",
       moSuffix: " / мес.",
       serviceNavLabelsById: {
@@ -682,8 +683,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         dmca: "DMCA",
         "creative-funnel": "Креатив",
         "seo-blog-network": "SEO & блоги",
-        "custom-software": "Кастом dev",
-        "ai-influencer": "AI influencer",
+        "custom-software": "Индивидуальная разработка",
+        "ai-influencer": "AI-инфлюенсер",
       },
       servicePackagesById: {
         "telegram-ads": {
@@ -825,20 +826,20 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         includes: [
           "Все ключевые сервисы по трафику и креативам",
           "Система AI-influencer",
-          "SEO Blog Network",
-          "DMCA Protection",
-          "Кастомная поддержка",
+          "Сеть SEO-блогов",
+          "Защита по DMCA",
+          "Персональная поддержка",
         ],
         extras: [
           "Для операторов, масштабирующихся в Турции и рядом",
-          "Мультиканальный трафик + долгосрочное SEO + автоматизация в одном стеке",
+          "Мультиканальный трафик + долгосрочное SEO + автоматизация в одном комплексе",
         ],
       },
     },
     combo: {
       flagship: "Флагман",
       description:
-        "Лучший ежемесячный комплект: трафик, AI, SEO, защита и hands-on поддержка—для серьезного масштаба в Турции.",
+        "Лучший ежемесячный комплект: трафик, AI, SEO, защита и прямое операционное сопровождение—для серьёзного масштаба в Турции.",
       getStarted: "Начните сегодня",
       messageTelegram: "Написать в Telegram",
       fullGrowthSuiteByLocale: {
@@ -848,13 +849,13 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         includes: [
           "Все ключевые сервисы по трафику и креативам",
           "Система AI-influencer",
-          "SEO Blog Network",
-          "DMCA Protection",
-          "Кастомная поддержка",
+          "Сеть SEO-блогов",
+          "Защита по DMCA",
+          "Персональная поддержка",
         ],
         extras: [
           "Для операторов, масштабирующихся в Турции и рядом",
-          "Мультиканальный трафик + долгосрочное SEO + автоматизация в одном стеке",
+          "Мультиканальный трафик + долгосрочное SEO + автоматизация в одном комплексе",
         ],
       },
     },

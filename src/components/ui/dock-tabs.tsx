@@ -44,17 +44,20 @@ function DockIcon({
     return val - bounds.x - bounds.width / 2;
   });
 
-  const widthSync = useTransform(distance, [-120, 0, 120], [44, 64, 44]);
+  const widthSync = useTransform(distance, [-120, 0, 120], [48, 70, 48]);
   const width = useSpring(widthSync, { mass: 0.1, stiffness: 150, damping: 12 });
 
-  const heightSync = useTransform(distance, [-120, 0, 120], [44, 64, 44]);
+  const heightSync = useTransform(distance, [-120, 0, 120], [48, 70, 48]);
   const height = useSpring(heightSync, { mass: 0.1, stiffness: 150, damping: 12 });
 
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <Link href={item.href} className="touch-manipulation">
+    <Link
+      href={item.href}
+      className="touch-manipulation flex min-w-0 max-w-[4.25rem] flex-col items-center justify-end gap-0.5 sm:max-w-[5.5rem]"
+    >
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -104,23 +107,6 @@ function DockIcon({
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 8, scale: 0.85 }}
-          animate={{
-            opacity: isHovered ? 1 : 0,
-            y: isHovered ? -18 : 8,
-            scale: isHovered ? 1 : 0.85,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 500,
-            damping: 30,
-          }}
-          className="pointer-events-none absolute -top-10 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-md border border-white/10 bg-zinc-900/95 px-2 py-1 text-xs text-white shadow-lg backdrop-blur-sm"
-        >
-          {item.name}
-        </motion.div>
-
-        <motion.div
           className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-white/80"
           animate={{
             scale: isClicked ? 1.5 : 1,
@@ -133,6 +119,10 @@ function DockIcon({
           }}
         />
       </motion.div>
+
+      <span className="line-clamp-2 w-full max-h-[2.5rem] text-center text-[9px] font-medium leading-tight text-white/80 sm:max-h-none sm:text-[10px]">
+        {item.name}
+      </span>
     </Link>
   );
 }
@@ -152,7 +142,7 @@ export function DockTabs({ items, className }: DockTabsProps) {
       onMouseLeave={() => mouseX.set(Infinity)}
       className={
         className ??
-        "mx-auto flex h-[3.1rem] max-w-full min-w-0 items-end gap-0.5 rounded-2xl border border-white/[0.12] bg-white/[0.06] px-1.5 pb-1.5 shadow-[0_8px_32px_rgba(0,0,0,0.28)] backdrop-blur-2xl backdrop-saturate-150 sm:h-[4.25rem] sm:gap-2 sm:rounded-3xl sm:px-3 sm:pb-2.5 md:gap-3 md:px-4"
+        "mx-auto flex min-h-[4.85rem] max-w-full min-w-0 items-end gap-1 rounded-2xl border border-white/[0.12] bg-white/[0.06] px-2.5 pb-1.5 pt-1 shadow-[0_8px_32px_rgba(0,0,0,0.28)] backdrop-blur-2xl backdrop-saturate-150 sm:min-h-[5.25rem] sm:gap-2 sm:rounded-3xl sm:px-3 sm:pb-2 sm:pt-1.5 md:gap-3 md:px-4"
       }
       initial={{ y: 12, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}

@@ -135,12 +135,13 @@ export default function RadialOrbitalTimeline({
     let rotationTimer: ReturnType<typeof setInterval>;
 
     if (autoRotate && viewMode === "orbital") {
+      // ~10 updates/s — same angular speed as 0.45°/50ms, less layout thrash / “shaking”.
       rotationTimer = setInterval(() => {
         setRotationAngle((prev) => {
-          const newAngle = (prev + 0.45) % 360;
+          const newAngle = (prev + 0.9) % 360;
           return Number(newAngle.toFixed(3));
         });
-      }, 50);
+      }, 100);
     }
 
     return () => {
@@ -200,28 +201,29 @@ export default function RadialOrbitalTimeline({
   return (
     <div
       className={cn(
-        "relative flex h-[min(720px,85vh)] w-full flex-col items-center justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-black/10 backdrop-blur-md",
+        "relative isolate flex h-[min(720px,85vh)] w-full flex-col items-center justify-center overflow-hidden rounded-[2rem] border border-white/10 bg-[#050510]/90",
         className
       )}
       ref={containerRef}
       onClick={handleContainerClick}
     >
-      {/* Background image behind the orbit animation */}
+      {/* Full image visible (letterboxed); cover was cropping important areas */}
       <div
-        className="pointer-events-none absolute inset-0 z-[0] opacity-100 [filter:brightness(1.2)_saturate(1.35)_contrast(1.2)]"
+        className="pointer-events-none absolute inset-0 z-[0] bg-[#050510]"
         style={{
           backgroundImage: "url('/assets/orbitarka.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "50% 35%",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 z-[0] bg-gradient-to-b from-black/5 via-transparent to-black/8"
+        className="pointer-events-none absolute inset-0 z-[0] bg-gradient-to-b from-black/10 via-transparent to-black/25"
         aria-hidden
       />
 
-      <div className="relative z-[1] w-full max-w-4xl h-full flex items-center justify-center">
+      <div className="relative z-[1] flex h-full w-full max-w-4xl items-center justify-center contain-layout">
         <div
           className="absolute w-full h-full flex items-center justify-center"
           ref={orbitRef}
@@ -248,13 +250,8 @@ export default function RadialOrbitalTimeline({
             />
           )}
 
-          <div className="absolute w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 animate-pulse flex items-center justify-center z-10">
-            <div className="absolute w-20 h-20 rounded-full border border-white/20 animate-ping opacity-70"></div>
-            <div
-              className="absolute w-24 h-24 rounded-full border border-white/10 animate-ping opacity-50"
-              style={{ animationDelay: "0.5s" }}
-            ></div>
-            <div className="w-8 h-8 rounded-full bg-white/80 backdrop-blur-md"></div>
+          <div className="absolute z-10 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 shadow-[0_0_24px_rgba(139,92,246,0.35)]">
+            <div className="h-8 w-8 rounded-full bg-white/85" />
           </div>
 
           <div className="absolute h-96 w-96 rounded-full border border-white/10" />

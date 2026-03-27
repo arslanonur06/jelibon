@@ -142,15 +142,20 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
       rafRef.current = requestAnimationFrame(animate);
     }
 
+    let resizeRaf = 0;
     const handleResize = () => {
-      setSize();
-      if (!isAnimating) renderer.render(scene, camera);
+      cancelAnimationFrame(resizeRaf);
+      resizeRaf = requestAnimationFrame(() => {
+        setSize();
+        if (!isAnimating) renderer.render(scene, camera);
+      });
     };
     window.addEventListener("resize", handleResize);
-    const ro = new ResizeObserver(() => setSize());
+    const ro = new ResizeObserver(handleResize);
     ro.observe(container);
 
     return () => {
+      cancelAnimationFrame(resizeRaf);
       window.removeEventListener("resize", handleResize);
       ro.disconnect();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);

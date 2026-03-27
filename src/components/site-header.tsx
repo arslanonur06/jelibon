@@ -12,7 +12,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-[100] flex flex-col border-b border-white/[0.1] bg-[#050510]/88 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl backdrop-saturate-150 supports-[backdrop-filter]:bg-[#050510]/72">
-      <div className="mx-auto flex w-full min-w-0 max-w-6xl items-center gap-1.5 px-2 py-2 sm:gap-3 sm:px-5 sm:py-3 md:gap-4 md:px-6">
+      <div className="mx-auto flex w-full min-w-0 max-w-7xl items-center gap-2 px-3 py-2.5 sm:gap-3 sm:px-5 sm:py-3 md:gap-4 md:px-6">
         <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3">
           <span className="relative h-8 w-[7.25rem] shrink-0 sm:h-11 sm:w-40 md:w-48">
             <Image
