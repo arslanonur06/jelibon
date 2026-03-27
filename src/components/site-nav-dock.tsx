@@ -6,7 +6,7 @@ import { getNavDockItems } from "@/data/nav-dock-items";
 
 export function SiteNavDock({ locale }: { locale: Locale }) {
   return (
-    <div className="flex w-full min-h-[4.75rem] min-w-0 flex-1 justify-start overflow-x-auto overscroll-x-contain px-1 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:min-h-0 sm:justify-center sm:px-1">
+    <div className="flex min-h-[3.75rem] min-w-0 flex-1 justify-start overflow-x-auto overscroll-x-contain px-1 snap-x snap-mandatory [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:min-h-0 sm:justify-center sm:px-1">
       <DockTabs items={getNavDockItems(locale)} />
     </div>
   );

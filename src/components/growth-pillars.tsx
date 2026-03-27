@@ -9,7 +9,7 @@ export function GrowthPillars() {
   return (
     <section
       id="solutions"
-      className="relative scroll-mt-28 bg-[#050510]/30 py-16 backdrop-blur-[2px] sm:py-20"
+      className="relative scroll-mt-44 bg-[#050510]/30 py-16 backdrop-blur-[2px] sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
@@ -43,3 +43,4 @@ export function GrowthPillars() {
     </section>
   );
 }
+

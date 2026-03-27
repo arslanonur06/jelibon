@@ -56,7 +56,7 @@ function DockIcon({
   return (
     <Link
       href={item.href}
-      className="touch-manipulation flex shrink-0 min-w-[3.95rem] max-w-[4.25rem] snap-center flex-col items-center justify-end gap-0.5 sm:min-w-[4.75rem] sm:max-w-[5.5rem]"
+      className="touch-manipulation flex shrink-0 min-w-[3.4rem] max-w-[3.8rem] snap-center flex-col items-center justify-end gap-0.5 sm:min-w-[4.75rem] sm:max-w-[5.5rem]"
     >
       <motion.div
         ref={ref}
@@ -120,7 +120,7 @@ function DockIcon({
         />
       </motion.div>
 
-      <span className="line-clamp-2 w-full max-h-[2.5rem] text-center text-[9px] font-medium leading-tight text-white/80 sm:max-h-none sm:text-[10px]">
+      <span className="hidden line-clamp-2 w-full max-h-[2.5rem] text-center text-[9px] font-medium leading-tight text-white/80 sm:block sm:max-h-none sm:text-[10px]">
         {item.name}
       </span>
     </Link>
@@ -142,7 +142,7 @@ export function DockTabs({ items, className }: DockTabsProps) {
       onMouseLeave={() => mouseX.set(Infinity)}
       className={
         className ??
-        "mx-auto flex w-max min-h-[4.85rem] min-w-max items-end gap-1 rounded-2xl border border-white/[0.12] bg-white/[0.06] px-2.5 pb-1.5 pt-1 shadow-[0_8px_32px_rgba(0,0,0,0.28)] backdrop-blur-2xl backdrop-saturate-150 sm:min-h-[5.25rem] sm:gap-2 sm:rounded-3xl sm:px-3 sm:pb-2 sm:pt-1.5 md:gap-3 md:px-4"
+        "mx-auto flex w-max min-h-[3.65rem] min-w-max items-end gap-1 rounded-2xl border border-white/[0.12] bg-white/[0.06] px-2 pb-1 pt-1 shadow-[0_8px_32px_rgba(0,0,0,0.28)] backdrop-blur-2xl backdrop-saturate-150 sm:min-h-[5.25rem] sm:gap-2 sm:rounded-3xl sm:px-3 sm:pb-2 sm:pt-1.5 md:gap-3 md:px-4"
       }
       initial={{ y: 12, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}

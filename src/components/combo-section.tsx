@@ -15,7 +15,7 @@ export function ComboSection() {
   return (
     <section
       id="combo"
-      className="relative scroll-mt-28 border-y border-white/10 bg-gradient-to-b from-[#0b0b18]/80 to-[#050510]/90 py-20"
+      className="relative scroll-mt-44 border-y border-white/10 bg-gradient-to-b from-[#0b0b18]/80 to-[#050510]/90 py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="glass-panel relative overflow-hidden rounded-[2rem] p-8 sm:p-10 lg:p-12">
@@ -85,3 +85,4 @@ export function ComboSection() {
     </section>
   );
 }
+

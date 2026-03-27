@@ -33,7 +33,7 @@ export function PackagesSection() {
   });
 
   return (
-    <section id="packages" className="relative scroll-mt-28 py-12 sm:py-16 md:py-20">
+    <section id="packages" className="relative scroll-mt-44 py-12 sm:py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
           <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
@@ -64,7 +64,7 @@ export function PackagesSection() {
             <article
               key={pkg.id}
               id={`pkg-${pkg.id}`}
-              className="glass-panel flex scroll-mt-36 flex-col rounded-2xl p-4 sm:rounded-3xl sm:p-6"
+              className="glass-panel flex scroll-mt-52 flex-col rounded-2xl p-4 sm:rounded-3xl sm:p-6"
             >
               <div className="flex flex-wrap items-start justify-between gap-2">
                 <div className="min-w-0">
@@ -116,7 +116,7 @@ export function PackagesSection() {
           ))}
         </div>
 
-        <div id="growth-packages" className="mt-12 scroll-mt-28 sm:mt-14 md:mt-16">
+        <div id="growth-packages" className="mt-12 scroll-mt-44 sm:mt-14 md:mt-16">
           <h3 className="font-display text-xl font-semibold text-white sm:text-2xl md:text-3xl">
             {dict.packages.growthPackagesHeading}
           </h3>
@@ -155,3 +155,4 @@ export function PackagesSection() {
     </section>
   );
 }
+

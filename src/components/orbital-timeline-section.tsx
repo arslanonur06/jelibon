@@ -228,7 +228,7 @@ export function OrbitalTimelineSection() {
   return (
     <section
       id="orbital"
-      className="relative scroll-mt-28 border-t border-white/10 bg-[#050510]/30 py-16 backdrop-blur-[1px] sm:py-20"
+      className="relative scroll-mt-44 border-t border-white/10 bg-[#050510]/30 py-16 backdrop-blur-[1px] sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-2xl">
@@ -244,3 +244,4 @@ export function OrbitalTimelineSection() {
     </section>
   );
 }
+

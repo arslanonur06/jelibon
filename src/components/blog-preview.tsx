@@ -12,7 +12,7 @@ export function BlogPreview() {
   return (
     <section
       id="blog"
-      className="relative scroll-mt-28 border-t border-white/10 bg-[#050510]/30 py-16 sm:py-20"
+      className="relative scroll-mt-44 border-t border-white/10 bg-[#050510]/30 py-16 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -69,3 +69,4 @@ export function BlogPreview() {
     </section>
   );
 }
+
