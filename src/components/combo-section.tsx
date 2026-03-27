@@ -1,7 +1,17 @@
 import Link from "next/link";
-import { fullCombo } from "@/data/packages";
+import { fullGrowthSuite } from "@/data/packages";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { getLocale } from "@/lib/i18n/get-locale";
 
 export function ComboSection() {
+  const locale = getLocale();
+  const dict = getDictionary(locale);
+
+  const suite = {
+    ...fullGrowthSuite,
+    ...dict.combo.fullGrowthSuiteByLocale,
+  };
+
   return (
     <section
       id="combo"
@@ -15,27 +25,25 @@ export function ComboSection() {
           <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-[#FDE047]/30 bg-[#FDE047]/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#FEF9C3]">
-                Best value
+                {dict.combo.flagship}
               </div>
               <h2 className="mt-4 font-display text-3xl font-semibold text-white sm:text-4xl">
-                {fullCombo.title}
+                {suite.title}
               </h2>
-              <p className="mt-2 text-lg text-zinc-300">{fullCombo.subtitle}</p>
+              <p className="mt-2 text-lg text-zinc-300">{suite.subtitle}</p>
               <p className="mt-4 text-sm leading-relaxed text-zinc-400">
-                Full suite integration with priority support, a dedicated
-                account manager, and a comprehensive scaling strategy—everything
-                in one monthly investment.
+                {dict.combo.description}
               </p>
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-black/30 p-6 sm:p-8">
               <p className="font-display text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-                {fullCombo.price}
+                {suite.price}
               </p>
-              <p className="mt-2 text-sm text-zinc-400">{fullCombo.billingNote}</p>
+              <p className="mt-2 text-sm text-zinc-400">{suite.billingNote}</p>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {fullCombo.includes.map((item) => (
+              <div className="mt-6 grid gap-3 sm:grid-cols-1">
+                {suite.includes.map((item) => (
                   <div
                     key={item}
                     className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-zinc-200"
@@ -46,7 +54,7 @@ export function ComboSection() {
               </div>
 
               <ul className="mt-6 space-y-2 text-sm text-zinc-300">
-                {fullCombo.extras.map((line) => (
+                {suite.extras.map((line) => (
                   <li key={line} className="flex gap-2">
                     <span className="text-[#86EFAC]">✓</span>
                     <span>{line}</span>
@@ -59,7 +67,7 @@ export function ComboSection() {
                   href="mailto:contact@jelibonmarketing.com"
                   className="inline-flex flex-1 items-center justify-center rounded-2xl bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_32px_rgba(255,105,180,0.35)] transition hover:brightness-110"
                 >
-                  Get started today
+                  {dict.combo.getStarted}
                 </Link>
                 <Link
                   href="https://t.me/jelibonmarketing"
@@ -67,7 +75,7 @@ export function ComboSection() {
                   rel="noopener noreferrer"
                   className="inline-flex flex-1 items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-[#22D3EE]/40 hover:bg-white/10"
                 >
-                  Message on Telegram
+                  {dict.combo.messageTelegram}
                 </Link>
               </div>
             </div>

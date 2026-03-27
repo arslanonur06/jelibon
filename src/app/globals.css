@@ -30,6 +30,26 @@
   .glass-panel {
     @apply border border-white/10 bg-white/[0.04] shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset] backdrop-blur-xl;
   }
+
+  /**
+   * Fine dot grid (CSS) — works with overflow-hidden + rounded corners for a “cropped” band.
+   * Complements the Three.js `DottedSurface` without replacing it.
+   */
+  .bg-dot-grid {
+    background-color: rgb(5 5 16 / 0.88);
+    background-image: radial-gradient(
+      rgba(196, 181, 253, 0.14) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+    background-position: 0 0;
+  }
+
+  @media (min-width: 640px) {
+    .bg-dot-grid {
+      background-size: 24px 24px;
+    }
+  }
 }
 
 @layer utilities {
@@ -40,10 +60,8 @@
 
 @layer base {
   .theme {
-    --font-heading:
-    var(--font-sans);
-    --font-sans:
-    var(--font-sans);
+    --font-heading: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
+    --font-sans: var(--font-dm), ui-sans-serif, system-ui, sans-serif;
   }
   :root {
     --background:
@@ -176,12 +194,171 @@
     oklch(0.556 0 0);
   }
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
   html {
     @apply font-sans;
+    scroll-padding-top: 8rem;
   }
+}
+
+/* TextColor hero headline — neon gradient animations (custom; not in default Tailwind) */
+@keyframes gradient-foreground-1 {
+  from,
+  16.667%,
+  to {
+    opacity: 1;
+  }
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}
+
+.animate-gradient-foreground-1 {
+  animation: gradient-foreground-1 8s infinite;
+}
+
+@keyframes gradient-foreground-2 {
+  from,
+  to {
+    opacity: 0;
+  }
+  33.333%,
+  50% {
+    opacity: 1;
+  }
+  16.667%,
+  66.667% {
+    opacity: 0;
+  }
+}
+
+.animate-gradient-foreground-2 {
+  animation: gradient-foreground-2 8s infinite;
+}
+
+@keyframes gradient-foreground-3 {
+  from,
+  50%,
+  to {
+    opacity: 0;
+  }
+  66.667%,
+  83.333% {
+    opacity: 1;
+  }
+}
+
+.animate-gradient-foreground-3 {
+  animation: gradient-foreground-3 8s infinite;
+}
+
+.from-gradient-1-start {
+  --tw-gradient-from: #39ff14;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(57, 255, 20, 0));
+}
+
+.to-gradient-1-end {
+  --tw-gradient-to: #00ffff;
+}
+
+.from-gradient-2-start {
+  --tw-gradient-from: #ff073a;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 7, 58, 0));
+}
+
+.to-gradient-2-end {
+  --tw-gradient-to: #ff6ec7;
+}
+
+.from-gradient-3-start {
+  --tw-gradient-from: #faff00;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(250, 255, 0, 0));
+}
+
+.to-gradient-3-end {
+  --tw-gradient-to: #00f0ff;
+}
+
+.from-gradient-1-ai {
+  --tw-gradient-from: #39ff14;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(57, 255, 20, 0));
+}
+
+.to-gradient-1-ai {
+  --tw-gradient-to: #ff00ff;
+}
+
+.from-gradient-2-ai {
+  --tw-gradient-from: #ff6ec7;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 110, 199, 0));
+}
+
+.to-gradient-2-ai {
+  --tw-gradient-to: #00fffb;
+}
+
+.from-gradient-3-ai {
+  --tw-gradient-from: #faff00;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(250, 255, 0, 0));
+}
+
+.to-gradient-3-ai {
+  --tw-gradient-to: #00f0ff;
+}
+
+@keyframes gradient-background-1 {
+  from,
+  16.667%,
+  to {
+    opacity: 0;
+  }
+  25%,
+  91.667% {
+    opacity: 1;
+  }
+}
+
+.before\:animate-gradient-background-1::before {
+  animation: gradient-background-1 8s infinite;
+}
+
+@keyframes gradient-background-2 {
+  from,
+  to {
+    opacity: 1;
+  }
+  33.333%,
+  50% {
+    opacity: 0;
+  }
+  25%,
+  58.333% {
+    opacity: 1;
+  }
+}
+
+.before\:animate-gradient-background-2::before {
+  animation: gradient-background-2 8s infinite;
+}
+
+@keyframes gradient-background-3 {
+  from,
+  58.333%,
+  91.667%,
+  to {
+    opacity: 1;
+  }
+  66.667%,
+  83.333% {
+    opacity: 0;
+  }
+}
+
+.before\:animate-gradient-background-3::before {
+  animation: gradient-background-3 8s infinite;
 }

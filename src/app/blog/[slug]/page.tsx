@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { blogPosts, getPostBySlug } from "@/data/blog-posts";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { getLocale } from "@/lib/i18n/get-locale";
 
 type Props = { params: { slug: string } };
 
@@ -23,6 +25,10 @@ export default function BlogPostPage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
+  const locale = getLocale();
+  const dict = getDictionary(locale);
+  const dateLocale = locale === "tr" ? "tr-TR" : locale === "ru" ? "ru-RU" : "en-US";
+
   return (
     <div className="relative min-h-screen">
       <div
@@ -30,23 +36,31 @@ export default function BlogPostPage({ params }: Props) {
         aria-hidden
       />
       <SiteHeader />
-      <article className="pb-20 pt-28">
+      <article className="pb-20 pt-36">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <Link
-            href="/blog"
-            className="text-sm font-semibold text-[#C4B5FD] transition hover:text-white"
-          >
-            ← Back to blog
-          </Link>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+            <Link
+              href="/"
+              className="font-semibold text-[#F9A8D4] transition hover:text-white"
+            >
+              ← {dict.blog.breadcrumbs.home}
+            </Link>
+            <Link
+              href="/blog"
+              className="font-semibold text-[#C4B5FD] transition hover:text-white"
+            >
+              ← {dict.blog.breadcrumbs.blog}
+            </Link>
+          </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-            {post.category}
+            {dict.blog.categoryLabelsByName[post.category] ?? post.category}
           </p>
           <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
             {post.title}
           </h1>
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-zinc-500">
             <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString("en-US", {
+              {new Date(post.date).toLocaleDateString(dateLocale, {
                 year: "numeric",
                 month: "long",
                 day: "numeric",

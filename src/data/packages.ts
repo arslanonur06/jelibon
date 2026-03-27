@@ -2,109 +2,201 @@ export type ServicePackage = {
   id: string;
   title: string;
   subtitle?: string;
-  price: string;
-  /** Shown under the price (billing notes, separate budgets, etc.) */
+  /** e.g. "$2,300" — used with default "/ month" unless priceHeadline is set */
+  price?: string;
+  /** Full price line (skips automatic "/ month" suffix) */
+  priceHeadline?: string;
   billingNote?: string;
   badge?: string;
   features: string[];
 };
 
+/** À la carte services */
 export const servicePackages: ServicePackage[] = [
   {
-    id: "pornhub-ads",
-    title: "PornHub Advertising Management",
-    price: "$8,500",
-    billingNote: "Ad budget billed separately by client",
+    id: "telegram-ads",
+    title: "Telegram Ads Management",
+    price: "$2,300",
+    billingNote: "Monthly retainer",
     features: [
-      "Full campaign management — setup and ongoing optimization",
-      "Banner and video ads (10+ A/B variants)",
-      "Advanced bid and targeting optimization",
-      "Landing page CRO and conversion tracking",
-      "Weekly executive reports",
+      "Campaign setup & targeting",
+      "Funnel creation",
+      "Creative production",
+      "A/B testing",
+      "Weekly reporting",
     ],
   },
   {
     id: "telegram-network",
-    title: "Adult Telegram Channel Network",
-    price: "$6,500",
-    billingNote: "Placement costs billed separately by client",
+    title: "Telegram Channel Network",
+    price: "$3,800",
+    billingNote: "Monthly retainer",
     features: [
-      "Premium channel research and vetting",
-      "Direct deal negotiation",
-      "Native content creation",
-      "Performance tracking with ROI measurement",
-      "Network expansion strategy",
+      "Channel research & negotiation",
+      "Native content production",
+      "ROI tracking",
+      "Scaling strategy",
     ],
   },
   {
-    id: "telegram-ads",
-    title: "Telegram Ads Management",
-    price: "$5,000",
-    billingNote: "Ad budget billed separately by client",
+    id: "pornhub-ads",
+    title: "PornHub Ads Management",
+    price: "$4,000",
+    billingNote: "Monthly retainer · ad spend billed separately",
     features: [
-      "Paid traffic funnels",
-      "Campaign setup and audience segmentation",
-      "High-converting creatives and copy",
-      "Funnel architecture with A/B testing",
-      "Continuous bid optimization",
-      "Weekly performance reporting",
+      "Full campaign management",
+      "Banner & video creatives",
+      "Targeting optimization",
+      "Conversion tracking",
     ],
   },
   {
     id: "ai-chatbot",
-    title: "AI Telegram Chatbot",
-    subtitle: "24/7 intelligent conversion engine",
-    price: "$2,000",
-    billingNote: "Maintenance retainer for continuous 24/7 operation",
+    title: "AI Chatbot System",
+    subtitle: "24/7 conversion system",
+    price: "$1,300",
+    billingNote: "Monthly retainer",
     features: [
-      "GPT-4 powered engine for unlimited conversations",
-      "Smart casino routing and multi-language support (10+ languages)",
-      "CRM integration with VIP tier flows",
-      "Personalized customer journeys",
+      "GPT-powered conversations",
+      "Multi-language support",
+      "Funnel routing",
+      "Basic CRM integration",
     ],
   },
   {
     id: "dmca",
     title: "DMCA & Clone Protection",
-    price: "$4,000",
-    billingNote: "Complete brand protection suite",
+    price: "$1,600",
+    billingNote: "Monthly retainer",
     features: [
-      "Real-time detection — continuous clone site monitoring across domains",
-      "Rapid takedowns — DMCA filings and hosting complaints",
-      "Weekly reports — brand safety updates and legal escalation pipeline",
+      "Clone detection",
+      "Takedown processes",
+      "Weekly reporting",
     ],
   },
   {
-    id: "creative",
-    title: "Design & Creative Production",
-    price: "$5,500",
-    billingNote: "Unlimited revisions included",
+    id: "creative-funnel",
+    title: "Creative & Funnel Production",
+    price: "$2,700",
+    billingNote: "Monthly retainer",
     features: [
-      "Premium visual studio — high-impact banner and ad creatives",
-      "Custom landing page design",
-      "Telegram visual identity kit",
-      "Video editing and motion graphics",
-      "Continuous production pipeline",
+      "Ad creatives",
+      "Landing pages",
+      "Funnel design",
+      "Continuous optimization",
+    ],
+  },
+  {
+    id: "seo-blog-network",
+    title: "SEO & Blog Network",
+    priceHeadline: "From $1,100 / month",
+    billingNote:
+      "Long-term growth system (typically 3–6 months) · scope affects pricing",
+    badge: "SEO",
+    features: [
+      "SEO blog site setup",
+      "Keyword targeting strategy",
+      "Content production",
+      "Backlink structure",
+    ],
+  },
+  {
+    id: "custom-software",
+    title: "Custom Software Solutions",
+    priceHeadline: "Custom pricing",
+    billingNote: "Scoped to your tracking, automation, and API needs",
+    features: [
+      "Tracking systems",
+      "Automation tools",
+      "Custom funnels",
+      "API integrations",
+    ],
+  },
+  {
+    id: "ai-influencer",
+    title: "AI Influencer System",
+    price: "$2,000",
+    billingNote: "Monthly retainer",
+    badge: "AI",
+    features: [
+      "AI-generated influencer models",
+      "Custom persona creation (casino niche)",
+      "Daily content (Telegram & socials)",
+      "Engagement & funnel integration",
+      "Traffic redirection to offers",
     ],
   },
 ];
 
-export const fullCombo = {
-  title: "Full Combo Package",
-  subtitle: "Complete iGaming Growth Suite",
-  price: "$27,500",
-  billingNote: "Monthly investment",
+export type GrowthPackageTier = {
+  id: string;
+  name: string;
+  price: string;
+  features: string[];
+};
+
+/** Bundled growth packages */
+export const growthPackageTiers: GrowthPackageTier[] = [
+  {
+    id: "starter",
+    name: "Starter Package",
+    price: "$3,000",
+    features: ["Telegram Ads", "Basic creatives", "Funnel setup"],
+  },
+  {
+    id: "growth",
+    name: "Growth Package",
+    price: "$6,200",
+    features: [
+      "Telegram Ads + Network",
+      "Creative production",
+      "Funnel optimization",
+    ],
+  },
+  {
+    id: "scale",
+    name: "Scale Package",
+    price: "$9,500",
+    features: [
+      "Telegram + PornHub Ads",
+      "Advanced creatives",
+      "Funnel & CRO",
+      "Basic SEO support",
+      "AI Influencer (lite)",
+    ],
+  },
+  {
+    id: "domination",
+    name: "Domination Package",
+    price: "$12,500",
+    features: [
+      "All traffic channels",
+      "AI Chatbot",
+      "AI Influencer (full)",
+      "Creative studio",
+      "Funnel optimization",
+    ],
+  },
+];
+
+/** Flagship monthly suite */
+export const fullGrowthSuite = {
+  title: "Full Growth Suite",
+  subtitle: "All-in-one iGaming growth infrastructure",
+  price: "$15,300",
+  billingNote: "Monthly investment · priority & custom support",
   includes: [
-    "PornHub Ads",
-    "Telegram Network",
-    "Telegram Ads",
-    "AI Chatbot",
+    "All core traffic & creative services",
+    "AI Influencer System",
+    "SEO Blog Network",
     "DMCA Protection",
-    "Design Package",
+    "Custom support",
   ],
   extras: [
-    "Priority support and dedicated account manager",
-    "Comprehensive scaling strategy",
-    "All six services combined for maximum impact",
+    "Built for operators scaling in Türkiye & adjacent markets",
+    "Multi-channel traffic + long-term SEO + automation in one stack",
   ],
 };
+
+/** @deprecated use fullGrowthSuite */
+export const fullCombo = fullGrowthSuite;

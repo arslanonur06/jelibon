@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { DM_Sans, Orbitron, Geist } from "next/font/google";
+import { DM_Sans, Orbitron } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+import { DottedSurface } from "@/components/ui/dotted-surface";
+import { ThemeProvider } from "@/components/theme-provider";
+import { getLocale } from "@/lib/i18n/get-locale";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -12,34 +13,48 @@ const orbitron = Orbitron({
 });
 
 const dmSans = DM_Sans({
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
   variable: "--font-dm",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Jelibon Marketing | iGaming Growth Solutions 2026",
+  title: "Jelibon Marketing | iGaming Growth Türkiye",
   description:
-    "Premium growth solutions for adult iGaming operators—traffic acquisition, AI automation, Telegram ads, DMCA protection, and creative production.",
+    "Premium growth & software for iGaming in Türkiye: Telegram & PornHub traffic, SEO, AI chatbot & Influencer, creative, DMCA, custom software.",
   openGraph: {
     title: "Jelibon Marketing",
     description:
-      "Dominate the iGaming market with premium traffic, automation, and brand protection.",
+      "Dominate iGaming in Türkiye—traffic, SEO, AI, and full-stack growth infrastructure.",
     type: "website",
   },
 };
+
+export const dynamic = "force-dynamic";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = getLocale();
   return (
-    <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)}>
+    <html
+      lang={locale}
+      className={cn(
+        "scroll-smooth dark",
+        dmSans.variable,
+        orbitron.variable,
+      )}
+      suppressHydrationWarning
+    >
       <body
         className={`${orbitron.variable} ${dmSans.variable} min-h-screen bg-[#050510] font-sans text-zinc-100 antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          <DottedSurface />
+          <div className="relative z-10">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );

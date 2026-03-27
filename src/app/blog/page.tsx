@@ -21,11 +21,22 @@ export default function BlogPage() {
         aria-hidden
       />
       <SiteHeader />
-      <main className="pb-20 pt-28">
+      <main className="pb-16 pt-32 sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <p className="font-display text-xs uppercase tracking-[0.35em] text-[#E9A8FF]/90">
-            Insights
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <Link
+              href="/"
+              className="text-xs font-semibold uppercase tracking-widest text-[#F9A8D4] transition hover:text-white"
+            >
+              ← Home
+            </Link>
+            <span className="text-zinc-600" aria-hidden>
+              ·
+            </span>
+            <p className="font-display text-xs uppercase tracking-[0.35em] text-[#E9A8FF]/90">
+              Insights
+            </p>
+          </div>
           <h1 className="mt-3 font-display text-4xl font-semibold text-white sm:text-5xl">
             Blog
           </h1>
