@@ -1,7 +1,17 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+
+const MOBILE_SRC = "/assets/kaplanvideo.mp4";
+const DESKTOP_SRC = "/assets/kaplanseker.mp4";
+
+function pickHeroVideoSrc(): string {
+  if (typeof window === "undefined") return DESKTOP_SRC;
+  return window.matchMedia("(max-width: 767px)").matches
+    ? MOBILE_SRC
+    : DESKTOP_SRC;
+}
 
 type Props = {
   className?: string;
@@ -13,7 +23,8 @@ type Props = {
 
 /**
  * Muted looping MP4 only (no GIF) — H.264 decodes on GPU and avoids huge animated-GIF decode cost.
- * Mobile (`max-md`): `kaplanvideo.mp4`. Web (`md+`): `kaplanseker.mp4` via `<source media>`.
+ * Mobile: `kaplanvideo.mp4`. Desktop: `kaplanseker.mp4`.
+ * Uses `matchMedia` + one `<source>` — many browsers ignore `media` on `<source>` inside `<video>`.
  * Recompress if needed: ffmpeg -i in.mp4 -vf scale=1280:-2 -c:v libx264 -crf 26 -movflags +faststart out.mp4
  */
 export function HeroVideoBackground({
@@ -23,16 +34,27 @@ export function HeroVideoBackground({
   objectPositionClassName = "max-lg:object-[center_68%]",
 }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
+  const [videoSrc, setVideoSrc] = useState(DESKTOP_SRC);
+
+  useLayoutEffect(() => {
+    setVideoSrc(pickHeroVideoSrc());
+    const mq = window.matchMedia("(max-width: 767px)");
+    const onChange = () => setVideoSrc(pickHeroVideoSrc());
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    el.load();
     const p = el.play();
     if (p !== undefined) p.catch(() => {});
-  }, []);
+  }, [videoSrc]);
 
   return (
     <video
+      key={videoSrc}
       ref={ref}
       className={cn(
         "absolute inset-0 h-full w-full",
@@ -53,12 +75,7 @@ export function HeroVideoBackground({
       aria-hidden
       disablePictureInPicture
     >
-      <source
-        src="/assets/kaplanvideo.mp4"
-        type="video/mp4"
-        media="(max-width: 767px)"
-      />
-      <source src="/assets/kaplanseker.mp4" type="video/mp4" />
+      <source src={videoSrc} type="video/mp4" />
     </video>
   );
 }
