@@ -5,7 +5,7 @@ const gtmId = process.env.NEXT_PUBLIC_GTM_ID?.trim();
 /**
  * Google Tag Manager (optional). Set `NEXT_PUBLIC_GTM_ID=GTM-XXXX` in `.env.local`.
  * Search Console: set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` in `layout.tsx` metadata.
- * Canonical URLs: set `NEXT_PUBLIC_SITE_URL` for sitemap / Open Graph (see `src/lib/site-config.ts`).
+ * Canonical URLs: set `NEXT_PUBLIC_SITE_URL` for sitemap / Open Graph (see `getSiteUrl` in `@/constants`).
  */
 export function SiteAnalytics() {
   if (!gtmId) return null;

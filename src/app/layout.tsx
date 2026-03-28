@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteJsonLd } from "@/components/site-json-ld";
+import { DEFAULT_OG_IMAGE_PATH, getSiteUrl } from "@/constants";
 import { getLocale } from "@/lib/i18n/get-locale";
-import { DEFAULT_OG_IMAGE_PATH, getSiteUrl } from "@/lib/site-config";
 
 const orbitron = Orbitron({
   subsets: ["latin"],

@@ -6,8 +6,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getAllSlugs, getLocalizedPost } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import { DEFAULT_OG_IMAGE_PATH } from "@/constants";
 import { getLocale } from "@/lib/i18n/get-locale";
-import { DEFAULT_OG_IMAGE_PATH } from "@/lib/site-config";
 
 type Props = { params: { slug: string } };
 

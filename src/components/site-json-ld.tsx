@@ -1,5 +1,9 @@
-import { BRAND_NAME, TELEGRAM_URL } from "@/constants";
-import { DEFAULT_OG_IMAGE_PATH, getSiteUrl } from "@/lib/site-config";
+import {
+  BRAND_NAME,
+  DEFAULT_OG_IMAGE_PATH,
+  getSiteUrl,
+  TELEGRAM_URL,
+} from "@/constants";
 
 /**
  * Organization + WebSite structured data (no email — contact via Telegram).
