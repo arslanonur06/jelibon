@@ -3,7 +3,7 @@ import {
   Calculator,
   CircleHelp,
   Layers,
-  Mail,
+  MessageCircle,
   Orbit,
   Package,
   Sparkles,
@@ -74,7 +74,7 @@ const navDockItemsBase: Omit<DockNavItem, "name">[] = [
   {
     id: "contact",
     href: "/#contact",
-    icon: Mail,
+    icon: MessageCircle,
     color: "bg-gradient-to-br from-emerald-500 to-teal-600",
     colorHover: "bg-gradient-to-br from-[#6EE7B7] to-[#2DD4BF]",
   },

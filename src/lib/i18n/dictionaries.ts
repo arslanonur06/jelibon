@@ -2,7 +2,6 @@ import type { Locale } from "./locales";
 
 export type Dictionary = {
   header: {
-    emailUs: string;
     telegram: string;
   };
   marquee: {
@@ -143,7 +142,7 @@ export type Dictionary = {
 
 export const DICTIONARIES: Record<Locale, Dictionary> = {
   en: {
-    header: { emailUs: "Email us", telegram: "Telegram" },
+    header: { telegram: "Telegram" },
     marquee: {
       copy: "Jelibon Marketing · iGaming acquisition · Telegram Ads & network · PornHub · SEO · AI chatbot & influencer · DMCA · Creative studio · Custom dev · Scale in Türkiye · ",
     },
@@ -457,7 +456,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
   },
   tr: {
-    header: { emailUs: "Bize e-posta", telegram: "Telegram" },
+    header: { telegram: "Telegram" },
     marquee: {
       copy: "Jelibon Marketing · iGaming büyümesi · Telegram Reklamları & ağ · PornHub · SEO · AI sohbet botu & influencer · DMCA · Kreatif stüdyo · Özel geliştirme · Türkiye'de ölçek · ",
     },
@@ -775,7 +774,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
   },
   ru: {
-    header: { emailUs: "Написать нам", telegram: "Telegram" },
+    header: { telegram: "Telegram" },
     marquee: {
       copy:
         "Jelibon Marketing · iGaming · Реклама в Telegram и сеть каналов · PornHub · SEO · AI-чатбот и инфлюенсер · DMCA · Креативная студия · Индивидуальная разработка · Масштаб в Турции · ",

@@ -20,10 +20,6 @@ export default function Home() {
   const locale = getLocale();
   return (
     <div className="relative min-h-screen bg-transparent">
-      <div
-        className="pointer-events-none fixed inset-0 z-0 starfield opacity-45"
-        aria-hidden
-      />
       <SiteHeader />
       <main className="relative z-10">
         <HeroSection />

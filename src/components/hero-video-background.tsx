@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const MOBILE_SRC = "/assets/kaplanvideo.mp4";
@@ -36,7 +36,7 @@ export function HeroVideoBackground({
   const ref = useRef<HTMLVideoElement>(null);
   const [videoSrc, setVideoSrc] = useState(DESKTOP_SRC);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setVideoSrc(pickHeroVideoSrc());
     const mq = window.matchMedia("(max-width: 767px)");
     const onChange = () => setVideoSrc(pickHeroVideoSrc());
@@ -71,7 +71,6 @@ export function HeroVideoBackground({
       loop
       playsInline
       preload="auto"
-      poster="/assets/jelibon-brand.png"
       aria-hidden
       disablePictureInPicture
     >

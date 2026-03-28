@@ -4,50 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Subtle starfield */
-.starfield {
-  background-image:
-    radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.35), transparent),
-    radial-gradient(1px 1px at 60% 70%, rgba(255, 255, 255, 0.25), transparent),
-    radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.2), transparent),
-    radial-gradient(1px 1px at 80% 10%, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.2), transparent),
-    radial-gradient(1px 1px at 33% 80%, rgba(255, 255, 255, 0.25), transparent);
-  background-size: 100% 100%;
-  animation: twinkle 8s ease-in-out infinite alternate;
-}
-
-@keyframes twinkle {
-  from {
-    opacity: 0.55;
-  }
-  to {
-    opacity: 0.85;
-  }
-}
-
 @layer components {
   /* Solid panel — avoids Chromium paint bugs (invisible text) from backdrop-blur stacks */
   .glass-panel {
     @apply border border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset];
     background-color: rgb(18 18 31 / 0.92);
-  }
-
-  /** Optional CSS dot grid (e.g. sections) — global background uses `SiteGradientBackground` in layout. */
-  .bg-dot-grid {
-    background-color: rgb(5 5 16 / 0.88);
-    background-image: radial-gradient(
-      rgba(196, 181, 253, 0.14) 1px,
-      transparent 1px
-    );
-    background-size: 22px 22px;
-    background-position: 0 0;
-  }
-
-  @media (min-width: 640px) {
-    .bg-dot-grid {
-      background-size: 24px 24px;
-    }
   }
 }
 

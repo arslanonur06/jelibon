@@ -198,5 +198,3 @@ export const fullGrowthSuite = {
   ],
 };
 
-/** @deprecated use fullGrowthSuite */
-export const fullCombo = fullGrowthSuite;

@@ -71,15 +71,15 @@ export default function RootLayout({
   return (
     <html
       lang={locale}
-      className={cn(
-        "scroll-smooth dark",
-        dmSans.variable,
-        orbitron.variable,
-      )}
+      className="scroll-smooth dark"
       suppressHydrationWarning
     >
       <body
-        className={`${orbitron.variable} ${dmSans.variable} min-h-screen bg-[#050510] font-sans text-zinc-100 antialiased`}
+        className={cn(
+          "min-h-screen bg-[#050510] font-sans text-zinc-100 antialiased",
+          dmSans.variable,
+          orbitron.variable,
+        )}
       >
         <SiteJsonLd />
         <SiteAnalytics />

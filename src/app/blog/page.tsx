@@ -31,10 +31,6 @@ export default function BlogPage() {
 
   return (
     <div className="relative min-h-screen">
-      <div
-        className="pointer-events-none fixed inset-0 -z-30 starfield opacity-70"
-        aria-hidden
-      />
       <SiteHeader />
       <main className="pb-16 pt-32 sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">

@@ -49,10 +49,6 @@ export default function BlogPostPage({ params }: Props) {
 
   return (
     <div className="relative min-h-screen">
-      <div
-        className="pointer-events-none fixed inset-0 -z-30 starfield opacity-70"
-        aria-hidden
-      />
       <SiteHeader />
       <article className="pb-20 pt-36">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">

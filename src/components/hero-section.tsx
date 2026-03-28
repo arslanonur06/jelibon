@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { HeroVideoBackground } from "@/components/hero-video-background";
 import { TextColor } from "@/components/ui/text-color";
@@ -21,19 +20,6 @@ export function HeroSection() {
 
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#050510]/18 via-transparent to-[#050510]/12" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_65%_at_50%_42%,rgba(255,105,180,0.04),transparent_58%)]" />
-
-          {/* `jelibonbackpng.png` on top of the tiger area */}
-          <div className="pointer-events-none absolute left-1/2 top-[7%] z-20 w-[min(34vw,12rem)] -translate-x-1/2 drop-shadow-[0_14px_30px_rgba(0,0,0,0.7)]">
-            <span className="relative block aspect-square w-full">
-              <Image
-                src="/assets/jelibonbackpng.png"
-                alt="Jelibon Marketing"
-                fill
-                className="object-contain"
-                sizes="(max-width: 640px) 42vw, (max-width: 1024px) 24vw, 12rem"
-              />
-            </span>
-          </div>
         </div>
       </div>
 
