@@ -207,19 +207,19 @@ export default function RadialOrbitalTimeline({
       ref={containerRef}
       onClick={handleContainerClick}
     >
-      {/* Full image visible (letterboxed); cover was cropping important areas */}
+      {/* Edge-to-edge cover — fills the rounded rect (no letterbox gaps) */}
       <div
         className="pointer-events-none absolute inset-0 z-[0] bg-[#050510]"
         style={{
-          backgroundImage: "url('/assets/orbitarka.jpg')",
-          backgroundSize: "contain",
+          backgroundImage: "url('/assets/ayicik1.png')",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 z-[0] bg-gradient-to-b from-black/10 via-transparent to-black/25"
+        className="pointer-events-none absolute inset-0 z-[0] bg-gradient-to-b from-black/35 via-black/15 to-black/45"
         aria-hidden
       />
 

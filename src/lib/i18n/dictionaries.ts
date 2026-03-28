@@ -107,6 +107,26 @@ export type Dictionary = {
     statusInProgress: string;
     statusPending: string;
   };
+  testimonials: {
+    heading: string;
+    subheading: string;
+  };
+  faq: {
+    heading: string;
+    subheading: string;
+    items: readonly { question: string; answer: string }[];
+  };
+  calculator: {
+    heading: string;
+    description: string;
+    totalLabel: string;
+    selectedLabel: string;
+    estimateNote: string;
+    getQuote: string;
+    customLabel: string;
+    noneSelected: string;
+    monthSuffix: string;
+  };
 };
 
 export const DICTIONARIES: Record<Locale, Dictionary> = {
@@ -364,6 +384,61 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusCompleted: "COMPLETE",
       statusInProgress: "IN PROGRESS",
       statusPending: "PENDING",
+    },
+    testimonials: {
+      heading: "Results, Not Promises",
+      subheading:
+        "Our partners share what changed after working with us.",
+    },
+    faq: {
+      heading: "Frequently Asked Questions",
+      subheading:
+        "Everything you need to know before getting started.",
+      items: [
+        {
+          question: "Which markets do you specialise in?",
+          answer:
+            "Türkiye is our primary focus—we have deep local knowledge of platform rules, audience behaviour, and compliance requirements. We also operate successfully across Russia, CIS, and Eastern Europe.",
+        },
+        {
+          question: "How does the retainer model work?",
+          answer:
+            "All services are billed as monthly retainers. Scope, channels, and output volume are agreed upfront. Ad spend for paid media (Telegram, PornHub) is invoiced separately so you have full visibility.",
+        },
+        {
+          question: "How quickly can I expect results?",
+          answer:
+            "Paid channels (Telegram, PornHub) typically deliver measurable traffic within 4–6 weeks. SEO and blog networks are long-term plays—plan for 3–6 months before organic volume compounds. AI chatbot and DMCA protection show impact from the first month.",
+        },
+        {
+          question: "Do you work with brand-new operators?",
+          answer:
+            "Yes. We regularly build launch stacks for operators entering Türkiye from scratch. That includes brand setup, funnel architecture, creative production, and compliance groundwork before first spend.",
+        },
+        {
+          question: "Can I start with a single service?",
+          answer:
+            "Absolutely. Most clients start with Telegram Ads or SEO and add services as they scale. Combining channels increases efficiency, but there is no minimum bundle requirement.",
+        },
+        {
+          question: "What makes Jelibon different from a generic performance agency?",
+          answer:
+            "We operate exclusively in the iGaming vertical. Our creative, compliance, and technical work is built around casino and betting norms—not adapted from e-commerce playbooks. That specialisation cuts onboarding time and improves every KPI from day one.",
+        },
+      ] as const,
+    },
+    calculator: {
+      heading: "Build Your Package",
+      description:
+        "Toggle the services you need and see your monthly estimate instantly.",
+      totalLabel: "Monthly estimate",
+      selectedLabel: "services selected",
+      estimateNote:
+        "Final pricing is scoped to your volume and goals. Contact us for a custom quote.",
+      getQuote: "Get a custom quote",
+      customLabel: "Custom pricing",
+      noneSelected: "Select services above to see your estimate.",
+      monthSuffix: " / mo",
     },
   },
   tr: {
@@ -625,6 +700,61 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusInProgress: "SÜRÜYOR",
       statusPending: "BEKLEMEDE",
     },
+    testimonials: {
+      heading: "Söz Değil, Sonuç",
+      subheading:
+        "Partnerlerimiz birlikte çalıştıktan sonra ne değiştiğini anlatıyor.",
+    },
+    faq: {
+      heading: "Sık Sorulan Sorular",
+      subheading:
+        "Başlamadan önce bilmeniz gereken her şey.",
+      items: [
+        {
+          question: "Hangi pazarlarda uzmanlaşıyorsunuz?",
+          answer:
+            "Öncelikli odağımız Türkiye—platform kuralları, kitle davranışı ve uyumluluk gereksinimleri konusunda derin yerel bilgiye sahibiz. Rusya, BDT ve Doğu Avrupa'da da başarılı şekilde hizmet veriyoruz.",
+        },
+        {
+          question: "Retainer modeli nasıl çalışır?",
+          answer:
+            "Tüm hizmetler aylık retainer olarak faturalandırılır. Kapsam, kanallar ve çıktı hacmi önceden belirlenir. Ücretli medya (Telegram, PornHub) için reklam harcaması ayrı faturalandırılır; böylece tam şeffaflık sağlanır.",
+        },
+        {
+          question: "Sonuçları ne zaman görmeye başlarım?",
+          answer:
+            "Ücretli kanallar (Telegram, PornHub) genellikle 4–6 hafta içinde ölçülebilir trafik sağlar. SEO ve blog ağları uzun vadeli yatırımlardır—organik hacmin birikmesi için 3–6 ay öngörün. AI sohbet botu ve DMCA koruması ilk aydan itibaren etki gösterir.",
+        },
+        {
+          question: "Yeni operatörlerle çalışıyor musunuz?",
+          answer:
+            "Evet. Türkiye pazarına sıfırdan giren operatörler için düzenli olarak lansman paketleri oluşturuyoruz. Bu; marka kurulumu, funnel mimarisi, kreatif prodüksiyon ve ilk harcama öncesi uyumluluk temellerini kapsar.",
+        },
+        {
+          question: "Tek bir hizmetle başlayabilir miyim?",
+          answer:
+            "Kesinlikle. Çoğu müşteri Telegram Reklamları veya SEO ile başlar ve büyüdükçe hizmet ekler. Kanalları birleştirmek verimliliği artırır, ancak minimum paket zorunluluğu yoktur.",
+        },
+        {
+          question: "Jelibon'u genel bir performans ajansından ayıran ne?",
+          answer:
+            "Yalnızca iGaming sektöründe faaliyet gösteriyoruz. Kreatif, uyumluluk ve teknik çalışmalarımız casino ve bahis normları üzerine inşa edilmiştir—e-ticaret playbook'larından uyarlanmamıştır. Bu uzmanlaşma, onboarding süresini kısaltır ve birinci günden itibaren tüm KPI'ları iyileştirir.",
+        },
+      ] as const,
+    },
+    calculator: {
+      heading: "Paketinizi Oluşturun",
+      description:
+        "İhtiyacınız olan hizmetleri seçin ve aylık tahmininizi anında görün.",
+      totalLabel: "Aylık tahmini",
+      selectedLabel: "hizmet seçildi",
+      estimateNote:
+        "Nihai fiyatlandırma hacminize ve hedeflerinize göre belirlenir. Özel teklif için bize ulaşın.",
+      getQuote: "Özel teklif alın",
+      customLabel: "Özel fiyatlandırma",
+      noneSelected: "Tahmininizi görmek için yukarıdan hizmet seçin.",
+      monthSuffix: " / ay",
+    },
   },
   ru: {
     header: { emailUs: "Написать нам", telegram: "Telegram" },
@@ -885,6 +1015,61 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusCompleted: "ГОТОВО",
       statusInProgress: "В ПРОЦЕССЕ",
       statusPending: "В ОЖИДАНИИ",
+    },
+    testimonials: {
+      heading: "Результаты, не обещания",
+      subheading:
+        "Наши партнёры рассказывают, что изменилось после работы с нами.",
+    },
+    faq: {
+      heading: "Часто задаваемые вопросы",
+      subheading:
+        "Всё, что нужно знать перед стартом.",
+      items: [
+        {
+          question: "На каких рынках вы специализируетесь?",
+          answer:
+            "Турция — наш основной фокус: у нас глубокое знание местных правил платформ, поведения аудитории и требований комплаенса. Мы также успешно работаем в России, СНГ и Восточной Европе.",
+        },
+        {
+          question: "Как устроена модель ретейнера?",
+          answer:
+            "Все услуги оплачиваются ежемесячными ретейнерами. Объём, каналы и результаты согласовываются заранее. Рекламные бюджеты для платных каналов (Telegram, PornHub) выставляются отдельно — для полной прозрачности.",
+        },
+        {
+          question: "Когда ожидать первых результатов?",
+          answer:
+            "Платные каналы (Telegram, PornHub) обычно дают измеримый трафик в течение 4–6 недель. SEO и блог-сети — долгосрочная инвестиция: закладывайте 3–6 месяцев на накопление органического объёма. AI-чатбот и защита DMCA показывают эффект уже в первый месяц.",
+        },
+        {
+          question: "Вы работаете с новыми операторами?",
+          answer:
+            "Да. Мы регулярно формируем стартовые комплексы для операторов, входящих в Турцию с нуля. Это включает настройку бренда, архитектуру воронки, создание креативов и комплаенс-подготовку до первых трат.",
+        },
+        {
+          question: "Можно ли начать с одной услуги?",
+          answer:
+            "Конечно. Большинство клиентов начинают с рекламы в Telegram или SEO и добавляют услуги по мере роста. Сочетание каналов повышает эффективность, но минимального пакета нет.",
+        },
+        {
+          question: "Чем Jelibon отличается от обычного performance-агентства?",
+          answer:
+            "Мы работаем исключительно в вертикали iGaming. Наши креативы, комплаенс и техническая часть построены на нормах казино и ставок — а не адаптированы из e-commerce. Эта специализация сокращает время онбординга и улучшает все KPI с первого дня.",
+        },
+      ] as const,
+    },
+    calculator: {
+      heading: "Соберите свой пакет",
+      description:
+        "Включите нужные услуги и сразу увидите ежемесячную оценку.",
+      totalLabel: "Ежемесячная оценка",
+      selectedLabel: "услуг выбрано",
+      estimateNote:
+        "Итоговая цена зависит от объёма и целей. Свяжитесь с нами для индивидуального расчёта.",
+      getQuote: "Получить расчёт",
+      customLabel: "Индивидуальная цена",
+      noneSelected: "Выберите услуги выше, чтобы увидеть оценку.",
+      monthSuffix: " / мес.",
     },
   },
 };

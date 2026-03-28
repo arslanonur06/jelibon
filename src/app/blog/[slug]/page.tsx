@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
@@ -69,6 +70,19 @@ export default function BlogPostPage({ params }: Props) {
             <span>{post.readTime}</span>
           </div>
 
+          {post.coverImage && (
+            <div className="relative mt-10 h-56 w-full overflow-hidden rounded-3xl sm:h-72">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                className="object-cover object-center opacity-85"
+                sizes="(max-width: 768px) 100vw, 768px"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050510]/60" />
+            </div>
+          )}
           <div className="glass-panel mt-10 rounded-3xl p-8 sm:p-10">
             <p className="text-lg leading-relaxed text-zinc-300">{post.excerpt}</p>
             <div className="mt-10 space-y-6 text-base leading-relaxed text-zinc-300">
