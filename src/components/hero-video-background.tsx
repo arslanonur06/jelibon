@@ -44,18 +44,23 @@ export function HeroVideoBackground({
     return () => mq.removeEventListener("change", onChange);
   }, []);
 
+  /* Fallback play() for browsers that don't honour the `autoPlay` attribute after hydration.
+     Never call load() here — that resets the element and aborts playback. key={videoSrc} already
+     remounts a fresh <video> element whenever the source changes. */
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    el.load();
-    const p = el.play();
-    if (p !== undefined) p.catch(() => {});
+    if (el.paused) {
+      const p = el.play();
+      if (p !== undefined) p.catch(() => {});
+    }
   }, [videoSrc]);
 
   return (
     <video
       key={videoSrc}
       ref={ref}
+      src={videoSrc}
       className={cn(
         "absolute inset-0 h-full w-full",
         objectFit === "contain"
@@ -73,8 +78,6 @@ export function HeroVideoBackground({
       preload="auto"
       aria-hidden
       disablePictureInPicture
-    >
-      <source src={videoSrc} type="video/mp4" />
-    </video>
+    />
   );
 }
