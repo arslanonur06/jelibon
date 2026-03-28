@@ -9,7 +9,7 @@ export function MarqueeStrip() {
   const locale = getLocale();
   const dict = getDictionary(locale);
   return (
-    <div className="pointer-events-none w-full border-t border-white/[0.08] bg-white/[0.04] backdrop-blur-xl backdrop-saturate-150">
+    <div className="pointer-events-none w-full border-t border-white/[0.08] bg-[#08081a]">
       <div className="mx-auto max-w-[100vw] py-2 sm:py-2.5">
         <VelocityMarquee
           baseVelocity={-1.15}

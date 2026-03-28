@@ -83,10 +83,10 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
                   key={svc.id}
                   onClick={() => toggle(svc.id)}
                   className={cn(
-                    "flex items-center gap-3 rounded-2xl border p-4 text-left transition",
+                    "relative isolate flex items-center gap-3 rounded-2xl border p-4 text-left transition",
                     active
-                      ? "border-[#FF69B4]/50 bg-[#FF69B4]/10 shadow-[0_0_18px_rgba(255,105,180,0.15)]"
-                      : "border-white/10 bg-white/[0.03] hover:border-white/20 hover:bg-white/[0.06]",
+                      ? "border-[#FF69B4]/50 bg-[#FF69B4]/15 shadow-[0_0_18px_rgba(255,105,180,0.15)]"
+                      : "border-white/15 bg-[#12121f] hover:border-white/25 hover:bg-[#16162a]",
                   )}
                   aria-pressed={active}
                 >
@@ -123,7 +123,7 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
           </div>
 
           {/* Total panel */}
-          <div className="glass-panel sticky top-28 flex flex-col gap-5 rounded-3xl p-6">
+          <div className="glass-panel relative isolate sticky top-28 flex flex-col gap-5 rounded-3xl p-6">
             <p className="text-sm font-medium text-zinc-400">
               {calc.totalLabel}
             </p>

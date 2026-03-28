@@ -9,7 +9,7 @@ export function GrowthPillars() {
   return (
     <section
       id="solutions"
-      className="relative scroll-mt-44 bg-[#050510]/30 py-16 backdrop-blur-[2px] sm:py-20"
+      className="relative scroll-mt-44 bg-[#050510]/50 py-16 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
@@ -25,15 +25,15 @@ export function GrowthPillars() {
           {growthPillars.map((pillar) => (
             <div
               key={pillar.title}
-              className="glass-panel group relative overflow-hidden rounded-3xl p-6 transition hover:border-[#FF69B4]/30"
+              className="glass-panel group relative isolate overflow-hidden rounded-3xl p-6 transition hover:border-[#FF69B4]/30"
             >
               <div
-                className={`pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br ${pillar.accent} opacity-25 blur-3xl transition group-hover:opacity-40`}
+                className={`pointer-events-none absolute -right-10 -top-10 z-0 h-40 w-40 rounded-full bg-gradient-to-br ${pillar.accent} opacity-25 blur-3xl transition group-hover:opacity-40`}
               />
-              <h3 className="font-display text-lg font-semibold text-white">
+              <h3 className="relative z-[1] font-display text-lg font-semibold text-white">
                 {pillar.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-300">
+              <p className="relative z-[1] mt-3 text-sm leading-relaxed text-zinc-200">
                 {pillar.description}
               </p>
             </div>

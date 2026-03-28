@@ -57,7 +57,7 @@ export function HeroSection() {
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 backdrop-blur-md transition hover:border-[#22D3EE]/40 hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-[#141428] px-6 py-3 text-sm font-semibold text-white transition hover:border-[#22D3EE]/40 hover:bg-[#1a1a32]"
             >
               {dict.hero.readBlog}
             </Link>

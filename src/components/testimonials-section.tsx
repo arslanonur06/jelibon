@@ -46,26 +46,28 @@ export function TestimonialsSection() {
           {items.map((t) => (
             <div
               key={t.id}
-              className="glass-panel relative flex flex-col gap-5 overflow-hidden rounded-3xl p-6"
+              className="glass-panel relative isolate flex flex-col gap-5 overflow-hidden rounded-3xl p-6"
             >
               {/* Decorative large quote mark */}
               <span
-                className="pointer-events-none absolute right-5 top-3 font-display text-7xl font-bold leading-none text-white/[0.05] select-none"
+                className="pointer-events-none absolute right-5 top-3 z-0 font-display text-7xl font-bold leading-none text-white/[0.06] select-none"
                 aria-hidden
               >
                 &ldquo;
               </span>
 
               {/* Stars */}
-              <StarRow count={t.stars} />
+              <div className="relative z-[1]">
+                <StarRow count={t.stars} />
+              </div>
 
               {/* Quote */}
-              <p className="flex-1 text-sm leading-relaxed text-zinc-300">
+              <p className="relative z-[1] flex-1 text-sm leading-relaxed text-zinc-100">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
               {/* Metric badge */}
-              <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-[#FF69B4]/30 bg-[#FF69B4]/10 px-3 py-1">
+              <div className="relative z-[1] inline-flex w-fit items-center gap-1.5 rounded-full border border-[#FF69B4]/30 bg-[#FF69B4]/10 px-3 py-1">
                 <span className="font-display text-lg font-semibold text-[#F9A8D4]">
                   {t.metric}
                 </span>
@@ -73,7 +75,7 @@ export function TestimonialsSection() {
               </div>
 
               {/* Author row */}
-              <div className="flex items-center gap-3 border-t border-white/10 pt-4">
+              <div className="relative z-[1] flex items-center gap-3 border-t border-white/10 pt-4">
                 {/* Gradient avatar */}
                 <span
                   className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} font-display text-sm font-semibold text-white shadow-lg`}

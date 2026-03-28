@@ -33,10 +33,7 @@
     background-color: rgb(18 18 31 / 0.92);
   }
 
-  /**
-   * Fine dot grid (CSS) — works with overflow-hidden + rounded corners for a “cropped” band.
-   * Complements the Three.js `DottedSurface` without replacing it.
-   */
+  /** Fine dot grid (CSS only) — used by `SiteBackground` instead of WebGL. */
   .bg-dot-grid {
     background-color: rgb(5 5 16 / 0.88);
     background-image: radial-gradient(
