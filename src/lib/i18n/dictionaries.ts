@@ -87,11 +87,16 @@ export type Dictionary = {
     heading: string;
     description: string;
     viewAllPosts: string;
+    listEyebrow: string;
     breadcrumbs: {
       home: string;
       blog: string;
     };
-    categoryLabelsByName: Record<string, string>;
+    categoryLabelsByKey: {
+      strategy: string;
+      performance: string;
+      compliance: string;
+    };
   };
   footer: {
     heading: string;
@@ -363,11 +368,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Notes on performance, automation, and brand safety—built for teams shipping in competitive markets.",
       viewAllPosts: "View all posts",
+      listEyebrow: "Insights",
       breadcrumbs: { home: "Home", blog: "Blog" },
-      categoryLabelsByName: {
-        Strategy: "Strategy",
-        Performance: "Performance",
-        Compliance: "Compliance",
+      categoryLabelsByKey: {
+        strategy: "Strategy",
+        performance: "Performance",
+        compliance: "Compliance",
       },
     },
     footer: {
@@ -678,11 +684,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Performans, otomasyon ve marka güvenliği üzerine notlar—rekabetçi pazarlarda ilerleyen ekipler için.",
       viewAllPosts: "Tüm yazıları gör",
+      listEyebrow: "İçgörüler",
       breadcrumbs: { home: "Ana Sayfa", blog: "Blog" },
-      categoryLabelsByName: {
-        Strategy: "Strateji",
-        Performance: "Performans",
-        Compliance: "Uyumluluk",
+      categoryLabelsByKey: {
+        strategy: "Strateji",
+        performance: "Performans",
+        compliance: "Uyumluluk",
       },
     },
     footer: {
@@ -994,11 +1001,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Заметки о производительности, автоматизации и бренд-безопасности—для команд, работающих в конкурентных рынках.",
       viewAllPosts: "Все статьи",
+      listEyebrow: "Инсайты",
       breadcrumbs: { home: "Главная", blog: "Блог" },
-      categoryLabelsByName: {
-        Strategy: "Стратегия",
-        Performance: "Эффективность",
-        Compliance: "Соответствие",
+      categoryLabelsByKey: {
+        strategy: "Стратегия",
+        performance: "Эффективность",
+        compliance: "Соответствие",
       },
     },
     footer: {

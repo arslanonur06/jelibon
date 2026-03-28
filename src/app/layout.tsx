@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { DottedSurface } from "@/components/ui/dotted-surface";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
+import { SiteAnalytics } from "@/components/site-analytics";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 const orbitron = Orbitron({
@@ -19,6 +20,9 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+const googleSiteVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
   title: "Jelibon Marketing | iGaming Growth Türkiye",
   description:
@@ -29,6 +33,9 @@ export const metadata: Metadata = {
       "Dominate iGaming in Türkiye—traffic, SEO, AI, and full-stack growth infrastructure.",
     type: "website",
   },
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
 };
 
 export const dynamic = "force-dynamic";
@@ -52,6 +59,7 @@ export default function RootLayout({
       <body
         className={`${orbitron.variable} ${dmSans.variable} min-h-screen bg-[#050510] font-sans text-zinc-100 antialiased`}
       >
+        <SiteAnalytics />
         <ThemeProvider>
           <DottedSurface />
           <div className="relative z-10">{children}</div>

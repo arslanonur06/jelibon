@@ -3,18 +3,19 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { blogPosts, getPostBySlug } from "@/data/blog-posts";
+import { getAllSlugs, getLocalizedPost } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 type Props = { params: { slug: string } };
 
 export function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return getAllSlugs().map((slug) => ({ slug }));
 }
 
 export function generateMetadata({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+  const locale = getLocale();
+  const post = getLocalizedPost(params.slug, locale);
   if (!post) return { title: "Post not found" };
   return {
     title: `${post.title} | Jelibon Marketing`,
@@ -23,12 +24,13 @@ export function generateMetadata({ params }: Props) {
 }
 
 export default function BlogPostPage({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+  const locale = getLocale();
+  const post = getLocalizedPost(params.slug, locale);
   if (!post) notFound();
 
-  const locale = getLocale();
   const dict = getDictionary(locale);
-  const dateLocale = locale === "tr" ? "tr-TR" : locale === "ru" ? "ru-RU" : "en-US";
+  const dateLocale =
+    locale === "tr" ? "tr-TR" : locale === "ru" ? "ru-RU" : "en-US";
 
   return (
     <div className="relative min-h-screen">
@@ -54,7 +56,7 @@ export default function BlogPostPage({ params }: Props) {
             </Link>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-            {dict.blog.categoryLabelsByName[post.category] ?? post.category}
+            {dict.blog.categoryLabelsByKey[post.categoryKey]}
           </p>
           <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
             {post.title}

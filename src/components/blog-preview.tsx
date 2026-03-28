@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { blogPosts } from "@/data/blog-posts";
+import { getPostsForLocale } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
@@ -7,7 +7,7 @@ export function BlogPreview() {
   const locale = getLocale();
   const dict = getDictionary(locale);
   const dateLocale = locale === "tr" ? "tr-TR" : locale === "ru" ? "ru-RU" : "en-US";
-  const featured = blogPosts.slice(0, 3);
+  const featured = getPostsForLocale(locale).slice(0, 3);
 
   return (
     <section
@@ -39,7 +39,7 @@ export function BlogPreview() {
               className="glass-panel flex flex-col rounded-3xl p-6 transition hover:border-[#A020F0]/35"
             >
               <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-                {dict.blog.categoryLabelsByName[post.category] ?? post.category}
+                {dict.blog.categoryLabelsByKey[post.categoryKey]}
               </p>
               <h3 className="mt-3 font-display text-lg font-semibold leading-snug text-white">
                 <Link

@@ -16,7 +16,6 @@ export function HeroSection() {
         <div className="relative h-[min(70vh,900px)] overflow-hidden rounded-[1.75rem] bg-[#050510] sm:rounded-[2rem] sm:h-[min(62vh,980px)]">
           <HeroVideoBackground
             objectFit="cover"
-            objectPositionClassName="object-[center_68%]"
             className="opacity-95 brightness-[1.15] contrast-[1.05] saturate-[1.2]"
           />
 
