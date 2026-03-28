@@ -1,9 +1,4 @@
-"use client";
-
-import { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-
-const MOBILE_BREAKPOINT = 768;
 
 type Props = {
   className?: string;
@@ -11,70 +6,61 @@ type Props = {
   objectPositionClassName?: string;
 };
 
+const baseClass = (
+  objectFit: "contain" | "cover",
+  objectPositionClassName: string,
+  extra?: string,
+) =>
+  cn(
+    "absolute inset-0 h-full w-full",
+    objectFit === "contain"
+      ? "object-contain object-center"
+      : cn(
+          "object-cover lg:object-contain lg:object-center",
+          objectPositionClassName,
+        ),
+    extra,
+  );
+
 /**
- * Full-bleed muted looping hero video.
- * kaplanseker.mp4 on desktop (≥768 px), kaplanvideo.mp4 on mobile.
- * Uses a single static <video> element — no key-based remounting that can
- * interrupt autoPlay during hydration.
+ * Desktop (md+): animated `webseker.gif` — pure <img>, no JS needed, autoplays.
+ * Mobile  (<md) : `kaplanvideo.mp4`    — muted looping <video>.
+ * Both rendered in static HTML; CSS hides the unused element per breakpoint.
  */
 export function HeroVideoBackground({
   className,
   objectFit = "contain",
   objectPositionClassName = "max-lg:object-[center_68%]",
 }: Props) {
-  const ref = useRef<HTMLVideoElement>(null);
-
-  /* Swap src + restart on breakpoint cross (resize only — rare in real use). */
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    function getSrc() {
-      return window.innerWidth < MOBILE_BREAKPOINT
-        ? "/assets/kaplanvideo.mp4"
-        : "/assets/kaplanseker.mp4";
-    }
-
-    /* Set the correct src for the current viewport on mount. */
-    const initial = getSrc();
-    if (el.getAttribute("src") !== initial) {
-      el.src = initial;
-      el.load();
-    }
-    el.play().catch(() => {});
-
-    const mq = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
-    function onChange() {
-      if (!el) return;
-      el.src = getSrc();
-      el.load();
-      el.play().catch(() => {});
-    }
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
-
   return (
-    <video
-      ref={ref}
-      src="/assets/kaplanseker.mp4"
-      className={cn(
-        "absolute inset-0 h-full w-full",
-        objectFit === "contain"
-          ? "object-contain object-center"
-          : cn(
-              "object-cover lg:object-contain lg:object-center",
-              objectPositionClassName,
-            ),
-        className,
-      )}
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="auto"
-      aria-hidden
-      disablePictureInPicture
-    />
+    <>
+      {/* ── Desktop: GIF ── shown md and up, hidden on mobile */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/assets/webseker.gif"
+        alt=""
+        aria-hidden
+        className={cn(
+          baseClass(objectFit, objectPositionClassName, className),
+          "hidden md:block",
+        )}
+      />
+
+      {/* ── Mobile: video ── shown below md, hidden on desktop */}
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <video
+        src="/assets/kaplanvideo.mp4"
+        className={cn(
+          baseClass(objectFit, objectPositionClassName, className),
+          "block md:hidden",
+        )}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden
+      />
+    </>
   );
 }
