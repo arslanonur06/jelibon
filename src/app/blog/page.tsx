@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -49,8 +50,21 @@ export default function BlogPage() {
             {sorted.map((post) => (
               <article
                 key={post.slug}
-                className="glass-panel flex flex-col rounded-3xl p-8 transition hover:border-[#A020F0]/35"
+                className="glass-panel flex flex-col overflow-hidden rounded-3xl transition hover:border-[#A020F0]/35"
               >
+                {post.coverImage && (
+                  <div className="relative h-44 w-full overflow-hidden">
+                    <Image
+                      src={post.coverImage}
+                      alt={post.title}
+                      fill
+                      className="object-cover object-center opacity-80 transition duration-500 hover:scale-105 hover:opacity-100"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050510]/80" />
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-8">
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
                   {post.category}
                 </p>
@@ -72,6 +86,7 @@ export default function BlogPage() {
                     })}
                   </time>
                   <span>{post.readTime}</span>
+                </div>
                 </div>
               </article>
             ))}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
+import { EMAIL, TELEGRAM_URL } from "@/constants";
 
 export function SiteFooter() {
   const locale = getLocale();
@@ -28,13 +29,13 @@ export function SiteFooter() {
           </span>
           <a
             className="text-zinc-200 transition hover:text-white"
-            href="mailto:contact@jelibonmarketing.com"
+            href={`mailto:${EMAIL}`}
           >
-            contact@jelibonmarketing.com
+            {EMAIL}
           </a>
           <Link
             className="text-zinc-200 transition hover:text-white"
-            href="https://t.me/jelibonmarketing"
+            href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { DottedSurface } from "@/components/ui/dotted-surface";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 const orbitron = Orbitron({
@@ -55,6 +56,7 @@ export default function RootLayout({
           <DottedSurface />
           <div className="relative z-10">{children}</div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
