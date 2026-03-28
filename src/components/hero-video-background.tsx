@@ -47,7 +47,7 @@ export function HeroVideoBackground({
       muted
       loop
       playsInline
-      preload="metadata"
+      preload="auto"
       poster="/assets/jelibon-brand.png"
       aria-hidden
       disablePictureInPicture

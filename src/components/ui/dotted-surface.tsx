@@ -8,8 +8,8 @@ import * as THREE from "three";
 type DottedSurfaceProps = Omit<React.ComponentProps<"div">, "ref">;
 
 /**
- * Three.js point grid background (static field by default for stable desktop compositing).
- * Requires `ThemeProvider` from `next-themes` (see `src/components/theme-provider.tsx`).
+ * Three.js point grid behind the app (`z-[1]`). Static field only — no RAF loop (stable with cards/video).
+ * Requires `ThemeProvider` from `next-themes`.
  */
 export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
   const { resolvedTheme } = useTheme();
@@ -50,6 +50,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
       alpha: true,
       antialias: true,
     });
+    /** Cap DPR to keep compositing light next to the main UI */
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.25));
     renderer.setClearColor(0x000000, 0);
 
@@ -102,7 +103,8 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
       size: 6.5,
       vertexColors: true,
       transparent: true,
-      opacity: 0.52,
+      /** Slightly softer so foreground (video/cards) stays the focus — static field only */
+      opacity: 0.4,
       sizeAttenuation: true,
     });
 

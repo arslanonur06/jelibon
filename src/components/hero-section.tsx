@@ -10,10 +10,10 @@ export function HeroSection() {
   const dict = getDictionary(locale);
 
   return (
-    <section className="relative overflow-hidden pb-14 pt-32 sm:pb-20 sm:pt-36">
-      <div className="relative z-0 mx-auto w-full max-w-[min(100%,1680px)] px-0 sm:px-4">
-        {/* No letterbox: `object-cover` fills the container, cropping from the top (object-bottom). */}
-        <div className="relative h-[min(70vh,900px)] overflow-hidden rounded-[1.75rem] bg-[#050510] sm:rounded-[2rem] sm:h-[min(62vh,980px)]">
+    <section className="relative overflow-hidden pb-10 pt-28 sm:pb-16 sm:pt-32">
+      <div className="relative z-0 mx-auto w-full max-w-[min(100%,1920px)] px-0 sm:px-3 lg:px-5">
+        {/* Taller hero video — less empty vertical space above the fold */}
+        <div className="relative h-[min(80vh,920px)] overflow-hidden rounded-xl bg-[#050510] sm:h-[min(86vh,1000px)] sm:rounded-2xl lg:h-[min(88vh,1080px)] lg:rounded-[2rem]">
           <HeroVideoBackground
             objectFit="cover"
             className="opacity-95 brightness-[1.15] contrast-[1.05] saturate-[1.2]"
@@ -37,7 +37,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-8 px-4 pt-8 sm:gap-10 sm:px-6 sm:pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-6 px-4 pt-6 sm:gap-8 sm:px-6 sm:pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
         <div className="order-2 lg:order-1">
           <p className="font-display text-xs uppercase tracking-[0.35em] text-[#E9A8FF]/90">
             {dict.hero.tagline}
