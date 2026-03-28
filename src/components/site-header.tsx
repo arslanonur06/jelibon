@@ -11,7 +11,7 @@ export function SiteHeader() {
   const dict = getDictionary(locale);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[100] flex flex-col border-b border-white/[0.1] bg-[#050510]/90 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl backdrop-saturate-150">
+    <header className="fixed inset-x-0 top-0 z-[100] flex flex-col border-b border-white/[0.1] bg-[#050510] shadow-[0_8px_40px_rgba(0,0,0,0.45)]">
       {/* ── Main row ── */}
       <div className="mx-auto flex w-full max-w-7xl items-center gap-2 px-3 py-2 sm:gap-4 sm:px-6 sm:py-2.5">
 

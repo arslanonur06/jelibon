@@ -52,9 +52,11 @@ export function PackagesSection() {
             <a
               key={pkg.id}
               href={`#pkg-${pkg.id}`}
-              className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-zinc-200 shadow-sm backdrop-blur-sm transition hover:border-[#FF69B4]/45 hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF69B4]"
+              className="inline-flex shrink-0 items-center rounded-full border border-white/20 bg-[#12121f] px-3 py-1.5 text-xs font-medium text-white shadow-sm transition hover:border-[#FF69B4]/55 hover:bg-[#1a1a2e] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF69B4]"
             >
-              {dict.packages.serviceNavLabelsById[pkg.id] ?? pkg.title}
+              <span className="relative z-[1] select-none">
+                {dict.packages.serviceNavLabelsById[pkg.id] ?? pkg.title}
+              </span>
             </a>
           ))}
         </nav>
@@ -64,9 +66,9 @@ export function PackagesSection() {
             <article
               key={pkg.id}
               id={`pkg-${pkg.id}`}
-              className="glass-panel flex scroll-mt-52 flex-col rounded-2xl p-4 sm:rounded-3xl sm:p-6"
+              className="glass-panel relative isolate flex scroll-mt-52 flex-col rounded-2xl p-4 sm:rounded-3xl sm:p-6"
             >
-              <div className="flex flex-wrap items-start justify-between gap-2">
+              <div className="relative z-[1] flex flex-wrap items-start justify-between gap-2">
                 <div className="min-w-0">
                   <h3 className="font-display text-lg font-semibold text-white sm:text-xl">
                     {pkg.title}
@@ -84,7 +86,7 @@ export function PackagesSection() {
                 ) : null}
               </div>
 
-              <div className="mt-4 sm:mt-5">
+              <div className="relative z-[1] mt-4 sm:mt-5">
                 {pkg.priceHeadline ? (
                   <p className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
                     {pkg.priceHeadline}
@@ -104,7 +106,7 @@ export function PackagesSection() {
                 ) : null}
               </div>
 
-              <ul className="mt-4 flex-1 space-y-2 text-xs text-zinc-200 sm:mt-5 sm:space-y-2.5 sm:text-sm">
+              <ul className="relative z-[1] mt-4 flex-1 space-y-2 text-xs text-zinc-100 sm:mt-5 sm:space-y-2.5 sm:text-sm">
                 {pkg.features.map((line) => (
                   <li key={line} className="flex gap-2 sm:gap-3">
                     <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-gradient-to-r from-[#FF69B4] to-[#00D4FF] sm:mt-1.5 sm:h-1.5 sm:w-1.5" />
@@ -128,18 +130,18 @@ export function PackagesSection() {
             {growthPackageTiersLocalized.map((tier) => (
               <article
                 key={tier.id}
-                className="glass-panel flex min-h-0 flex-col rounded-xl border border-white/10 p-3 sm:rounded-2xl sm:p-5"
+                className="glass-panel relative isolate flex min-h-0 flex-col rounded-xl border border-white/10 p-3 sm:rounded-2xl sm:p-5"
               >
-                <h4 className="font-display text-sm font-semibold leading-tight text-white sm:text-lg">
+                <h4 className="relative z-[1] font-display text-sm font-semibold leading-tight text-white sm:text-lg">
                   {tier.name}
                 </h4>
-                <p className="mt-2 font-display text-lg font-semibold text-[#C4B5FD] sm:mt-3 sm:text-2xl">
+                <p className="relative z-[1] mt-2 font-display text-lg font-semibold text-[#C4B5FD] sm:mt-3 sm:text-2xl">
                   {tier.price}
                   <span className="text-[10px] font-normal text-zinc-500 sm:text-sm">
                     {dict.packages.moSuffix}
                   </span>
                 </p>
-                <ul className="mt-3 flex-1 space-y-1.5 text-[11px] leading-snug text-zinc-300 sm:mt-4 sm:space-y-2 sm:text-xs">
+                <ul className="relative z-[1] mt-3 flex-1 space-y-1.5 text-[11px] leading-snug text-zinc-200 sm:mt-4 sm:space-y-2 sm:text-xs">
                   {tier.features.map((f) => (
                     <li key={f} className="flex gap-1.5 sm:gap-2">
                       <span className="shrink-0 text-[#86EFAC]">✓</span>

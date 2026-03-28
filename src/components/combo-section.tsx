@@ -22,7 +22,7 @@ export function ComboSection() {
           <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-gradient-to-br from-[#FF69B4]/40 via-[#A020F0]/30 to-[#00D4FF]/25 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-28 -left-20 h-72 w-72 rounded-full bg-[#32CD32]/10 blur-3xl" />
 
-          <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="relative z-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-[#FDE047]/30 bg-[#FDE047]/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-[#FEF9C3]">
                 {dict.combo.flagship}

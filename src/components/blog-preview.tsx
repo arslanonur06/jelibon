@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { blogPosts } from "@/data/blog-posts";
+import { getPostsForLocale } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
@@ -7,7 +7,7 @@ export function BlogPreview() {
   const locale = getLocale();
   const dict = getDictionary(locale);
   const dateLocale = locale === "tr" ? "tr-TR" : locale === "ru" ? "ru-RU" : "en-US";
-  const featured = blogPosts.slice(0, 3);
+  const featured = getPostsForLocale(locale).slice(0, 3);
 
   return (
     <section
@@ -36,12 +36,12 @@ export function BlogPreview() {
           {featured.map((post) => (
             <article
               key={post.slug}
-              className="glass-panel flex flex-col rounded-3xl p-6 transition hover:border-[#A020F0]/35"
+              className="glass-panel relative isolate flex flex-col rounded-3xl p-6 transition hover:border-[#A020F0]/35"
             >
-              <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-                {dict.blog.categoryLabelsByName[post.category] ?? post.category}
+              <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
+                {dict.blog.categoryLabelsByKey[post.categoryKey]}
               </p>
-              <h3 className="mt-3 font-display text-lg font-semibold leading-snug text-white">
+              <h3 className="relative z-[1] mt-3 font-display text-lg font-semibold leading-snug text-white">
                 <Link
                   href={`/blog/${post.slug}`}
                   className="hover:text-[#F9A8D4]"
@@ -49,10 +49,10 @@ export function BlogPreview() {
                   {post.title}
                 </Link>
               </h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-400">
+              <p className="relative z-[1] mt-3 flex-1 text-sm leading-relaxed text-zinc-200">
                 {post.excerpt}
               </p>
-              <div className="mt-5 flex items-center justify-between text-xs text-zinc-500">
+              <div className="relative z-[1] mt-5 flex items-center justify-between text-xs text-zinc-400">
                 <time dateTime={post.date}>
                   {new Date(post.date).toLocaleDateString(dateLocale, {
                     year: "numeric",

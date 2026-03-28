@@ -1,10 +1,13 @@
 import {
   BookOpen,
+  Calculator,
+  CircleHelp,
   Layers,
   Mail,
   Orbit,
   Package,
   Sparkles,
+  Star,
 } from "lucide-react";
 import type { DockNavItem } from "@/components/ui/dock-tabs";
 import type { Locale } from "@/lib/i18n/locales";
@@ -34,6 +37,13 @@ const navDockItemsBase: Omit<DockNavItem, "name">[] = [
     colorHover: "bg-gradient-to-br from-[#67E8F9] to-[#60A5FA]",
   },
   {
+    id: "calculator",
+    href: "/#calculator",
+    icon: Calculator,
+    color: "bg-gradient-to-br from-sky-500 to-indigo-600",
+    colorHover: "bg-gradient-to-br from-sky-300 to-indigo-400",
+  },
+  {
     id: "combo",
     href: "/#combo",
     icon: Sparkles,
@@ -41,11 +51,25 @@ const navDockItemsBase: Omit<DockNavItem, "name">[] = [
     colorHover: "bg-gradient-to-br from-[#FDE68A] to-[#FB923C]",
   },
   {
+    id: "testimonials",
+    href: "/#testimonials",
+    icon: Star,
+    color: "bg-gradient-to-br from-rose-500 to-pink-600",
+    colorHover: "bg-gradient-to-br from-rose-300 to-pink-400",
+  },
+  {
     id: "blog",
     href: "/blog",
     icon: BookOpen,
     color: "bg-gradient-to-br from-fuchsia-500 to-pink-600",
     colorHover: "bg-gradient-to-br from-[#F0ABFC] to-[#FB7185]",
+  },
+  {
+    id: "faq",
+    href: "/#faq",
+    icon: CircleHelp,
+    color: "bg-gradient-to-br from-violet-500 to-purple-700",
+    colorHover: "bg-gradient-to-br from-violet-300 to-purple-500",
   },
   {
     id: "contact",
@@ -64,5 +88,4 @@ export function getNavDockItems(locale: Locale): DockNavItem[] {
   }));
 }
 
-// Backwards-compatible export for demo pages that don't care about locale.
 export const navDockItems = getNavDockItems("en");

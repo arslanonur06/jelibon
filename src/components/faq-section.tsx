@@ -19,13 +19,14 @@ function FaqItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="glass-panel overflow-hidden rounded-2xl">
+    <div className="glass-panel relative isolate overflow-hidden rounded-2xl">
       <button
+        type="button"
         onClick={onToggle}
-        className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition hover:bg-white/[0.03] sm:px-6 sm:py-5"
+        className="relative z-[1] flex w-full items-center justify-between gap-4 bg-transparent px-5 py-4 text-left transition hover:bg-white/[0.06] sm:px-6 sm:py-5"
         aria-expanded={isOpen}
       >
-        <span className="text-sm font-medium text-white sm:text-base">
+        <span className="text-pretty text-sm font-medium text-white sm:text-base">
           {question}
         </span>
         <ChevronDown
@@ -44,7 +45,7 @@ function FaqItem({
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
-            <p className="px-5 pb-5 text-sm leading-relaxed text-zinc-400 sm:px-6 sm:pb-6">
+            <p className="relative z-[1] px-5 pb-5 text-sm leading-relaxed text-zinc-200 sm:px-6 sm:pb-6">
               {answer}
             </p>
           </motion.div>

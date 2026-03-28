@@ -27,14 +27,13 @@
 }
 
 @layer components {
+  /* Solid panel — avoids Chromium paint bugs (invisible text) from backdrop-blur stacks */
   .glass-panel {
-    @apply border border-white/10 bg-white/[0.04] shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset] backdrop-blur-xl;
+    @apply border border-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset];
+    background-color: rgb(18 18 31 / 0.92);
   }
 
-  /**
-   * Fine dot grid (CSS) — works with overflow-hidden + rounded corners for a “cropped” band.
-   * Complements the Three.js `DottedSurface` without replacing it.
-   */
+  /** Fine dot grid (CSS only) — used by `SiteBackground` instead of WebGL. */
   .bg-dot-grid {
     background-color: rgb(5 5 16 / 0.88);
     background-image: radial-gradient(

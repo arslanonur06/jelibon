@@ -8,7 +8,7 @@ import * as THREE from "three";
 type DottedSurfaceProps = Omit<React.ComponentProps<"div">, "ref">;
 
 /**
- * Animated Three.js point grid background. Lives in `src/components/ui` (shadcn convention).
+ * Three.js point grid background (static field by default for stable desktop compositing).
  * Requires `ThemeProvider` from `next-themes` (see `src/components/theme-provider.tsx`).
  */
 export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
@@ -30,10 +30,12 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
 
     const SEPARATION = 150;
     const isSmallScreen = window.innerWidth < 640;
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    const shouldAnimate = !isSmallScreen && !prefersReducedMotion;
+    /**
+     * Continuous RAF + buffer updates on large canvases were causing whole-page
+     * compositor flicker on desktop (Chrome/Edge) while mobile skipped animation.
+     * Keep a static field — still looks premium, zero animation loop.
+     */
+    const shouldAnimate = false;
     const AMOUNTX = isSmallScreen ? 30 : 40;
     const AMOUNTY = isSmallScreen ? 40 : 60;
 
@@ -60,6 +62,13 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
     };
     setSize();
 
+    renderer.domElement.style.position = "absolute";
+    renderer.domElement.style.inset = "0";
+    renderer.domElement.style.width = "100%";
+    renderer.domElement.style.height = "100%";
+    renderer.domElement.style.pointerEvents = "none";
+    /** Own compositor layer — limits repaints bleeding into page UI */
+    renderer.domElement.style.isolation = "isolate";
     container.appendChild(renderer.domElement);
 
     const geometry = new THREE.BufferGeometry();
@@ -143,18 +152,23 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
     }
 
     let resizeRaf = 0;
+    let resizeDebounce: ReturnType<typeof setTimeout> | undefined;
     const handleResize = () => {
       cancelAnimationFrame(resizeRaf);
-      resizeRaf = requestAnimationFrame(() => {
-        setSize();
-        if (!isAnimating) renderer.render(scene, camera);
-      });
+      clearTimeout(resizeDebounce);
+      resizeDebounce = setTimeout(() => {
+        resizeRaf = requestAnimationFrame(() => {
+          setSize();
+          if (!isAnimating) renderer.render(scene, camera);
+        });
+      }, 120);
     };
     window.addEventListener("resize", handleResize);
     const ro = new ResizeObserver(handleResize);
     ro.observe(container);
 
     return () => {
+      clearTimeout(resizeDebounce);
       cancelAnimationFrame(resizeRaf);
       window.removeEventListener("resize", handleResize);
       ro.disconnect();
@@ -174,7 +188,7 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
     <div
       ref={containerRef}
       className={cn(
-        "pointer-events-none fixed inset-0 z-[1] overflow-hidden",
+        "pointer-events-none fixed inset-0 z-[1] isolate overflow-hidden [contain:paint]",
         className,
       )}
       aria-hidden

@@ -22,7 +22,7 @@ export default function Home() {
       <SiteHeader />
       <main className="relative z-10">
         <HeroSection />
-        <div className="relative -mt-4 overflow-hidden rounded-t-[1.75rem] border-t border-white/[0.08] bg-[#050510]/45 shadow-[0_-12px_48px_rgba(0,0,0,0.4)] backdrop-blur-[1px] sm:-mt-5 sm:rounded-t-[2rem]">
+        <div className="relative -mt-4 overflow-hidden rounded-t-[1.75rem] border-t border-white/[0.08] bg-[#050510]/80 shadow-[0_-12px_48px_rgba(0,0,0,0.4)] sm:-mt-5 sm:rounded-t-[2rem]">
           <GrowthPillars />
           <OrbitalTimelineSection />
           <PackagesSection />
