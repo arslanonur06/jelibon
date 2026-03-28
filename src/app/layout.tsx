@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Orbitron } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { DottedSurface } from "@/components/ui/dotted-surface";
+import { SiteGradientBackground } from "@/components/site-gradient-background";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SiteAnalytics } from "@/components/site-analytics";
@@ -61,7 +61,7 @@ export default function RootLayout({
       >
         <SiteAnalytics />
         <ThemeProvider>
-          <DottedSurface />
+          <SiteGradientBackground />
           <div className="relative z-10">{children}</div>
         </ThemeProvider>
         <Analytics />

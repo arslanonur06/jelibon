@@ -33,7 +33,7 @@
     background-color: rgb(18 18 31 / 0.92);
   }
 
-  /** Optional CSS dot grid (e.g. sections) — global background uses `DottedSurface` in layout. */
+  /** Optional CSS dot grid (e.g. sections) — global background uses `SiteGradientBackground` in layout. */
   .bg-dot-grid {
     background-color: rgb(5 5 16 / 0.88);
     background-image: radial-gradient(
