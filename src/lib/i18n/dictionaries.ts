@@ -82,7 +82,6 @@ export type Dictionary = {
     flagship: string;
     description: string;
     getStarted: string;
-    messageTelegram: string;
     fullGrowthSuiteByLocale: {
       title: string;
       subtitle: string;
@@ -356,7 +355,6 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Our top monthly stack: traffic, AI, SEO, protection, and hands-on support—built for serious scale in Türkiye.",
       getStarted: "Get started today",
-      messageTelegram: "Message on Telegram",
       fullGrowthSuiteByLocale: {
         title: "Full Growth Suite",
         subtitle: "All-in-one iGaming growth infrastructure",
@@ -390,7 +388,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     footer: {
       heading: "Jelibon Marketing",
       about:
-        "Growth & software for iGaming in Türkiye—Telegram, PornHub, SEO, AI, DMCA, and custom stacks. Start on Telegram or email.",
+        "Growth & software for iGaming in Türkiye—Telegram, PornHub, SEO, AI, DMCA, and custom stacks. Reach us on Telegram.",
       getStarted: "Get started",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. All rights reserved.",
@@ -675,7 +673,6 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Aylık öne çıkan paketimiz: trafik, AI, SEO, koruma ve birebir operasyonel destek—Türkiye'de ciddi ölçek için tasarlandı.",
       getStarted: "Bugün başlayın",
-      messageTelegram: "Telegram'dan mesaj",
       fullGrowthSuiteByLocale: {
         title: "Tam Büyüme Paketi",
         subtitle: "Tek noktada iGaming büyüme altyapısı",
@@ -709,7 +706,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     footer: {
       heading: "Jelibon Marketing",
       about:
-        "Türkiye'de iGaming için büyüme & yazılım—Telegram, PornHub, SEO, AI, DMCA ve özel paketler. Telegram'dan başlayın ya da e-posta gönderin.",
+        "Türkiye'de iGaming için büyüme & yazılım—Telegram, PornHub, SEO, AI, DMCA ve özel paketler. Bize Telegram üzerinden ulaşın.",
       getStarted: "Hemen başlayın",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
@@ -995,7 +992,6 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Лучший ежемесячный комплект: трафик, AI, SEO, защита и прямое операционное сопровождение—для серьёзного масштаба в Турции.",
       getStarted: "Начните сегодня",
-      messageTelegram: "Написать в Telegram",
       fullGrowthSuiteByLocale: {
         title: "Полный комплект роста",
         subtitle: "Единая iGaming-инфраструктура роста",
@@ -1029,7 +1025,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     footer: {
       heading: "Jelibon Marketing",
       about:
-        "Рост и софт для iGaming в Турции — Telegram, PornHub, SEO, AI, DMCA и кастомные стеки. Начните в Telegram или напишите на email.",
+        "Рост и софт для iGaming в Турции — Telegram, PornHub, SEO, AI, DMCA и кастомные стеки. Свяжитесь с нами в Telegram.",
       getStarted: "Начать",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Все права защищены.",

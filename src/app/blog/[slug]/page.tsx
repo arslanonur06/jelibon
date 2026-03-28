@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -6,6 +7,7 @@ import { SiteHeader } from "@/components/site-header";
 import { getAllSlugs, getLocalizedPost } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
+import { DEFAULT_OG_IMAGE_PATH } from "@/lib/site-config";
 
 type Props = { params: { slug: string } };
 
@@ -13,13 +15,26 @@ export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: Props) {
+export function generateMetadata({ params }: Props): Metadata {
   const locale = getLocale();
   const post = getLocalizedPost(params.slug, locale);
   if (!post) return { title: "Post not found" };
+
+  const path = `/blog/${params.slug}`;
+  const ogImage = post.coverImage ?? DEFAULT_OG_IMAGE_PATH;
+
   return {
     title: `${post.title} | Jelibon Marketing`,
     description: post.excerpt,
+    alternates: { canonical: path },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: path,
+      publishedTime: post.date,
+      images: [{ url: ogImage, alt: post.title }],
+    },
   };
 }
 

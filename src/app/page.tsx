@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { BlogPreview } from "@/components/blog-preview";
 import { ComboSection } from "@/components/combo-section";
 import { FaqSection } from "@/components/faq-section";
@@ -10,6 +11,10 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { getLocale } from "@/lib/i18n/get-locale";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   const locale = getLocale();

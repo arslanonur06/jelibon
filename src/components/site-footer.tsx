@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
-import { EMAIL, TELEGRAM_URL } from "@/constants";
+import { TELEGRAM_URL } from "@/constants";
 
 export function SiteFooter() {
   const locale = getLocale();
@@ -27,12 +27,6 @@ export function SiteFooter() {
           <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
             {dict.footer.getStarted}
           </span>
-          <a
-            className="text-zinc-200 transition hover:text-white"
-            href={`mailto:${EMAIL}`}
-          >
-            {EMAIL}
-          </a>
           <Link
             className="text-zinc-200 transition hover:text-white"
             href={TELEGRAM_URL}

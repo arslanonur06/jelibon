@@ -9,7 +9,6 @@ export const BRAND_TAGLINE = "Premium growth & software · Türkiye";
 
 // ─── Links ───────────────────────────────────────────────────────────────────
 export const TELEGRAM_URL = "https://t.me/jelibonmarketing";
-export const EMAIL = "contact@jelibonmarketing.com";
 
 // ─── Colors (matches tailwind.config.ts) ─────────────────────────────────────
 export const COLORS = {

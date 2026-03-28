@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
@@ -6,10 +7,19 @@ import { getPostsForLocale } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Blog | Jelibon Marketing",
   description:
     "Insights on iGaming growth, Telegram performance, AI automation, and brand protection.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog | Jelibon Marketing",
+    description:
+      "Insights on iGaming growth, Telegram performance, AI automation, and brand protection.",
+    type: "website",
+    url: "/blog",
+    images: [{ url: "/assets/jelibon-brand.png", alt: "Jelibon Marketing" }],
+  },
 };
 
 export default function BlogPage() {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TELEGRAM_URL } from "@/constants";
 import { fullGrowthSuite } from "@/data/packages";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
@@ -64,18 +65,18 @@ export function ComboSection() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href="mailto:contact@jelibonmarketing.com"
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex flex-1 items-center justify-center rounded-2xl bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_32px_rgba(255,105,180,0.35)] transition hover:brightness-110"
                 >
                   {dict.combo.getStarted}
                 </Link>
                 <Link
-                  href="https://t.me/jelibonmarketing"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#contact"
                   className="inline-flex flex-1 items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 transition hover:border-[#22D3EE]/40 hover:bg-white/10"
                 >
-                  {dict.combo.messageTelegram}
+                  {dict.nav.contact}
                 </Link>
               </div>
             </div>

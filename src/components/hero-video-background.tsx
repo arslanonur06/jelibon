@@ -13,6 +13,7 @@ type Props = {
 
 /**
  * Muted looping MP4 only (no GIF) — H.264 decodes on GPU and avoids huge animated-GIF decode cost.
+ * Mobile (`max-md`): `kaplanvideo.mp4`. Web (`md+`): `kaplanseker.mp4` via `<source media>`.
  * Recompress if needed: ffmpeg -i in.mp4 -vf scale=1280:-2 -c:v libx264 -crf 26 -movflags +faststart out.mp4
  */
 export function HeroVideoBackground({
@@ -52,7 +53,12 @@ export function HeroVideoBackground({
       aria-hidden
       disablePictureInPicture
     >
-      <source src="/assets/kaplanvideo.mp4" type="video/mp4" />
+      <source
+        src="/assets/kaplanvideo.mp4"
+        type="video/mp4"
+        media="(max-width: 767px)"
+      />
+      <source src="/assets/kaplanseker.mp4" type="video/mp4" />
     </video>
   );
 }
