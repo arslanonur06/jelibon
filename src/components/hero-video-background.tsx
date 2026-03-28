@@ -12,12 +12,14 @@ type Props = {
 };
 
 /**
- * Muted looping MP4. Keep file small: ffmpeg -i in.mp4 -vf scale=1280:-2 -crf 26 out.mp4
+ * Muted looping MP4 only (no GIF) — H.264 decodes on GPU and avoids huge animated-GIF decode cost.
+ * Recompress if needed: ffmpeg -i in.mp4 -vf scale=1280:-2 -c:v libx264 -crf 26 -movflags +faststart out.mp4
  */
 export function HeroVideoBackground({
   className,
   objectFit = "contain",
-  objectPositionClassName = "object-bottom",
+  /** Focal point when using `cover` below `lg` only (wide screens use `contain`). */
+  objectPositionClassName = "max-lg:object-[center_68%]",
 }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
 
@@ -35,16 +37,20 @@ export function HeroVideoBackground({
         "absolute inset-0 h-full w-full",
         objectFit === "contain"
           ? "object-contain object-center"
-          : cn("object-cover", objectPositionClassName),
+            : cn(
+              "object-cover lg:object-contain lg:object-center",
+              objectPositionClassName,
+            ),
         className,
       )}
       autoPlay
       muted
       loop
       playsInline
-      preload="auto"
+      preload="metadata"
       poster="/assets/jelibon-brand.png"
       aria-hidden
+      disablePictureInPicture
     >
       <source src="/assets/kaplanvideo.mp4" type="video/mp4" />
     </video>

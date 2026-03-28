@@ -9,7 +9,15 @@ export type Dictionary = {
     copy: string;
   };
   nav: Record<
-    "solutions" | "orbital" | "packages" | "combo" | "blog" | "contact",
+    | "solutions"
+    | "orbital"
+    | "packages"
+    | "calculator"
+    | "combo"
+    | "testimonials"
+    | "blog"
+    | "faq"
+    | "contact",
     string
   >;
   language: {
@@ -87,11 +95,16 @@ export type Dictionary = {
     heading: string;
     description: string;
     viewAllPosts: string;
+    listEyebrow: string;
     breadcrumbs: {
       home: string;
       blog: string;
     };
-    categoryLabelsByName: Record<string, string>;
+    categoryLabelsByKey: {
+      strategy: string;
+      performance: string;
+      compliance: string;
+    };
   };
   footer: {
     heading: string;
@@ -139,8 +152,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       solutions: "Solutions",
       orbital: "Orbit",
       packages: "Packages",
+      calculator: "Estimator",
       combo: "Full suite",
+      testimonials: "Reviews",
       blog: "Blog",
+      faq: "FAQ",
       contact: "Contact",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
@@ -363,11 +379,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Notes on performance, automation, and brand safety—built for teams shipping in competitive markets.",
       viewAllPosts: "View all posts",
+      listEyebrow: "Insights",
       breadcrumbs: { home: "Home", blog: "Blog" },
-      categoryLabelsByName: {
-        Strategy: "Strategy",
-        Performance: "Performance",
-        Compliance: "Compliance",
+      categoryLabelsByKey: {
+        strategy: "Strategy",
+        performance: "Performance",
+        compliance: "Compliance",
       },
     },
     footer: {
@@ -450,8 +467,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       solutions: "Çözümler",
       orbital: "Yörünge",
       packages: "Paketler",
+      calculator: "Hesaplayıcı",
       combo: "Eksiksiz paket",
+      testimonials: "Referanslar",
       blog: "Blog",
+      faq: "SSS",
       contact: "İletişim",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
@@ -678,11 +698,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Performans, otomasyon ve marka güvenliği üzerine notlar—rekabetçi pazarlarda ilerleyen ekipler için.",
       viewAllPosts: "Tüm yazıları gör",
+      listEyebrow: "İçgörüler",
       breadcrumbs: { home: "Ana Sayfa", blog: "Blog" },
-      categoryLabelsByName: {
-        Strategy: "Strateji",
-        Performance: "Performans",
-        Compliance: "Uyumluluk",
+      categoryLabelsByKey: {
+        strategy: "Strateji",
+        performance: "Performans",
+        compliance: "Uyumluluk",
       },
     },
     footer: {
@@ -766,8 +787,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       solutions: "Решения",
       orbital: "Орбита",
       packages: "Пакеты",
+      calculator: "Калькулятор",
       combo: "Полный комплект",
+      testimonials: "Отзывы",
       blog: "Блог",
+      faq: "FAQ",
       contact: "Контакты",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
@@ -994,11 +1018,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Заметки о производительности, автоматизации и бренд-безопасности—для команд, работающих в конкурентных рынках.",
       viewAllPosts: "Все статьи",
+      listEyebrow: "Инсайты",
       breadcrumbs: { home: "Главная", blog: "Блог" },
-      categoryLabelsByName: {
-        Strategy: "Стратегия",
-        Performance: "Эффективность",
-        Compliance: "Соответствие",
+      categoryLabelsByKey: {
+        strategy: "Стратегия",
+        performance: "Эффективность",
+        compliance: "Соответствие",
       },
     },
     footer: {
