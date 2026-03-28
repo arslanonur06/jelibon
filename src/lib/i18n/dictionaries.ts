@@ -9,7 +9,15 @@ export type Dictionary = {
     copy: string;
   };
   nav: Record<
-    "solutions" | "orbital" | "packages" | "combo" | "blog" | "contact",
+    | "solutions"
+    | "orbital"
+    | "packages"
+    | "calculator"
+    | "combo"
+    | "testimonials"
+    | "blog"
+    | "faq"
+    | "contact",
     string
   >;
   language: {
@@ -144,8 +152,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       solutions: "Solutions",
       orbital: "Orbit",
       packages: "Packages",
+      calculator: "Estimator",
       combo: "Full suite",
+      testimonials: "Reviews",
       blog: "Blog",
+      faq: "FAQ",
       contact: "Contact",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
@@ -456,8 +467,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       solutions: "Çözümler",
       orbital: "Yörünge",
       packages: "Paketler",
+      calculator: "Hesaplayıcı",
       combo: "Eksiksiz paket",
+      testimonials: "Referanslar",
       blog: "Blog",
+      faq: "SSS",
       contact: "İletişim",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
@@ -773,8 +787,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       solutions: "Решения",
       orbital: "Орбита",
       packages: "Пакеты",
+      calculator: "Калькулятор",
       combo: "Полный комплект",
+      testimonials: "Отзывы",
       blog: "Блог",
+      faq: "FAQ",
       contact: "Контакты",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },

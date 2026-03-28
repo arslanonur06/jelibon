@@ -68,7 +68,7 @@ export function HeroSection() {
         </div>
 
         <div className="order-1 flex flex-col gap-6 lg:order-2">
-          <div className="glass-panel relative rounded-3xl border border-white/12 bg-white/[0.06] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset] backdrop-blur-2xl sm:p-8">
+          <div className="glass-panel relative rounded-3xl border border-white/12 p-6 sm:p-8">
             <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[#FF69B4]/20 blur-2xl" />
             <div className="absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-[#00D4FF]/15 blur-3xl" />
             <p className="font-display text-sm font-semibold uppercase tracking-widest text-[#C4B5FD]">

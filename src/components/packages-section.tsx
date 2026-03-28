@@ -52,9 +52,11 @@ export function PackagesSection() {
             <a
               key={pkg.id}
               href={`#pkg-${pkg.id}`}
-              className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-xs font-medium text-zinc-200 shadow-sm backdrop-blur-sm transition hover:border-[#FF69B4]/45 hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF69B4]"
+              className="inline-flex shrink-0 items-center rounded-full border border-white/20 bg-[#12121f] px-3 py-1.5 text-xs font-medium text-white shadow-sm transition hover:border-[#FF69B4]/55 hover:bg-[#1a1a2e] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF69B4]"
             >
-              {dict.packages.serviceNavLabelsById[pkg.id] ?? pkg.title}
+              <span className="relative z-[1] select-none">
+                {dict.packages.serviceNavLabelsById[pkg.id] ?? pkg.title}
+              </span>
             </a>
           ))}
         </nav>

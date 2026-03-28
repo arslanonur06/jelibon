@@ -73,7 +73,7 @@ export function DockTabs({ items, className }: DockTabsProps) {
     <div
       className={
         className ??
-        "flex items-end gap-0.5 rounded-2xl border border-white/[0.12] bg-white/[0.06] px-1.5 py-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.25)] backdrop-blur-2xl sm:gap-1 sm:px-2 sm:py-2"
+        "flex items-end gap-0.5 rounded-2xl border border-white/[0.12] bg-[#0c0c18]/92 px-1.5 py-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.25)] sm:gap-1 sm:px-2 sm:py-2"
       }
     >
       {items.map((item) => (
