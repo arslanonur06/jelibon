@@ -1,18 +1,13 @@
 import { NextResponse } from "next/server";
+import { getGoogleSiteVerification } from "@/constants";
 
 /**
  * Search Console HTML-file verification at `/google77535185e011a25b.html` (site root, e.g. https://jelibon.app/...).
  * Keep this route after verification succeeds — Google rechecks the token periodically.
- * Token source: `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (same as `metadata.verification.google` in layout).
+ * Token: `getGoogleSiteVerification()` (env override or default; same as layout metadata).
  */
 export async function GET() {
-  const token = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
-  if (!token) {
-    return new NextResponse(
-      "Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION to the value from Search Console (HTML tag / downloaded file meta content).",
-      { status: 503, headers: { "Content-Type": "text/plain; charset=utf-8" } },
-    );
-  }
+  const token = getGoogleSiteVerification();
 
   const safe = token
     .replace(/&/g, "&amp;")

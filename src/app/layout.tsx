@@ -7,7 +7,11 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteJsonLd } from "@/components/site-json-ld";
-import { DEFAULT_OG_IMAGE_PATH, getSiteUrl } from "@/constants";
+import {
+  DEFAULT_OG_IMAGE_PATH,
+  getGoogleSiteVerification,
+  getSiteUrl,
+} from "@/constants";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 const orbitron = Orbitron({
@@ -22,10 +26,8 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const googleSiteVerification =
-  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
-
 const siteUrl = getSiteUrl();
+const googleSiteVerification = getGoogleSiteVerification();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -55,9 +57,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  ...(googleSiteVerification
-    ? { verification: { google: googleSiteVerification } }
-    : {}),
+  verification: { google: googleSiteVerification },
 };
 
 export const dynamic = "force-dynamic";

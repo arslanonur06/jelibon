@@ -26,6 +26,15 @@ export function getSiteUrl(): string {
   return DEFAULT_SITE_URL;
 }
 
+/** Google Search Console HTML-tag token; override with `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`. */
+const DEFAULT_GOOGLE_SITE_VERIFICATION =
+  "ybIp6HG1Ki5aaPCkyL0sLs9TfBdfc_LePqxJ1oEL46c";
+
+export function getGoogleSiteVerification(): string {
+  const fromEnv = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+  return fromEnv || DEFAULT_GOOGLE_SITE_VERIFICATION;
+}
+
 /** Default Open Graph image path (file lives under `public/`). */
 export const DEFAULT_OG_IMAGE_PATH = "/assets/jelibon-brand.png";
 
