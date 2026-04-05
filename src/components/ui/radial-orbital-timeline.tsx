@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Image from "next/image";
 import {
   ArrowRight,
@@ -28,6 +28,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n/locales";
 import { DICTIONARIES } from "@/lib/i18n/dictionaries";
+
+/** Degrees per second — keep low to avoid hectic motion and reduce layout thrash from frequent setState. */
+const ORBIT_ROTATION_DPS = 2;
+/** How often we commit rotation to React state (ms). Slower tick + smaller steps = smoother perceived orbit. */
+const ORBIT_TICK_MS = 200;
 
 interface TimelineItem {
   id: number;
@@ -135,13 +140,13 @@ export default function RadialOrbitalTimeline({
     let rotationTimer: ReturnType<typeof setInterval>;
 
     if (autoRotate && viewMode === "orbital") {
-      // ~10 updates/s — same angular speed as 0.45°/50ms, less layout thrash / “shaking”.
+      const step = (ORBIT_ROTATION_DPS * ORBIT_TICK_MS) / 1000;
       rotationTimer = setInterval(() => {
         setRotationAngle((prev) => {
-          const newAngle = (prev + 0.9) % 360;
-          return Number(newAngle.toFixed(3));
+          const next = (prev + step) % 360;
+          return Number(next.toFixed(4));
         });
-      }, 100);
+      }, ORBIT_TICK_MS);
     }
 
     return () => {
@@ -240,9 +245,9 @@ export default function RadialOrbitalTimeline({
                 width: TELEGRAM_GLOW_SIZE,
                 height: TELEGRAM_GLOW_SIZE,
                 // Center the glow on the telegram node (nodes use translate(x,y) from the same origin).
-                transform: `translate(${telegramPosition.x - TELEGRAM_GLOW_SIZE / 2}px, ${
+                transform: `translate3d(${telegramPosition.x - TELEGRAM_GLOW_SIZE / 2}px, ${
                   telegramPosition.y - TELEGRAM_GLOW_SIZE / 2
-                }px)`,
+                }px, 0)`,
                 background:
                   "radial-gradient(circle at center, rgba(34,211,238,0.65) 0%, rgba(160,32,240,0.26) 35%, rgba(255,105,180,0.14) 60%, transparent 72%)",
                 zIndex: 60,
@@ -266,10 +271,11 @@ export default function RadialOrbitalTimeline({
               : undefined;
             const hasImage = Boolean(item.iconImage);
 
-            const nodeStyle = {
-              transform: `translate(${position.x}px, ${position.y}px)`,
+            const nodeStyle: CSSProperties = {
+              transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
               zIndex: isExpanded ? 200 : position.zIndex,
               opacity: isExpanded ? 1 : position.opacity,
+              ...(autoRotate ? { willChange: "transform" as const } : {}),
             };
 
             return (
