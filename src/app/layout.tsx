@@ -8,9 +8,16 @@ import { Analytics } from "@vercel/analytics/react";
 import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteJsonLd } from "@/components/site-json-ld";
 import {
+  BRAND_NAME,
   DEFAULT_OG_IMAGE_PATH,
+  FAVICON_PATH,
   getGoogleSiteVerification,
   getSiteUrl,
+  SEO_DEFAULT_DESCRIPTION,
+  SEO_DEFAULT_TITLE,
+  SEO_KEYWORDS,
+  SEO_OG_DESCRIPTION,
+  SEO_TITLE_TEMPLATE,
 } from "@/constants";
 import { getLocale } from "@/lib/i18n/get-locale";
 
@@ -31,32 +38,44 @@ const googleSiteVerification = getGoogleSiteVerification();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Jelibon Marketing | iGaming Growth Türkiye",
-  description:
-    "Premium growth & software for iGaming in Türkiye: Telegram & PornHub traffic, SEO, AI chatbot & Influencer, creative, DMCA, custom software.",
-  keywords: [
-    "iGaming marketing",
-    "Türkiye",
-    "Telegram ads",
-    "iGaming SEO",
-    "PornHub advertising",
-    "iGaming growth",
-  ],
+  title: { default: SEO_DEFAULT_TITLE, template: SEO_TITLE_TEMPLATE },
+  description: SEO_DEFAULT_DESCRIPTION,
+  keywords: [...SEO_KEYWORDS],
+  authors: [{ name: BRAND_NAME, url: siteUrl }],
+  creator: BRAND_NAME,
+  publisher: BRAND_NAME,
+  formatDetection: { email: false, address: false, telephone: false },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
-    title: "Jelibon Marketing | iGaming Growth Türkiye",
-    description:
-      "Dominate iGaming in Türkiye—traffic, SEO, AI, and full-stack growth infrastructure.",
+    title: SEO_DEFAULT_TITLE,
+    description: SEO_OG_DESCRIPTION,
     type: "website",
     url: siteUrl,
-    siteName: "Jelibon Marketing",
+    siteName: BRAND_NAME,
     locale: "en_US",
+    alternateLocale: ["tr_TR", "ru_RU"],
     images: [
       {
         url: DEFAULT_OG_IMAGE_PATH,
-        alt: "Jelibon Marketing",
+        alt: BRAND_NAME,
       },
     ],
   },
+  icons: {
+    icon: [{ url: FAVICON_PATH, type: "image/png" }],
+    apple: [{ url: FAVICON_PATH, type: "image/png" }],
+  },
+  manifest: "/manifest.webmanifest",
   verification: { google: googleSiteVerification },
 };
 

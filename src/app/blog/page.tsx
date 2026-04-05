@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getPostsForLocale } from "@/data/blog";
@@ -8,9 +9,18 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 export const metadata: Metadata = {
-  title: "Blog | Jelibon Marketing",
+  title: "Blog",
   description:
     "Insights on iGaming growth, Telegram performance, AI automation, and brand protection.",
+  keywords: [
+    "iGaming blog",
+    "Telegram marketing",
+    "Telegram Web App",
+    "casino SEO",
+    "deneme bonusu",
+    "Google Search Console",
+    "iGaming compliance",
+  ],
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog | Jelibon Marketing",
@@ -31,6 +41,12 @@ export default function BlogPage() {
 
   return (
     <div className="relative min-h-screen">
+      <BreadcrumbJsonLd
+        items={[
+          { name: dict.blog.breadcrumbs.home, path: "/" },
+          { name: dict.blog.breadcrumbs.blog, path: "/blog" },
+        ]}
+      />
       <SiteHeader />
       <main className="pb-16 pt-32 sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">

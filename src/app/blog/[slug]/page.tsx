@@ -6,7 +6,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getAllSlugs, getLocalizedPost } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import { DEFAULT_OG_IMAGE_PATH } from "@/constants";
+import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld";
+import { BlogPostJsonLd } from "@/components/blog-post-json-ld";
+import { BRAND_NAME, DEFAULT_OG_IMAGE_PATH } from "@/constants";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 type Props = { params: { slug: string } };
@@ -24,15 +26,17 @@ export function generateMetadata({ params }: Props): Metadata {
   const ogImage = post.coverImage ?? DEFAULT_OG_IMAGE_PATH;
 
   return {
-    title: `${post.title} | Jelibon Marketing`,
+    title: post.title,
     description: post.excerpt,
+    authors: [{ name: BRAND_NAME }],
     alternates: { canonical: path },
     openGraph: {
-      title: post.title,
+      title: `${post.title} | Jelibon Marketing`,
       description: post.excerpt,
       type: "article",
       url: path,
       publishedTime: post.date,
+      modifiedTime: post.date,
       images: [{ url: ogImage, alt: post.title }],
     },
   };
@@ -49,6 +53,20 @@ export default function BlogPostPage({ params }: Props) {
 
   return (
     <div className="relative min-h-screen">
+      <BreadcrumbJsonLd
+        items={[
+          { name: dict.blog.breadcrumbs.home, path: "/" },
+          { name: dict.blog.breadcrumbs.blog, path: "/blog" },
+          { name: post.title, path: `/blog/${params.slug}` },
+        ]}
+      />
+      <BlogPostJsonLd
+        slug={params.slug}
+        title={post.title}
+        description={post.excerpt}
+        datePublished={post.date}
+        coverImage={post.coverImage}
+      />
       <SiteHeader />
       <article className="pb-20 pt-36">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">

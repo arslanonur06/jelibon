@@ -2,6 +2,8 @@ import {
   BRAND_NAME,
   DEFAULT_OG_IMAGE_PATH,
   getSiteUrl,
+  SEO_DEFAULT_DESCRIPTION,
+  SEO_SITE_LANGUAGES,
   TELEGRAM_URL,
 } from "@/constants";
 
@@ -11,6 +13,7 @@ import {
 export function SiteJsonLd() {
   const url = getSiteUrl();
   const logoUrl = `${url}${DEFAULT_OG_IMAGE_PATH}`;
+  const langs = [...SEO_SITE_LANGUAGES];
 
   const graph = [
     {
@@ -18,6 +21,7 @@ export function SiteJsonLd() {
       "@id": `${url}/#organization`,
       name: BRAND_NAME,
       url,
+      description: SEO_DEFAULT_DESCRIPTION,
       logo: { "@type": "ImageObject" as const, url: logoUrl },
       sameAs: [TELEGRAM_URL],
     },
@@ -26,6 +30,8 @@ export function SiteJsonLd() {
       "@id": `${url}/#website`,
       name: BRAND_NAME,
       url,
+      description: SEO_DEFAULT_DESCRIPTION,
+      inLanguage: langs,
       publisher: { "@id": `${url}/#organization` },
     },
   ];

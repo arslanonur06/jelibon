@@ -38,6 +38,42 @@ export function getGoogleSiteVerification(): string {
 /** Default Open Graph image path (file lives under `public/`). */
 export const DEFAULT_OG_IMAGE_PATH = "/assets/jelibon-brand.png";
 
+/** Favicon + PWA chrome icons (distinct from OG card art). */
+export const FAVICON_PATH = "/assets/jelibonbackpng.png";
+
+// ─── SEO copy (layout + fallbacks) ───────────────────────────────────────────
+export const SEO_DEFAULT_TITLE = "Jelibon Marketing | iGaming Growth Türkiye";
+
+export const SEO_DEFAULT_DESCRIPTION =
+  "Premium growth & software for iGaming in Türkiye: Telegram & PornHub traffic, SEO, AI chatbot & Influencer, creative, DMCA, custom software.";
+
+export const SEO_OG_DESCRIPTION =
+  "Dominate iGaming in Türkiye—traffic, SEO, AI, and full-stack growth infrastructure.";
+
+export const SEO_KEYWORDS = [
+  "iGaming marketing",
+  "iGaming Türkiye",
+  "casino marketing Turkey",
+  "Telegram ads iGaming",
+  "Telegram Web App casino",
+  "Telegram mini app onboarding",
+  "iGaming SEO",
+  "deneme bonusu SEO",
+  "Google Search Console iGaming",
+  "PornHub advertising",
+  "iGaming growth agency",
+  "DMCA brand protection",
+  "iGaming influencer marketing",
+  "affiliate growth",
+  "internal linking casino",
+  "topical authority SEO",
+] as const;
+
+/** Child pages use `title` only; layout appends via template. */
+export const SEO_TITLE_TEMPLATE = "%s | Jelibon Marketing";
+
+export const SEO_SITE_LANGUAGES = ["en", "tr", "ru"] as const;
+
 // ─── Colors (matches tailwind.config.ts) ─────────────────────────────────────
 export const COLORS = {
   pink: "#FF69B4",
