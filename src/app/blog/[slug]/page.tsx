@@ -6,7 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getAllSlugs, getLocalizedPost } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import { BreadcrumbJsonLd } from "@/components/breadcrumb-json-ld";
+import { BreadcrumbJsonLd } from "@/components/site-json-ld";
 import { BlogPostJsonLd } from "@/components/blog-post-json-ld";
 import { BRAND_NAME, DEFAULT_OG_IMAGE_PATH } from "@/constants";
 import { getLocale } from "@/lib/i18n/get-locale";

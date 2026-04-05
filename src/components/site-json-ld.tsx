@@ -48,3 +48,41 @@ export function SiteJsonLd() {
     />
   );
 }
+
+export type BreadcrumbJsonLdItem = {
+  name: string;
+  path: string;
+};
+
+type BreadcrumbProps = { items: BreadcrumbJsonLdItem[] };
+
+/**
+ * BreadcrumbList for Google rich results; paths must start with `/`.
+ */
+export function BreadcrumbJsonLd({ items }: BreadcrumbProps) {
+  if (items.length === 0) return null;
+
+  const base = getSiteUrl();
+  const itemListElement = items.map((item, index) => {
+    const path = item.path.startsWith("/") ? item.path : `/${item.path}`;
+    return {
+      "@type": "ListItem" as const,
+      position: index + 1,
+      name: item.name,
+      item: `${base}${path}`,
+    };
+  });
+
+  const payload = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(payload) }}
+    />
+  );
+}
