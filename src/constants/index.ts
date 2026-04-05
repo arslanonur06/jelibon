@@ -11,7 +11,7 @@ export const BRAND_TAGLINE = "Premium growth & software · Türkiye";
 export const TELEGRAM_URL = "https://t.me/jelibonmarketing";
 
 // ─── SEO / metadata (NEXT_PUBLIC_SITE_URL in production; VERCEL_URL on Vercel) ─
-const DEFAULT_SITE_URL = "https://jelibonmarketing.com";
+const DEFAULT_SITE_URL = "https://jelibon.app";
 
 export function getSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
