@@ -3,7 +3,8 @@ import type { BlogPostEntry } from "../types";
 export const googleSearchConsoleIgamingWorkflow2026: BlogPostEntry = {
   slug: "google-search-console-igaming-workflow-2026",
   date: "2026-04-11",
-  coverImage: "/assets/jelibon-brand.png",
+  coverImage:
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=70",
   locales: {
     en: {
       title:

@@ -3,7 +3,8 @@ import type { BlogPostEntry } from "../types";
 export const telegramWebAppOnboarding2026: BlogPostEntry = {
   slug: "telegram-web-app-onboarding-2026",
   date: "2026-04-07",
-  coverImage: "/assets/telegramicon.png",
+  coverImage:
+    "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1400&q=70",
   locales: {
     en: {
       title:
@@ -21,9 +22,9 @@ export const telegramWebAppOnboarding2026: BlogPostEntry = {
     },
     tr: {
       title:
-        "Telegram Web App ve Mini App: Sohbeti Terketmeden Sürtünmesiz Onboarding",
+        "Telegram Web App ve Mini App: Sohbeti Terk Etmeden Sürtünmesiz Onboarding",
       excerpt:
-        "WebApp düğmeleri, güvenli bağlam ve sığ navigasyon yığını; KYC-hafif adımlar, promolar ve destek için tamamlanma oranını nasıl artırır—Telegram UX sözleşmesi içinde kalırken.",
+        "WebApp düğmeleri, güvenli bağlam ve sade navigasyon; KYC-hafif adımlar, promolar ve destekte tamamlanma oranını Telegram UX sözleşmesi içinde nasıl artırır?",
       readTime: "8 dk okuma",
       categoryKey: "performance",
       body: [

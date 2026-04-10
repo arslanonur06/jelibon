@@ -3,7 +3,8 @@ import type { BlogPostEntry } from "../types";
 export const telegramOrganicPaidUnified2026: BlogPostEntry = {
   slug: "telegram-organic-paid-unified-2026",
   date: "2026-04-10",
-  coverImage: "/assets/orbitarka.jpg",
+  coverImage:
+    "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1400&q=70",
   locales: {
     en: {
       title:

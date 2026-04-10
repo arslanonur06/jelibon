@@ -29,10 +29,10 @@ import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n/locales";
 import { DICTIONARIES } from "@/lib/i18n/dictionaries";
 
-/** Degrees per second — keep low to avoid hectic motion and reduce layout thrash from frequent setState. */
-const ORBIT_ROTATION_DPS = 2;
-/** How often we commit rotation to React state (ms). Slower tick + smaller steps = smoother perceived orbit. */
-const ORBIT_TICK_MS = 200;
+/** Degrees per second — tuned for smoother/faster perceived motion. */
+const ORBIT_ROTATION_DPS = 5;
+/** Update cadence (ms). Keeps motion fluid without excessive rerenders. */
+const ORBIT_TICK_MS = 80;
 
 interface TimelineItem {
   id: number;
@@ -192,7 +192,7 @@ export default function RadialOrbitalTimeline({
 
   const TELEGRAM_NETWORK_NODE_ID = 2;
   const TELEGRAM_ADS_NODE_ID = 1;
-  const TELEGRAM_GLOW_SIZE = 520;
+  const TELEGRAM_GLOW_SIZE = 420;
   const totalNodes = timelineData.length;
   const telegramIndex = timelineData.findIndex(
     (item) => item.id === TELEGRAM_NETWORK_NODE_ID
@@ -240,7 +240,7 @@ export default function RadialOrbitalTimeline({
           {telegramPosition && shouldShowTelegramFill && (
             <div
               aria-hidden
-              className="pointer-events-none absolute rounded-full blur-2xl opacity-90"
+              className="pointer-events-none absolute rounded-full blur-xl opacity-70"
               style={{
                 width: TELEGRAM_GLOW_SIZE,
                 height: TELEGRAM_GLOW_SIZE,

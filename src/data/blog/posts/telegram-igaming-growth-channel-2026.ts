@@ -3,7 +3,8 @@ import type { BlogPostEntry } from "../types";
 export const telegramIgamingGrowthChannel2026: BlogPostEntry = {
   slug: "telegram-igaming-growth-channel-2026",
   date: "2026-04-06",
-  coverImage: "/assets/telegramicon.png",
+  coverImage:
+    "https://images.unsplash.com/photo-1611605698335-8b1569810432?auto=format&fit=crop&w=1400&q=70",
   locales: {
     en: {
       title: "Why Telegram Became the Default Growth Layer for iGaming in 2026",

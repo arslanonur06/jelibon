@@ -10,18 +10,32 @@ export const BRAND_TAGLINE = "Premium growth & software · Türkiye";
 // ─── Links ───────────────────────────────────────────────────────────────────
 export const TELEGRAM_URL = "https://t.me/jelibonmarketing";
 
-// ─── SEO / metadata (NEXT_PUBLIC_SITE_URL in production; VERCEL_URL on Vercel) ─
+// ─── SEO / metadata ─────────────────────────────────────────────────────────
+// Prefer NEXT_PUBLIC_SITE_URL in Vercel env so sitemap / canonical / OG match GSC property.
+// On production without it, VERCEL_URL is often *.vercel.app (wrong for jelibon.app indexing).
 const DEFAULT_SITE_URL = "https://jelibon.app";
+
+function toHttpsOrigin(raw: string): string {
+  const host = raw.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  return `https://${host}`;
+}
 
 export function getSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (explicit) return explicit.replace(/\/$/, "");
 
-  const vercel = process.env.VERCEL_URL?.trim();
-  if (vercel) {
-    const host = vercel.replace(/^https?:\/\//, "").replace(/\/$/, "");
-    return `https://${host}`;
+  const vercelEnv = process.env.VERCEL_ENV;
+  const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  const deploymentHost = process.env.VERCEL_URL?.trim();
+
+  if (vercelEnv === "production") {
+    if (productionHost) return toHttpsOrigin(productionHost);
+    if (deploymentHost) return toHttpsOrigin(deploymentHost);
+    return DEFAULT_SITE_URL;
   }
+
+  if (deploymentHost) return toHttpsOrigin(deploymentHost);
+  if (productionHost) return toHttpsOrigin(productionHost);
 
   return DEFAULT_SITE_URL;
 }

@@ -3,7 +3,8 @@ import type { BlogPostEntry } from "../types";
 export const internalLinkingHubSpokeCasino2026: BlogPostEntry = {
   slug: "internal-linking-hub-spoke-casino-2026",
   date: "2026-04-12",
-  coverImage: "/assets/orbitarka.jpg",
+  coverImage:
+    "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=1400&q=70",
   locales: {
     en: {
       title:

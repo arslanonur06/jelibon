@@ -3,7 +3,8 @@ import type { BlogPostEntry } from "../types";
 export const denemeBonusuSeoTurkey2026: BlogPostEntry = {
   slug: "deneme-bonusu-seo-turkey-2026",
   date: "2026-04-09",
-  coverImage: "/assets/haribo.jpg",
+  coverImage:
+    "https://images.unsplash.com/photo-1606166325683-e6deb697d301?auto=format&fit=crop&w=1400&q=70",
   locales: {
     en: {
       title:
