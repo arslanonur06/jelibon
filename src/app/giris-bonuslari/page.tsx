@@ -1,0 +1,73 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { TELEGRAM_URL } from "@/constants";
+import { bonusBrandGuides, bonusHeadKeywords } from "@/data/bonus-guides";
+
+export const metadata: Metadata = {
+  title: "Guncel Giris Bonusu Rehberi",
+  description:
+    "Guncel giris bonus sartlari, deneme bonusu/freespin, yatirimsiz bonus ve ucak oyunu odakli bilgilendirme rehberi. Tum yonlendirme kanali Telegram: @jelibonmarketing.",
+  keywords: [
+    "guncel giris bonus sartlari",
+    "deneme bonusu freespin",
+    "dogum gunu bonusu",
+    "yatirimsiz bonus",
+    "ucak oyunu bonus",
+    ...bonusHeadKeywords,
+  ],
+  alternates: { canonical: "/giris-bonuslari" },
+  openGraph: {
+    title: "Guncel Giris Bonusu Rehberi | Jelibon Marketing",
+    description:
+      "Marka bazli bonus bilgi sayfalari: giris, bonus kosullari, guncel notlar ve tum destek yonlendirmesi Telegram hesabinda.",
+    type: "website",
+    url: "/giris-bonuslari",
+  },
+};
+
+export default function GirisBonuslariPage() {
+  return (
+    <div className="relative min-h-screen">
+      <SiteHeader />
+      <main className="pb-16 pt-32 sm:pb-20 sm:pt-36">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="font-display text-xs uppercase tracking-[0.35em] text-[#E9A8FF]/90">
+            Bonus Rehberleri
+          </p>
+          <h1 className="mt-3 font-display text-4xl font-semibold text-white sm:text-5xl">
+            Guncel Giris Bonusu Sartlari ve Marka Rehberleri
+          </h1>
+          <p className="mt-4 max-w-3xl text-zinc-300">
+            Bu bolum bilgilendirme amaclidir. Her marka icin guncel bonus
+            kosullari, deneme/freespin, yatirimsiz bonus ve benzeri kampanya
+            basliklarini tek sayfada ozetliyoruz. Tum yonlendirme ve destek
+            akislarimiz Telegram hesabimiz uzerinden ilerler.
+          </p>
+          <Link
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-5 py-3 text-sm font-semibold text-white"
+          >
+            Telegram: @jelibonmarketing
+          </Link>
+
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {bonusBrandGuides.map((brand) => (
+              <Link
+                key={brand.slug}
+                href={`/giris-bonuslari/${brand.slug}`}
+                className="glass-panel rounded-2xl px-4 py-3 text-zinc-100 transition hover:border-[#A78BFA]/40 hover:bg-white/[0.03]"
+              >
+                {brand.name} giris bonus rehberi
+              </Link>
+            ))}
+          </div>
+        </div>
+      </main>
+      <SiteFooter />
+    </div>
+  );
+}

@@ -40,6 +40,8 @@ export function HeroVideoBackground({
         src="/assets/webseker.gif"
         alt=""
         aria-hidden
+        decoding="async"
+        fetchPriority="low"
         className={cn(
           baseClass(objectFit, objectPositionClassName, className),
           "hidden md:block",
@@ -50,6 +52,7 @@ export function HeroVideoBackground({
       {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
       <video
         src="/assets/kaplanvideo.mp4"
+        poster="/assets/jelibon-brand.png"
         className={cn(
           baseClass(objectFit, objectPositionClassName, className),
           "block md:hidden",
@@ -58,7 +61,7 @@ export function HeroVideoBackground({
         muted
         loop
         playsInline
-        preload="auto"
+        preload="metadata"
         aria-hidden
       />
     </>

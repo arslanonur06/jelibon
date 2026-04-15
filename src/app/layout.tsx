@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { DM_Sans, Orbitron } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SiteGradientBackground } from "@/components/site-gradient-background";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from "@vercel/analytics/react";
 import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteJsonLd } from "@/components/site-json-ld";
 import {
@@ -21,10 +20,16 @@ import {
 } from "@/constants";
 import { getLocale } from "@/lib/i18n/get-locale";
 
+const VercelAnalytics = dynamic(
+  () => import("@vercel/analytics/react").then((m) => m.Analytics),
+  { ssr: false },
+);
+
 const orbitron = Orbitron({
   subsets: ["latin"],
   variable: "--font-orbitron",
   display: "swap",
+  preload: false,
 });
 
 const dmSans = DM_Sans({
@@ -71,6 +76,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_DEFAULT_TITLE,
+    description: SEO_OG_DESCRIPTION,
+    images: [DEFAULT_OG_IMAGE_PATH],
+  },
   icons: {
     icon: [{ url: FAVICON_PATH, type: "image/png" }],
     apple: [{ url: FAVICON_PATH, type: "image/png" }],
@@ -78,8 +89,6 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
   verification: { google: googleSiteVerification },
 };
-
-export const dynamic = "force-dynamic";
 
 export default function RootLayout({
   children,
@@ -102,11 +111,9 @@ export default function RootLayout({
       >
         <SiteJsonLd />
         <SiteAnalytics />
-        <ThemeProvider>
-          <SiteGradientBackground />
-          <div className="relative z-10">{children}</div>
-        </ThemeProvider>
-        <Analytics />
+        <SiteGradientBackground />
+        <div className="relative z-10">{children}</div>
+        <VercelAnalytics />
       </body>
     </html>
   );

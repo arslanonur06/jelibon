@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { getAllSlugs, getLocalizedPost } from "@/data/blog";
+import { getAllSlugs, getLocalizedPost, getPostsForLocale } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
 import { BlogPostJsonLd } from "@/components/blog-post-json-ld";
@@ -50,6 +50,24 @@ export default function BlogPostPage({ params }: Props) {
   const dict = getDictionary(locale);
   const dateLocale =
     locale === "tr" ? "tr-TR" : locale === "ru" ? "ru-RU" : "en-US";
+  const relatedHeading =
+    locale === "tr"
+      ? "İlgili Yazılar"
+      : locale === "ru"
+        ? "Похожие статьи"
+        : "Related Posts";
+  const relatedCta =
+    locale === "tr" ? "Yazıyı oku" : locale === "ru" ? "Читать" : "Read post";
+  const allLocalizedPosts = getPostsForLocale(locale).filter(
+    (entry) => entry.slug !== post.slug,
+  );
+  const sameCategoryPosts = allLocalizedPosts.filter(
+    (entry) => entry.categoryKey === post.categoryKey,
+  );
+  const fallbackPosts = allLocalizedPosts.filter(
+    (entry) => entry.categoryKey !== post.categoryKey,
+  );
+  const relatedPosts = [...sameCategoryPosts, ...fallbackPosts].slice(0, 3);
 
   return (
     <div className="relative min-h-screen">
@@ -122,6 +140,38 @@ export default function BlogPostPage({ params }: Props) {
               ))}
             </div>
           </div>
+          {relatedPosts.length > 0 ? (
+            <section className="mt-12">
+              <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
+                {relatedHeading}
+              </h2>
+              <div className="mt-6 grid gap-4">
+                {relatedPosts.map((relatedPost) => (
+                  <Link
+                    key={relatedPost.slug}
+                    href={`/blog/${relatedPost.slug}`}
+                    className="glass-panel rounded-2xl p-5 transition hover:border-[#A78BFA]/40 hover:bg-white/[0.03]"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
+                      {dict.blog.categoryLabelsByKey[relatedPost.categoryKey]}
+                    </p>
+                    <h3 className="mt-2 text-lg font-semibold text-white">
+                      {relatedPost.title}
+                    </h3>
+                    <p className="mt-2 line-clamp-2 text-sm text-zinc-300">
+                      {relatedPost.excerpt}
+                    </p>
+                    <div className="mt-3 flex items-center justify-between text-xs text-zinc-400">
+                      <span>{relatedPost.readTime}</span>
+                      <span className="font-semibold text-[#F9A8D4]">
+                        {relatedCta} →
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
         </div>
       </article>
       <SiteFooter />

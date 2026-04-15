@@ -144,7 +144,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
   en: {
     header: { telegram: "Telegram" },
     marquee: {
-      copy: "Jelibon Marketing · iGaming acquisition · Telegram Ads & network · PornHub · SEO · AI chatbot & influencer · DMCA · Creative studio · Custom dev · Scale in Türkiye · ",
+      copy:
+        "Jelibon Marketing · iGaming acquisition · Telegram Ads & network · PornHub · SEO · freespin & no-deposit SERPs · birthday bonus · crash / Aviator · AI chatbot & influencer · DMCA · Creative · Custom dev · Scale in Türkiye · ",
     },
     nav: {
       solutions: "Solutions",
@@ -165,7 +166,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "Traffic acquisition through long-term SEO, Telegram & PornHub; AI automation, AI Influencer, creative studio, DMCA, and custom software—built for the Turkish market.",
       viewPackages: "View packages",
       readBlog: "Read the blog",
-      tags: "Telegram · PornHub · SEO · AI · DMCA",
+      tags:
+        "Freespin · no-deposit · birthday bonus · crash / Aviator SEO · Telegram · PornHub",
       whyUsHeading: "Why us",
       whyUsBullets: [
         "iGaming-focused expertise & multi-channel traffic.",
@@ -270,6 +272,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           features: [
             "SEO blog site setup",
             "Keyword targeting strategy",
+            "Clusters for bonus & game intent (freespins, no-deposit, birthday promos, crash/Aviator-style topics)",
             "Content production",
             "Backlink structure",
           ],
@@ -439,6 +442,18 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           answer:
             "We operate exclusively in the iGaming vertical. Our creative, compliance, and technical work is built around casino and betting norms—not adapted from e-commerce playbooks. That specialisation cuts onboarding time and improves every KPI from day one.",
         },
+        {
+          question:
+            'Do you support SEO for competitive Turkish queries like "deneme bonusu"?',
+          answer:
+            "Yes. Our SEO & blog network is built for competitive iGaming SERPs in Türkiye: intent mapping, hub-and-spoke architecture, and sustained publishing—always within your brand and compliance rules. We treat these topics as commercial-intent landscapes, not spam farms.",
+        },
+        {
+          question:
+            "Do you cover high-volume Turkish bonus and game SERPs—freespins, birthday bonuses, no-deposit offers, and crash / 'plane' games like Aviator?",
+          answer:
+            "Yes. We model those demand clusters with hub pages, supporting articles, and internal linking—written in your approved tone with compliance guardrails and editorial quality, so organic growth compounds without thin affiliate spam.",
+        },
       ] as const,
     },
     calculator: {
@@ -458,7 +473,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
   tr: {
     header: { telegram: "Telegram" },
     marquee: {
-      copy: "Jelibon Marketing · iGaming büyümesi · Telegram Reklamları & ağ · PornHub · SEO · AI sohbet botu & influencer · DMCA · Kreatif stüdyo · Özel geliştirme · Türkiye'de ölçek · ",
+      copy:
+        "Jelibon Marketing · iGaming büyümesi · deneme bonusu freespin · doğum günü bonusu · yatırımsız bonus · uçak oyunu · Aviator/crash SEO · Telegram & ağ · PornHub · AI · DMCA · Kreatif · Özel yazılım · Türkiye'de ölçek · ",
     },
     nav: {
       solutions: "Çözümler",
@@ -476,10 +492,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       tagline: "Türkiye'ye özel büyüme & yazılım",
       textColorLines: ["Trafik.", "Ölçek.", "Kazan."],
       description:
-        "Uzun vadeli SEO, Telegram ve PornHub ile trafik kazanımı; yapay zeka otomasyonu, AI influencer, kreatif stüdyo, DMCA ve özel yazılım—Türkiye pazarına uygun şekilde tasarlandı.",
+        "Deneme bonusu freespin, doğum günü bonusu, yatırımsız bonus ve uçak oyunu (Aviator/crash) gibi yüksek hacimli aramalarda SEO; Telegram ve PornHub ile trafik, AI otomasyonu, influencer, kreatif, DMCA ve özel yazılım—Türkiye pazarına göre.",
       viewPackages: "Paketleri görüntüle",
       readBlog: "Blogu oku",
-      tags: "Telegram · PornHub · SEO · AI · DMCA",
+      tags:
+        "Deneme bonusu freespin · doğum günü bonusu · yatırımsız bonus · uçak oyunu · SEO · Telegram",
       whyUsHeading: "Neden Biz",
       whyUsBullets: [
         "iGaming odaklı uzmanlık & çok kanallı trafik.",
@@ -588,6 +605,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           features: [
             "SEO blog site kurulumu",
             "Anahtar kelime hedefleme stratejisi",
+            "Bonus ve oyun niyeti kümeleri (deneme bonusu freespin, yatırımsız/doğum günü bonusu, uçak/crash)",
             "İçerik üretimi",
             "Backlink yapısı",
           ],
@@ -757,6 +775,18 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           answer:
             "Yalnızca iGaming sektöründe faaliyet gösteriyoruz. Kreatif, uyumluluk ve teknik çalışmalarımız casino ve bahis normları üzerine inşa edilmiştir—e-ticaret playbook'larından uyarlanmamıştır. Bu uzmanlaşma, onboarding süresini kısaltır ve birinci günden itibaren tüm KPI'ları iyileştirir.",
         },
+        {
+          question:
+            '"Deneme bonusu" gibi yüksek rekabetli Türkçe aramalarda SEO çalışması yapıyor musunuz?',
+          answer:
+            "Evet. SEO ve blog ağımız Türkiye'deki rekabetçi iGaming SERP'leri için tasarlandı: arama niyeti haritalama, hub–spoke mimarisi ve sürdürülebilir yayıncılık—markanız ve uyumluluk kurallarınız çerçevesinde. Bu sorguları ticari niyet alanları olarak ele alır, kalıcı otorite inşa etmeyi hedefleriz.",
+        },
+        {
+          question:
+            "Deneme bonusu freespin, doğum günü bonusu, yatırımsız bonus ve uçak oyunu (Aviator/crash) gibi çok aranan konularda SEO desteği veriyor musunuz?",
+          answer:
+            "Evet. Bu tür yüksek hacimli aramaları onayladığınız mesaj ve uyumluluk çerçevesinde cluster'lar halinde planlarız: hub sayfalar, destekleyici içerikler ve iç bağlantı. Amaç; E-E-A-T ve marka diliyle sürdürülebilir sıralama kazanmak, düşük kaliteli affiliate spam’ine düşmeden organik büyümeyi ölçeklemektir.",
+        },
       ] as const,
     },
     calculator: {
@@ -777,7 +807,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon Marketing · iGaming · Реклама в Telegram и сеть каналов · PornHub · SEO · AI-чатбот и инфлюенсер · DMCA · Креативная студия · Индивидуальная разработка · Масштаб в Турции · ",
+        "Jelibon Marketing · iGaming · SEO под турецкий спрос: фриспины, бездепозит, день рождения, crash/Aviator · Telegram и сеть · PornHub · AI · DMCA · Креатив · Индивидуальная разработка · Турция · ",
     },
     nav: {
       solutions: "Решения",
@@ -798,7 +828,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "Привлечение трафика через долгосрочное SEO, Telegram и PornHub; AI-автоматизация, AI-influencer, креативная студия, DMCA и кастомная разработка—для турецкого рынка.",
       viewPackages: "Смотреть пакеты",
       readBlog: "Читать блог",
-      tags: "Telegram · PornHub · SEO · AI · DMCA",
+      tags:
+        "Фриспины · бездепозит · день рождения · crash/Aviator · SEO · Telegram · PornHub",
       whyUsHeading: "Почему мы",
       whyUsBullets: [
         "Экспертиза в iGaming и многоканальный трафик.",
@@ -907,6 +938,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           features: [
             "Настройка SEO-блогов",
             "Стратегия таргетинга по ключам",
+            "Кластеры под бонусные и игровые интенты (фриспины, бездепозит, birthday, crash/Aviator)",
             "Производство контента",
             "Структура бэклинков",
           ],
@@ -1075,6 +1107,18 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           question: "Чем Jelibon отличается от обычного performance-агентства?",
           answer:
             "Мы работаем исключительно в вертикали iGaming. Наши креативы, комплаенс и техническая часть построены на нормах казино и ставок — а не адаптированы из e-commerce. Эта специализация сокращает время онбординга и улучшает все KPI с первого дня.",
+        },
+        {
+          question:
+            "Помогаете ли вы с SEO под конкурентные турецкие запросы (вроде бонусных и триал-кластеров)?",
+          answer:
+            "Да. Наша SEO- и блог-сеть заточена под конкурентные iGaming SERP в Турции: карта интентов, структура хабов и кластеров и регулярная публикация — строго в рамках вашего бренда и комплаенса. Мы работаем с такими нишами как с высоким коммерческим спросом, без массового спама.",
+        },
+        {
+          question:
+            "Делаете ли SEO под массовые турецкие запросы: фриспины к демо-бонусу, бездепозит, день рождения, crash/Aviator («самолёт»)?",
+          answer:
+            "Да. Мы выстраиваем коммерческие кластеры в рамках вашего tone of voice и комплаенса: хабы, поддерживающие статьи и перелинковка — с упором на устойчивый органический рост и качество текста, а не на тонкий doorway-спам.",
         },
       ] as const,
     },

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogEntries } from "@/data/blog/entries";
 import { getSiteUrl } from "@/constants";
+import { bonusBrandGuides } from "@/data/bonus-guides";
 
 const MS_PER_DAY = 86_400_000;
 
@@ -37,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.95,
     },
+    {
+      url: `${base}/giris-bonuslari`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.93,
+    },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogEntries.map((entry) => {
@@ -53,5 +60,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticRoutes, ...blogRoutes];
+  const bonusRoutes: MetadataRoute.Sitemap = bonusBrandGuides.map((entry) => ({
+    url: `${base}/giris-bonuslari/${entry.slug}`,
+    lastModified: now,
+    changeFrequency: "daily",
+    priority: 0.82,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...bonusRoutes];
 }

@@ -59,20 +59,59 @@ export const FAVICON_PATH = "/assets/jelibonbackpng.png";
 export const SEO_DEFAULT_TITLE = "Jelibon Marketing | iGaming Growth Türkiye";
 
 export const SEO_DEFAULT_DESCRIPTION =
-  "Premium growth & software for iGaming in Türkiye: Telegram & PornHub traffic, SEO, AI chatbot & Influencer, creative, DMCA, custom software.";
+  "Premium growth & software for iGaming in Türkiye: Telegram & PornHub traffic, SEO for high-intent Turkish SERPs (deneme bonusu & freespin, doğum günü bonusu, yatırımsız bonus, uçak/crash oyunları), AI chatbot & Influencer, creative, DMCA, custom software.";
 
 export const SEO_OG_DESCRIPTION =
-  "Dominate iGaming in Türkiye—traffic, SEO, AI, and full-stack growth infrastructure.";
+  "iGaming in Türkiye—traffic + topical SEO for bonus & game demand (freespin, no-deposit, birthday promos, Aviator/crash), AI, and full-stack growth.";
+
+/** Homepage titles (layout `SEO_TITLE_TEMPLATE` appends “| Jelibon Marketing”). */
+export const SEO_HOME_TITLE_TR = "Deneme Bonusu SEO & iGaming Büyümesi";
+
+export const SEO_HOME_DESCRIPTION_TR =
+  "Türkiye iGaming SEO: deneme bonusu freespin, doğum günü bonusu, yatırımsız bonus, uçak oyunu (Aviator/crash) gibi yüksek hacimli sorgular; Telegram & PornHub trafik, AI, kreatif, DMCA ve özel yazılım—tek çatı altında büyüme.";
+
+export const SEO_HOME_TITLE_EN = "Trial-Bonus SEO & iGaming Growth Türkiye";
+
+export const SEO_HOME_DESCRIPTION_EN =
+  "iGaming growth in Türkiye: SEO for high-volume Turkish bonus & game intent (freespins, birthday bonuses, no-deposit, crash/Aviator-style queries), plus Telegram & PornHub, AI, creative, DMCA, and custom software.";
+
+export const SEO_HOME_TITLE_RU = "SEO под конкурентные iGaming-запросы в Турции";
+
+export const SEO_HOME_DESCRIPTION_RU =
+  "Рост iGaming в Турции: SEO под массовый спрос по бонусам и играм (фриспины, бездепозит, день рождения, crash/Aviator), трафик Telegram и PornHub, AI, креатив, DMCA и кастомная разработка.";
 
 export const SEO_KEYWORDS = [
   "iGaming marketing",
   "iGaming Türkiye",
+  "casino SEO Türkiye",
+  "deneme bonusu",
+  "deneme bonusu freespin",
+  "deneme bonusu SEO",
+  "freespin bonusu",
+  "freespin",
+  "doğum günü bonusu",
+  "dogum gunu bonusu",
+  "yatırımsız bonus",
+  "yatirimsiz bonus",
+  "çevrimsiz bonus",
+  "cevrimsiz bonus",
+  "hoş geldin bonusu",
+  "hosgeldin bonusu",
+  "casino bonusları",
+  "slot bonusu",
+  "uçak oyunu",
+  "ucak oyunu",
+  "aviator oyunu",
+  "crash oyunu",
+  "yüksek niyetli casino sorguları",
+  "deneme bonusu pazarlama",
+  "trial bonus SEO",
+  "no deposit bonus Turkey",
   "casino marketing Turkey",
   "Telegram ads iGaming",
   "Telegram Web App casino",
   "Telegram mini app onboarding",
   "iGaming SEO",
-  "deneme bonusu SEO",
   "Google Search Console iGaming",
   "PornHub advertising",
   "iGaming growth agency",
@@ -81,6 +120,7 @@ export const SEO_KEYWORDS = [
   "affiliate growth",
   "internal linking casino",
   "topical authority SEO",
+  "E-E-A-T iGaming içerik",
 ] as const;
 
 /** Child pages use `title` only; layout appends via template. */
