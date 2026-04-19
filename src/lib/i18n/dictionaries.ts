@@ -92,6 +92,7 @@ export type Dictionary = {
   blog: {
     heading: string;
     description: string;
+    articlesHeading: string;
     viewAllPosts: string;
     listEyebrow: string;
     breadcrumbs: {
@@ -145,7 +146,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon Marketing · iGaming acquisition · Telegram Ads & network · PornHub · SEO · freespin & no-deposit SERPs · birthday bonus · crash / Aviator · AI chatbot & influencer · DMCA · Creative · Custom dev · Scale in Türkiye · ",
+        "Jelibon Marketing · iGaming acquisition · Telegram Ads & network · PornHub · SEO · AI chatbot & influencer · DMCA · Creative studio · Custom dev · Scale in Türkiye · ",
     },
     nav: {
       solutions: "Solutions",
@@ -378,6 +379,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       heading: "Blog",
       description:
         "Notes on performance, automation, and brand safety—built for teams shipping in competitive markets.",
+      articlesHeading: "Editorial posts",
       viewAllPosts: "View all posts",
       listEyebrow: "Insights",
       breadcrumbs: { home: "Home", blog: "Blog" },
@@ -474,7 +476,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon Marketing · iGaming büyümesi · deneme bonusu freespin · doğum günü bonusu · yatırımsız bonus · uçak oyunu · Aviator/crash SEO · Telegram & ağ · PornHub · AI · DMCA · Kreatif · Özel yazılım · Türkiye'de ölçek · ",
+        "Jelibon Marketing · iGaming büyümesi · Telegram Reklamları & ağ · PornHub · SEO · AI sohbet botu & influencer · DMCA · Kreatif stüdyo · Özel geliştirme · Türkiye'de ölçek · ",
     },
     nav: {
       solutions: "Çözümler",
@@ -711,6 +713,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       heading: "Blog",
       description:
         "Performans, otomasyon ve marka güvenliği üzerine notlar—rekabetçi pazarlarda ilerleyen ekipler için.",
+      articlesHeading: "Blog yazıları",
       viewAllPosts: "Tüm yazıları gör",
       listEyebrow: "İçgörüler",
       breadcrumbs: { home: "Ana Sayfa", blog: "Blog" },
@@ -807,7 +810,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon Marketing · iGaming · SEO под турецкий спрос: фриспины, бездепозит, день рождения, crash/Aviator · Telegram и сеть · PornHub · AI · DMCA · Креатив · Индивидуальная разработка · Турция · ",
+        "Jelibon Marketing · iGaming · Реклама в Telegram и сеть каналов · PornHub · SEO · AI-чатбот и инфлюенсер · DMCA · Креативная студия · Индивидуальная разработка · Масштаб в Турции · ",
     },
     nav: {
       solutions: "Решения",
@@ -1044,6 +1047,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       heading: "Блог",
       description:
         "Заметки о производительности, автоматизации и бренд-безопасности—для команд, работающих в конкурентных рынках.",
+      articlesHeading: "Статьи блога",
       viewAllPosts: "Все статьи",
       listEyebrow: "Инсайты",
       breadcrumbs: { home: "Главная", blog: "Блог" },

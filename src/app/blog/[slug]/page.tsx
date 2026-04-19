@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { getBlogCoverImage } from "@/data/blog/cover-image";
 import { getAllSlugs, getLocalizedPost, getPostsForLocale } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
@@ -23,7 +24,7 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!post) return { title: "Post not found" };
 
   const path = `/blog/${params.slug}`;
-  const ogImage = post.coverImage ?? DEFAULT_OG_IMAGE_PATH;
+  const ogImage = getBlogCoverImage(post) ?? DEFAULT_OG_IMAGE_PATH;
 
   return {
     title: post.title,
@@ -103,7 +104,8 @@ export default function BlogPostPage({ params }: Props) {
             </Link>
           </div>
           <p className="mt-8 text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-            {dict.blog.categoryLabelsByKey[post.categoryKey]}
+            {dict.blog.categoryLabelsByKey[post.categoryKey] ??
+              post.categoryKey}
           </p>
           <h1 className="mt-4 font-display text-4xl font-semibold leading-tight text-white sm:text-5xl">
             {post.title}
@@ -119,19 +121,17 @@ export default function BlogPostPage({ params }: Props) {
             <span>{post.readTime}</span>
           </div>
 
-          {post.coverImage && (
-            <div className="relative mt-10 h-56 w-full overflow-hidden rounded-3xl sm:h-72">
-              <Image
-                src={post.coverImage}
-                alt={post.title}
-                fill
-                className="object-cover object-center opacity-85"
-                sizes="(max-width: 768px) 100vw, 768px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050510]/60" />
-            </div>
-          )}
+          <div className="relative mt-10 h-56 w-full overflow-hidden rounded-3xl sm:h-72">
+            <Image
+              src={getBlogCoverImage(post)}
+              alt={post.title}
+              fill
+              className="object-cover object-center opacity-85"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050510]/60" />
+          </div>
           <div className="glass-panel mt-10 rounded-3xl p-8 sm:p-10">
             <p className="text-lg leading-relaxed text-zinc-300">{post.excerpt}</p>
             <div className="mt-10 space-y-6 text-base leading-relaxed text-zinc-300">
@@ -153,7 +153,8 @@ export default function BlogPostPage({ params }: Props) {
                     className="glass-panel rounded-2xl p-5 transition hover:border-[#A78BFA]/40 hover:bg-white/[0.03]"
                   >
                     <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-                      {dict.blog.categoryLabelsByKey[relatedPost.categoryKey]}
+                      {dict.blog.categoryLabelsByKey[relatedPost.categoryKey] ??
+                        relatedPost.categoryKey}
                     </p>
                     <h3 className="mt-2 text-lg font-semibold text-white">
                       {relatedPost.title}

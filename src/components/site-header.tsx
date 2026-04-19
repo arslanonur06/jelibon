@@ -1,54 +1,83 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MarqueeStrip } from "@/components/marquee-strip";
-import { SiteNavDock } from "@/components/site-nav-dock";
+import { SiteMobileNav } from "@/components/site-mobile-nav";
 import { getLocale } from "@/lib/i18n/get-locale";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { TELEGRAM_URL } from "@/constants";
+import { getNavDockItems } from "@/data/nav-dock-items";
+
+function TelegramHeaderLink({ label }: { label: string }) {
+  return (
+    <Link
+      href={TELEGRAM_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex h-10 w-10 shrink-0 touch-manipulation items-center justify-center rounded-full bg-white text-[#229ED9] shadow-[0_2px_14px_rgba(0,0,0,0.25)] ring-1 ring-white/40 transition hover:bg-zinc-100"
+      aria-label={label}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        className="h-[1.4rem] w-[1.4rem]"
+        fill="currentColor"
+        aria-hidden
+      >
+        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+      </svg>
+    </Link>
+  );
+}
 
 export function SiteHeader() {
   const locale = getLocale();
   const dict = getDictionary(locale);
+  const navItems = getNavDockItems(locale);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[100] flex flex-col border-b border-white/[0.1] bg-[#050510] shadow-[0_8px_40px_rgba(0,0,0,0.45)]">
-      {/* ── Main row ── */}
-      <div className="mx-auto flex w-full max-w-7xl items-center gap-2 px-3 py-2 sm:gap-4 sm:px-6 sm:py-2.5">
-
-        {/* Logo */}
+    <header className="fixed inset-x-0 top-0 z-[100] flex flex-col shadow-[0_8px_40px_rgba(0,0,0,0.45)]">
+      <div className="border-b border-white/[0.1] bg-[#050510]/95 backdrop-blur-md">
+        <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-3 py-2.5 sm:px-6">
         <Link href="/" className="shrink-0" aria-label="Jelibon Marketing">
-          <span className="relative block h-9 w-9 overflow-hidden rounded-xl ring-1 ring-white/20 shadow-[0_0_14px_rgba(255,105,180,0.4)] sm:h-11 sm:w-11">
+          <span className="relative block h-9 w-9 overflow-hidden rounded-xl ring-1 ring-white/20 shadow-[0_0_14px_rgba(255,105,180,0.4)] sm:h-10 sm:w-10">
             <Image
               src="/assets/jelibonbackpng.png"
               alt="Jelibon Marketing"
               fill
               className="object-cover object-center"
-              sizes="(max-width:640px) 36px, 44px"
+              sizes="(max-width:640px) 36px, 40px"
               priority
             />
           </span>
         </Link>
 
-        {/* Nav dock – flex-1 so it fills remaining space */}
-        <div className="min-w-0 flex-1">
-          <SiteNavDock locale={locale} />
+        <div className="hidden min-w-0 flex-1 lg:flex lg:justify-center">
+          <nav aria-label="Primary">
+            <ul className="flex flex-wrap items-center justify-center gap-x-0.5 gap-y-1 xl:gap-x-1">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    href={item.href}
+                    className="block rounded-lg px-2.5 py-2 text-xs font-medium text-zinc-400 transition hover:bg-white/[0.06] hover:text-white xl:px-3 xl:text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
 
-        {/* Right actions */}
-        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
-          <Link
-            href="https://t.me/jelibonmarketing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center rounded-full bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-3 py-1.5 text-xs font-semibold text-white shadow-[0_0_18px_rgba(255,105,180,0.35)] transition hover:brightness-110 sm:px-4 sm:py-2 sm:text-sm"
-          >
-            {dict.header.telegram}
-          </Link>
-          <LanguageSwitcher />
+        <div className="flex min-w-0 flex-1 lg:hidden" aria-hidden />
+
+        <div className="flex shrink-0 items-center gap-2">
+          <TelegramHeaderLink label={dict.header.telegram} />
+          <LanguageSwitcher initialLocale={locale} />
+          <SiteMobileNav locale={locale} />
+        </div>
         </div>
       </div>
 
-      {/* ── Marquee strip ── */}
       <MarqueeStrip />
     </header>
   );

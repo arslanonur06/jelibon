@@ -39,7 +39,8 @@ export function BlogPreview() {
               className="glass-panel relative isolate flex flex-col rounded-3xl p-6 transition hover:border-[#A020F0]/35"
             >
               <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-                {dict.blog.categoryLabelsByKey[post.categoryKey]}
+                {dict.blog.categoryLabelsByKey[post.categoryKey] ??
+                  post.categoryKey}
               </p>
               <h3 className="relative z-[1] mt-3 font-display text-lg font-semibold leading-snug text-white">
                 <Link

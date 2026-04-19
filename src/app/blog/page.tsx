@@ -4,7 +4,10 @@ import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { BlogBrandHub } from "@/components/blog-brand-hub";
+import { getBlogCoverImage } from "@/data/blog/cover-image";
 import { getPostsForLocale } from "@/data/blog";
+import { bonusBrandGuides } from "@/data/bonus-guides";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
@@ -71,27 +74,32 @@ export default function BlogPage() {
             {dict.blog.description}
           </p>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
+          <BlogBrandHub locale={locale} brands={bonusBrandGuides} />
+
+          <h2 className="mt-16 font-display text-2xl font-semibold text-white sm:text-3xl">
+            {dict.blog.articlesHeading}
+          </h2>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
             {sorted.map((post) => (
               <article
                 key={post.slug}
                 className="glass-panel flex flex-col overflow-hidden rounded-3xl transition hover:border-[#A020F0]/35"
               >
-                {post.coverImage && (
-                  <div className="relative h-44 w-full overflow-hidden">
-                    <Image
-                      src={post.coverImage}
-                      alt={post.title}
-                      fill
-                      className="object-cover object-center opacity-80 transition duration-500 hover:scale-105 hover:opacity-100"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050510]/80" />
-                  </div>
-                )}
+                <div className="relative h-44 w-full overflow-hidden">
+                  <Image
+                    src={getBlogCoverImage(post)}
+                    alt={post.title}
+                    fill
+                    className="object-cover object-center opacity-80 transition duration-500 hover:scale-105 hover:opacity-100"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050510]/80" />
+                </div>
                 <div className="flex flex-1 flex-col p-8">
                   <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-                    {dict.blog.categoryLabelsByKey[post.categoryKey]}
+                    {dict.blog.categoryLabelsByKey[post.categoryKey] ??
+                      post.categoryKey}
                   </p>
                   <h2 className="mt-4 font-display text-2xl font-semibold leading-snug text-white">
                     <Link

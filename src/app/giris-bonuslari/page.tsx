@@ -3,7 +3,16 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TELEGRAM_URL } from "@/constants";
-import { bonusBrandGuides, bonusHeadKeywords } from "@/data/bonus-guides";
+import {
+  BONUS_BRAND_COUNT,
+  bonusBrandGuides,
+  bonusHeadKeywords,
+} from "@/data/bonus-guides";
+
+function toHashTag(value: string): string {
+  const compact = value.replace(/[^a-zA-Z0-9]/g, "");
+  return `#${compact}GirisBonusu`;
+}
 
 export const metadata: Metadata = {
   title: "Guncel Giris Bonusu Rehberi",
@@ -28,6 +37,12 @@ export const metadata: Metadata = {
 };
 
 export default function GirisBonuslariPage() {
+  const hashtagCloud = bonusBrandGuides.map((brand) => ({
+    slug: brand.slug,
+    tag: toHashTag(brand.name),
+    name: brand.name,
+  }));
+
   return (
     <div className="relative min-h-screen">
       <SiteHeader />
@@ -53,6 +68,29 @@ export default function GirisBonuslariPage() {
           >
             Telegram: @jelibonmarketing
           </Link>
+
+          <section className="glass-panel mt-8 rounded-3xl p-5 sm:p-7">
+            <h2 className="font-display text-2xl font-semibold text-white">
+              SEO etiket bulutu ({BONUS_BRAND_COUNT} marka)
+            </h2>
+            <p className="mt-3 text-zinc-300">
+              Her marka icin ayri SEO alanimiz var. Asagidaki hashtag kartlari
+              marka rehber sayfalarina baglanir ve bonus odakli arama niyetini
+              guclu bir ic link agi ile destekler.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {hashtagCloud.map((item) => (
+                <Link
+                  key={item.slug}
+                  href={`/giris-bonuslari/${item.slug}`}
+                  className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-[#E9A8FF] transition hover:border-[#A78BFA]/45 hover:text-white"
+                  aria-label={`${item.name} hashtag sayfasina git`}
+                >
+                  {item.tag}
+                </Link>
+              ))}
+            </div>
+          </section>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {bonusBrandGuides.map((brand) => (

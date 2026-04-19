@@ -7,7 +7,7 @@
 export type { Locale } from "@/lib/i18n/locales";
 
 // ─── Navigation ──────────────────────────────────────────────────────────────
-export type { DockNavItem } from "@/components/ui/dock-tabs";
+export type { DockNavItem } from "@/data/nav-dock-items";
 
 // ─── Blog ────────────────────────────────────────────────────────────────────
 export type { BlogPost } from "@/data/blog-posts";

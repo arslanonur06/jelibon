@@ -9,9 +9,18 @@ import {
   Sparkles,
   Star,
 } from "lucide-react";
-import type { DockNavItem } from "@/components/ui/dock-tabs";
+import type { LucideIcon } from "lucide-react";
 import type { Locale } from "@/lib/i18n/locales";
 import { DICTIONARIES } from "@/lib/i18n/dictionaries";
+
+export type DockNavItem = {
+  id: string;
+  name: string;
+  href: string;
+  icon: LucideIcon;
+  color: string;
+  colorHover: string;
+};
 
 /** Use `/#…` so anchors work from /blog and other routes */
 const navDockItemsBase: Omit<DockNavItem, "name">[] = [

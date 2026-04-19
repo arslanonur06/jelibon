@@ -52,8 +52,11 @@ export function getGoogleSiteVerification(): string {
 /** Default Open Graph image path (file lives under `public/`). */
 export const DEFAULT_OG_IMAGE_PATH = "/assets/jelibon-brand.png";
 
-/** Favicon + PWA chrome icons (distinct from OG card art). */
-export const FAVICON_PATH = "/assets/jelibonbackpng.png";
+/**
+ * Favicon + PWA icons — `src/app/icon.png` ile aynı kaynak (Next `/icon.png` route).
+ * Eski `/favicon.ico` istekleri `next.config.mjs` redirect ile buraya yönlendirilir.
+ */
+export const FAVICON_PATH = "/icon.png";
 
 // ─── SEO copy (layout + fallbacks) ───────────────────────────────────────────
 export const SEO_DEFAULT_TITLE = "Jelibon Marketing | iGaming Growth Türkiye";

@@ -146,6 +146,8 @@ function toSeoSlug(value: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+export const BONUS_BRAND_COUNT = RAW_BONUS_BRANDS.length;
+
 export const bonusBrandGuides: BonusBrandGuide[] = RAW_BONUS_BRANDS.map((name) => ({
   name,
   slug: toSeoSlug(name),
