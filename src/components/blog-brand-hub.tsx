@@ -13,13 +13,13 @@ type BlogBrandHubProps = {
 function hubCopy(locale: Locale, count: number) {
   if (locale === "tr") {
     return {
-      title: `${count} marka — tüm rehberler`,
+      title: `${count} marka, iki görünüm`,
       description:
-        "Her marka için iki şablon: koyu tema giriş bonusu rehberi ve açık tema blog rehberi. Güncel kampanya ve adres için Telegram üzerinden iletişim.",
-      bonus: "Giriş bonusu (koyu)",
+        "Aşağıda aynı markanın koyu (bonus odaklı) ve açık (blog) sayfasına gider. Kampanya, adres, özel anlaşma: yine Telegram.",
+      bonus: "Bonus sayfası (koyu)",
       light: "Blog rehberi (açık)",
-      indexBonus: "Tüm markalar — bonus indeksi",
-      indexLight: "Rehber listesi",
+      indexBonus: "Hepsini listele: bonus",
+      indexLight: "Hepsini listele: rehber",
     };
   }
   if (locale === "ru") {

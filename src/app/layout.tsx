@@ -14,10 +14,10 @@ import {
   getSiteUrl,
   SEO_DEFAULT_DESCRIPTION,
   SEO_DEFAULT_TITLE,
-  SEO_KEYWORDS,
   SEO_OG_DESCRIPTION,
   SEO_TITLE_TEMPLATE,
 } from "@/constants";
+import { getAllSeoKeywords } from "@/data/seo-all-keywords";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 const VercelAnalytics = dynamic(
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: SEO_DEFAULT_TITLE, template: SEO_TITLE_TEMPLATE },
   description: SEO_DEFAULT_DESCRIPTION,
-  keywords: [...SEO_KEYWORDS],
+  keywords: getAllSeoKeywords(),
   authors: [{ name: BRAND_NAME, url: siteUrl }],
   creator: BRAND_NAME,
   publisher: BRAND_NAME,

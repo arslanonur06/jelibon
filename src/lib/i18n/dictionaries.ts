@@ -476,7 +476,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon Marketing · iGaming büyümesi · Telegram Reklamları & ağ · PornHub · SEO · AI sohbet botu & influencer · DMCA · Kreatif stüdyo · Özel geliştirme · Türkiye'de ölçek · ",
+        "Jelibon · iGaming · Telegram reklam ve kanal ağı · PornHub · arama (bonus, uçak oyunu) · kreatif · DMCA · özel yazılım · @jelibonmarketing · ",
     },
     nav: {
       solutions: "Çözümler",
@@ -491,35 +491,35 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
     hero: {
-      tagline: "Türkiye'ye özel büyüme & yazılım",
+      tagline: "Büyüme ve yazılım, Türkiye pazarına göre",
       textColorLines: ["Trafik.", "Ölçek.", "Kazan."],
       description:
-        "Deneme bonusu freespin, doğum günü bonusu, yatırımsız bonus ve uçak oyunu (Aviator/crash) gibi yüksek hacimli aramalarda SEO; Telegram ve PornHub ile trafik, AI otomasyonu, influencer, kreatif, DMCA ve özel yazılım—Türkiye pazarına göre.",
-      viewPackages: "Paketleri görüntüle",
-      readBlog: "Blogu oku",
+        "Telegram ve PornHub’da reklam, sitede arama trafiği (deneme bonusu, freespin, yatırımsız, doğum günü, uçak oyunu aramaları), kreatif, DMCA, gerekiyorsa özel parça kod. Hedefin neyse, önce onu netleştiririz; boş söz yok. İletişim: @jelibonmarketing",
+      viewPackages: "Paketlere bak",
+      readBlog: "Blog",
       tags:
-        "Deneme bonusu freespin · doğum günü bonusu · yatırımsız bonus · uçak oyunu · SEO · Telegram",
-      whyUsHeading: "Neden Biz",
+        "deneme bonusu · freespin · yatırımsız · doğum günü · uçak oyunu · SEO · Telegram",
+      whyUsHeading: "Kısaca neden bizi arıyorlar",
       whyUsBullets: [
-        "iGaming odaklı uzmanlık & çok kanallı trafik.",
-        "Uzun vadeli SEO & blog ağı sistemleri.",
-        "Tek pakette otomasyon, ölçeklenebilirlik ve marka koruması.",
+        "Sadece iGaming ve bahis tarafındayız, genel ajans oyunu oynamıyoruz.",
+        "Aramada + ücretli kanalda aynı masada; birbirini dolduran iş.",
+        "Bot, takip, kreatif, koruma: ihtiyaca göre paket, zorunlu fatura yok.",
       ],
     },
     growthPillars: {
-      heading: "Tam kapsamlı iGaming altyapısı",
+      heading: "Ne iş yapıyoruz",
       description:
-        "Trafikten SEO'ya, otomasyondan özel yazılıma kadar—Türkiye'ye odaklanan operatörlerle uyumlu.",
+        "Trafik, içerik/arama, reklam hesabı, markayı kopyalamaya karşı önlem, gerekirse özel panel. Hepsi tek çatı değil: neye ihtiyacın varsa onu açalım demek daha doğru.",
     },
     orbitalSection: {
-      heading: "Büyüme yörüngesi",
+      heading: "Modüllerin birbiriyle bağı",
       description:
-        "Eksiksiz büyüme ekosistemi—modüllerin nasıl bağlandığını keşfetmek için düğümlere tıklayın.",
+        "Aşağıdaki halkalara tıkla, hangi işin nereye dokunduğunu gör.",
     },
     packages: {
       heading: "Hizmetler ve fiyatlar",
       description:
-        "Belirtilmedikçe USD üzerinden aylık retainer. Telegram, PornHub, SEO, AI, kreatif, DMCA, özel yazılım—aşağıdan modül veya paket seçin. Paketler kapsamla ölçeklenir (trafik + kreatif hacim).",
+        "Aksi yazılmadıkça aylık ücretler dolar. Telegram, PornHub, arama, kreatif, DMCA, yazılım. Hacim arttıkça paket fiyatı da artar; aşağıdan modül veya hazır seviye seçebilirsin.",
       growthPackagesHeading: "Büyüme paketleri",
       growthPackagesDescription:
         "Hazır paketler—her modülü tek tek birleştirmek yerine bir paket seviyesi seçin.",
@@ -712,8 +712,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     blog: {
       heading: "Blog",
       description:
-        "Performans, otomasyon ve marka güvenliği üzerine notlar—rekabetçi pazarlarda ilerleyen ekipler için.",
-      articlesHeading: "Blog yazıları",
+        "Nasıl yaptık, neye dikkat ettik, hangi sorgu patladı. Okuyup “bizde de böyle olsun” dersen Telegram’dan yazman yeterli.",
+      articlesHeading: "Yazılar",
       viewAllPosts: "Tüm yazıları gör",
       listEyebrow: "İçgörüler",
       breadcrumbs: { home: "Ana Sayfa", blog: "Blog" },
@@ -726,7 +726,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     footer: {
       heading: "Jelibon Marketing",
       about:
-        "Türkiye'de iGaming için büyüme & yazılım—Telegram, PornHub, SEO, AI, DMCA ve özel paketler. Bize Telegram üzerinden ulaşın.",
+        "Türkiye’de iGaming ve bahis tarafı: reklam, arama, kreatif, DMCA, kod. Soru ve teklif: Telegram @jelibonmarketing",
       getStarted: "Hemen başlayın",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
@@ -744,51 +744,49 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "Partnerlerimiz birlikte çalıştıktan sonra ne değiştiğini anlatıyor.",
     },
     faq: {
-      heading: "Sık Sorulan Sorular",
-      subheading:
-        "Başlamadan önce bilmeniz gereken her şey.",
+      heading: "Sık sorulanlar",
+      subheading: "Kısaca; detay için yazışırız.",
       items: [
         {
-          question: "Hangi pazarlarda uzmanlaşıyorsunuz?",
+          question: "Hangi pazarlarda çalışıyorsunuz?",
           answer:
-            "Öncelikli odağımız Türkiye—platform kuralları, kitle davranışı ve uyumluluk gereksinimleri konusunda derin yerel bilgiye sahibiz. Rusya, BDT ve Doğu Avrupa'da da başarılı şekilde hizmet veriyoruz.",
+            "Ağırlık Türkiye. Kurallar, kitle, dil, hangi sorgu ne zaman hareket ediyor: bunlara hâkimiz. Rusça / bölge operasyonu da olur, ama ana iş burası.",
         },
         {
-          question: "Retainer modeli nasıl çalışır?",
+          question: "Aylık anlaşma (retainer) nasıl işler?",
           answer:
-            "Tüm hizmetler aylık retainer olarak faturalandırılır. Kapsam, kanallar ve çıktı hacmi önceden belirlenir. Ücretli medya (Telegram, PornHub) için reklam harcaması ayrı faturalandırılır; böylece tam şeffaflık sağlanır.",
+            "Her ay tek fatura. Ne alıyorsun, hangi kanal, ne sıklık çıktı—başta netleşir. Telegram ve PornHub’da reklam bütçesi ayrı; nereye gittiği raporda.",
         },
         {
-          question: "Sonuçları ne zaman görmeye başlarım?",
+          question: "Ne zaman sonuç görürüm?",
           answer:
-            "Ücretli kanallar (Telegram, PornHub) genellikle 4–6 hafta içinde ölçülebilir trafik sağlar. SEO ve blog ağları uzun vadeli yatırımlardır—organik hacmin birikmesi için 3–6 ay öngörün. AI sohbet botu ve DMCA koruması ilk aydan itibaren etki gösterir.",
+            "Ücretli trafikte birkaç hafta–iki ay arası hareket beklerim; iş, rezerv, rakibe göre değişir. Arama tarafı aylar. Bot ve takedown daha erken dokunur.",
         },
         {
-          question: "Yeni operatörlerle çalışıyor musunuz?",
+          question: "Yeni markayla sıfırdan da ele alıyor musunuz?",
           answer:
-            "Evet. Türkiye pazarına sıfırdan giren operatörler için düzenli olarak lansman paketleri oluşturuyoruz. Bu; marka kurulumu, funnel mimarisi, kreatif prodüksiyon ve ilk harcama öncesi uyumluluk temellerini kapsar.",
+            "Evet. Kimi sadece reklam ister, kiminde sayfa ve metin de bizden çıkar. Sıfırdan girerken önce neyin gürültü olduğunu ayıklarız, sonra harcama açarız.",
         },
         {
-          question: "Tek bir hizmetle başlayabilir miyim?",
+          question: "Tek kanaldan başlasam olur mu?",
           answer:
-            "Kesinlikle. Çoğu müşteri Telegram Reklamları veya SEO ile başlar ve büyüdükçe hizmet ekler. Kanalları birleştirmek verimliliği artırır, ancak minimum paket zorunluluğu yoktur.",
+            "Olur. Birçok iş Telegram veya arama ile başlıyor; yürür, ekleriz. Zorunlu “hepsini al” yok.",
         },
         {
-          question: "Jelibon'u genel bir performans ajansından ayıran ne?",
+          question: "Jelibon'u diğer ajanslardan ne ayırıyor?",
           answer:
-            "Yalnızca iGaming sektöründe faaliyet gösteriyoruz. Kreatif, uyumluluk ve teknik çalışmalarımız casino ve bahis normları üzerine inşa edilmiştir—e-ticaret playbook'larından uyarlanmamıştır. Bu uzmanlaşma, onboarding süresini kısaltır ve birinci günden itibaren tüm KPI'ları iyileştirir.",
+            "Biz sadece bu işe bakıyoruz: kumarhane ve bahis. E-ticaret reçetesi kopyalayıp “casino yaptık” demiyoruz. Ne demek, ne risk yaratır, siz zaten söylersiniz; ona göre hareket ederiz.",
+        },
+        {
+          question: '"Deneme bonusu" gibi kelimelerde SEO yapıyor musunuz?',
+          answer:
+            "Evet, hem teknik hem içerik. Konu: hangi sayfa neyi anlatacak, birbirine nasıl linklenecek, metin sizin dilinizde mi. Spam çöplüğü gibi büyüme uydurmuyoruz; senin sınırların belli olsun.",
         },
         {
           question:
-            '"Deneme bonusu" gibi yüksek rekabetli Türkçe aramalarda SEO çalışması yapıyor musunuz?',
+            "Freespin, doğum günü, yatırımsız, uçak oyunu (Aviator/crash) aramalarında da aynı şey geçerli mi?",
           answer:
-            "Evet. SEO ve blog ağımız Türkiye'deki rekabetçi iGaming SERP'leri için tasarlandı: arama niyeti haritalama, hub–spoke mimarisi ve sürdürülebilir yayıncılık—markanız ve uyumluluk kurallarınız çerçevesinde. Bu sorguları ticari niyet alanları olarak ele alır, kalıcı otorite inşa etmeyi hedefleriz.",
-        },
-        {
-          question:
-            "Deneme bonusu freespin, doğum günü bonusu, yatırımsız bonus ve uçak oyunu (Aviator/crash) gibi çok aranan konularda SEO desteği veriyor musunuz?",
-          answer:
-            "Evet. Bu tür yüksek hacimli aramaları onayladığınız mesaj ve uyumluluk çerçevesinde cluster'lar halinde planlarız: hub sayfalar, destekleyici içerikler ve iç bağlantı. Amaç; E-E-A-T ve marka diliyle sürdürülebilir sıralama kazanmak, düşük kaliteli affiliate spam’ine düşmeden organik büyümeyi ölçeklemektir.",
+            "Evet. Niyet farklı, kurgu benzer: ana sayfalar, yardımcı yazılar, iç link. Söylediğin yasal ve marka sınırı içinde kalırız. Bu iş uzun nefes ister, buna da baştan söyleriz.",
         },
       ] as const,
     },

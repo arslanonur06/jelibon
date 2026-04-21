@@ -13,7 +13,6 @@ import {
   SEO_HOME_TITLE_EN,
   SEO_HOME_TITLE_RU,
   SEO_HOME_TITLE_TR,
-  SEO_KEYWORDS,
   getSiteUrl,
 } from "@/constants";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -102,7 +101,6 @@ export function generateMetadata(): Metadata {
     alternates: { canonical: "/" },
     title: home.title,
     description: home.description,
-    keywords: [...SEO_KEYWORDS],
     openGraph: {
       title: home.title,
       description: home.description,

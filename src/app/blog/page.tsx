@@ -14,21 +14,12 @@ import { getLocale } from "@/lib/i18n/get-locale";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Insights on iGaming growth, Telegram performance, AI automation, and brand protection.",
-  keywords: [
-    "iGaming blog",
-    "Telegram marketing",
-    "Telegram Web App",
-    "casino SEO",
-    "deneme bonusu",
-    "Google Search Console",
-    "iGaming compliance",
-  ],
+    "Türkiye iGaming pazarlaması, Telegram, SEO, otomasyon notları. Yüzlerce marka için ayrı rehber: giriş, bonus, günün koşulları. Detay: @jelibonmarketing.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog | Jelibon Marketing",
     description:
-      "Insights on iGaming growth, Telegram performance, AI automation, and brand protection.",
+      "Jelibon blog: pazarlama notları, marka rehberleri, güncel giriş ve bonus sayfaları. Telegram: @jelibonmarketing",
     type: "website",
     url: "/blog",
     images: [{ url: "/assets/jelibon-brand.png", alt: "Jelibon Marketing" }],

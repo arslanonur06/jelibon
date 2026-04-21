@@ -15,25 +15,16 @@ export function generateMetadata({ params }: Props): Metadata {
   const brand = bonusGuideBySlug.get(params.slug);
   if (!brand) return { title: "Sayfa bulunamadı" };
 
-  const title = `${brand.name} Rehberi | Güncel adres, giriş ve bonus`;
-  const description = `${brand.name} için tarafsız iGaming rehberi: güncel giriş, adres ve bonus bilgilendirmesi. PR ve iş birliği için Telegram: @jelibonmarketing.`;
+  const title = `${brand.name} — giriş ve bonus notları`;
+  const description = `${brand.name} hakkinda sade rehber: giris, bonus basliklari, guncel notlar. Is birligi ve guncel kampanya: Telegram @jelibonmarketing.`;
   const path = `/blog/rehber/${brand.slug}`;
 
   return {
     title,
     description,
-    keywords: [
-      `${brand.name} giriş`,
-      `${brand.name} güncel adres`,
-      `${brand.name} bonus`,
-      `${brand.name} mobil giriş`,
-      `${brand.name} kayıt`,
-      "iGaming rehberi",
-      "jelibonmarketing telegram",
-    ],
     alternates: { canonical: path },
     openGraph: {
-      title: `${title} | Jelibon Marketing`,
+      title: `${brand.name} rehberi | Jelibon Marketing`,
       description,
       type: "article",
       url: path,

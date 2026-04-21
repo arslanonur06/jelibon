@@ -158,4 +158,3 @@ export const bonusGuideBySlug = new Map(
   bonusBrandGuides.map((item) => [item.slug, item] as const),
 );
 
-export const bonusHeadKeywords = bonusBrandGuides.slice(0, 36).map((item) => item.name);

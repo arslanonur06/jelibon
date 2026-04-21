@@ -62,16 +62,16 @@ export const FAVICON_PATH = "/icon.png";
 export const SEO_DEFAULT_TITLE = "Jelibon Marketing | iGaming Growth Türkiye";
 
 export const SEO_DEFAULT_DESCRIPTION =
-  "Premium growth & software for iGaming in Türkiye: Telegram & PornHub traffic, SEO for high-intent Turkish SERPs (deneme bonusu & freespin, doğum günü bonusu, yatırımsız bonus, uçak/crash oyunları), AI chatbot & Influencer, creative, DMCA, custom software.";
+  "Türkiye iGaming için trafik ve yazılım: Telegram, PornHub, arama (deneme bonusu, freespin, yatırımsız, doğum günü, uçak oyunu), kreatif, DMCA, özel uygulamalar. Soru ve teklif: Telegram @jelibonmarketing.";
 
 export const SEO_OG_DESCRIPTION =
   "iGaming in Türkiye—traffic + topical SEO for bonus & game demand (freespin, no-deposit, birthday promos, Aviator/crash), AI, and full-stack growth.";
 
 /** Homepage titles (layout `SEO_TITLE_TEMPLATE` appends “| Jelibon Marketing”). */
-export const SEO_HOME_TITLE_TR = "Deneme Bonusu SEO & iGaming Büyümesi";
+export const SEO_HOME_TITLE_TR = "Türkiye iGaming trafiği & SEO";
 
 export const SEO_HOME_DESCRIPTION_TR =
-  "Türkiye iGaming SEO: deneme bonusu freespin, doğum günü bonusu, yatırımsız bonus, uçak oyunu (Aviator/crash) gibi yüksek hacimli sorgular; Telegram & PornHub trafik, AI, kreatif, DMCA ve özel yazılım—tek çatı altında büyüme.";
+  "Deneme bonusu, freespin, yatırımsız, doğum günü, uçak/Aviator gibi aramalarda içerik ve teknik; Telegram ve PornHub reklam, kreatif, DMCA, ihtiyaca özel kod. Bize yine de Telegram @jelibonmarketing üzerinden yazın, net konuşalım.";
 
 export const SEO_HOME_TITLE_EN = "Trial-Bonus SEO & iGaming Growth Türkiye";
 

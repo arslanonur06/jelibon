@@ -3,11 +3,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TELEGRAM_URL } from "@/constants";
-import {
-  BONUS_BRAND_COUNT,
-  bonusBrandGuides,
-  bonusHeadKeywords,
-} from "@/data/bonus-guides";
+import { BONUS_BRAND_COUNT, bonusBrandGuides } from "@/data/bonus-guides";
 
 function toHashTag(value: string): string {
   const compact = value.replace(/[^a-zA-Z0-9]/g, "");
@@ -15,22 +11,14 @@ function toHashTag(value: string): string {
 }
 
 export const metadata: Metadata = {
-  title: "Guncel Giris Bonusu Rehberi",
+  title: "Guncel giris bonusu rehberi",
   description:
-    "Guncel giris bonus sartlari, deneme bonusu/freespin, yatirimsiz bonus ve ucak oyunu odakli bilgilendirme rehberi. Tum yonlendirme kanali Telegram: @jelibonmarketing.",
-  keywords: [
-    "guncel giris bonus sartlari",
-    "deneme bonusu freespin",
-    "dogum gunu bonusu",
-    "yatirimsiz bonus",
-    "ucak oyunu bonus",
-    ...bonusHeadKeywords,
-  ],
+    "Marka marka guncel giris, bonus kosullari ve notlar. Deneme, freespin, yatirimsiz, dogum gunu, ucak oyunu gibi aramalarda bilgi amaçli sayfalar. Soru ve guncel kampanya: Telegram @jelibonmarketing.",
   alternates: { canonical: "/giris-bonuslari" },
   openGraph: {
-    title: "Guncel Giris Bonusu Rehberi | Jelibon Marketing",
+    title: "Güncel giriş bonusu rehberi | Jelibon Marketing",
     description:
-      "Marka bazli bonus bilgi sayfalari: giris, bonus kosullari, guncel notlar ve tum destek yonlendirmesi Telegram hesabinda.",
+      "Marka marka giriş ve bonus notları. Telegram: @jelibonmarketing",
     type: "website",
     url: "/giris-bonuslari",
   },
@@ -52,13 +40,13 @@ export default function GirisBonuslariPage() {
             Bonus Rehberleri
           </p>
           <h1 className="mt-3 font-display text-4xl font-semibold text-white sm:text-5xl">
-            Guncel Giris Bonusu Sartlari ve Marka Rehberleri
+            Güncel giriş bonusu şartları ve marka rehberleri
           </h1>
           <p className="mt-4 max-w-3xl text-zinc-300">
-            Bu bolum bilgilendirme amaclidir. Her marka icin guncel bonus
-            kosullari, deneme/freespin, yatirimsiz bonus ve benzeri kampanya
-            basliklarini tek sayfada ozetliyoruz. Tum yonlendirme ve destek
-            akislarimiz Telegram hesabimiz uzerinden ilerler.
+            Buradaki metinler bilgilendirme amaçlı. Her marka için ayrı sayfada
+            deneme, freespin, yatırımsız, doğum günü, uçak oyunu gibi
+            aramalarda ne yazdık kısaca topladık. Güncel kampanya ve bire bir
+            soru: Telegram &quot;@jelibonmarketing&quot;.
           </p>
           <Link
             href={TELEGRAM_URL}
@@ -74,9 +62,8 @@ export default function GirisBonuslariPage() {
               SEO etiket bulutu ({BONUS_BRAND_COUNT} marka)
             </h2>
             <p className="mt-3 text-zinc-300">
-              Her marka icin ayri SEO alanimiz var. Asagidaki hashtag kartlari
-              marka rehber sayfalarina baglanir ve bonus odakli arama niyetini
-              guclu bir ic link agi ile destekler.
+              Tıkla, ilgili rehber sayfasına gitsin. Amaç, site adı + giriş gibi
+              aramalar arasında sitemizin birbirine bağlanması.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               {hashtagCloud.map((item) => (

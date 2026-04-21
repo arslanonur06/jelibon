@@ -4,11 +4,7 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { buildBonusArticle } from "@/data/bonus-article";
-import {
-  bonusBrandGuides,
-  bonusGuideBySlug,
-  bonusHeadKeywords,
-} from "@/data/bonus-guides";
+import { bonusBrandGuides, bonusGuideBySlug } from "@/data/bonus-guides";
 
 type Props = { params: { slug: string } };
 
@@ -20,24 +16,13 @@ export function generateMetadata({ params }: Props): Metadata {
   const brand = bonusGuideBySlug.get(params.slug);
   if (!brand) return { title: "Sayfa bulunamadi" };
 
-  const title = `${brand.name} giris bonusu, guncel bonus sartlari ve deneme/freespin rehberi`;
+  const title = `${brand.name} giris bonusu ve guncel notlar`;
   const description =
-    `${brand.name} icin bilgilendirme rehberi: guncel giris bonus sartlari, deneme bonusu/freespin, yatirimsiz bonus ve ucak oyunu odakli arama niyetleri. Tum yonlendirmeler @jelibonmarketing Telegram hesabina yapilir.`;
+    `${brand.name} icin aciklayici rehber: giris, bonus basliklari (deneme, freespin, yatirimsiz, dogum gunu, ucak oyunu aramalari). Kampanya ve adres icin Telegram: @jelibonmarketing.`;
 
   return {
     title,
     description,
-    keywords: [
-      `${brand.name} giris`,
-      `${brand.name} bonus`,
-      `${brand.name} guncel giris bonus sartlari`,
-      `${brand.name} deneme bonusu`,
-      `${brand.name} yatirimsiz bonus`,
-      "deneme bonusu freespin",
-      "dogum gunu bonusu",
-      "ucak oyunu",
-      ...bonusHeadKeywords.slice(0, 12),
-    ],
     alternates: { canonical: `/giris-bonuslari/${brand.slug}` },
     openGraph: {
       title: `${brand.name} bonus rehberi | Jelibon Marketing`,
