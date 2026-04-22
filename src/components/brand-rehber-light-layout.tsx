@@ -98,14 +98,8 @@ export function BrandRehberLightLayout({
             <Link href="/blog" className={navLinkClass}>
               Blog
             </Link>
-            <Link href="/blog/rehber" className={navLinkClass}>
-              Markalar
-            </Link>
-            <Link href="/giris-bonuslari" className={navLinkClass}>
-              Karşılaştır
-            </Link>
             <Link href={directoryHref} className={navLinkClass}>
-              Rehberler
+              Markalar
             </Link>
             <Link href="/blog" className={navLinkClass}>
               Slotlar
@@ -163,11 +157,9 @@ export function BrandRehberLightLayout({
             >
               {brand.name} Giriş
             </h1>
-            <div className="mt-5 space-y-3 text-base leading-relaxed text-[#e7e1d3] sm:text-lg">
-              {article.intro.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
+            <p className="mt-5 text-base leading-relaxed text-[#e7e1d3] sm:text-lg">
+              {article.intro[0]}
+            </p>
           </div>
         </div>
       </section>
@@ -199,22 +191,6 @@ export function BrandRehberLightLayout({
                 </div>
               </section>
             ))}
-
-            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
-              <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
-                Sık sorulan sorular
-              </h2>
-              <div className="mt-5 space-y-5 text-[#455248]">
-                {article.faqs.map((faq) => (
-                  <div key={faq.question}>
-                    <h3 className="text-base font-semibold text-[#17382d] sm:text-lg">
-                      {faq.question}
-                    </h3>
-                    <p className="mt-2 leading-relaxed">{faq.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
 
             <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -261,24 +237,6 @@ export function BrandRehberLightLayout({
               </div>
             </section>
 
-            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
-              <h2 className="font-display text-xl font-semibold text-[#17382d]">
-                Güncel şartlar kontrol listesi
-              </h2>
-              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#455248]">
-                {article.checklist.map((rule) => (
-                  <li key={rule} className="flex gap-3">
-                    <span
-                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
-                      style={{ backgroundColor: PRIMARY }}
-                      aria-hidden
-                    />
-                    <span>{rule}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-
             <section
               className="rounded-[28px] border p-6 shadow-[0_16px_40px_rgba(6,43,33,0.14)]"
               style={{
@@ -306,18 +264,6 @@ export function BrandRehberLightLayout({
           </aside>
         </div>
 
-        <footer className="mt-10 border-t border-[#dbc8a8] pt-6 text-sm text-[#5b655d]">
-          Jelibon Marketing — Türkiye odaklı growth ve SEO. Tüm yönlendirmeler{" "}
-          <Link
-            href={TELEGRAM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-[#7f5c22] hover:underline"
-          >
-            @jelibonmarketing
-          </Link>{" "}
-          üzerinden yapılır.
-        </footer>
       </main>
     </div>
   );

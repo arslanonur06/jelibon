@@ -19,7 +19,6 @@ import { denemeBonusuSeoTurkey2026 } from "./posts/deneme-bonusu-seo-turkey-2026
 import { denemeBonusuFreespinSeoTurkey2026 } from "./posts/deneme-bonusu-freespin-seo-turkey-2026";
 import { dogumGunuBonusuSeoTurkey2026 } from "./posts/dogum-gunu-bonusu-seo-turkey-2026";
 import { yatirimsizBonusSeoTurkey2026 } from "./posts/yatirimsiz-bonus-seo-turkey-2026";
-import { ucakOyunuCrashAviatorSeoTurkey2026 } from "./posts/ucak-oyunu-crash-aviator-seo-turkey-2026";
 import { telegramAdsCreativeTesting } from "./posts/telegram-ads-creative-testing";
 import { telegramIgamingGrowthChannel2026 } from "./posts/telegram-igaming-growth-channel-2026";
 import { telegramOrganicPaidUnified2026 } from "./posts/telegram-organic-paid-unified-2026";
@@ -37,7 +36,6 @@ export const blogEntries: BlogPostEntry[] = [
   denemeBonusuFreespinSeoTurkey2026,
   dogumGunuBonusuSeoTurkey2026,
   yatirimsizBonusSeoTurkey2026,
-  ucakOyunuCrashAviatorSeoTurkey2026,
   telegramTurkeyMemberAcquisition2026,
   telegramWebAppOnboarding2026,
   telegramIgamingGrowthChannel2026,

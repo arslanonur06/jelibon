@@ -29,9 +29,9 @@ export const KISA_BLOG_BONUS_ITEMS: KisaBlogBonusItem[] = [
     href: "/blog/yatirimsiz-bonus-seo-turkey-2026",
   },
   {
-    title: "Uçak oyunu / crash kampanyalarında şeffaflık nasıl kurulur?",
+    title: "Bonus çevrim şartı net görünür hale nasıl getirilir?",
     readMinutes: 2,
     date: "2026-03-24",
-    href: "/blog/ucak-oyunu-crash-aviator-seo-turkey-2026",
+    href: "/blog/deneme-bonusu-seo-turkey-2026",
   },
 ];

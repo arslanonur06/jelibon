@@ -19,7 +19,7 @@ function buildMarkaDescription(brandName: string, variantIndex: number): string 
     `${brandName} güncel adres, giriş ve bonus başlıklarını tek sayfada toplar.`,
     `${brandName} için deneme bonusu, freespin ve yatırımsız bonus kümeleri.`,
     `${brandName} mobil giriş, kayıt ve kampanya aramaları için hızlı erişim.`,
-    `${brandName} crash / uçak oyunu ve bonus niyeti için kısa rehber.`,
+    `${brandName} bonus ve kampanya niyeti için kısa rehber.`,
     `${brandName} güncel giriş akışı ve bonus başlıkları.`,
     `${brandName} için giriş, adres ve kampanya sorgularını tek merkezde toplar.`,
     `${brandName} aramalarında hızlı yönlendirme ve net başlık yapısı.`,

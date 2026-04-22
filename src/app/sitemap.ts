@@ -44,12 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.93,
     },
-    {
-      url: `${base}/blog/rehber`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.92,
-    },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogEntries.map((entry) => {
@@ -73,14 +67,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.82,
   }));
 
-  const blogRehberRoutes: MetadataRoute.Sitemap = bonusBrandGuides.map(
-    (entry) => ({
-      url: `${base}/blog/rehber/${entry.slug}`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.9,
-    }),
-  );
-
-  return [...staticRoutes, ...blogRoutes, ...bonusRoutes, ...blogRehberRoutes];
+  return [...staticRoutes, ...blogRoutes, ...bonusRoutes];
 }

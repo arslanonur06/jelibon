@@ -111,13 +111,13 @@ const timelineOverrides: Record<
     1: {
       title: "Telegram Reklamları",
       content:
-        "Kampanya kurulumu, funnel'lar, kreatifler, A/B testleri ve haftalık raporlama.",
+        "Kampanya kurulumu, akış kurgusu, kreatif üretimi, A/B testleri ve haftalık raporlama.",
       category: "Trafik",
     },
     2: {
       title: "Telegram Ağı",
       content:
-        "Kanal araştırması, natif içerik, ROI takibi, ölçekleme stratejisi.",
+        "Kanal araştırması, satın alma planı, natif içerik ve ROI takibi.",
       category: "Trafik",
     },
     3: {
@@ -129,7 +129,7 @@ const timelineOverrides: Record<
     4: {
       title: "AI Sohbet Botu",
       content:
-        "GPT destekli sohbet, çok dilli yönlendirme, akış kurgusu ve temel CRM bağlantıları.",
+        "GPT destekli sohbet, çok dilli yönlendirme ve temel CRM bağlantıları.",
       category: "Otomasyon",
     },
     5: {
@@ -140,7 +140,7 @@ const timelineOverrides: Record<
     6: {
       title: "Kreatif",
       content:
-        "Reklamlar, landing sayfaları, funnel tasarımı ve sürekli optimizasyon.",
+        "Reklam görselleri, landing sayfaları ve dönüşüm odaklı akış tasarımları.",
       category: "Kreatif",
     },
     7: {
@@ -153,7 +153,7 @@ const timelineOverrides: Record<
     8: {
       title: "AI Influencer",
       content:
-        "AI karakterler, günlük içerik akışı, etkileşim yönetimi ve tekliflere yönlenen akışlar.",
+        "AI karakterler, günlük içerik üretimi ve tekliflere bağlanan etkileşim akışları.",
       category: "AI",
     },
   },

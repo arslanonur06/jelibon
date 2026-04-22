@@ -73,21 +73,11 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                 className="absolute inset-y-0 right-0 flex w-[min(20.5rem,92vw)] flex-col overflow-hidden rounded-l-[2.25rem] border-l border-white/25 bg-[#08081c]/70 shadow-[-20px_0_48px_rgba(255,105,180,0.18)] backdrop-blur-2xl backdrop-saturate-150"
               >
                 <div
-                  className="pointer-events-none absolute inset-0 bg-jelly-glow opacity-[0.55]"
+                  className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-95"
+                  style={{ backgroundImage: "url('/assets/blog-sidebar-bg.png')" }}
                   aria-hidden
                 />
-                <div
-                  className="pointer-events-none absolute -right-10 top-10 h-44 w-44 rounded-[45%] bg-[#FF69B4]/45 blur-3xl animate-pulse"
-                  aria-hidden
-                />
-                <div
-                  className="pointer-events-none absolute -bottom-16 left-0 h-52 w-52 rounded-[48%] bg-[#00D4FF]/35 blur-3xl animate-pulse [animation-duration:3s]"
-                  aria-hidden
-                />
-                <div
-                  className="pointer-events-none absolute left-1/4 top-1/3 h-36 w-36 rounded-[42%] bg-[#A020F0]/30 blur-3xl animate-pulse [animation-duration:2.5s] [animation-delay:300ms]"
-                  aria-hidden
-                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-[#050510]/60 via-[#050510]/34 to-[#050510]/18" />
                 <div className="relative z-10 flex min-h-0 flex-1 flex-col bg-gradient-to-b from-white/[0.12] via-transparent to-white/[0.04]">
                   <div className="flex items-center justify-between border-b border-white/[0.12] px-4 py-3.5">
                     <h2

@@ -13,39 +13,39 @@ export function getGrowthPillars(locale: Locale) {
   if (locale === "tr") {
     return [
       {
-        title: "Trafik tarafı",
+        title: "Alternatif reklam kanalları",
         description:
-          "Telegram reklamı, kanal satın alımı ve PornHub medya planı tek operasyonla yürür.",
+          "Telegram reklamı, kanal alımı ve diğer alternatif medya alanlarını tek planla yönetiyoruz.",
         accent: PILLAR_ACCENTS[0],
       },
       {
         title: "SEO ve içerik ağı",
         description:
-          "Marka, bonus ve oyun niyetini toplayan içerik yapısı; düzenli üretim ve arama tarafı kurgu.",
+          "Marka ve bonus niyetini toplayan içerik yapısını düzenli yayın planıyla büyütüyoruz.",
         accent: PILLAR_ACCENTS[1],
       },
       {
-        title: "AI otomasyon",
+        title: "Trend ve dağıtım hızı",
         description:
-          "Sohbet akışları, yönlendirme mantığı ve AI destekli içerik süreçleri tek hat üzerinden ilerler.",
+          "Pazardaki hareketi hızlı okuyup içerik, kampanya ve dağıtım tarafını gecikmeden güncelliyoruz.",
         accent: PILLAR_ACCENTS[2],
       },
       {
-        title: "Kreatif üretim",
+        title: "Viral içerik üretimi",
         description:
-          "Banner, video, landing ve funnel ekranları kampanya ritmine göre sürekli güncellenir.",
+          "Banner, video, landing ve kısa format kreatifleri markanın hızına uygun şekilde üretiyoruz.",
         accent: PILLAR_ACCENTS[3],
       },
       {
-        title: "Marka koruması",
+        title: "Operasyon ve koruma",
         description:
-          "Klon takibi, takedown süreçleri ve marka riskini azaltan düzenli kontrol tarafı.",
+          "Klon takibi, DMCA süreçleri ve marka riskini azaltan operasyon düzenli olarak yürür.",
         accent: PILLAR_ACCENTS[4],
       },
       {
-        title: "Özel yazılım",
+        title: "Özel yazılım altyapısı",
         description:
-          "Takip, otomasyon ve API tarafında hazır araçların yetmediği yerde özel kurgu açılır.",
+          "Takip, otomasyon, panel ve API ihtiyaçlarında hazır araç yetmediğinde özel çözüm geliştiriyoruz.",
         accent: PILLAR_ACCENTS[5],
       },
     ] as const;

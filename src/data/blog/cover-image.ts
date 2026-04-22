@@ -10,8 +10,6 @@ const COVER_BY_CATEGORY = {
 const COVER_BY_SLUG_KEYWORD: Array<{ keyword: string; image: string }> = [
   { keyword: "telegram", image: "/assets/telegramicon.png" },
   { keyword: "bonus", image: "/assets/pinkadam.jpg" },
-  { keyword: "aviator", image: "/assets/haribo.jpg" },
-  { keyword: "crash", image: "/assets/haribo.jpg" },
 ];
 
 /**

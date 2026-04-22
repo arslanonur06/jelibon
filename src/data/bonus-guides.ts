@@ -163,6 +163,17 @@ const EXCLUDED_BRAND_SLUGS = new Set([
   "vippark",
 ]);
 
+const POPULAR_BONUS_BRAND_SLUGS = [
+  "casibom",
+  "betticket",
+  "mobilbahis",
+  "superbahis",
+  "rivalo",
+  "onwin",
+  "sahabet",
+  "gettobet",
+] as const;
+
 function toSeoSlug(value: string): string {
   return value
     .normalize("NFD")
@@ -190,5 +201,12 @@ export const BONUS_BRAND_COUNT = bonusBrandGuides.length;
 
 export const bonusGuideBySlug = new Map(
   bonusBrandGuides.map((item) => [item.slug, item] as const),
+);
+
+export const popularBonusBrandGuides = POPULAR_BONUS_BRAND_SLUGS.flatMap(
+  (slug) => {
+    const brand = bonusGuideBySlug.get(slug);
+    return brand ? [brand] : [];
+  },
 );
 

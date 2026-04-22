@@ -33,20 +33,19 @@ function buildSections(brand: string): BonusArticleSection[] {
     {
       heading: `${brand} giriş ve adres tarafı`,
       paragraphs: [
-        `${brand} tarafında en çok dönen başlıklar giriş, güncel adres ve güncel giriş aramalarıdır. Bu taraf hızlı açılan, net görünen ve tek kanaldan güncellenen yapıyla ilerlemelidir.`,
+        `${brand} tarafında giriş, güncel adres ve mobil erişim başlıkları aynı akışta ilerler.`,
       ],
     },
     {
       heading: "Bonus başlıkları",
       paragraphs: [
-        `Deneme bonusu, freespin, yatırımsız bonus, doğum günü bonusu ve crash / uçak oyunu başlıkları ayrı kümeler gibi ele alınmalıdır. Böylece kullanıcı ne arıyorsa doğrudan onu görür.`,
+        "Deneme bonusu, freespin, yatırımsız bonus ve doğum günü bonusu ayrı başlıklarda tutulur.",
       ],
     },
     {
       heading: "Şart tarafı",
       paragraphs: [
-        `${brand} sayfasında bonus tutarı, çevrim, geçerli oyunlar, maksimum çekim ve süre bilgisi kısa ama eksiksiz görünmelidir.`,
-        "Şart değiştiği anda metin ve yönlendirme birlikte güncellenmelidir.",
+        `${brand} sayfasında bonus tutarı, çevrim, geçerli oyunlar, maksimum çekim ve süre bilgisi net görünmelidir.`,
       ],
     },
   ];
@@ -90,8 +89,7 @@ export function buildBonusArticle(brand: BonusBrandGuide): BonusArticleContent {
   return {
     title: `${brand.name} site, güncel adres ve bonus rehberi`,
     intro: [
-      `${brand.name} için güncel adres, giriş ve bonus başlıkları tek sayfada.`,
-      "Deneme bonusu, freespin, yatırımsız bonus, doğum günü bonusu ve crash / uçak oyunu aramaları burada toplanır.",
+      `${brand.name} güncel adres, giriş ve bonus başlıkları.`,
     ],
     sections: buildSections(brand.name),
     checklist: buildChecklist(),

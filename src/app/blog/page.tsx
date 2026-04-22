@@ -5,7 +5,10 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { BlogBrandHub } from "@/components/blog-brand-hub";
 import { getPostsForLocale } from "@/data/blog";
-import { bonusBrandGuides } from "@/data/bonus-guides";
+import {
+  bonusBrandGuides,
+  popularBonusBrandGuides,
+} from "@/data/bonus-guides";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
@@ -63,8 +66,6 @@ export default function BlogPage() {
             {dict.blog.description}
           </p>
 
-          <BlogBrandHub locale={locale} brands={bonusBrandGuides} />
-
           <h2 className="mt-16 font-display text-2xl font-semibold text-white sm:text-3xl">
             {dict.blog.articlesHeading}
           </h2>
@@ -103,6 +104,12 @@ export default function BlogPage() {
               </article>
             ))}
           </div>
+
+          <BlogBrandHub
+            locale={locale}
+            brands={bonusBrandGuides}
+            popularBrands={popularBonusBrandGuides}
+          />
         </div>
       </main>
       <SiteFooter />

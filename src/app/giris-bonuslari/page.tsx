@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BonusBrandCatalog } from "@/components/bonus-brand-catalog";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TELEGRAM_URL } from "@/constants";
-import { BONUS_BRAND_COUNT, bonusBrandGuides } from "@/data/bonus-guides";
+import {
+  bonusBrandGuides,
+  popularBonusBrandGuides,
+} from "@/data/bonus-guides";
 
 function toHashTag(value: string): string {
   const compact = value.replace(/[^a-zA-Z0-9]/g, "");
@@ -18,7 +22,7 @@ const BONUS_KEYWORDS = [
   "güncel adres",
   "mobil giriş",
   "kayıt bonusu",
-  "uçak oyunu",
+  "hoş geldin bonusu",
 ] as const;
 
 export const metadata: Metadata = {
@@ -35,24 +39,37 @@ export const metadata: Metadata = {
 };
 
 export default function GirisBonuslariPage() {
-  const hashtagCloud = bonusBrandGuides.map((brand) => ({
+  const featuredTags = bonusBrandGuides.slice(0, 18).map((brand) => ({
     slug: brand.slug,
     tag: toHashTag(brand.name),
     name: brand.name,
   }));
-  const keywordTicker = [...BONUS_KEYWORDS, ...BONUS_KEYWORDS];
 
   return (
     <div className="relative min-h-screen">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.14]"
+        style={{
+          backgroundImage: "url('/assets/bonus-directory-bg.png')",
+          backgroundPosition: "center top",
+          backgroundSize: "cover",
+        }}
+        aria-hidden
+      />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.86)_0%,rgba(5,5,16,0.95)_35%,rgba(5,5,16,0.98)_100%)]" aria-hidden />
       <SiteHeader />
-      <main className="pb-16 pt-32 sm:pb-20 sm:pt-36">
+      <main className="relative z-[1] pb-16 pt-32 sm:pb-20 sm:pt-36">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className="font-display text-xs uppercase tracking-[0.35em] text-[#E9A8FF]/90">
             Bonus Rehberleri
           </p>
           <h1 className="mt-3 font-display text-4xl font-semibold text-white sm:text-5xl">
-            Güncel giriş bonusu şartları ve marka rehberleri
+            Güncel giriş ve bonus rehberleri
           </h1>
+          <p className="mt-4 max-w-2xl text-sm text-zinc-300 sm:text-base">
+            Tüm markalar tek katalogda. Arama, alfabetik filtre ve popüler sıra
+            ile hızlı geçiş yap.
+          </p>
           <Link
             href={TELEGRAM_URL}
             target="_blank"
@@ -62,47 +79,24 @@ export default function GirisBonuslariPage() {
             Telegram: @jelibonmarketing
           </Link>
 
-          <section className="glass-panel mt-8 rounded-3xl p-5 sm:p-7">
-            <h2 className="font-display text-2xl font-semibold text-white">
-              Hızlı aramalar ({BONUS_BRAND_COUNT} marka)
-            </h2>
-            <div className="mt-5 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] py-3">
-              <div className="animate-horizontal-marquee flex min-w-max gap-3 px-3">
-                {keywordTicker.map((keyword, index) => (
-                  <span
-                    key={`${keyword}-${index}`}
-                    className="rounded-full border border-white/10 bg-[#131322] px-3 py-1.5 text-xs font-medium text-zinc-200"
-                  >
-                    {keyword}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {hashtagCloud.map((item) => (
-                <Link
-                  key={item.slug}
-                  href={`/giris-bonuslari/${item.slug}`}
-                  className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-[#E9A8FF] transition hover:border-[#A78BFA]/45 hover:text-white"
-                  aria-label={`${item.name} hashtag sayfasina git`}
-                >
-                  {item.tag}
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {bonusBrandGuides.map((brand) => (
+          <section className="mt-8 flex flex-wrap gap-2">
+            {featuredTags.map((item) => (
               <Link
-                key={brand.slug}
-                href={`/giris-bonuslari/${brand.slug}`}
-                className="glass-panel rounded-2xl px-4 py-3 text-zinc-100 transition hover:border-[#A78BFA]/40 hover:bg-white/[0.03]"
+                key={item.slug}
+                href={`/giris-bonuslari/${item.slug}`}
+                className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-[#E9A8FF] transition hover:border-[#A78BFA]/45 hover:text-white"
+                aria-label={`${item.name} hashtag sayfasina git`}
               >
-                {brand.name} güncel adres ve bonus rehberi
+                {item.tag}
               </Link>
             ))}
-          </div>
+          </section>
+
+          <BonusBrandCatalog
+            brands={bonusBrandGuides}
+            popularBrands={popularBonusBrandGuides}
+            keywords={BONUS_KEYWORDS}
+          />
         </div>
       </main>
       <SiteFooter />
