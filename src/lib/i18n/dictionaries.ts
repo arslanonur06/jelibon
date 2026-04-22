@@ -167,7 +167,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       tagline: "Premium growth & software · Türkiye",
       textColorLines: ["Acquire.", "Scale.", "Dominate."],
       description:
-        "Traffic acquisition through long-term SEO, Telegram & PornHub; AI automation, AI Influencer, creative studio, DMCA, and custom software—built for the Turkish market.",
+        "Telegram, PornHub, SEO, AI, DMCA, creative, and custom software for iGaming in Türkiye.",
       viewPackages: "View packages",
       readBlog: "Read the blog",
       tags:
@@ -181,13 +181,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     growthPillars: {
       heading: "Full-stack iGaming infrastructure",
-      description:
-        "From traffic and SEO to automation and custom software—aligned for operators targeting Türkiye.",
+      description: "Traffic, SEO, automation, and software for operators in Türkiye.",
     },
     orbitalSection: {
       heading: "Growth orbit",
-      description:
-        "Full growth stack—click nodes to explore how modules connect.",
+      description: "Click nodes to view the stack.",
     },
     packages: {
       heading: "Services & pricing",
@@ -358,8 +356,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     combo: {
       flagship: "Flagship",
-      description:
-        "Our top monthly stack: traffic, AI, SEO, protection, and hands-on support—built for serious scale in Türkiye.",
+      description: "Traffic, AI, SEO, protection, and support in one stack.",
       getStarted: "Get started today",
       fullGrowthSuiteByLocale: {
         title: "Full Growth Suite",
@@ -380,8 +377,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     blog: {
       heading: "Blog",
-      description:
-        "Notes on performance, automation, and brand safety—built for teams shipping in competitive markets.",
+      description: "Performance, automation, and brand safety.",
       articlesHeading: "Editorial posts",
       viewAllPosts: "View all posts",
       listEyebrow: "Insights",
@@ -394,8 +390,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     footer: {
       heading: "Jelibon Marketing",
-      about:
-        "Growth & software for iGaming in Türkiye—Telegram, PornHub, SEO, AI, DMCA, and custom stacks. Reach us on Telegram.",
+      about: "Growth & software for iGaming in Türkiye.",
       getStarted: "Get started",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. All rights reserved.",
@@ -409,21 +404,18 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     testimonials: {
       heading: "What operators say",
-      subheading:
-        "A few recent notes from the field—metrics depend on offer, spend, and timing.",
-      sigmaHeading: "SiGMA & industry recognition",
-      sigmaSubtext:
-        "Illustrative shortlists and nomination tracks—eligibility, categories, and juries change every cycle.",
+      subheading: "Recent operator notes and market presence.",
+      sigmaHeading: "Seen across the circuit",
+      sigmaSubtext: "Regular touchpoints with the same rooms operators already know.",
       sigmaAwards: [
-        "SiGMA Europe — Best Marketing Agency (shortlist, 2025)",
-        "SiGMA Americas — Growth Partner of the Year (nominee, 2024)",
-        "SiGMA Africa — Most Innovative Campaign (shortlist, 2024)",
+        "ICE Barcelona — operator and affiliate meetings",
+        "SBC Summit Lisbon — sportsbook and casino teams",
+        "SiGMA Europe Malta — traffic, CRM, and SEO rounds",
       ],
     },
     faq: {
       heading: "Frequently Asked Questions",
-      subheading:
-        "Everything you need to know before getting started.",
+      subheading: "Short answers.",
       items: [
         {
           question: "Which markets do you specialise in?",
@@ -476,7 +468,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       totalLabel: "Monthly estimate",
       selectedLabel: "services selected",
       estimateNote:
-        "Final pricing is scoped to your volume and goals. Contact us for a custom quote.",
+        "Final pricing depends on scope and volume.",
       getQuote: "Get a custom quote",
       customLabel: "Custom pricing",
       noneSelected: "Select services above to see your estimate.",
@@ -505,7 +497,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       tagline: "Büyüme ve yazılım, Türkiye pazarına göre",
       textColorLines: ["Trafik.", "Ölçek.", "Kazan."],
       description:
-        "Telegram ve PornHub’da reklam, sitede arama trafiği (deneme bonusu, freespin, yatırımsız, doğum günü, uçak oyunu aramaları), kreatif, DMCA, gerekiyorsa özel parça kod. Hedefin neyse, önce onu netleştiririz; boş söz yok. İletişim: @jelibonmarketing",
+        "Telegram, PornHub, SEO, AI, DMCA, kreatif ve özel yazılım.",
       viewPackages: "Paketlere bak",
       readBlog: "Blog",
       tags:
@@ -519,13 +511,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     growthPillars: {
       heading: "Ne iş yapıyoruz",
-      description:
-        "Trafik, içerik/arama, reklam hesabı, markayı kopyalamaya karşı önlem, gerekirse özel panel. Hepsi tek çatı değil: neye ihtiyacın varsa onu açalım demek daha doğru.",
+      description: "Trafik, SEO, otomasyon, kreatif ve yazılım.",
     },
     orbitalSection: {
       heading: "Modüllerin birbiriyle bağı",
-      description:
-        "Aşağıdaki halkalara tıkla, hangi işin nereye dokunduğunu gör.",
+      description: "Aşağıdaki halkalara tıkla.",
     },
     packages: {
       heading: "Hizmetler ve fiyatlar",
@@ -700,8 +690,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     combo: {
       flagship: "Öne çıkan",
-      description:
-        "Aylık öne çıkan paketimiz: trafik, AI, SEO, koruma ve birebir operasyonel destek—Türkiye'de ciddi ölçek için tasarlandı.",
+      description: "Trafik, AI, SEO, koruma ve destek tek pakette.",
       getStarted: "Bugün başlayın",
       fullGrowthSuiteByLocale: {
         title: "Tam Büyüme Paketi",
@@ -722,8 +711,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     blog: {
       heading: "Blog",
-      description:
-        "Nasıl yaptık, neye dikkat ettik, hangi sorgu patladı. Okuyup “bizde de böyle olsun” dersen Telegram’dan yazman yeterli.",
+      description: "Performans, otomasyon ve SEO notları.",
       articlesHeading: "Yazılar",
       viewAllPosts: "Tüm yazıları gör",
       listEyebrow: "İçgörüler",
@@ -736,8 +724,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     footer: {
       heading: "Jelibon Marketing",
-      about:
-        "Türkiye’de iGaming ve bahis tarafı: reklam, arama, kreatif, DMCA, kod. Soru ve teklif: Telegram @jelibonmarketing",
+      about: "Türkiye’de iGaming growth, SEO ve yazılım.",
       getStarted: "Hemen başlayın",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
@@ -751,20 +738,18 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     testimonials: {
       heading: "Sahadaki ses",
-      subheading:
-        "Aşağıdaki notlar sahadan; metrikler teklif, bütçe ve zamana göre değişir.",
-      sigmaHeading: "SiGMA ve sektörel tanınma",
-      sigmaSubtext:
-        "Örnek kısa liste / adaylık türü ifadeler; kategori, jüri ve yıla göre farklılık gösterebilir.",
+      subheading: "Operatör notları ve pazardaki görünürlük.",
+      sigmaHeading: "Bulunduğumuz sahne",
+      sigmaSubtext: "Operatörlerin zaten takip ettiği ana etkinlikler ve çevreler.",
       sigmaAwards: [
-        "SiGMA Europe — Best Marketing Agency (shortlist, 2025)",
-        "SiGMA Americas — Growth Partner of the Year (nominee, 2024)",
-        "SiGMA Africa — Most Innovative Campaign (shortlist, 2024)",
+        "ICE Barcelona — operatör ve affiliate görüşmeleri",
+        "SBC Summit Lisbon — sportsbook ve casino ekipleri",
+        "SiGMA Europe Malta — trafik, CRM ve SEO turları",
       ],
     },
     faq: {
       heading: "Sık sorulanlar",
-      subheading: "Kısaca; detay için yazışırız.",
+      subheading: "Kısa cevaplar.",
       items: [
         {
           question: "Hangi pazarlarda çalışıyorsunuz?",
@@ -816,7 +801,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       totalLabel: "Aylık tahmini",
       selectedLabel: "hizmet seçildi",
       estimateNote:
-        "Nihai fiyatlandırma hacminize ve hedeflerinize göre belirlenir. Özel teklif için bize ulaşın.",
+        "Fiyat kapsam ve hacme göre netleşir.",
       getQuote: "Özel teklif alın",
       customLabel: "Özel fiyatlandırma",
       noneSelected: "Tahmininizi görmek için yukarıdan hizmet seçin.",
@@ -1091,15 +1076,13 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     testimonials: {
       heading: "Что говорят операторы",
-      subheading:
-        "Несколько недавних заметок с практики — цифры зависят от оффера, бюджета и срока.",
-      sigmaHeading: "SiGMA и отраслевое признание",
-      sigmaSubtext:
-        "Иллюстративные шортлисты/номинации: категории и жюри меняются от года к году.",
+      subheading: "Заметки операторов и рыночное присутствие.",
+      sigmaHeading: "Где нас видят",
+      sigmaSubtext: "Ключевые ивенты и залы, которые и так знает рынок.",
       sigmaAwards: [
-        "SiGMA Europe — Best Marketing Agency (shortlist, 2025)",
-        "SiGMA Americas — Growth Partner of the Year (nominee, 2024)",
-        "SiGMA Africa — Most Innovative Campaign (shortlist, 2024)",
+        "ICE Barcelona — встречи с операторами и аффилиатами",
+        "SBC Summit Lisbon — команды sportsbook и casino",
+        "SiGMA Europe Malta — трафик, CRM и SEO-круги",
       ],
     },
     faq: {

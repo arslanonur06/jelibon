@@ -16,14 +16,14 @@ function hashSlug(slug: string): number {
 
 function buildMarkaDescription(brandName: string, variantIndex: number): string {
   const templates = [
-    `${brandName} için Türkiye’de sık aranan giriş, güncel adres ve bonus sorgularında tarafsız özet; güncel kampanya koşulları Telegram üzerinden paylaşılır.`,
-    `${brandName} markasına dair deneme bonusu ve freespin aramalarında beklentiyi netleştiren kısa bilgilendirme metni; ticari vaat veya garanti içermez.`,
-    `${brandName} çevresinde yatırımsız bonus ve KYC süreçleri hakkında okunabilir bir çerçeve sunar; çekim limitleri ve çevrim şartları mutlaka doğrulanmalıdır.`,
-    `${brandName} ile ilişkili mobil giriş ve kampanya başlıklarında içerik–reklam uyumunu güçlendirmek için eğitim odaklı yapı kullanılır.`,
-    `${brandName} sorgularında Google ve kullanıcı güveni için şeffaf dipnotlar ve sorumlu oyun uyarısı içeren bilgi kartıdır.`,
-    `${brandName} için uçak oyunu / crash promolarında risk anlatımı ve bonus katkı oranlarının anlaşılır şekilde özetlenmesine uygundur.`,
-    `${brandName} karşılaştırma ve rehber formatında; yalnızca bilgilendirme amaçlıdır, yasal yaş ve bölgesel uygunluk kullanıcı sorumluluğundadır.`,
-    `${brandName} hub–spoke SEO modelinde iç linklerle desteklenir; her kart ilgili rehber URL’sine gider ve tekrarlayan ince sayfalar üretmez.`,
+    `${brandName} güncel adres, giriş ve bonus başlıklarını tek sayfada toplar.`,
+    `${brandName} için deneme bonusu, freespin ve yatırımsız bonus kümeleri.`,
+    `${brandName} mobil giriş, kayıt ve kampanya aramaları için hızlı erişim.`,
+    `${brandName} crash / uçak oyunu ve bonus niyeti için kısa rehber.`,
+    `${brandName} güncel giriş akışı ve bonus başlıkları.`,
+    `${brandName} için giriş, adres ve kampanya sorgularını tek merkezde toplar.`,
+    `${brandName} aramalarında hızlı yönlendirme ve net başlık yapısı.`,
+    `${brandName} bonus rehberi, güncel adres ve giriş odaklı sayfa.`,
   ] as const;
   return templates[variantIndex % templates.length];
 }

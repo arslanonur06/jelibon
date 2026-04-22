@@ -14,8 +14,7 @@ function hubCopy(locale: Locale, count: number) {
   if (locale === "tr") {
     return {
       title: `${count} marka, iki görünüm`,
-      description:
-        "Aşağıda aynı markanın koyu (bonus odaklı) ve açık (blog) sayfasına gider. Kampanya, adres, özel anlaşma: yine Telegram.",
+      description: "Her marka için bonus ve rehber sayfası.",
       bonus: "Bonus sayfası (koyu)",
       light: "Blog rehberi (açık)",
       indexBonus: "Hepsini listele: bonus",
@@ -25,8 +24,7 @@ function hubCopy(locale: Locale, count: number) {
   if (locale === "ru") {
     return {
       title: `${count} брендов — все гайды`,
-      description:
-        "Для каждого бренда: тёмная страница бонусов и светлый гайд в блоге. Актуальные условия — через Telegram.",
+      description: "Для каждого бренда: бонусная и блоговая страница.",
       bonus: "Бонус (тёмная)",
       light: "Гайд (светлая)",
       indexBonus: "Индекс бонусов",
@@ -35,8 +33,7 @@ function hubCopy(locale: Locale, count: number) {
   }
   return {
     title: `${count} brands — full directory`,
-    description:
-      "Each brand has two templates: dark-theme bonus guide and light blog-style guide. For live offers, use Telegram.",
+    description: "Each brand has a bonus page and a blog guide.",
     bonus: "Bonus guide (dark)",
     light: "Blog guide (light)",
     indexBonus: "All brands — bonus hub",

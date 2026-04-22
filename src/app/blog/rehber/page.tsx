@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
-import { TELEGRAM_URL } from "@/constants";
 import { BONUS_BRAND_COUNT, bonusBrandGuides } from "@/data/bonus-guides";
 
 export const metadata: Metadata = {
   title: "Marka rehberleri",
-  description: `${BONUS_BRAND_COUNT} marka için güncel giriş, adres ve bonus odaklı açık tema rehber sayfaları. PR ve iş birliği: @jelibonmarketing.`,
+  description: `${BONUS_BRAND_COUNT} marka için güncel giriş, adres ve bonus rehberleri.`,
   alternates: { canonical: "/blog/rehber" },
   openGraph: {
     title: "Marka rehberleri | Jelibon Marketing",
     description:
-      "Her marka için blog altında rehber şablonu; tüm yönlendirmeler Telegram.",
+      "Her marka için açık tema rehber sayfası.",
     url: "/blog/rehber",
     type: "website",
     locale: "tr_TR",
@@ -41,19 +40,7 @@ export default function BlogRehberIndexPage() {
         <h1 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
           Marka rehberleri
         </h1>
-        <p className="mt-3 max-w-2xl text-slate-600">
-          Aşağıdaki her satır, ekran görüntüsündeki gibi açık tema rehber
-          şablonuna gider. Güncel kampanya ve adres bilgisi için{" "}
-          <Link
-            href={TELEGRAM_URL}
-            className="font-semibold text-[#0047FF] underline-offset-2 hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Telegram @jelibonmarketing
-          </Link>{" "}
-          kullanılır.
-        </p>
+        <p className="mt-3 max-w-2xl text-slate-600">Açık tema marka rehberleri.</p>
       </header>
       <main className="mx-auto max-w-5xl px-4 pb-16 sm:px-8">
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BrandRehberLightLayout } from "@/components/brand-rehber-light-layout";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
+import { buildBonusArticle } from "@/data/bonus-article";
 import { bonusBrandGuides, bonusGuideBySlug } from "@/data/bonus-guides";
 import { getSiteUrl } from "@/constants";
 
@@ -16,7 +17,7 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!brand) return { title: "Sayfa bulunamadı" };
 
   const title = `${brand.name} — giriş ve bonus notları`;
-  const description = `${brand.name} hakkinda sade rehber: giris, bonus basliklari, guncel notlar. Is birligi ve guncel kampanya: Telegram @jelibonmarketing.`;
+  const description = `${brand.name} giris, adres ve bonus rehberi.`;
   const path = `/blog/rehber/${brand.slug}`;
 
   return {
@@ -36,6 +37,7 @@ export function generateMetadata({ params }: Props): Metadata {
 export default function BlogBrandRehberPage({ params }: Props) {
   const brand = bonusGuideBySlug.get(params.slug);
   if (!brand) notFound();
+  const article = buildBonusArticle(brand);
 
   const base = getSiteUrl();
 
@@ -58,13 +60,19 @@ export default function BlogBrandRehberPage({ params }: Props) {
             "@id": `${base}/blog/rehber/${brand.slug}#webpage`,
             url: `${base}/blog/rehber/${brand.slug}`,
             name: `${brand.name} Rehberi`,
-            description: `${brand.name} güncel giriş, adres ve bonus bilgilendirme sayfası.`,
+            description: `${brand.name} güncel giriş, adres ve bonus sayfası.`,
             inLanguage: "tr-TR",
             isPartOf: { "@id": `${base}/#website` },
           }),
         }}
       />
-      <BrandRehberLightLayout brandName={brand.name} slug={brand.slug} />
+      <BrandRehberLightLayout
+        brand={brand}
+        article={article}
+        directoryHref="/blog/rehber"
+        directoryLabel="Tüm markalar"
+        relatedHrefBase="/blog/rehber"
+      />
     </>
   );
 }

@@ -1,107 +1,110 @@
 import Link from "next/link";
 import { TELEGRAM_URL } from "@/constants";
-import { KISA_BLOG_BONUS_ITEMS } from "@/data/kisa-blog-bonus-tr";
-import { getPopulerMarkaKartlari } from "@/data/populer-marka-kartlari-tr";
+import type { BonusArticleContent } from "@/data/bonus-article";
+import type { BonusBrandGuide } from "@/data/bonus-guides";
 
 type BrandRehberLightLayoutProps = {
-  brandName: string;
-  slug: string;
+  brand: BonusBrandGuide;
+  article: BonusArticleContent;
+  directoryHref: string;
+  directoryLabel: string;
+  relatedHrefBase: string;
 };
 
-const PRIMARY = "#0047FF";
+const PRIMARY = "#C9A35F";
 
-function PillRow() {
-  const pills = [
-    { label: "Güncel adres", filled: true },
-    { label: "Giriş", filled: false },
-    { label: "Kayıt ol", filled: false },
-    { label: "Bonus", filled: false },
-    { label: "Mobil giriş", filled: false },
-  ] as const;
+const HERO_LINKS = [
+  "Güncel adres",
+  "Giriş",
+  "Kayıt ol",
+  "Bonus",
+  "Mobil giriş",
+] as const;
 
+const SEARCH_LINKS = [
+  "site",
+  "güncel adres",
+  "güncel giriş",
+  "bulunan bonuslar",
+  "deneme bonusu freespin",
+  "yatırımsız bonus",
+] as const;
+
+function getBrandMonogram(brandName: string) {
+  const parts = brandName
+    .split(/\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (parts.length >= 2) {
+    return `${parts[0][0]}${parts[1][0]}`.toUpperCase();
+  }
+
+  return brandName.slice(0, 2).toUpperCase();
+}
+
+function HeroPills({ brandName }: { brandName: string }) {
   return (
-    <div className="flex flex-wrap gap-2">
-      {pills.map((pill) => (
+    <div className="flex flex-wrap gap-2.5">
+      {HERO_LINKS.map((label, index) => (
         <Link
-          key={pill.label}
+          key={label}
           href={TELEGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`${pill.label} — bilgi için Telegram`}
+          aria-label={`${brandName} ${label} bilgisi için Telegram`}
           className={
-            pill.filled
-              ? "rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
-              : "rounded-full border-2 bg-white px-4 py-2 text-sm font-semibold transition hover:bg-slate-50"
+            index === 0
+              ? "rounded-xl border px-4 py-2 text-sm font-semibold text-[#1f2a22] shadow-sm transition hover:opacity-90"
+              : "rounded-xl border bg-white px-4 py-2 text-sm font-semibold text-[#234336] transition hover:bg-[#faf6ef]"
           }
-          style={
-            pill.filled
-              ? { backgroundColor: PRIMARY }
-              : { borderColor: PRIMARY, color: PRIMARY }
-          }
+          style={{
+            borderColor: PRIMARY,
+            backgroundColor: index === 0 ? PRIMARY : "#fffdf8",
+          }}
         >
-          {pill.label}
+          {label}
         </Link>
       ))}
     </div>
   );
 }
 
-/**
- * Açık tema “marka rehberi” şablonu (blog altında kullanılır).
- * Tüm aksiyonlar bilgilendirme + Telegram yönlendirmesi içindir.
- */
 export function BrandRehberLightLayout({
-  brandName,
-  slug,
+  brand,
+  article,
+  directoryHref,
+  directoryLabel,
+  relatedHrefBase,
 }: BrandRehberLightLayoutProps) {
-  const logoLabel = `${brandName} Rehberi.`;
-  const boxLabel = `${brandName.toUpperCase()} — GÜNCEL ADRES, GİRİŞ VE BONUS`;
-  const populerMarkalar = getPopulerMarkaKartlari(slug, 6);
-
+  const monogram = getBrandMonogram(brand.name);
   const navLinkClass =
-    "text-sm font-medium text-slate-700 transition hover:text-[#0047FF]";
+    "text-sm font-medium text-[#31443b] transition hover:text-[#7f5c22]";
 
   return (
     <div
-      className="relative z-[120] min-h-screen bg-white text-slate-900 antialiased"
+      className="relative z-[120] min-h-screen bg-[#f6f1e6] text-[#1f2a22] antialiased"
       style={{ fontFamily: "var(--font-dm), system-ui, sans-serif" }}
     >
-      <p className="border-b border-slate-200 bg-slate-50 px-4 py-2 text-center text-xs text-slate-600 sm:text-sm">
-        Google aramasıyla gelen markalar: PR anlaşması ve iş birliği için bize
-        ulaşın.{" "}
-        <Link
-          href={TELEGRAM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-semibold text-[#0047FF] underline-offset-2 hover:underline"
-        >
-          Telegram
-        </Link>
-      </p>
-
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
+      <header className="border-b border-[#dac7a4] bg-[#f8f4eb]">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
           <Link
-            href={`/blog/rehber/${slug}`}
-            className="text-lg font-bold tracking-tight text-slate-900 sm:text-xl"
-            style={{ color: PRIMARY }}
+            href={`${relatedHrefBase}/${brand.slug}`}
+            className="text-lg font-bold tracking-tight text-[#1f2a22] sm:text-xl"
           >
-            {logoLabel}
+            {brand.name} Rehberi.
           </Link>
-          <nav
-            className="hidden flex-wrap items-center gap-5 md:flex"
-            aria-label="Ana menü"
-          >
+          <nav className="hidden flex-wrap items-center gap-5 lg:flex" aria-label="Ana menü">
             <Link href="/blog" className={navLinkClass}>
               Blog
             </Link>
             <Link href="/blog/rehber" className={navLinkClass}>
               Markalar
             </Link>
-            <Link href="/blog/rehber" className={navLinkClass}>
+            <Link href="/giris-bonuslari" className={navLinkClass}>
               Karşılaştır
             </Link>
-            <Link href="/giris-bonuslari" className={navLinkClass}>
+            <Link href={directoryHref} className={navLinkClass}>
               Rehberler
             </Link>
             <Link href="/blog" className={navLinkClass}>
@@ -116,189 +119,205 @@ export function BrandRehberLightLayout({
               rel="noopener noreferrer"
               className={navLinkClass}
             >
-              Telegram
+              İş birliği için yaz
             </Link>
           </nav>
           <Link
             href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`${brandName} — Telegram ile iletişim`}
-            className="rounded-full px-5 py-2 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+            className="rounded-full px-5 py-2 text-sm font-semibold text-[#1f2a22] shadow-sm transition hover:opacity-90"
             style={{ backgroundColor: PRIMARY }}
           >
-            {brandName}
+            {brand.name}
           </Link>
         </div>
-        <nav
-          className="md:hidden"
-          aria-label="Mobil menü"
-        >
-          <div className="mx-auto flex max-w-5xl gap-4 overflow-x-auto whitespace-nowrap border-t border-slate-100 px-4 py-2.5 sm:px-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-            <Link href="/blog" className={navLinkClass}>
-              Blog
-            </Link>
-            <Link href="/blog/rehber" className={navLinkClass}>
-              Markalar
-            </Link>
-            <Link href="/blog/rehber" className={navLinkClass}>
-              Karşılaştır
-            </Link>
-            <Link href="/giris-bonuslari" className={navLinkClass}>
-              Rehberler
-            </Link>
-            <Link href="/blog" className={navLinkClass}>
-              Slotlar
-            </Link>
-            <Link href="/blog" className={navLinkClass}>
-              İncelemeler
-            </Link>
-            <Link
-              href={TELEGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={navLinkClass}
-            >
-              Telegram
-            </Link>
-          </div>
-        </nav>
-        <div className="mx-auto max-w-5xl border-t border-slate-100 px-4 py-3 sm:px-6">
-          <PillRow />
+        <div className="mx-auto max-w-6xl border-t border-[#e3d6bb] px-4 py-3 sm:px-6">
+          <HeroPills brandName={brand.name} />
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
-        <div className="mx-auto max-w-3xl">
-          <p
-            className="text-center text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm"
-            style={{ color: PRIMARY }}
+      <section className="bg-[#052e23]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 sm:py-14 md:flex-row md:items-center">
+          <div
+            className="flex h-28 w-28 shrink-0 items-center justify-center rounded-3xl border text-4xl font-semibold shadow-[0_18px_45px_rgba(0,0,0,0.18)] sm:h-36 sm:w-36"
+            style={{
+              borderColor: "rgba(201, 163, 95, 0.3)",
+              color: PRIMARY,
+              background:
+                "radial-gradient(circle at 30% 30%, rgba(201,163,95,0.18), rgba(4,27,21,0.9))",
+            }}
           >
-            EĞİTİM • KARŞILAŞTIRMAYA UYGUN • ŞEFFAF AÇIKLAMALAR
-          </p>
-          <h1 className="mt-6 text-center text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">
-            Şartları okuyan okuyucular için dürüst{" "}
-            <span style={{ color: PRIMARY }}>iGaming rehberleri</span>; öne çıkan
-            ortak <span style={{ color: PRIMARY }}>{brandName}</span>.
-          </h1>
-          <p className="mt-8 text-center text-base leading-relaxed text-slate-600 sm:text-lg">
-            Bu sayfa bilgilendirme amaçlıdır. {brandName} markasına dair güncel
-            giriş, adres, bonus ve kampanya şartları hakkında tarafsız özet sunar;
-            ticari vaat içermez. Kumar risklidir; sadece yasal yaşta ve sorumlu
-            oyun ilkeleriyle hareket edin. Güncel ve kişiye özel bilgi için
-            yalnızca resmi iletişim kanalımız olan Telegram üzerinden yönlendirme
-            yapılır.
-          </p>
-
-          <section
-            className="mt-12 rounded-2xl border border-blue-100 bg-blue-50/50 p-6 sm:p-8"
-            aria-labelledby="cta-box-heading"
-          >
+            {monogram}
+          </div>
+          <div className="max-w-3xl">
             <p
-              id="cta-box-heading"
-              className="text-xs font-bold uppercase tracking-widest sm:text-sm"
+              className="text-xs font-semibold uppercase tracking-[0.22em] sm:text-sm"
               style={{ color: PRIMARY }}
             >
-              {boxLabel}
+              {brand.name.toUpperCase()} ADRES VE GİRİŞ NOTLARI
             </p>
-            <div className="mt-5">
-              <PillRow />
-            </div>
-          </section>
-        </div>
-
-        <div className="mt-16 rounded-3xl border border-slate-100 bg-gradient-to-b from-sky-50 via-white to-white px-4 py-12 shadow-sm sm:px-8 sm:py-14">
-          <section aria-labelledby="kisa-blog-heading">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <h2
-                  id="kisa-blog-heading"
-                  className="text-xl font-bold text-slate-900 sm:text-2xl"
-                >
-                  Kısa blog — bonus ve kampanyalar
-                </h2>
-                <p className="mt-1 max-w-xl text-sm text-slate-600">
-                  Türkiye aramalarında sık geçen deneme bonusu, freespin ve
-                  kampanya başlıkları için hızlı okuma notları.
-                </p>
-              </div>
-              <Link
-                href="/blog"
-                className="shrink-0 text-sm font-semibold text-[#0047FF] hover:underline"
-              >
-                Tümünü gör
-              </Link>
-            </div>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {KISA_BLOG_BONUS_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  aria-label={`${item.title} — blog yazısını aç`}
-                  className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-[#0047FF]/40 hover:shadow-md"
-                >
-                  <h3 className="text-base font-bold leading-snug text-slate-900">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-slate-500">
-                    {item.readMinutes} dk · {item.date}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <section className="mt-14" aria-labelledby="populer-markalar-heading">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <h2
-                  id="populer-markalar-heading"
-                  className="text-xl font-bold text-slate-900 sm:text-2xl"
-                >
-                  Popüler markalar (bilgi sayfaları)
-                </h2>
-                <p className="mt-1 max-w-xl text-sm text-slate-600">
-                  Türkiye’de sık aranan işletmeler için kısa bilgilendirme
-                  metinleri; her kart ilgili rehber sayfasına gider.
-                </p>
-              </div>
-              <Link
-                href="/blog/rehber"
-                className="shrink-0 text-sm font-semibold text-[#0047FF] hover:underline"
-              >
-                Tüm markalar
-              </Link>
-            </div>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {populerMarkalar.map((m) => (
-                <Link
-                  key={m.slug}
-                  href={`/blog/rehber/${m.slug}`}
-                  aria-label={`${m.name} bilgi rehberi`}
-                  className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-[#0047FF]/40 hover:shadow-md"
-                >
-                  <h3 className="text-lg font-bold text-slate-900">{m.name}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                    {m.description}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <p className="mt-12 text-center text-sm text-slate-500">
-            Jelibon Marketing — Türkiye odaklı SEO ve içerik rehberleri. Tüm
-            yönlendirmeler:{" "}
-            <Link
-              href={TELEGRAM_URL}
-              className="font-semibold text-[#0047FF] underline-offset-2 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
+            <h1
+              className="mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl"
+              style={{ color: PRIMARY }}
             >
-              @jelibonmarketing
-            </Link>
-          </p>
+              {brand.name} Giriş
+            </h1>
+            <div className="mt-5 space-y-3 text-base leading-relaxed text-[#e7e1d3] sm:text-lg">
+              {article.intro.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
         </div>
+      </section>
+
+      <main className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
+        <section className="-mt-6 rounded-[28px] border border-[#dbc8a8] bg-[#fdfbf6] p-6 shadow-[0_20px_50px_rgba(8,24,18,0.08)] sm:-mt-8 sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#3f5146]">
+            {brand.name.toUpperCase()} — HIZLI ERİŞİM
+          </p>
+          <div className="mt-4">
+            <HeroPills brandName={brand.name} />
+          </div>
+        </section>
+
+        <div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1fr)_320px]">
+          <div className="space-y-6">
+            {article.sections.map((section) => (
+              <section
+                key={section.heading}
+                className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8"
+              >
+                <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
+                  {section.heading}
+                </h2>
+                <div className="mt-4 space-y-4 text-base leading-relaxed text-[#455248]">
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              </section>
+            ))}
+
+            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
+              <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
+                Sık sorulan sorular
+              </h2>
+              <div className="mt-5 space-y-5 text-[#455248]">
+                {article.faqs.map((faq) => (
+                  <div key={faq.question}>
+                    <h3 className="text-base font-semibold text-[#17382d] sm:text-lg">
+                      {faq.question}
+                    </h3>
+                    <p className="mt-2 leading-relaxed">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
+                    İlgili marka rehberleri
+                  </h2>
+                </div>
+                <Link href={directoryHref} className="text-sm font-semibold text-[#7f5c22] hover:underline">
+                  {directoryLabel}
+                </Link>
+              </div>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {article.relatedBrands.map((relatedBrand) => (
+                  <Link
+                    key={relatedBrand.slug}
+                    href={`${relatedHrefBase}/${relatedBrand.slug}`}
+                    className="rounded-2xl border border-[#e3d7c2] bg-[#fcfaf5] px-4 py-3 text-[#234336] transition hover:border-[#c9a35f] hover:bg-[#f8f2e7]"
+                  >
+                    {relatedBrand.name} güncel adres ve giriş rehberi
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </div>
+
+          <aside className="space-y-6">
+            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
+              <h2 className="font-display text-xl font-semibold text-[#17382d]">
+                Tıklanan kelimeler
+              </h2>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {SEARCH_LINKS.map((item) => (
+                  <Link
+                    key={item}
+                    href={TELEGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-xl border border-[#d2b178] bg-[#f8f0de] px-3 py-2 text-sm font-medium text-[#6f4f18] transition hover:bg-[#f1e4c6]"
+                  >
+                    {brand.name} {item}
+                  </Link>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
+              <h2 className="font-display text-xl font-semibold text-[#17382d]">
+                Güncel şartlar kontrol listesi
+              </h2>
+              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-[#455248]">
+                {article.checklist.map((rule) => (
+                  <li key={rule} className="flex gap-3">
+                    <span
+                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full"
+                      style={{ backgroundColor: PRIMARY }}
+                      aria-hidden
+                    />
+                    <span>{rule}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section
+              className="rounded-[28px] border p-6 shadow-[0_16px_40px_rgba(6,43,33,0.14)]"
+              style={{
+                borderColor: "rgba(201, 163, 95, 0.45)",
+                background:
+                  "linear-gradient(180deg, rgba(6,43,33,1) 0%, rgba(9,56,42,0.98) 100%)",
+              }}
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.22em]" style={{ color: PRIMARY }}>
+                Canlı yönlendirme
+              </p>
+              <h2 className="mt-3 font-display text-2xl font-semibold text-white">
+                Telegram erişimi
+              </h2>
+              <Link
+                href={brand.telegramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex rounded-xl px-4 py-3 text-sm font-semibold text-[#1f2a22] transition hover:opacity-90"
+                style={{ backgroundColor: PRIMARY }}
+              >
+                Telegram: @jelibonmarketing
+              </Link>
+            </section>
+          </aside>
+        </div>
+
+        <footer className="mt-10 border-t border-[#dbc8a8] pt-6 text-sm text-[#5b655d]">
+          Jelibon Marketing — Türkiye odaklı growth ve SEO. Tüm yönlendirmeler{" "}
+          <Link
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-[#7f5c22] hover:underline"
+          >
+            @jelibonmarketing
+          </Link>{" "}
+          üzerinden yapılır.
+        </footer>
       </main>
     </div>
   );

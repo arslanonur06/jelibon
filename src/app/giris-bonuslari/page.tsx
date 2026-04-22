@@ -12,13 +12,12 @@ function toHashTag(value: string): string {
 
 export const metadata: Metadata = {
   title: "Guncel giris bonusu rehberi",
-  description:
-    "Marka marka guncel giris, bonus kosullari ve notlar. Deneme, freespin, yatirimsiz, dogum gunu, ucak oyunu gibi aramalarda bilgi amaçli sayfalar. Soru ve guncel kampanya: Telegram @jelibonmarketing.",
+  description: "Marka marka güncel giriş, adres ve bonus rehberleri.",
   alternates: { canonical: "/giris-bonuslari" },
   openGraph: {
     title: "Güncel giriş bonusu rehberi | Jelibon Marketing",
     description:
-      "Marka marka giriş ve bonus notları. Telegram: @jelibonmarketing",
+      "Marka marka giriş, adres ve bonus rehberleri.",
     type: "website",
     url: "/giris-bonuslari",
   },
@@ -42,12 +41,6 @@ export default function GirisBonuslariPage() {
           <h1 className="mt-3 font-display text-4xl font-semibold text-white sm:text-5xl">
             Güncel giriş bonusu şartları ve marka rehberleri
           </h1>
-          <p className="mt-4 max-w-3xl text-zinc-300">
-            Buradaki metinler bilgilendirme amaçlı. Her marka için ayrı sayfada
-            deneme, freespin, yatırımsız, doğum günü, uçak oyunu gibi
-            aramalarda ne yazdık kısaca topladık. Güncel kampanya ve bire bir
-            soru: Telegram &quot;@jelibonmarketing&quot;.
-          </p>
           <Link
             href={TELEGRAM_URL}
             target="_blank"
@@ -61,10 +54,6 @@ export default function GirisBonuslariPage() {
             <h2 className="font-display text-2xl font-semibold text-white">
               SEO etiket bulutu ({BONUS_BRAND_COUNT} marka)
             </h2>
-            <p className="mt-3 text-zinc-300">
-              Tıkla, ilgili rehber sayfasına gitsin. Amaç, site adı + giriş gibi
-              aramalar arasında sitemizin birbirine bağlanması.
-            </p>
             <div className="mt-5 flex flex-wrap gap-2">
               {hashtagCloud.map((item) => (
                 <Link
@@ -86,7 +75,7 @@ export default function GirisBonuslariPage() {
                 href={`/giris-bonuslari/${brand.slug}`}
                 className="glass-panel rounded-2xl px-4 py-3 text-zinc-100 transition hover:border-[#A78BFA]/40 hover:bg-white/[0.03]"
               >
-                {brand.name} giris bonus rehberi
+                {brand.name} site, guncel adres ve bonus rehberi
               </Link>
             ))}
           </div>
