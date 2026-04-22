@@ -3,16 +3,18 @@ import {
   servicePackages,
   type ServicePackage,
 } from "@/data/packages";
-import { getDictionary } from "@/lib/i18n/dictionaries";
+import { DICTIONARIES, getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 export function PackagesSection() {
   const locale = getLocale();
   const dict = getDictionary(locale);
+  /** Turkish UI: keep package & service lines in English (briefs match contracts). */
+  const p = locale === "tr" ? DICTIONARIES.en.packages : dict.packages;
 
   const servicePackagesLocalized: ServicePackage[] = servicePackages.map(
     (pkg) => {
-      const localized = dict.packages.servicePackagesById[pkg.id];
+      const localized = p.servicePackagesById[pkg.id];
       if (!localized) return pkg;
       return {
         ...pkg,
@@ -27,7 +29,7 @@ export function PackagesSection() {
   );
 
   const growthPackageTiersLocalized = growthPackageTiers.map((tier) => {
-    const localized = dict.packages.growthPackageTiersById[tier.id];
+    const localized = p.growthPackageTiersById[tier.id];
     if (!localized) return tier;
     return { ...tier, name: localized.name, features: localized.features };
   });
@@ -37,10 +39,10 @@ export function PackagesSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
           <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
-            {dict.packages.heading}
+            {p.heading}
           </h2>
           <p className="mt-2 text-sm text-zinc-400 sm:mt-3 sm:text-base">
-            {dict.packages.description}
+            {p.description}
           </p>
         </div>
 
@@ -55,7 +57,7 @@ export function PackagesSection() {
               className="inline-flex shrink-0 items-center rounded-full border border-white/20 bg-[#12121f] px-3 py-1.5 text-xs font-medium text-white shadow-sm transition hover:border-[#FF69B4]/55 hover:bg-[#1a1a2e] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF69B4]"
             >
               <span className="relative z-[1] select-none">
-                {dict.packages.serviceNavLabelsById[pkg.id] ?? pkg.title}
+                {p.serviceNavLabelsById[pkg.id] ?? pkg.title}
               </span>
             </a>
           ))}
@@ -95,7 +97,7 @@ export function PackagesSection() {
                   <p className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                     {pkg.price}
                     <span className="text-base font-normal text-zinc-400 sm:text-lg">
-                      {dict.packages.monthSuffix}
+                      {p.monthSuffix}
                     </span>
                   </p>
                 )}
@@ -120,10 +122,10 @@ export function PackagesSection() {
 
         <div id="growth-packages" className="mt-12 scroll-mt-44 sm:mt-14 md:mt-16">
           <h3 className="font-display text-xl font-semibold text-white sm:text-2xl md:text-3xl">
-            {dict.packages.growthPackagesHeading}
+            {p.growthPackagesHeading}
           </h3>
           <p className="mt-2 max-w-2xl text-sm text-zinc-400 sm:text-base">
-            {dict.packages.growthPackagesDescription}
+            {p.growthPackagesDescription}
           </p>
 
           <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4 lg:grid-cols-3 xl:grid-cols-5">
@@ -138,7 +140,7 @@ export function PackagesSection() {
                 <p className="relative z-[1] mt-2 font-display text-lg font-semibold text-[#C4B5FD] sm:mt-3 sm:text-2xl">
                   {tier.price}
                   <span className="text-[10px] font-normal text-zinc-500 sm:text-sm">
-                    {dict.packages.moSuffix}
+                    {p.moSuffix}
                   </span>
                 </p>
                 <ul className="relative z-[1] mt-3 flex-1 space-y-1.5 text-[11px] leading-snug text-zinc-200 sm:mt-4 sm:space-y-2 sm:text-xs">

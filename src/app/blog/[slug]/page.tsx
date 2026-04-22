@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { getBlogCoverImage } from "@/data/blog/cover-image";
 import { getAllSlugs, getLocalizedPost, getPostsForLocale } from "@/data/blog";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
@@ -24,7 +22,6 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!post) return { title: "Post not found" };
 
   const path = `/blog/${params.slug}`;
-  const ogImage = getBlogCoverImage(post) ?? DEFAULT_OG_IMAGE_PATH;
 
   return {
     title: post.title,
@@ -38,7 +35,7 @@ export function generateMetadata({ params }: Props): Metadata {
       url: path,
       publishedTime: post.date,
       modifiedTime: post.date,
-      images: [{ url: ogImage, alt: post.title }],
+      images: [{ url: DEFAULT_OG_IMAGE_PATH, alt: post.title }],
     },
   };
 }
@@ -84,7 +81,6 @@ export default function BlogPostPage({ params }: Props) {
         title={post.title}
         description={post.excerpt}
         datePublished={post.date}
-        coverImage={post.coverImage}
       />
       <SiteHeader />
       <article className="pb-20 pt-36">
@@ -121,17 +117,6 @@ export default function BlogPostPage({ params }: Props) {
             <span>{post.readTime}</span>
           </div>
 
-          <div className="relative mt-10 h-56 w-full overflow-hidden rounded-3xl sm:h-72">
-            <Image
-              src={getBlogCoverImage(post)}
-              alt={post.title}
-              fill
-              className="object-cover object-center opacity-85"
-              sizes="(max-width: 768px) 100vw, 768px"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#050510]/60" />
-          </div>
           <div className="glass-panel mt-10 rounded-3xl p-8 sm:p-10">
             <p className="text-lg leading-relaxed text-zinc-300">{post.excerpt}</p>
             <div className="mt-10 space-y-6 text-base leading-relaxed text-zinc-300">

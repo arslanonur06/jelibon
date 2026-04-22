@@ -41,6 +41,27 @@ export function TestimonialsSection() {
           <p className="mt-3 text-zinc-400">{dict.testimonials.subheading}</p>
         </div>
 
+        {/* SiGMA & industry recognition */}
+        <div className="mt-10 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 sm:px-6">
+          <p className="font-display text-xs uppercase tracking-[0.25em] text-[#E9A8FF]/80">
+            {dict.testimonials.sigmaHeading}
+          </p>
+          <p className="mt-2 text-xs text-zinc-500 sm:text-sm">
+            {dict.testimonials.sigmaSubtext}
+          </p>
+          <ul className="mt-4 list-none space-y-2.5 text-sm text-zinc-300">
+            {dict.testimonials.sigmaAwards.map((line) => (
+              <li key={line} className="flex gap-2.5">
+                <span
+                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#FF69B4]/70"
+                  aria-hidden
+                />
+                <span>{line}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Cards */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((t) => (

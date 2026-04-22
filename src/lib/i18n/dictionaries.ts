@@ -122,6 +122,9 @@ export type Dictionary = {
   testimonials: {
     heading: string;
     subheading: string;
+    sigmaHeading: string;
+    sigmaSubtext: string;
+    sigmaAwards: readonly [string, string, string];
   };
   faq: {
     heading: string;
@@ -146,15 +149,15 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon Marketing · iGaming acquisition · Telegram Ads & network · PornHub · SEO · AI chatbot & influencer · DMCA · Creative studio · Custom dev · Scale in Türkiye · ",
+        "Jelibon Marketing — iGaming growth · Telegram Ads + channel network · PornHub · SEO & content hubs · AI chat + influencer systems · DMCA & brand safety · creative & landing production · custom tracking & automations — Türkiye & nearby markets · ",
     },
     nav: {
       solutions: "Solutions",
-      orbital: "Orbit",
+      orbital: "Stack",
       packages: "Packages",
       calculator: "Estimator",
-      combo: "Full suite",
-      testimonials: "Reviews",
+      combo: "All-in",
+      testimonials: "Clients",
       blog: "Blog",
       faq: "FAQ",
       contact: "Contact",
@@ -405,9 +408,17 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "PENDING",
     },
     testimonials: {
-      heading: "Results, Not Promises",
+      heading: "What operators say",
       subheading:
-        "Our partners share what changed after working with us.",
+        "A few recent notes from the field—metrics depend on offer, spend, and timing.",
+      sigmaHeading: "SiGMA & industry recognition",
+      sigmaSubtext:
+        "Illustrative shortlists and nomination tracks—eligibility, categories, and juries change every cycle.",
+      sigmaAwards: [
+        "SiGMA Europe — Best Marketing Agency (shortlist, 2025)",
+        "SiGMA Americas — Growth Partner of the Year (nominee, 2024)",
+        "SiGMA Africa — Most Innovative Campaign (shortlist, 2024)",
+      ],
     },
     faq: {
       heading: "Frequently Asked Questions",
@@ -476,17 +487,17 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon · iGaming · Telegram reklam ve kanal ağı · PornHub · arama (bonus, uçak oyunu) · kreatif · DMCA · özel yazılım · @jelibonmarketing · ",
+        "Jelibon Marketing — iGaming growth · Telegram Ads + channel network · PornHub · SEO & content hubs · AI chat + influencer systems · DMCA & brand safety · creative & landing production · custom tracking & automations — Türkiye & nearby markets · ",
     },
     nav: {
-      solutions: "Çözümler",
-      orbital: "Yörünge",
+      solutions: "Hizmetler",
+      orbital: "Modüller",
       packages: "Paketler",
-      calculator: "Hesaplayıcı",
-      combo: "Eksiksiz paket",
-      testimonials: "Referanslar",
+      calculator: "Teklif",
+      combo: "Tüm paket",
+      testimonials: "Müşteriler",
       blog: "Blog",
-      faq: "SSS",
+      faq: "S.S.S.",
       contact: "İletişim",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
@@ -739,9 +750,17 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "BEKLEMEDE",
     },
     testimonials: {
-      heading: "Söz Değil, Sonuç",
+      heading: "Sahadaki ses",
       subheading:
-        "Partnerlerimiz birlikte çalıştıktan sonra ne değiştiğini anlatıyor.",
+        "Aşağıdaki notlar sahadan; metrikler teklif, bütçe ve zamana göre değişir.",
+      sigmaHeading: "SiGMA ve sektörel tanınma",
+      sigmaSubtext:
+        "Örnek kısa liste / adaylık türü ifadeler; kategori, jüri ve yıla göre farklılık gösterebilir.",
+      sigmaAwards: [
+        "SiGMA Europe — Best Marketing Agency (shortlist, 2025)",
+        "SiGMA Americas — Growth Partner of the Year (nominee, 2024)",
+        "SiGMA Africa — Most Innovative Campaign (shortlist, 2024)",
+      ],
     },
     faq: {
       heading: "Sık sorulanlar",
@@ -1071,9 +1090,17 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "В ОЖИДАНИИ",
     },
     testimonials: {
-      heading: "Результаты, не обещания",
+      heading: "Что говорят операторы",
       subheading:
-        "Наши партнёры рассказывают, что изменилось после работы с нами.",
+        "Несколько недавних заметок с практики — цифры зависят от оффера, бюджета и срока.",
+      sigmaHeading: "SiGMA и отраслевое признание",
+      sigmaSubtext:
+        "Иллюстративные шортлисты/номинации: категории и жюри меняются от года к году.",
+      sigmaAwards: [
+        "SiGMA Europe — Best Marketing Agency (shortlist, 2025)",
+        "SiGMA Americas — Growth Partner of the Year (nominee, 2024)",
+        "SiGMA Africa — Most Innovative Campaign (shortlist, 2024)",
+      ],
     },
     faq: {
       heading: "Часто задаваемые вопросы",
