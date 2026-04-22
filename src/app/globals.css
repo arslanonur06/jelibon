@@ -217,6 +217,19 @@
   animation: gradient-foreground-3 8s infinite;
 }
 
+@keyframes horizontal-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-horizontal-marquee {
+  animation: horizontal-marquee 28s linear infinite;
+}
+
 .from-gradient-1-start {
   --tw-gradient-from: #39ff14;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(57, 255, 20, 0));

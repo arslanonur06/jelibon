@@ -129,7 +129,7 @@ const timelineOverrides: Record<
     4: {
       title: "AI Sohbet Botu",
       content:
-        "GPT destekli sohbet, çok dilli yönlendirme, funnel routing, temel CRM bağlantıları.",
+        "GPT destekli sohbet, çok dilli yönlendirme, akış kurgusu ve temel CRM bağlantıları.",
       category: "Otomasyon",
     },
     5: {
@@ -145,15 +145,15 @@ const timelineOverrides: Record<
     },
     7: {
       title: "SEO",
-      date: "1.1k'den itibaren",
+      date: "$1.1k’dan başlar",
       content:
-        "Blog ağları, parasite SEO, anahtar kelimeler, içerik, backlink'ler—3–6 aylık ufuk.",
+        "Blog ağı, anahtar kelime kurgusu, içerik üretimi ve link akışıyla 3–6 aylık organik büyüme hattı.",
       category: "SEO",
     },
     8: {
       title: "AI Influencer",
       content:
-        "AI personae, günlük içerik, etkileşim ve tekliflere funnel entegrasyonu.",
+        "AI karakterler, günlük içerik akışı, etkileşim yönetimi ve tekliflere yönlenen akışlar.",
       category: "AI",
     },
   },

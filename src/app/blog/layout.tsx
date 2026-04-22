@@ -11,10 +11,13 @@ export default function BlogLayout({ children }: { children: ReactNode }) {
         aria-hidden
       >
         <div
-          className="absolute inset-0 bg-cover bg-right bg-no-repeat opacity-95"
-          style={{ backgroundImage: `url('${BLOG_SIDEBAR_BG}')` }}
+          className="absolute inset-0 bg-center bg-no-repeat opacity-100"
+          style={{
+            backgroundImage: `url('${BLOG_SIDEBAR_BG}')`,
+            backgroundSize: "100% 100%",
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-[#050510]/85 via-[#050510]/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-l from-[#050510]/28 via-transparent to-transparent" />
       </aside>
     </div>
   );

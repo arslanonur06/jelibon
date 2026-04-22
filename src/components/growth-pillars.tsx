@@ -1,10 +1,11 @@
-import { growthPillars } from "@/data/pillars";
+import { getGrowthPillars } from "@/data/pillars";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 export function GrowthPillars() {
   const locale = getLocale();
   const dict = getDictionary(locale);
+  const growthPillars = getGrowthPillars(locale);
 
   return (
     <section
@@ -14,7 +15,11 @@ export function GrowthPillars() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
           <p className="font-display text-xs uppercase tracking-[0.3em] text-[#E9A8FF]/90">
-            Growth &amp; software solutions
+            {locale === "tr"
+              ? "Büyüme ve yazılım"
+              : locale === "ru"
+                ? "Рост и софт"
+                : "Growth & software solutions"}
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold text-white sm:text-4xl">
             {dict.growthPillars.heading}

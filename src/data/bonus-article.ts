@@ -31,31 +31,22 @@ function hashSeed(value: string): number {
 function buildSections(brand: string): BonusArticleSection[] {
   return [
     {
-      heading: `${brand} site, güncel adres ve arama niyeti`,
+      heading: `${brand} giriş ve adres tarafı`,
       paragraphs: [
-        `${brand} aramalarında kullanıcı niyeti tek başlıktan oluşmaz. Aynı markada “site”, “güncel adres”, “güncel giriş”, “deneme bonusu”, “freespin”, “yatırımsız bonus” ve “uçak oyunu” sorguları farklı beklentiler taşır. Bu nedenle içerik tek paragraf değil, niyet bazlı alt başlıklarla modellenmelidir.`,
-        "Odak; giriş aramalarını, bonus kümelerini ve yüksek niyetli sorguları aynı yapıda toplamaktır.",
+        `${brand} tarafında en çok dönen başlıklar giriş, güncel adres ve güncel giriş aramalarıdır. Bu taraf hızlı açılan, net görünen ve tek kanaldan güncellenen yapıyla ilerlemelidir.`,
       ],
     },
     {
-      heading: "Bulunan bonuslar nasıl gruplandırılmalı?",
+      heading: "Bonus başlıkları",
       paragraphs: [
-        `${brand} özelinde önerilen yapı: deneme bonusu, freespin, doğum günü bonusu, yatırımsız bonus ve crash / uçak oyunu aramalarını ayrı niyet kümeleri hâlinde ele almaktır. Bu modelde kullanıcı önce kısa özet görür, ardından bonus türlerine göre detay bölümlere iner ve sonunda tek aksiyon kanalına yönlendirilir.`,
-        "Böylece her bonus başlığı ayrı görünür, sayfa tek merkezden güncel kalır.",
+        `Deneme bonusu, freespin, yatırımsız bonus, doğum günü bonusu ve crash / uçak oyunu başlıkları ayrı kümeler gibi ele alınmalıdır. Böylece kullanıcı ne arıyorsa doğrudan onu görür.`,
       ],
     },
     {
-      heading: "Bilgilendirme sayfası mimarisi",
+      heading: "Şart tarafı",
       paragraphs: [
-        `${brand} özelinde önerilen yapı: sorgu niyetine göre bölümleme + SSS + karşılaştırma tabloları. Bu modelde kullanıcı önce kısa özet görür, ardından bonus türlerine göre detay bölümlere iner ve sonunda tek aksiyon kanalına yönlendirilir.`,
-        "Tek sayfada net başlıklar, kısa bloklar ve hızlı yönlendirme kullanılır.",
-      ],
-    },
-    {
-      heading: "Güncel giriş bonus şartları nasıl yazılmalı?",
-      paragraphs: [
-        `${brand} sayfasında şart metinleri kısa ama eksiksiz olmalıdır: bonus tutarı, çevrim oranı, geçerli oyun kategorileri, maksimum çekim limiti ve son kullanım tarihi.`,
-        "Şartlar değiştiğinde sayfa metni ve yönlendirme aynı anda güncellenmelidir.",
+        `${brand} sayfasında bonus tutarı, çevrim, geçerli oyunlar, maksimum çekim ve süre bilgisi kısa ama eksiksiz görünmelidir.`,
+        "Şart değiştiği anda metin ve yönlendirme birlikte güncellenmelidir.",
       ],
     },
   ];
@@ -83,10 +74,10 @@ function buildFaqs(brand: string): BonusArticleFaqItem[] {
 
 function buildChecklist(): string[] {
   return [
-    "Promosyon metni ile gerçek şartlar birebir eşleşmelidir.",
-    "Çevrim, maksimum çekim ve süre bilgileri görünür alanda olmalıdır.",
-    "KYC onayı gerekiyorsa kayıt öncesi açık şekilde belirtilmelidir.",
-    "Bölgesel/lisans farklılıkları varsa tek satır dipnot yerine detaylı açıklama verilmelidir.",
+    "Promosyon metni ile gerçek şart aynı olmalı.",
+    "Çevrim, maksimum çekim ve süre görünür alanda kalmalı.",
+    "KYC gerekiyorsa kayıt öncesinde açık yazılmalı.",
+    "Bölgesel fark varsa tek satır geçilmemeli.",
   ];
 }
 
@@ -99,8 +90,8 @@ export function buildBonusArticle(brand: BonusBrandGuide): BonusArticleContent {
   return {
     title: `${brand.name} site, güncel adres ve bonus rehberi`,
     intro: [
-      `${brand.name} için site, güncel adres, güncel giriş ve bonus başlıklarını tek sayfada topluyoruz.`,
-      "Deneme bonusu, freespin, yatırımsız bonus, doğum günü bonusu ve crash / uçak oyunu aramaları için hızlı erişim burada.",
+      `${brand.name} için güncel adres, giriş ve bonus başlıkları tek sayfada.`,
+      "Deneme bonusu, freespin, yatırımsız bonus, doğum günü bonusu ve crash / uçak oyunu aramaları burada toplanır.",
     ],
     sections: buildSections(brand.name),
     checklist: buildChecklist(),

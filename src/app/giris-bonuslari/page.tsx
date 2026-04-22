@@ -10,8 +10,19 @@ function toHashTag(value: string): string {
   return `#${compact}GirisBonusu`;
 }
 
+const BONUS_KEYWORDS = [
+  "deneme bonusu",
+  "freespin",
+  "yatırımsız bonus",
+  "güncel giriş",
+  "güncel adres",
+  "mobil giriş",
+  "kayıt bonusu",
+  "uçak oyunu",
+] as const;
+
 export const metadata: Metadata = {
-  title: "Guncel giris bonusu rehberi",
+  title: "Güncel giriş bonusu rehberi",
   description: "Marka marka güncel giriş, adres ve bonus rehberleri.",
   alternates: { canonical: "/giris-bonuslari" },
   openGraph: {
@@ -29,6 +40,7 @@ export default function GirisBonuslariPage() {
     tag: toHashTag(brand.name),
     name: brand.name,
   }));
+  const keywordTicker = [...BONUS_KEYWORDS, ...BONUS_KEYWORDS];
 
   return (
     <div className="relative min-h-screen">
@@ -52,8 +64,20 @@ export default function GirisBonuslariPage() {
 
           <section className="glass-panel mt-8 rounded-3xl p-5 sm:p-7">
             <h2 className="font-display text-2xl font-semibold text-white">
-              SEO etiket bulutu ({BONUS_BRAND_COUNT} marka)
+              Hızlı aramalar ({BONUS_BRAND_COUNT} marka)
             </h2>
+            <div className="mt-5 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] py-3">
+              <div className="animate-horizontal-marquee flex min-w-max gap-3 px-3">
+                {keywordTicker.map((keyword, index) => (
+                  <span
+                    key={`${keyword}-${index}`}
+                    className="rounded-full border border-white/10 bg-[#131322] px-3 py-1.5 text-xs font-medium text-zinc-200"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+            </div>
             <div className="mt-5 flex flex-wrap gap-2">
               {hashtagCloud.map((item) => (
                 <Link
@@ -75,7 +99,7 @@ export default function GirisBonuslariPage() {
                 href={`/giris-bonuslari/${brand.slug}`}
                 className="glass-panel rounded-2xl px-4 py-3 text-zinc-100 transition hover:border-[#A78BFA]/40 hover:bg-white/[0.03]"
               >
-                {brand.name} site, guncel adres ve bonus rehberi
+                {brand.name} güncel adres ve bonus rehberi
               </Link>
             ))}
           </div>

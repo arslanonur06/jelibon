@@ -3,14 +3,13 @@ import {
   servicePackages,
   type ServicePackage,
 } from "@/data/packages";
-import { DICTIONARIES, getDictionary } from "@/lib/i18n/dictionaries";
+import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 export function PackagesSection() {
   const locale = getLocale();
   const dict = getDictionary(locale);
-  /** Turkish UI: keep package & service lines in English (briefs match contracts). */
-  const p = locale === "tr" ? DICTIONARIES.en.packages : dict.packages;
+  const p = dict.packages;
 
   const servicePackagesLocalized: ServicePackage[] = servicePackages.map(
     (pkg) => {

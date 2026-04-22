@@ -37,10 +37,10 @@ function getBrandMonogram(brandName: string) {
     .filter(Boolean);
 
   if (parts.length >= 2) {
-    return `${parts[0][0]}${parts[1][0]}`.toUpperCase();
+    return `${parts[0][0]}${parts[1][0]}`.toLocaleUpperCase("tr-TR");
   }
 
-  return brandName.slice(0, 2).toUpperCase();
+  return brandName.slice(0, 2).toLocaleUpperCase("tr-TR");
 }
 
 function HeroPills({ brandName }: { brandName: string }) {
@@ -155,7 +155,7 @@ export function BrandRehberLightLayout({
               className="text-xs font-semibold uppercase tracking-[0.22em] sm:text-sm"
               style={{ color: PRIMARY }}
             >
-              {brand.name.toUpperCase()} ADRES VE GİRİŞ NOTLARI
+              {brand.name.toLocaleUpperCase("tr-TR")} ADRES VE GİRİŞ NOTLARI
             </p>
             <h1
               className="mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl"
@@ -175,7 +175,7 @@ export function BrandRehberLightLayout({
       <main className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
         <section className="-mt-6 rounded-[28px] border border-[#dbc8a8] bg-[#fdfbf6] p-6 shadow-[0_20px_50px_rgba(8,24,18,0.08)] sm:-mt-8 sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#3f5146]">
-            {brand.name.toUpperCase()} — HIZLI ERİŞİM
+            {brand.name.toLocaleUpperCase("tr-TR")} — HIZLI ERİŞİM
           </p>
           <div className="mt-4">
             <HeroPills brandName={brand.name} />

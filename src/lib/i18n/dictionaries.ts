@@ -502,16 +502,16 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       readBlog: "Blog",
       tags:
         "deneme bonusu · freespin · yatırımsız · doğum günü · uçak oyunu · SEO · Telegram",
-      whyUsHeading: "Kısaca neden bizi arıyorlar",
+      whyUsHeading: "Neden Jelibon",
       whyUsBullets: [
-        "Sadece iGaming ve bahis tarafındayız, genel ajans oyunu oynamıyoruz.",
-        "Aramada + ücretli kanalda aynı masada; birbirini dolduran iş.",
-        "Bot, takip, kreatif, koruma: ihtiyaca göre paket, zorunlu fatura yok.",
+        "İşi iGaming tarafından okuyoruz; genel ajans diliyle ilerlemiyoruz.",
+        "SEO, medya satın alma ve kreatif aynı plan içinde çalışıyor.",
+        "Takip, otomasyon, kreatif ve koruma tarafı tek ekipte toplanıyor.",
       ],
     },
     growthPillars: {
-      heading: "Ne iş yapıyoruz",
-      description: "Trafik, SEO, otomasyon, kreatif ve yazılım.",
+      heading: "Hangi tarafları yönetiyoruz",
+      description: "Trafik, SEO, kreatif, otomasyon ve yazılım tarafı.",
     },
     orbitalSection: {
       heading: "Modüllerin birbiriyle bağı",
@@ -520,51 +520,51 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     packages: {
       heading: "Hizmetler ve fiyatlar",
       description:
-        "Aksi yazılmadıkça aylık ücretler dolar. Telegram, PornHub, arama, kreatif, DMCA, yazılım. Hacim arttıkça paket fiyatı da artar; aşağıdan modül veya hazır seviye seçebilirsin.",
+        "Aksi belirtilmedikçe fiyatlar aylık ve USD bazındadır. Modül modül ilerleyebilir ya da hazır paket seçebilirsin.",
       growthPackagesHeading: "Büyüme paketleri",
       growthPackagesDescription:
-        "Hazır paketler—her modülü tek tek birleştirmek yerine bir paket seviyesi seçin.",
+        "Tek tek toplamak yerine doğrudan paket seviyesiyle ilerleyebilirsin.",
       monthSuffix: " / ay",
       moSuffix: " / ay",
       serviceNavLabelsById: {
         "telegram-ads": "Telegram Reklamları",
-        "telegram-network": "TG ağı",
+        "telegram-network": "Telegram Ağı",
         "pornhub-ads": "PornHub",
-        "ai-chatbot": "AI sohbet botu",
+        "ai-chatbot": "AI Sohbet",
         dmca: "DMCA",
         "creative-funnel": "Kreatif",
-        "seo-blog-network": "SEO & bloglar",
+        "seo-blog-network": "SEO ve Blog",
         "custom-software": "Özel yazılım",
-        "ai-influencer": "AI influencer",
+        "ai-influencer": "AI Influencer",
       },
       servicePackagesById: {
         "telegram-ads": {
           title: "Telegram Reklam Yönetimi",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
             "Kampanya kurulumu & hedefleme",
-            "Funnel oluşturma",
-            "Kreatif prodüksiyon",
+            "Akış ve yönlendirme kurgusu",
+            "Kreatif üretimi",
             "A/B testleri",
             "Haftalık raporlama",
           ],
         },
         "telegram-network": {
           title: "Telegram Kanal Ağı",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
-            "Kanal araştırması & müzakere",
-            "Natif içerik prodüksiyonu",
+            "Kanal araştırması & satın alma",
+            "Natif içerik üretimi",
             "ROI takibi",
             "Ölçekleme stratejisi",
           ],
         },
         "pornhub-ads": {
           title: "PornHub Reklam Yönetimi",
-          billingNote: "Aylık retainer · reklam harcaması ayrı faturalandırılır",
+          billingNote: "Aylık yönetim bedeli · medya bütçesi ayrı geçer",
           features: [
             "Tam kampanya yönetimi",
-            "Banner & video kreatifler",
+            "Banner ve video kreatifleri",
             "Hedefleme optimizasyonu",
             "Dönüşüm takibi",
           ],
@@ -572,17 +572,17 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "ai-chatbot": {
           title: "AI Sohbet Botu Sistemi",
           subtitle: "7/24 dönüşüm sistemi",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
             "GPT destekli görüşmeler",
             "Çok dilli destek",
-            "Funnel yönlendirme",
+            "Akış yönlendirmesi",
             "Temel CRM entegrasyonu",
           ],
         },
         dmca: {
           title: "DMCA ve Kopya Koruması",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
             "Klon tespiti",
             "Kaldırma süreçleri",
@@ -590,27 +590,27 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "creative-funnel": {
-          title: "Kreatif ve Funnel Prodüksiyonu",
-          billingNote: "Aylık retainer",
+          title: "Kreatif ve Akış Prodüksiyonu",
+          billingNote: "Aylık yönetim bedeli",
           features: [
             "Reklam kreatifleri",
-            "Landing sayfaları",
-            "Funnel tasarımı",
+            "Açılış sayfaları",
+            "Akış tasarımı",
             "Sürekli optimizasyon",
           ],
         },
         "seo-blog-network": {
           title: "SEO ve Blog Ağı",
           badge: "SEO",
-          priceHeadline: "Aylık $1,100'dan başlayan fiyatlar",
+          priceHeadline: "$1,100 / ay'dan başlar",
           billingNote:
-            "Uzun vadeli büyüme sistemi (genellikle 3–6 ay) · kapsam fiyatı etkiler",
+            "Uzun vadeli organik büyüme · kapsam fiyatı etkiler",
           features: [
-            "SEO blog site kurulumu",
+            "SEO site ve blog kurulumu",
             "Anahtar kelime hedefleme stratejisi",
             "Bonus ve oyun niyeti kümeleri (deneme bonusu freespin, yatırımsız/doğum günü bonusu, uçak/crash)",
             "İçerik üretimi",
-            "Backlink yapısı",
+            "Link kurgusu",
           ],
         },
         "custom-software": {
@@ -620,71 +620,71 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           features: [
             "Takip sistemleri",
             "Otomasyon araçları",
-            "Özel funnel’lar",
+            "Özel akışlar",
             "API entegrasyonları",
           ],
         },
         "ai-influencer": {
           title: "AI Influencer Sistemi",
           badge: "AI",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
-            "AI tarafından üretilen influencer modelleri",
-            "Özel persona oluşturma (casino nişi)",
-            "Günlük içerik (Telegram & sosyal medya)",
-            "Etkileşim ve funnel entegrasyonu",
+            "AI ile üretilen influencer karakterleri",
+            "Markaya özel persona kurgusu",
+            "Günlük içerik akışı",
+            "Etkileşim ve akış entegrasyonu",
             "Tekliflere trafik yönlendirme",
           ],
         },
       },
       growthPackageTiersById: {
         starter: {
-          name: "Başlangıç Paketi",
-          features: ["Telegram Reklamları", "Temel kreatifler", "Funnel kurulumu"],
+          name: "Başlangıç",
+          features: ["Telegram Reklamları", "Temel kreatif seti", "Akış kurulumu"],
         },
         growth: {
-          name: "Büyüme Paketi",
+          name: "Büyüme",
           features: [
             "Telegram Reklamları + Ağ",
-            "Kreatif prodüksiyon",
-            "Funnel optimizasyonu",
+            "Kreatif üretimi",
+            "Akış optimizasyonu",
           ],
         },
         scale: {
-          name: "Ölçek Paketi",
+          name: "Ölçek",
           features: [
             "Telegram + PornHub Reklamları",
             "Gelişmiş kreatifler",
-            "Funnel & CRO",
+            "Akış ve dönüşüm optimizasyonu",
             "Temel SEO desteği",
-            "AI Influencer (lite)",
+            "AI Influencer başlangıç seti",
           ],
         },
         domination: {
-          name: "Hakimiyet Paketi",
+          name: "Tam Paket",
           features: [
             "Tüm trafik kanalları",
             "AI Sohbet Botu",
-            "AI Influencer (tam)",
-            "Kreatif stüdyo",
-            "Funnel optimizasyonu",
+            "AI Influencer tam kurgu",
+            "Kreatif stüdyo desteği",
+            "Akış optimizasyonu",
           ],
         },
       },
       fullGrowthSuiteByLocale: {
         title: "Tam Büyüme Paketi",
-        subtitle: "Tek noktada iGaming büyüme altyapısı",
-        billingNote: "Aylık yatırım · öncelik & özel destek",
+        subtitle: "Tek merkezden yönetilen büyüme kurgusu",
+        billingNote: "Aylık yatırım · öncelikli operasyon desteği",
         includes: [
-          "Tüm temel trafik & kreatif hizmetleri",
+          "Tüm temel trafik ve kreatif hizmetleri",
           "AI Influencer Sistemi",
           "SEO Blog Ağı",
           "DMCA Koruması",
-          "Özel destek",
+          "Öncelikli destek",
         ],
         extras: [
-          "Türkiye ve komşu pazarlarda ölçekleyen operatörler için",
-          "Tek pakette çok kanallı trafik + uzun vadeli SEO + otomasyon",
+          "Türkiye ve yakın pazarlarda ölçekleyen markalar için",
+          "Çok kanallı trafik, organik büyüme ve otomasyon tek pakette",
         ],
       },
     },
@@ -694,18 +694,18 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       getStarted: "Bugün başlayın",
       fullGrowthSuiteByLocale: {
         title: "Tam Büyüme Paketi",
-        subtitle: "Tek noktada iGaming büyüme altyapısı",
-        billingNote: "Aylık yatırım · öncelik & özel destek",
+        subtitle: "Tek merkezden yönetilen büyüme kurgusu",
+        billingNote: "Aylık yatırım · öncelikli operasyon desteği",
         includes: [
-          "Tüm temel trafik & kreatif hizmetleri",
+          "Tüm temel trafik ve kreatif hizmetleri",
           "AI Influencer Sistemi",
           "SEO Blog Ağı",
           "DMCA Koruması",
-          "Özel destek",
+          "Öncelikli destek",
         ],
         extras: [
-          "Türkiye ve komşu pazarlarda ölçekleyen operatörler için",
-          "Tek pakette çok kanallı trafik + uzun vadeli SEO + otomasyon",
+          "Türkiye ve yakın pazarlarda ölçekleyen markalar için",
+          "Çok kanallı trafik, organik büyüme ve otomasyon tek pakette",
         ],
       },
     },
@@ -724,7 +724,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     footer: {
       heading: "Jelibon Marketing",
-      about: "Türkiye’de iGaming growth, SEO ve yazılım.",
+      about: "Türkiye’de iGaming büyüme, SEO ve yazılım.",
       getStarted: "Hemen başlayın",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
@@ -754,43 +754,43 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         {
           question: "Hangi pazarlarda çalışıyorsunuz?",
           answer:
-            "Ağırlık Türkiye. Kurallar, kitle, dil, hangi sorgu ne zaman hareket ediyor: bunlara hâkimiz. Rusça / bölge operasyonu da olur, ama ana iş burası.",
+            "Ana odağımız Türkiye. Bunun yanında Rusça konuşan pazarlar ve yakın coğrafyada da iş açıyoruz ama merkez tarafımız Türkiye operasyonu.",
         },
         {
-          question: "Aylık anlaşma (retainer) nasıl işler?",
+          question: "Aylık çalışma modeli nasıl ilerliyor?",
           answer:
-            "Her ay tek fatura. Ne alıyorsun, hangi kanal, ne sıklık çıktı—başta netleşir. Telegram ve PornHub’da reklam bütçesi ayrı; nereye gittiği raporda.",
+            "Başta kapsamı netleştiriyoruz: hangi kanal açılacak, hangi üretim çıkacak, operasyon ritmi ne olacak. Aylık çalışma bedeli sabitleniyor; medya bütçesi gerekiyorsa ayrı yönetiliyor.",
         },
         {
           question: "Ne zaman sonuç görürüm?",
           answer:
-            "Ücretli trafikte birkaç hafta–iki ay arası hareket beklerim; iş, rezerv, rakibe göre değişir. Arama tarafı aylar. Bot ve takedown daha erken dokunur.",
+            "Ücretli tarafta ilk hareketi daha kısa sürede görürsün. SEO ve içerik tarafı daha uzun çalışır. DMCA, takip ve otomasyon gibi alanlar ise daha erken etki gösterir.",
         },
         {
-          question: "Yeni markayla sıfırdan da ele alıyor musunuz?",
+          question: "Sıfırdan çıkan markayla da çalışıyor musunuz?",
           answer:
-            "Evet. Kimi sadece reklam ister, kiminde sayfa ve metin de bizden çıkar. Sıfırdan girerken önce neyin gürültü olduğunu ayıklarız, sonra harcama açarız.",
+            "Evet. Bazı işlerde sadece trafik tarafını açıyoruz, bazı işlerde kreatif, sayfa ve içerik de bizden çıkıyor. Sıfırdan başlayan markada önce temel kurguyu oturtuyoruz, sonra ölçek açıyoruz.",
         },
         {
-          question: "Tek kanaldan başlasam olur mu?",
+          question: "Tek kanalla başlamak mümkün mü?",
           answer:
-            "Olur. Birçok iş Telegram veya arama ile başlıyor; yürür, ekleriz. Zorunlu “hepsini al” yok.",
+            "Mümkün. Birçok marka önce Telegram, SEO ya da kreatif tarafından başlıyor. İş oturdukça diğer modülleri açıyoruz.",
         },
         {
           question: "Jelibon'u diğer ajanslardan ne ayırıyor?",
           answer:
-            "Biz sadece bu işe bakıyoruz: kumarhane ve bahis. E-ticaret reçetesi kopyalayıp “casino yaptık” demiyoruz. Ne demek, ne risk yaratır, siz zaten söylersiniz; ona göre hareket ederiz.",
+            "Biz bu dikeyde çalışıyoruz. O yüzden trafik tarafı, bonus dili, kreatif tonu ve operasyon riski aynı çerçevede okunuyor. Genel ajans refleksiyle değil, sektör içinden bakıyoruz.",
         },
         {
           question: '"Deneme bonusu" gibi kelimelerde SEO yapıyor musunuz?',
           answer:
-            "Evet, hem teknik hem içerik. Konu: hangi sayfa neyi anlatacak, birbirine nasıl linklenecek, metin sizin dilinizde mi. Spam çöplüğü gibi büyüme uydurmuyoruz; senin sınırların belli olsun.",
+            "Evet. Hem içerik kurgusunu hem teknik tarafı birlikte ele alıyoruz. Hangi kelime ayrı sayfa ister, hangisi kümelenir, iç link nasıl akar; bunları baştan planlıyoruz.",
         },
         {
           question:
             "Freespin, doğum günü, yatırımsız, uçak oyunu (Aviator/crash) aramalarında da aynı şey geçerli mi?",
           answer:
-            "Evet. Niyet farklı, kurgu benzer: ana sayfalar, yardımcı yazılar, iç link. Söylediğin yasal ve marka sınırı içinde kalırız. Bu iş uzun nefes ister, buna da baştan söyleriz.",
+            "Evet. Kullanıcı niyeti değişiyor ama kurgu mantığı aynı kalıyor: ana sayfa, destekleyici içerikler ve doğru iç bağlantı. Oyun ve bonus kümelerini buna göre ayrı ayrı kuruyoruz.",
         },
       ] as const,
     },
