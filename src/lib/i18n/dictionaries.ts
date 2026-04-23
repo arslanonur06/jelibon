@@ -486,7 +486,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       orbital: "Modüller",
       packages: "Paketler",
       calculator: "Teklif",
-      combo: "Tüm paket",
+      combo: "Tam paket",
       testimonials: "Müşteriler",
       blog: "Blog",
       faq: "S.S.S.",
@@ -495,11 +495,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
     hero: {
       tagline: "Büyüme ve yazılım, Türkiye pazarına göre",
-      textColorLines: ["Fall 7", "Times", "Stand Up 8"],
+      textColorLines: ["7 Kez", "Düş", "8 Kez Kalk"],
       description:
         "Telegram, PornHub, SEO, AI, DMCA, kreatif üretim ve özel yazılım tarafını tek ekipte yönetiyoruz.",
       viewPackages: "Paketleri İncele",
-      readBlog: "Blog",
+      readBlog: "Yazılar",
       tags:
         "deneme bonusu · freespin · yatırımsız · doğum günü · SEO · Telegram",
       whyUsHeading: "Neden Jelibon?",
@@ -691,9 +691,9 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       },
     },
     combo: {
-      flagship: "Öne çıkan",
+      flagship: "Ana paket",
       description: "Trafik, AI, SEO, koruma ve destek tek pakette.",
-      getStarted: "Bugün başlayın",
+      getStarted: "Hemen başla",
       fullGrowthSuiteByLocale: {
         title: "Tam Büyüme Paketi",
         subtitle: "Tek merkezden yönetilen büyüme kurgusu",
@@ -713,10 +713,10 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     blog: {
       heading: "Blog",
-      description: "Performans, otomasyon, SEO ve operasyon notları.",
+      description: "Performans, SEO, otomasyon ve operasyon tarafından kısa notlar.",
       articlesHeading: "Yazılar",
-      viewAllPosts: "Tüm yazılara git",
-      listEyebrow: "İçgörüler",
+      viewAllPosts: "Tüm yazıları gör",
+      listEyebrow: "Sahadan notlar",
       breadcrumbs: { home: "Ana Sayfa", blog: "Blog" },
       categoryLabelsByKey: {
         strategy: "Strateji",
@@ -726,8 +726,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     footer: {
       heading: "Jelibon Marketing",
-      about: "Türkiye’de iGaming büyüme, SEO ve yazılım.",
-      getStarted: "Hemen başlayın",
+      about: "Casinonuzu beraber büyütelim ",
+      getStarted: "Hemen Başla",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
     },
@@ -741,7 +741,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     testimonials: {
       heading: "Sahadaki ses",
       subheading: "Operatör notları ve pazardaki görünürlük.",
-      sigmaHeading: "Bulunduğumuz sahne",
+      sigmaHeading: "Bulunduğumuz Sahneler",
       sigmaSubtext: "Operatörlerin zaten takip ettiği ana etkinlikler ve çevreler.",
       sigmaAwards: [
         "ICE Barcelona — operatör ve affiliate görüşmeleri",
@@ -761,7 +761,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         {
           question: "Aylık çalışma modeli nasıl ilerliyor?",
           answer:
-            "İlk aşamada kapsamı netleştiriyoruz: hangi kanal açılacak, hangi üretim çıkacak, operasyon ritmi nasıl işleyecek. Aylık çalışma bedeli buna göre sabitleniyor; medya bütçesi varsa ayrıca yönetiliyor.",
+            "İlk aşamada kapsamı netleştiriyoruz: hangi kanal açılacak, hangi üretim çıkacak, operasyon  nasıl işleyecek. Aylık çalışma bedeli buna göre sabitleniyor; medya bütçesi varsa ayrıca yönetiliyor.",
         },
         {
           question: "Ne zaman sonuç görürüm?",
@@ -799,12 +799,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     calculator: {
       heading: "Paketinizi Oluşturun",
       description:
-        "İhtiyacınız olan hizmetleri seçin ve aylık tahmininizi anında görün.",
+        "İhtiyacın olan hizmetleri seç, aylık tahmini anında gör.",
       totalLabel: "Aylık tahmini",
       selectedLabel: "hizmet seçildi",
       estimateNote:
         "Fiyat kapsam ve hacme göre netleşir.",
-      getQuote: "Özel teklif alın",
+      getQuote: "Özel teklif al",
       customLabel: "Özel fiyatlandırma",
       noneSelected: "Tahmininizi görmek için yukarıdan hizmet seçin.",
       monthSuffix: " / ay",
