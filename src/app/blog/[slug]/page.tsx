@@ -131,23 +131,37 @@ export default function BlogPostPage({ params }: Props) {
                 {relatedHeading}
               </h2>
               <div className="mt-6 grid gap-4">
-                {relatedPosts.map((relatedPost) => (
+                {relatedPosts.map((relatedPost, index) => (
                   <Link
                     key={relatedPost.slug}
                     href={`/blog/${relatedPost.slug}`}
-                    className="glass-panel rounded-2xl p-5 transition hover:border-[#A78BFA]/40 hover:bg-white/[0.03]"
+                    className="glass-panel group relative overflow-hidden rounded-2xl border border-white/10 bg-transparent p-5 transition hover:-translate-y-1 hover:border-[#A78BFA]/40"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
+                    <div
+                      className="pointer-events-none absolute inset-[-8%] bg-cover bg-center opacity-[0.98] saturate-[1.15] brightness-[1.18] contrast-[1.28] transition duration-500 group-hover:scale-[1.04]"
+                      style={{
+                        backgroundImage: "url('/assets/morlines-blog-card-bg.png')",
+                        backgroundPosition:
+                          index % 2 === 0 ? "center top" : "center bottom",
+                        backgroundSize: "cover",
+                      }}
+                      aria-hidden
+                    />
+                    <div
+                      className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.36)_0%,rgba(5,5,16,0.64)_100%)]"
+                      aria-hidden
+                    />
+                    <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
                       {dict.blog.categoryLabelsByKey[relatedPost.categoryKey] ??
                         relatedPost.categoryKey}
                     </p>
-                    <h3 className="mt-2 text-lg font-semibold text-white">
+                    <h3 className="relative z-[1] mt-2 text-lg font-semibold text-white">
                       {relatedPost.title}
                     </h3>
-                    <p className="mt-2 line-clamp-2 text-sm text-zinc-300">
+                    <p className="relative z-[1] mt-2 line-clamp-2 text-sm text-zinc-300">
                       {relatedPost.excerpt}
                     </p>
-                    <div className="mt-3 flex items-center justify-between text-xs text-zinc-400">
+                    <div className="relative z-[1] mt-3 flex items-center justify-between text-xs text-zinc-400">
                       <span>{relatedPost.readTime}</span>
                       <span className="font-semibold text-[#F9A8D4]">
                         {relatedCta} →

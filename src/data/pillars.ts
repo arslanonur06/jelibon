@@ -13,7 +13,7 @@ export function getGrowthPillars(locale: Locale) {
   if (locale === "tr") {
     return [
       {
-        title: "Alternatif reklam kanalları",
+        title: "Alternatif trafik kanalları",
         description:
           "Telegram reklamı, kanal alımı ve diğer alternatif medya alanlarını tek planla yönetiyoruz.",
         accent: PILLAR_ACCENTS[0],

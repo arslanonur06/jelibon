@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { BrandRehberLightLayout } from "@/components/brand-rehber-light-layout";
 import { buildBonusArticle } from "@/data/bonus-article";
 import { bonusBrandGuides, bonusGuideBySlug } from "@/data/bonus-guides";
+import { getBonusBrandSeoKeywords } from "@/data/seo-all-keywords";
 
 type Props = { params: { slug: string } };
 
@@ -21,6 +22,7 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title,
     description,
+    keywords: getBonusBrandSeoKeywords(brand),
     alternates: { canonical: `/giris-bonuslari/${brand.slug}` },
     openGraph: {
       title: `${brand.name} bonus rehberi | Jelibon Marketing`,

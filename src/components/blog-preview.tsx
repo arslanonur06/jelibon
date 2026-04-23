@@ -33,11 +33,25 @@ export function BlogPreview() {
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {featured.map((post) => (
+          {featured.map((post, index) => (
             <article
               key={post.slug}
-              className="glass-panel relative isolate flex flex-col rounded-3xl p-6 transition hover:border-[#A020F0]/35"
+              className="glass-panel group relative isolate flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-transparent p-6 transition hover:-translate-y-1 hover:border-[#A020F0]/35"
             >
+              <div
+                className="pointer-events-none absolute inset-[-8%] bg-cover bg-center opacity-[0.98] saturate-[1.15] brightness-[1.18] contrast-[1.28] transition duration-500 group-hover:scale-[1.04]"
+                style={{
+                  backgroundImage: "url('/assets/morlines-blog-card-bg.png')",
+                  backgroundPosition:
+                    index % 2 === 0 ? "center top" : "center bottom",
+                  backgroundSize: "cover",
+                }}
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.34)_0%,rgba(5,5,16,0.62)_100%)]"
+                aria-hidden
+              />
               <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
                 {dict.blog.categoryLabelsByKey[post.categoryKey] ??
                   post.categoryKey}

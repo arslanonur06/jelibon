@@ -33,6 +33,24 @@ export default function BlogPage() {
   const dateLocale =
     locale === "tr" ? "tr-TR" : locale === "ru" ? "ru-RU" : "en-US";
   const sorted = getPostsForLocale(locale);
+  const sectionCopy =
+    locale === "tr"
+      ? {
+          description: "Sahadan çıkan kısa notlar ve direkt açılan site rehberleri.",
+          articles: "Yazılar",
+          sites: "Siteler",
+        }
+      : locale === "ru"
+        ? {
+            description: "Короткие заметки по рынку и быстрый доступ к гайдам по сайтам.",
+            articles: "Статьи",
+            sites: "Сайты",
+          }
+        : {
+            description: "Short market notes and quick access to site guides.",
+            articles: "Articles",
+            sites: "Sites",
+          };
 
   return (
     <div className="relative min-h-screen">
@@ -63,53 +81,86 @@ export default function BlogPage() {
             {dict.blog.heading}
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-zinc-400">
-            {dict.blog.description}
+            {sectionCopy.description}
           </p>
 
-          <h2 className="mt-16 font-display text-2xl font-semibold text-white sm:text-3xl">
-            {dict.blog.articlesHeading}
-          </h2>
-
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {sorted.map((post) => (
-              <article
-                key={post.slug}
-                className="glass-panel flex flex-col overflow-hidden rounded-3xl border border-white/10 transition hover:border-[#A020F0]/35"
-              >
-                <div className="flex flex-1 flex-col p-8">
-                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
-                    {dict.blog.categoryLabelsByKey[post.categoryKey] ??
-                      post.categoryKey}
-                  </p>
-                  <h2 className="mt-4 font-display text-2xl font-semibold leading-snug text-white">
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="hover:text-[#F9A8D4]"
-                    >
-                      {post.title}
-                    </Link>
-                  </h2>
-                  <p className="mt-4 flex-1 text-zinc-400">{post.excerpt}</p>
-                  <div className="mt-6 flex items-center justify-between text-xs text-zinc-500">
-                    <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString(dateLocale, {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </time>
-                    <span>{post.readTime}</span>
-                  </div>
-                </div>
-              </article>
-            ))}
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="#blog-articles"
+              className="rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-white transition hover:border-[#A78BFA]/35 hover:bg-white/[0.08]"
+            >
+              {sectionCopy.articles}
+            </Link>
+            <Link
+              href="#blog-sites"
+              className="rounded-full border border-[#22D3EE]/30 bg-[#101827] px-4 py-2 text-sm font-semibold text-[#A5F3FC] transition hover:border-[#22D3EE]/55 hover:text-white"
+            >
+              {sectionCopy.sites}
+            </Link>
           </div>
 
-          <BlogBrandHub
-            locale={locale}
-            brands={bonusBrandGuides}
-            popularBrands={popularBonusBrandGuides}
-          />
+          <section id="blog-sites" className="scroll-mt-32">
+            <BlogBrandHub
+              locale={locale}
+              brands={bonusBrandGuides}
+              popularBrands={popularBonusBrandGuides}
+            />
+          </section>
+
+          <section id="blog-articles" className="scroll-mt-32">
+            <h2 className="mt-16 font-display text-2xl font-semibold text-white sm:text-3xl">
+              {dict.blog.articlesHeading}
+            </h2>
+
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {sorted.map((post, index) => (
+                <article
+                  key={post.slug}
+                  className="glass-panel group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-transparent transition hover:-translate-y-1 hover:border-[#A020F0]/35"
+                >
+                  <div
+                    className="pointer-events-none absolute inset-[-8%] bg-cover bg-center opacity-[0.98] saturate-[1.15] brightness-[1.18] contrast-[1.28] transition duration-500 group-hover:scale-[1.04]"
+                    style={{
+                      backgroundImage: "url('/assets/morlines-blog-card-bg.png')",
+                      backgroundPosition:
+                        index % 2 === 0 ? "center top" : "center bottom",
+                      backgroundSize: "cover",
+                    }}
+                    aria-hidden
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.34)_0%,rgba(5,5,16,0.62)_100%)]"
+                    aria-hidden
+                  />
+                  <div className="relative z-[1] flex flex-1 flex-col p-8">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
+                      {dict.blog.categoryLabelsByKey[post.categoryKey] ??
+                        post.categoryKey}
+                    </p>
+                    <h2 className="mt-4 font-display text-2xl font-semibold leading-snug text-white">
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="hover:text-[#F9A8D4]"
+                      >
+                        {post.title}
+                      </Link>
+                    </h2>
+                    <p className="mt-4 flex-1 text-zinc-400">{post.excerpt}</p>
+                    <div className="mt-6 flex items-center justify-between text-xs text-zinc-500">
+                      <time dateTime={post.date}>
+                        {new Date(post.date).toLocaleDateString(dateLocale, {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </time>
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
       <SiteFooter />

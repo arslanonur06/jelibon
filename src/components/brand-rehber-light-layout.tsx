@@ -96,7 +96,7 @@ export function BrandRehberLightLayout({
           </Link>
           <nav className="hidden flex-wrap items-center gap-5 lg:flex" aria-label="Ana menü">
             <Link href="/blog" className={navLinkClass}>
-              Blog
+              Yazılar
             </Link>
             <Link href={directoryHref} className={navLinkClass}>
               Markalar

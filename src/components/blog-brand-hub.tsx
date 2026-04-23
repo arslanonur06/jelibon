@@ -18,12 +18,12 @@ function hubCopy(locale: Locale, count: number) {
   if (locale === "tr") {
     return {
       title: `Siteler (${count})`,
-      description: "Tek rehber akışı. Arama ile hızlı geçiş yap.",
-      guide: "Siteye git",
-      index: "Hepsini listele",
-      searchPlaceholder: "Site adı yaz",
-      popular: "Popüler siteler",
-      all: "Tüm siteler",
+      description: "Markaları tek yerden ara, rehbere direkt geç.",
+      guide: "Rehberi aç",
+      index: "Tüm markalar",
+      searchPlaceholder: "Site adı ara",
+      popular: "Öne çıkan siteler",
+      all: "Toplam site",
       clear: "Temizle",
     };
   }
@@ -175,7 +175,7 @@ export function BlogBrandHub({
 
       {filteredBrands.length === 0 ? (
         <div className="mt-4 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm text-zinc-400">
-          Sonuc bulunamadi.
+          Sonuç bulunamadı.
         </div>
       ) : null}
     </section>

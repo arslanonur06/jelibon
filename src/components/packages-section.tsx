@@ -6,6 +6,33 @@ import {
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
+const COLORWAYS_POSITIONS = [
+  "left top",
+  "center top",
+  "right center",
+  "left bottom",
+  "center center",
+  "right bottom",
+] as const;
+
+const COLORWAYS_ROTATIONS = [
+  "-rotate-[4deg]",
+  "rotate-[5deg]",
+  "-rotate-[2deg]",
+  "rotate-[6deg]",
+  "-rotate-[5deg]",
+  "rotate-[3deg]",
+] as const;
+
+const COLORWAYS_STRENGTH = [
+  "opacity-[0.82]",
+  "opacity-[0.74]",
+  "opacity-[0.88]",
+  "opacity-[0.78]",
+  "opacity-[0.84]",
+  "opacity-[0.72]",
+] as const;
+
 export function PackagesSection() {
   const locale = getLocale();
   const dict = getDictionary(locale);
@@ -32,6 +59,8 @@ export function PackagesSection() {
     if (!localized) return tier;
     return { ...tier, name: localized.name, features: localized.features };
   });
+
+  const colorwaysBackground = "url('/assets/colorways-card-bg.png')";
 
   return (
     <section id="packages" className="relative scroll-mt-44 py-12 sm:py-16 md:py-20">
@@ -63,12 +92,26 @@ export function PackagesSection() {
         </nav>
 
         <div className="mt-8 grid gap-3 sm:mt-10 sm:gap-4 lg:grid-cols-2">
-          {servicePackagesLocalized.map((pkg) => (
+          {servicePackagesLocalized.map((pkg, index) => (
             <article
               key={pkg.id}
               id={`pkg-${pkg.id}`}
-              className="glass-panel relative isolate flex scroll-mt-52 flex-col rounded-2xl p-4 sm:rounded-3xl sm:p-6"
+              className="glass-panel group relative isolate flex scroll-mt-52 flex-col overflow-hidden rounded-2xl bg-transparent p-4 transition hover:-translate-y-1 sm:rounded-3xl sm:p-6"
             >
+              <div
+                className={`pointer-events-none absolute inset-[-8%] bg-cover transition duration-500 group-hover:scale-[1.05] ${COLORWAYS_ROTATIONS[index % COLORWAYS_ROTATIONS.length]} ${COLORWAYS_STRENGTH[index % COLORWAYS_STRENGTH.length]}`}
+                style={{
+                  backgroundImage: colorwaysBackground,
+                  backgroundPosition:
+                    COLORWAYS_POSITIONS[index % COLORWAYS_POSITIONS.length],
+                  backgroundSize: "cover",
+                }}
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.42)_0%,rgba(5,5,16,0.68)_100%)]"
+                aria-hidden
+              />
               <div className="relative z-[1] flex flex-wrap items-start justify-between gap-2">
                 <div className="min-w-0">
                   <h3 className="font-display text-lg font-semibold text-white sm:text-xl">
@@ -128,11 +171,25 @@ export function PackagesSection() {
           </p>
 
           <div className="mt-6 grid grid-cols-2 gap-3 sm:mt-8 sm:gap-4 lg:grid-cols-3 xl:grid-cols-5">
-            {growthPackageTiersLocalized.map((tier) => (
+            {growthPackageTiersLocalized.map((tier, index) => (
               <article
                 key={tier.id}
-                className="glass-panel relative isolate flex min-h-0 flex-col rounded-xl border border-white/10 p-3 sm:rounded-2xl sm:p-5"
+                className="glass-panel group relative isolate flex min-h-0 flex-col overflow-hidden rounded-xl border border-white/10 bg-transparent p-3 transition hover:-translate-y-1 sm:rounded-2xl sm:p-5"
               >
+                <div
+                  className={`pointer-events-none absolute inset-[-8%] bg-cover transition duration-500 group-hover:scale-[1.05] ${COLORWAYS_ROTATIONS[(index + 1) % COLORWAYS_ROTATIONS.length]} ${COLORWAYS_STRENGTH[(index + 2) % COLORWAYS_STRENGTH.length]}`}
+                  style={{
+                    backgroundImage: colorwaysBackground,
+                    backgroundPosition:
+                      COLORWAYS_POSITIONS[(index + 2) % COLORWAYS_POSITIONS.length],
+                    backgroundSize: "cover",
+                  }}
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.48)_0%,rgba(5,5,16,0.74)_100%)]"
+                  aria-hidden
+                />
                 <h4 className="relative z-[1] font-display text-sm font-semibold leading-tight text-white sm:text-lg">
                   {tier.name}
                 </h4>

@@ -23,6 +23,8 @@ function formatUSD(n: number): string {
 export function PriceCalculator({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const calc = dict.calculator;
+  const eyebrow =
+    locale === "tr" ? "Fiyatlandırma" : locale === "ru" ? "Стоимость" : "Pricing";
 
   /* Localise service names using existing serviceNavLabelsById dict */
   const services = servicePackages.map((pkg) => ({
@@ -65,7 +67,7 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
         {/* Heading */}
         <div className="max-w-2xl">
           <p className="font-display text-xs uppercase tracking-[0.3em] text-[#E9A8FF]/90">
-            Pricing
+            {eyebrow}
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold text-white sm:text-4xl">
             {calc.heading}
@@ -123,7 +125,7 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
           </div>
 
           {/* Total panel */}
-          <div className="glass-panel relative isolate sticky top-28 flex flex-col gap-5 rounded-3xl p-6">
+          <div className="glass-panel isolate sticky top-28 flex flex-col gap-5 rounded-3xl p-6">
             <p className="text-sm font-medium text-zinc-400">
               {calc.totalLabel}
             </p>
@@ -162,9 +164,18 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-5 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(255,105,180,0.3)] transition hover:brightness-110"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(255,105,180,0.22)] transition hover:-translate-y-0.5"
             >
-              {calc.getQuote}
+              <span
+                className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.88] transition duration-300 group-hover:scale-[1.04]"
+                style={{ backgroundImage: "url('/assets/button-cta-bg.png')" }}
+                aria-hidden
+              />
+              <span
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,8,24,0.22)_0%,rgba(8,8,24,0.38)_100%)]"
+                aria-hidden
+              />
+              <span className="relative z-[1]">{calc.getQuote}</span>
             </Link>
           </div>
         </div>
