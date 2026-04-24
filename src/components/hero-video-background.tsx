@@ -23,23 +23,41 @@ const baseClass = (
   );
 
 /**
- * Optimized animated hero GIF. Kept as a plain image to avoid JS/video runtime
- * work while still preserving the animated visual.
+ * Mobile: short loop (MP4) in a smaller hero slot. md+: animated GIF to avoid
+ * loading video on large viewports. Single compositor path each (no rAF).
  */
 export function HeroVideoBackground({
   className,
   objectFit = "contain",
   objectPositionClassName = "max-lg:object-[center_68%]",
 }: Props) {
+  const mediaClass = baseClass(
+    objectFit,
+    objectPositionClassName,
+    className,
+  );
+
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src="/assets/webseker.gif"
-      alt=""
-      aria-hidden
-      decoding="async"
-      fetchPriority="high"
-      className={baseClass(objectFit, objectPositionClassName, className)}
-    />
+    <>
+      <video
+        className={cn(mediaClass, "md:hidden")}
+        src="/assets/kaplanvideo.mp4"
+        muted
+        loop
+        playsInline
+        autoPlay
+        preload="auto"
+        aria-hidden
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/assets/webseker.gif"
+        alt=""
+        aria-hidden
+        decoding="async"
+        fetchPriority="high"
+        className={cn(mediaClass, "hidden md:block")}
+      />
+    </>
   );
 }

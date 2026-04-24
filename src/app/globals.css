@@ -235,6 +235,28 @@
   animation: horizontal-marquee 28s linear infinite;
 }
 
+/* Slower, header-only ticker: easier on the GPU at ~60fps; duplicate track + -50% loop */
+@keyframes header-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-header-marquee {
+  animation: header-marquee 50s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-header-marquee,
+  .animate-horizontal-marquee {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
 @keyframes growth-tier-bronze {
   0%,
   100% {
