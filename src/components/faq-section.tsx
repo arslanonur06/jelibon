@@ -64,9 +64,27 @@ export function FaqSection({ locale }: { locale: Locale }) {
   return (
     <section
       id="faq"
-      className="relative scroll-mt-44 border-t border-white/10 bg-[#050510]/30 py-16 sm:py-20"
+      className="relative scroll-mt-44 overflow-hidden border-t border-white/10 bg-[#050510]/30 py-16 sm:py-20"
     >
-      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.16] sm:opacity-[0.22]"
+        style={{
+          backgroundImage: "url('/assets/faq-benjamin-bg.png')",
+          backgroundRepeat: "repeat",
+          backgroundSize: "340px auto",
+          backgroundPosition: "center top",
+        }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_0%,rgba(255,255,255,0)_58%)]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.74)_0%,rgba(5,5,16,0.84)_38%,rgba(5,5,16,0.94)_100%)] sm:bg-[linear-gradient(90deg,rgba(5,5,16,0.88)_0%,rgba(5,5,16,0.76)_42%,rgba(5,5,16,0.9)_100%)]"
+        aria-hidden
+      />
+      <div className="relative z-[1] mx-auto max-w-3xl px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center">
           <p className="font-display text-xs uppercase tracking-[0.3em] text-[#E9A8FF]/90">

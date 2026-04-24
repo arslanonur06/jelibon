@@ -230,6 +230,76 @@
   animation: horizontal-marquee 28s linear infinite;
 }
 
+@keyframes growth-tier-bronze {
+  0%,
+  100% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate3d(-2%, -1.5%, 0);
+  }
+}
+
+.animate-growth-tier-bronze {
+  animation: growth-tier-bronze 12s ease-in-out infinite;
+}
+
+@keyframes growth-tier-silver {
+  0%,
+  100% {
+    transform: scale(1.03) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate3d(1.5%, -2%, 0);
+  }
+}
+
+.animate-growth-tier-silver {
+  animation: growth-tier-silver 14s ease-in-out infinite;
+}
+
+@keyframes growth-tier-gold {
+  0%,
+  100% {
+    transform: scale(1.05) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.11) translate3d(-1.5%, 2%, 0);
+  }
+}
+
+.animate-growth-tier-gold {
+  animation: growth-tier-gold 11s ease-in-out infinite;
+}
+
+@keyframes growth-tier-diamond {
+  0%,
+  100% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.09) translate3d(2%, -1%, 0);
+  }
+}
+
+.animate-growth-tier-diamond {
+  animation: growth-tier-diamond 13s ease-in-out infinite;
+}
+
+@keyframes growth-tier-red {
+  0%,
+  100% {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate3d(-1%, 1.5%, 0);
+  }
+}
+
+.animate-growth-tier-red {
+  animation: growth-tier-red 12s ease-in-out infinite;
+}
+
 .from-gradient-1-start {
   --tw-gradient-from: #39ff14;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(57, 255, 20, 0));

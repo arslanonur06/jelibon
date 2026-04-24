@@ -7,7 +7,7 @@ const timelineDataEn = [
   {
     id: 1,
     title: "Telegram Ads",
-    date: "$2.3k",
+    date: "$2.76k",
     content:
       "Campaign setup, funnels, creatives, A/B tests, and weekly reporting.",
     category: "Traffic",
@@ -20,7 +20,7 @@ const timelineDataEn = [
   {
     id: 2,
     title: "Telegram Network",
-    date: "$3.8k",
+    date: "$4.56k",
     content:
       "Channel research, native content, ROI tracking, scaling strategy.",
     category: "Traffic",
@@ -33,7 +33,7 @@ const timelineDataEn = [
   {
     id: 3,
     title: "PornHub Ads",
-    date: "$4k",
+    date: "$4.8k",
     content:
       "Full campaign management, creatives, targeting, conversion tracking.",
     category: "Traffic",
@@ -45,7 +45,7 @@ const timelineDataEn = [
   {
     id: 4,
     title: "AI Chatbot",
-    date: "$1.3k",
+    date: "$1.56k",
     content:
       "GPT-powered chat, multi-language, funnel routing, basic CRM hooks.",
     category: "Automation",
@@ -57,7 +57,7 @@ const timelineDataEn = [
   {
     id: 5,
     title: "DMCA",
-    date: "$1.6k",
+    date: "$1.92k",
     content: "Clone detection, takedowns, weekly reporting.",
     category: "Trust",
     iconKey: "shield",
@@ -68,7 +68,7 @@ const timelineDataEn = [
   {
     id: 6,
     title: "Creative",
-    date: "$2.7k",
+    date: "$3.24k",
     content: "Ads, landing pages, funnel design, continuous optimization.",
     category: "Creative",
     iconKey: "palette",
@@ -79,7 +79,7 @@ const timelineDataEn = [
   {
     id: 7,
     title: "SEO",
-    date: "From $1.1k",
+    date: "From $1.32k",
     content:
       "Blog farms, parasite SEO, keywords, content, backlinks—3–6 month horizon.",
     category: "SEO",
@@ -91,7 +91,7 @@ const timelineDataEn = [
   {
     id: 8,
     title: "AI Influencer",
-    date: "$2k",
+    date: "$2.4k",
     content:
       "AI personas, daily content, engagement & funnel integration to offers.",
     category: "AI",
@@ -145,7 +145,7 @@ const timelineOverrides: Record<
     },
     7: {
       title: "SEO",
-      date: "$1.1k’dan başlar",
+      date: "$1.32k’dan başlar",
       content:
         "Blog ağı, anahtar kelime kurgusu, içerik üretimi ve link akışıyla 3–6 aylık organik büyüme hattı.",
       category: "SEO",
@@ -195,7 +195,7 @@ const timelineOverrides: Record<
     },
     7: {
       title: "SEO",
-      date: "От $1.1k",
+      date: "От $1.32k",
       content:
         "Блог-сети, parasite SEO, ключевые слова, контент, бэклинки — горизонт 3–6 месяцев.",
       category: "SEO",

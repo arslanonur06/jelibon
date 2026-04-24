@@ -15,7 +15,7 @@ import { getLocale } from "@/lib/i18n/get-locale";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Türkiye iGaming pazarlaması, Telegram, SEO, otomasyon notları. Yüzlerce marka için ayrı rehber: giriş, bonus, günün koşulları. Detay: @jelibonmarketing.",
+    "Türkiye odaklı online casino pazarlaması, Telegram, SEO ve otomasyon notları. Yuzlerce marka icin giris, bonus ve guncel rehberler. Detay: @jelibonmarketing.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Blog | Jelibon Marketing",
@@ -116,8 +116,16 @@ export default function BlogPage() {
               {sorted.map((post, index) => (
                 <article
                   key={post.slug}
-                  className="glass-panel group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-transparent transition hover:-translate-y-1 hover:border-[#A020F0]/35"
+                  className="glass-panel group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-transparent shadow-[0_18px_40px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-1.5 hover:border-[#A020F0]/35 hover:shadow-[0_26px_60px_rgba(0,0,0,0.28)]"
                 >
+                  <div
+                    className="pointer-events-none absolute inset-x-[-16%] top-[-24%] h-28 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.18)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-2xl transition duration-500 group-hover:translate-y-2 group-hover:opacity-100"
+                    aria-hidden
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-y-0 left-[-35%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[120%] group-hover:opacity-100"
+                    aria-hidden
+                  />
                   <div
                     className="pointer-events-none absolute inset-[-8%] bg-cover bg-center opacity-[0.98] saturate-[1.15] brightness-[1.18] contrast-[1.28] transition duration-500 group-hover:scale-[1.04]"
                     style={{
@@ -133,11 +141,11 @@ export default function BlogPage() {
                     aria-hidden
                   />
                   <div className="relative z-[1] flex flex-1 flex-col p-8">
-                    <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
+                    <p className="text-xs font-semibold uppercase tracking-widest text-[#C4B5FD] transition duration-500 group-hover:text-[#E9D5FF]">
                       {dict.blog.categoryLabelsByKey[post.categoryKey] ??
                         post.categoryKey}
                     </p>
-                    <h2 className="mt-4 font-display text-2xl font-semibold leading-snug text-white">
+                    <h2 className="mt-4 font-display text-2xl font-semibold leading-snug text-white transition duration-500 group-hover:translate-y-[-1px] group-hover:text-[#F8D8FF]">
                       <Link
                         href={`/blog/${post.slug}`}
                         className="hover:text-[#F9A8D4]"
@@ -145,8 +153,10 @@ export default function BlogPage() {
                         {post.title}
                       </Link>
                     </h2>
-                    <p className="mt-4 flex-1 text-zinc-400">{post.excerpt}</p>
-                    <div className="mt-6 flex items-center justify-between text-xs text-zinc-500">
+                    <p className="mt-4 flex-1 text-zinc-400 transition duration-500 group-hover:text-zinc-200">
+                      {post.excerpt}
+                    </p>
+                    <div className="mt-6 flex items-center justify-between text-xs text-zinc-500 transition duration-500 group-hover:text-zinc-300">
                       <time dateTime={post.date}>
                         {new Date(post.date).toLocaleDateString(dateLocale, {
                           year: "numeric",

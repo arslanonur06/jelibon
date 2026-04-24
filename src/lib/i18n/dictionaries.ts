@@ -149,7 +149,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon Marketing — iGaming growth · Telegram Ads + channel network · PornHub · SEO & content hubs · AI chat + influencer systems · DMCA & brand safety · creative & landing production · custom tracking & automations — Türkiye & nearby markets · ",
+        "Jelibon Marketing — online casino growth · Telegram Ads + adult channels · Adult Ads · deneme bonusu SEO · trusted casino site content hubs · AI chat + influencer systems · DMCA & brand safety · creative production · custom software & automations — Türkiye & nearby markets · ",
     },
     nav: {
       solutions: "Solutions",
@@ -167,11 +167,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       tagline: "Premium growth & software · Türkiye",
       textColorLines: ["Acquire.", "Scale.", "Dominate."],
       description:
-        "Telegram, PornHub, SEO, AI, DMCA, creative, and custom software for iGaming in Türkiye.",
+        "Telegram, Adult Ads, SEO, AI, DMCA, creative, and custom software for online casino brands in Türkiye.",
       viewPackages: "View packages",
       readBlog: "Read the blog",
       tags:
-        "Freespin · no-deposit · birthday bonus · SEO · Telegram · PornHub",
+        "deneme bonusu · trusted casino sites · SEO · Telegram · Adult Ads",
       whyUsHeading: "Why us",
       whyUsBullets: [
         "iGaming-focused expertise & multi-channel traffic.",
@@ -198,8 +198,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       moSuffix: " / mo",
       serviceNavLabelsById: {
         "telegram-ads": "Telegram Ads",
-        "telegram-network": "TG network",
-        "pornhub-ads": "PornHub",
+        "telegram-network": "Telegram Adult Channels",
+        "pornhub-ads": "Adult Ads",
         "ai-chatbot": "AI chatbot",
         dmca: "DMCA",
         "creative-funnel": "Creative",
@@ -220,7 +220,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "telegram-network": {
-          title: "Telegram Channel Network",
+          title: "Telegram Adult Channels",
           billingNote: "Monthly retainer",
           features: [
             "Channel research & negotiation",
@@ -230,7 +230,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "pornhub-ads": {
-          title: "PornHub Ads Management",
+          title: "Adult Ads Management",
           billingNote: "Monthly retainer · ad spend billed separately",
           features: [
             "Full campaign management",
@@ -268,7 +268,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "seo-blog-network": {
           title: "SEO & Blog Network",
           badge: "SEO",
-          priceHeadline: "From $1,100 / month",
+          priceHeadline: "From $1,320 / month",
           billingNote:
             "Long-term growth system (typically 3–6 months) · scope affects pricing",
           features: [
@@ -305,11 +305,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       },
       growthPackageTiersById: {
         starter: {
-          name: "Starter Package",
+          name: "Bronze",
           features: ["Telegram Ads", "Basic creatives", "Funnel setup"],
         },
         growth: {
-          name: "Growth Package",
+          name: "Silver",
           features: [
             "Telegram Ads + Network",
             "Creative production",
@@ -317,9 +317,9 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         scale: {
-          name: "Scale Package",
+          name: "Gold",
           features: [
-            "Telegram + PornHub Ads",
+            "Telegram + Adult Ads",
             "Advanced creatives",
             "Funnel & CRO",
             "Basic SEO support",
@@ -327,7 +327,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         domination: {
-          name: "Domination Package",
+          name: "Diamond",
           features: [
             "All traffic channels",
             "AI Chatbot",
@@ -479,7 +479,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     header: { telegram: "Telegram" },
     marquee: {
       copy:
-        "Jelibon Marketing — iGaming growth · Telegram Ads + channel network · PornHub · SEO & content hubs · AI chat + influencer systems · DMCA & brand safety · creative & landing production · custom tracking & automations — Türkiye & nearby markets · ",
+        "Jelibon Marketing — online casino büyümesi · Telegram reklamları + adult kanallar · Adult Ads · deneme bonusu SEO · güvenilir siteler için içerik ağları · AI sohbet + influencer sistemleri · DMCA ve marka güvenliği · kreatif prodüksiyon · özel yazılım ve otomasyon — Türkiye odaklı büyüme · ",
     },
     nav: {
       solutions: "Hizmetler",
@@ -497,11 +497,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       tagline: "Büyüme ve yazılım, Türkiye pazarına göre",
       textColorLines: ["7 Kez", "Düş", "8 Kez Kalk"],
       description:
-        "Telegram, PornHub, SEO, AI, DMCA, kreatif üretim ve özel yazılım tarafını tek ekipte yönetiyoruz.",
+        "Online casino markaları için Telegram, Adult Ads, SEO, AI, DMCA, kreatif üretim ve özel yazılım tarafını tek ekipte yönetiyoruz.",
       viewPackages: "Paketleri İncele",
       readBlog: "Yazılar",
       tags:
-        "deneme bonusu · freespin · yatırımsız · doğum günü · SEO · Telegram",
+        "deneme bonusu · güvenilir siteler · SEO · Telegram · Adult Ads",
       whyUsHeading: "Neden Jelibon?",
       whyUsBullets: [
         "Sektörde çalışan global ortaklarla aynı ritimde ilerliyoruz.",
@@ -530,8 +530,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       moSuffix: " / ay",
       serviceNavLabelsById: {
         "telegram-ads": "Telegram Reklamları",
-        "telegram-network": "Telegram Ağı",
-        "pornhub-ads": "PornHub",
+        "telegram-network": "Telegram Adult Kanallar",
+        "pornhub-ads": "Adult Ads",
         "ai-chatbot": "AI Sohbet",
         dmca: "DMCA",
         "creative-funnel": "Kreatif",
@@ -552,7 +552,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "telegram-network": {
-          title: "Telegram Kanal Ağı",
+          title: "Telegram Adult Kanallar",
           billingNote: "Aylık yönetim bedeli",
           features: [
             "Kanal araştırması & satın alma",
@@ -562,7 +562,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "pornhub-ads": {
-          title: "PornHub Reklam Yönetimi",
+          title: "Adult Ads Yönetimi",
           billingNote: "Aylık yönetim bedeli · medya bütçesi ayrı geçer",
           features: [
             "Tam kampanya yönetimi",
@@ -604,7 +604,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "seo-blog-network": {
           title: "SEO ve Blog Ağı",
           badge: "SEO",
-          priceHeadline: "$1,100 / ay'dan başlar",
+          priceHeadline: "$1,320 / ay'dan başlar",
           billingNote:
             "Uzun vadeli organik büyüme çalışması · kapsam fiyatı belirler",
           features: [
@@ -641,11 +641,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       },
       growthPackageTiersById: {
         starter: {
-          name: "Başlangıç",
+          name: "Bronz",
           features: ["Telegram Reklamları", "Temel kreatif seti", "İlk akış kurulumu"],
         },
         growth: {
-          name: "Büyüme",
+          name: "Silver",
           features: [
             "Telegram Reklamları + Ağ",
             "Kreatif üretimi",
@@ -653,9 +653,9 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         scale: {
-          name: "Ölçek",
+          name: "Gold",
           features: [
-            "Telegram + PornHub Reklamları",
+            "Telegram + Adult Ads",
             "Gelişmiş kreatifler",
             "Akış ve dönüşüm iyileştirmesi",
             "Temel SEO desteği",
@@ -663,7 +663,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         domination: {
-          name: "Tam Paket",
+          name: "Diamond",
           features: [
             "Tüm trafik kanalları",
             "AI Sohbet Botu",
@@ -761,22 +761,17 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         {
           question: "Aylık çalışma modeli nasıl ilerliyor?",
           answer:
-            "İlk aşamada kapsamı netleştiriyoruz: hangi kanal açılacak, hangi üretim çıkacak, operasyon  nasıl işleyecek. Aylık çalışma bedeli buna göre sabitleniyor; medya bütçesi varsa ayrıca yönetiliyor.",
+            "Aylık sabit bedelle çalışıyoruz. İlk etapta seçilen paketi ve çıkacak işleri netleştiriyoruz; ardından aylık ücret sabitleniyor. Reklam bütçesi varsa yönetim bedelinden ayrı ilerliyor.",
         },
         {
           question: "Ne zaman sonuç görürüm?",
           answer:
-            "Ücretli kanallarda ilk hareket daha hızlı gelir. SEO ve içerik tarafı daha uzun vadede sonuç verir. DMCA, takip ve otomasyon gibi alanlarda ise etkiyi daha erken görürsün.",
+            "Bu tamamen seçtiğiniz pakete göre değişir. Ücretli tarafta hareket daha erken görünür; SEO, içerik ve organik büyüme tarafı ise biraz daha zaman ister.",
         },
         {
           question: "Sıfırdan çıkan markayla da çalışıyor musunuz?",
           answer:
-            "Evet. Bazı markalarda yalnızca trafik tarafını açıyoruz, bazılarında kreatif, sayfa ve içerik tarafı da bizden çıkıyor. Sıfırdan başlayan işlerde önce temel yapıyı kurup sonra büyümeyi açıyoruz.",
-        },
-        {
-          question: "Tek kanalla başlamak mümkün mü?",
-          answer:
-            "Mümkün. Birçok marka önce Telegram, SEO ya da kreatif tarafıyla başlıyor. Operasyon oturdukça diğer modülleri devreye alıyoruz.",
+            "Evet, çalışıyoruz. Şu an da birçok marka ile aktif işbirliği yürütüyoruz. Bazısında sadece trafik tarafını alıyoruz, bazısında sayfa, içerik, kreatif ve yazılım da bizden çıkıyor. Sıfırdan başlayan markalarda önce temel yapıyı kurup sonra ölçekliyoruz.",
         },
         {
           question: "Jelibon'u diğer ajanslardan ne ayırıyor?",
@@ -784,15 +779,14 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
             "Biz doğrudan bu dikeyde çalışıyoruz. Bu yüzden trafik tarafını, bonus dilini, kreatif tonu ve operasyon riskini aynı çerçevede okuyabiliyoruz. Genel ajans refleksiyle değil, sektörün içinden bakıyoruz.",
         },
         {
-          question: '"Deneme bonusu" gibi kelimelerde SEO yapıyor musunuz?',
+          question: "Verilerimiz başka markalarla paylaşılır mı?",
           answer:
-            "Evet. İçerik kurgusunu ve teknik tarafı birlikte ele alıyoruz. Hangi kelime ayrı sayfa ister, hangisi kümelenir, iç link nasıl akar; bunların hepsini baştan planlıyoruz.",
+            "Hayır. Çalıştığımız markaların gelen-giden trafik, kayıt ve dönüşüm verileri tamamen kendi içinde kalır. NDA tarafında net çalışıyoruz; sizin veriniz başka markayla paylaşılmaz, başka markanın verisi de sizinle paylaşılmaz.",
         },
         {
-          question:
-            "Freespin, doğum günü ve yatırımsız bonus aramalarında da aynı şey geçerli mi?",
+          question: '"Deneme bonusu" gibi kelimelerde SEO yapıyor musunuz?',
           answer:
-            "Evet. Kullanıcı niyeti değişse de kurgu mantığı aynı kalıyor: ana sayfa, destekleyici içerikler ve doğru iç bağlantı. Bonus kümelerini buna göre ayrı ayrı kuruyoruz.",
+            "Evet. Bu tarafta iş sadece bir kelimeyi sayfaya serpmek değil. Kullanıcının ne aradığını ayırıyoruz: deneme bonusu mu arıyor, hoş geldin bonusu mu, çevrim şartını mı görmek istiyor? Ona göre sayfa yapısını, içerik kümelerini ve iç link akışını kuruyoruz. Metin tarafında da şartları görünür ve anlaşılır yazıyoruz.",
         },
       ] as const,
     },
@@ -865,8 +859,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       moSuffix: " / мес.",
       serviceNavLabelsById: {
         "telegram-ads": "Реклама Telegram",
-        "telegram-network": "TG сеть",
-        "pornhub-ads": "PornHub",
+        "telegram-network": "Telegram Adult Channels",
+        "pornhub-ads": "Adult Ads",
         "ai-chatbot": "AI-чатбот",
         dmca: "DMCA",
         "creative-funnel": "Креатив",
@@ -887,7 +881,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "telegram-network": {
-          title: "Сеть каналов Telegram",
+          title: "Telegram Adult Channels",
           billingNote: "Ежемесячный ретейнер",
           features: [
             "Исследование каналов и переговоры",
@@ -897,7 +891,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "pornhub-ads": {
-          title: "Управление рекламой PornHub",
+          title: "Управление Adult Ads",
           billingNote: "Ежемесячный ретейнер · рекламный бюджет отдельно",
           features: [
             "Полное управление кампаниями",
@@ -939,7 +933,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "seo-blog-network": {
           title: "SEO и блог-сеть",
           badge: "SEO",
-          priceHeadline: "От $1,100 / мес.",
+          priceHeadline: "От $1,320 / мес.",
           billingNote:
             "Долгосрочная система роста (обычно 3–6 месяцев) · объем влияет на цену",
           features: [
@@ -976,11 +970,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       },
       growthPackageTiersById: {
         starter: {
-          name: "Стартовый пакет",
+          name: "Bronze",
           features: ["Реклама Telegram", "Базовые креативы", "Настройка воронки"],
         },
         growth: {
-          name: "Пакет роста",
+          name: "Silver",
           features: [
             "Реклама Telegram + сеть",
             "Производство креативов",
@@ -988,9 +982,9 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         scale: {
-          name: "Пакет масштабирования",
+          name: "Gold",
           features: [
-            "Реклама Telegram + PornHub",
+            "Реклама Telegram + Adult Ads",
             "Продвинутые креативы",
             "Воронка и CRO",
             "Базовая поддержка SEO",
@@ -998,7 +992,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         domination: {
-          name: "Пакет доминирования",
+          name: "Diamond",
           features: [
             "Все каналы трафика",
             "AI-чатбот",

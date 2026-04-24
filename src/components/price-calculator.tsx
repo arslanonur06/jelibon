@@ -85,33 +85,44 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
                   key={svc.id}
                   onClick={() => toggle(svc.id)}
                   className={cn(
-                    "relative isolate flex items-center gap-3 rounded-2xl border p-4 text-left transition",
+                    "group relative isolate flex items-center gap-3 overflow-hidden rounded-2xl border p-4 text-left shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-xl transition duration-500 hover:-translate-y-0.5",
                     active
-                      ? "border-[#FF69B4]/50 bg-[#FF69B4]/15 shadow-[0_0_18px_rgba(255,105,180,0.15)]"
-                      : "border-white/15 bg-[#12121f] hover:border-white/25 hover:bg-[#16162a]",
+                      ? "border-[#FF69B4]/40 bg-white/[0.12] shadow-[0_0_24px_rgba(255,105,180,0.14)]"
+                      : "border-white/12 bg-white/[0.06] hover:border-white/20 hover:bg-white/[0.09]",
                   )}
                   aria-pressed={active}
                 >
+                  <span
+                    className={cn(
+                      "pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] transition duration-500",
+                      active ? "opacity-100" : "opacity-80 group-hover:opacity-100",
+                    )}
+                    aria-hidden
+                  />
+                  <span
+                    className="pointer-events-none absolute inset-y-0 left-[-38%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[122%] group-hover:opacity-100"
+                    aria-hidden
+                  />
                   {/* Checkbox */}
                   <span
                     className={cn(
-                      "flex h-5 w-5 shrink-0 items-center justify-center rounded-md border transition",
+                      "relative z-[1] flex h-5 w-5 shrink-0 items-center justify-center rounded-md border transition",
                       active
                         ? "border-[#FF69B4] bg-[#FF69B4]"
-                        : "border-white/25 bg-transparent",
+                        : "border-white/25 bg-white/[0.06]",
                     )}
                   >
                     {active && <Check className="h-3 w-3 text-white" strokeWidth={3} />}
                   </span>
 
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-medium text-white">
+                  <div className="relative z-[1] min-w-0 flex-1">
+                    <p className="truncate text-sm font-medium text-white transition duration-500 group-hover:text-[#FCE7F3]">
                       {svc.fullName}
                     </p>
                     <p
                       className={cn(
-                        "mt-0.5 text-xs",
-                        active ? "text-[#F9A8D4]" : "text-zinc-500",
+                        "mt-0.5 text-xs transition duration-500",
+                        active ? "text-[#F9A8D4]" : "text-zinc-400 group-hover:text-zinc-300",
                       )}
                     >
                       {svc.price !== null
@@ -164,15 +175,14 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl border border-white/15 px-5 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(255,105,180,0.22)] transition hover:-translate-y-0.5"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl border border-white/14 bg-white/[0.07] px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_34px_rgba(0,0,0,0.18)] backdrop-blur-xl transition duration-500 hover:-translate-y-0.5 hover:border-white/22 hover:bg-white/[0.1]"
             >
               <span
-                className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.88] transition duration-300 group-hover:scale-[1.04]"
-                style={{ backgroundImage: "url('/assets/button-cta-bg.png')" }}
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))]"
                 aria-hidden
               />
               <span
-                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,8,24,0.22)_0%,rgba(8,8,24,0.38)_100%)]"
+                className="pointer-events-none absolute inset-y-0 left-[-38%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.14)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[122%] group-hover:opacity-100"
                 aria-hidden
               />
               <span className="relative z-[1]">{calc.getQuote}</span>

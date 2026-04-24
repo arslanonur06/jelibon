@@ -6,7 +6,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import type { Locale } from "@/lib/i18n/locales";
-import { getNavDockItems } from "@/data/nav-dock-items";
+import { getNavDockItems, resolveNavItemHref } from "@/data/nav-dock-items";
 
 type SiteMobileNavProps = {
   locale: Locale;
@@ -103,10 +103,11 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                     <ul className="space-y-1">
                       {items.map((item) => {
                         const Icon = item.icon;
+                        const href = resolveNavItemHref(item.href, pathname);
                         return (
                           <li key={item.id}>
                             <Link
-                              href={item.href}
+                              href={href}
                               prefetch
                               className="flex items-center gap-3 rounded-2xl px-3 py-3 text-sm font-medium text-zinc-100 transition hover:bg-white/[0.14] hover:shadow-[0_0_20px_rgba(255,105,180,0.12)] active:scale-[0.99]"
                               onClick={() => setOpen(false)}

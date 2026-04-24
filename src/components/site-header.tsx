@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { DesktopPrimaryNav } from "@/components/desktop-primary-nav";
 import { MarqueeStrip } from "@/components/marquee-strip";
 import { SiteMobileNav } from "@/components/site-mobile-nav";
 import { getLocale } from "@/lib/i18n/get-locale";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { TELEGRAM_URL } from "@/constants";
-import { getNavDockItems } from "@/data/nav-dock-items";
 
 function TelegramHeaderLink({ label }: { label: string }) {
   return (
@@ -14,7 +14,7 @@ function TelegramHeaderLink({ label }: { label: string }) {
       href={TELEGRAM_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex h-10 w-10 shrink-0 touch-manipulation items-center justify-center rounded-full bg-white text-[#229ED9] shadow-[0_2px_14px_rgba(0,0,0,0.25)] ring-1 ring-white/40 transition hover:bg-zinc-100"
+      className="inline-flex h-10 w-10 shrink-0 touch-manipulation items-center justify-center rounded-full border border-white/12 bg-white/[0.08] text-[#8FDBFF] shadow-[0_12px_28px_rgba(0,0,0,0.2)] backdrop-blur-xl transition hover:border-white/20 hover:bg-white/[0.12] hover:text-[#B7E8FF]"
       aria-label={label}
     >
       <svg
@@ -32,49 +32,40 @@ function TelegramHeaderLink({ label }: { label: string }) {
 export function SiteHeader() {
   const locale = getLocale();
   const dict = getDictionary(locale);
-  const navItems = getNavDockItems(locale);
 
   return (
     <header className="fixed inset-x-0 top-0 z-[100] flex flex-col shadow-[0_8px_40px_rgba(0,0,0,0.45)]">
       <div className="border-b border-white/[0.1] bg-[#050510]/95 backdrop-blur-md">
-        <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-3 py-2.5 sm:px-6">
-        <Link href="/" className="shrink-0" aria-label="Jelibon Marketing">
-          <span className="relative block h-9 w-9 overflow-hidden rounded-xl ring-1 ring-white/20 shadow-[0_0_14px_rgba(255,105,180,0.4)] sm:h-10 sm:w-10">
-            <Image
-              src="/assets/jelibonbackpng.png"
-              alt="Jelibon Marketing"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width:640px) 36px, 40px"
-              priority
-            />
-          </span>
-        </Link>
+        <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-3 py-2.5 sm:px-6 lg:gap-5">
+          <Link
+            href="/"
+            className="flex shrink-0 items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1.5 shadow-[0_12px_30px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+            aria-label="Jelibon Marketing"
+          >
+            <span className="relative block h-9 w-9 overflow-hidden rounded-xl ring-1 ring-white/20 shadow-[0_0_14px_rgba(255,105,180,0.4)] sm:h-10 sm:w-10">
+              <Image
+                src="/assets/jelibonbackpng.png"
+                alt="Jelibon Marketing"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width:640px) 36px, 40px"
+                priority
+              />
+            </span>
+            <span className="hidden text-sm font-semibold tracking-[0.14em] text-zinc-100 lg:block">
+              JELIBON
+            </span>
+          </Link>
 
-        <div className="hidden min-w-0 flex-1 lg:flex lg:justify-center">
-          <nav aria-label="Primary">
-            <ul className="flex flex-wrap items-center justify-center gap-x-0.5 gap-y-1 xl:gap-x-1">
-              {navItems.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={item.href}
-                    className="block rounded-lg px-2.5 py-2 text-xs font-medium text-zinc-400 transition hover:bg-white/[0.06] hover:text-white xl:px-3 xl:text-sm"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+          <DesktopPrimaryNav locale={locale} />
 
-        <div className="flex min-w-0 flex-1 lg:hidden" aria-hidden />
+          <div className="flex min-w-0 flex-1 lg:hidden" aria-hidden />
 
-        <div className="flex shrink-0 items-center gap-2">
-          <TelegramHeaderLink label={dict.header.telegram} />
-          <LanguageSwitcher initialLocale={locale} />
-          <SiteMobileNav locale={locale} />
-        </div>
+          <div className="flex shrink-0 items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-2 py-1.5 shadow-[0_12px_28px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+            <TelegramHeaderLink label={dict.header.telegram} />
+            <LanguageSwitcher initialLocale={locale} />
+            <SiteMobileNav locale={locale} />
+          </div>
         </div>
       </div>
 

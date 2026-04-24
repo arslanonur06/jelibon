@@ -12,7 +12,7 @@ export function MarqueeStrip() {
           baseVelocity={-1.15}
           scrollDependent={false}
           delay={80}
-          textClassName="bg-gradient-to-r from-[#FF69B4] via-[#E9D5FF] to-[#22D3EE] bg-clip-text text-transparent [filter:drop-shadow(0_0_12px_rgba(255,105,180,0.35))]"
+          textClassName="font-sans text-xs font-semibold uppercase tracking-[0.14em] sm:text-sm md:text-[15px] bg-gradient-to-r from-[#FF69B4] via-[#E9D5FF] to-[#22D3EE] bg-clip-text text-transparent [filter:drop-shadow(0_0_12px_rgba(255,105,180,0.35))]"
         >
           {DICTIONARIES.en.marquee.copy}
         </VelocityMarquee>

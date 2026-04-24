@@ -36,8 +36,16 @@ export function BlogPreview() {
           {featured.map((post, index) => (
             <article
               key={post.slug}
-              className="glass-panel group relative isolate flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-transparent p-6 transition hover:-translate-y-1 hover:border-[#A020F0]/35"
+              className="glass-panel group relative isolate flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-transparent p-6 shadow-[0_18px_40px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-1.5 hover:border-[#A020F0]/35 hover:shadow-[0_26px_60px_rgba(0,0,0,0.28)]"
             >
+              <div
+                className="pointer-events-none absolute inset-x-[-16%] top-[-24%] h-28 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.18)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-2xl transition duration-500 group-hover:translate-y-2 group-hover:opacity-100"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute inset-y-0 left-[-35%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[120%] group-hover:opacity-100"
+                aria-hidden
+              />
               <div
                 className="pointer-events-none absolute inset-[-8%] bg-cover bg-center opacity-[0.98] saturate-[1.15] brightness-[1.18] contrast-[1.28] transition duration-500 group-hover:scale-[1.04]"
                 style={{
@@ -52,11 +60,11 @@ export function BlogPreview() {
                 className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.34)_0%,rgba(5,5,16,0.62)_100%)]"
                 aria-hidden
               />
-              <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
+              <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-[#C4B5FD] transition duration-500 group-hover:text-[#E9D5FF]">
                 {dict.blog.categoryLabelsByKey[post.categoryKey] ??
                   post.categoryKey}
               </p>
-              <h3 className="relative z-[1] mt-3 font-display text-lg font-semibold leading-snug text-white">
+              <h3 className="relative z-[1] mt-3 font-display text-lg font-semibold leading-snug text-white transition duration-500 group-hover:translate-y-[-1px] group-hover:text-[#F8D8FF]">
                 <Link
                   href={`/blog/${post.slug}`}
                   className="hover:text-[#F9A8D4]"
@@ -64,10 +72,10 @@ export function BlogPreview() {
                   {post.title}
                 </Link>
               </h3>
-              <p className="relative z-[1] mt-3 flex-1 text-sm leading-relaxed text-zinc-200">
+              <p className="relative z-[1] mt-3 flex-1 text-sm leading-relaxed text-zinc-200 transition duration-500 group-hover:text-white">
                 {post.excerpt}
               </p>
-              <div className="relative z-[1] mt-5 flex items-center justify-between text-xs text-zinc-400">
+              <div className="relative z-[1] mt-5 flex items-center justify-between text-xs text-zinc-400 transition duration-500 group-hover:text-zinc-300">
                 <time dateTime={post.date}>
                   {new Date(post.date).toLocaleDateString(dateLocale, {
                     year: "numeric",

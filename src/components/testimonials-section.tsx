@@ -42,7 +42,9 @@ export function TestimonialsSection() {
         </div>
 
         {/* SiGMA & industry recognition */}
-        <div className="mt-10 max-w-3xl rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 sm:px-6">
+        <div className="glass-panel group relative mt-10 max-w-3xl overflow-hidden rounded-2xl border border-white/12 bg-white/[0.04] px-4 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:px-6">
+          <div className="pointer-events-none absolute inset-x-[-12%] top-[-45%] h-28 rounded-full bg-[radial-gradient(circle,rgba(233,168,255,0.2)_0%,rgba(233,168,255,0)_70%)] opacity-70 blur-2xl" />
+          <div className="pointer-events-none absolute inset-y-0 left-[-35%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[120%] group-hover:opacity-100" />
           <p className="font-display text-xs uppercase tracking-[0.25em] text-[#E9A8FF]/80">
             {dict.testimonials.sigmaHeading}
           </p>
@@ -64,50 +66,73 @@ export function TestimonialsSection() {
 
         {/* Cards */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((t) => (
+          {items.map((t, index) => (
             <div
               key={t.id}
-              className="glass-panel relative isolate flex flex-col gap-5 overflow-hidden rounded-3xl p-6"
+              className="glass-panel group relative isolate flex flex-col gap-5 overflow-hidden rounded-3xl border border-white/12 bg-white/[0.05] p-6 shadow-[0_22px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl transition duration-500 hover:-translate-y-1.5 hover:border-white/20 hover:bg-white/[0.07] hover:shadow-[0_30px_70px_rgba(0,0,0,0.28)]"
             >
+              <div
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))]"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute inset-x-[-10%] top-[-26%] h-28 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.18)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-2xl transition duration-500 group-hover:translate-y-2 group-hover:opacity-100"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute inset-y-0 left-[-38%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[122%] group-hover:opacity-100"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute inset-x-4 bottom-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent opacity-70"
+                aria-hidden
+              />
               {/* Decorative large quote mark */}
               <span
-                className="pointer-events-none absolute right-5 top-3 z-0 font-display text-7xl font-bold leading-none text-white/[0.06] select-none"
+                className="pointer-events-none absolute right-5 top-3 z-0 select-none font-display text-7xl font-bold leading-none text-white/[0.08] transition duration-500 group-hover:scale-110 group-hover:text-white/[0.12]"
                 aria-hidden
               >
                 &ldquo;
               </span>
 
               {/* Stars */}
-              <div className="relative z-[1]">
+              <div
+                className="relative z-[1] transition duration-500 group-hover:translate-y-[-1px]"
+                style={{ transitionDelay: `${index * 25}ms` }}
+              >
                 <StarRow count={t.stars} />
               </div>
 
               {/* Quote */}
-              <p className="relative z-[1] flex-1 text-sm leading-relaxed text-zinc-100">
+              <p className="relative z-[1] flex-1 text-sm leading-relaxed text-zinc-100 transition duration-500 group-hover:text-white">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
               {/* Metric badge */}
-              <div className="relative z-[1] inline-flex w-fit items-center gap-1.5 rounded-full border border-[#FF69B4]/30 bg-[#FF69B4]/10 px-3 py-1">
-                <span className="font-display text-lg font-semibold text-[#F9A8D4]">
+              <div className="relative z-[1] inline-flex w-fit items-center gap-1.5 rounded-full border border-[#FF69B4]/30 bg-[#FF69B4]/10 px-3 py-1 transition duration-500 group-hover:border-[#FF69B4]/55 group-hover:bg-[#FF69B4]/15 group-hover:shadow-[0_0_24px_rgba(255,105,180,0.16)]">
+                <span className="font-display text-lg font-semibold text-[#F9A8D4] transition duration-500 group-hover:text-[#FFD2EE]">
                   {t.metric}
                 </span>
-                <span className="text-xs text-zinc-400">{t.metricLabel}</span>
+                <span className="text-xs text-zinc-400 transition duration-500 group-hover:text-zinc-300">
+                  {t.metricLabel}
+                </span>
               </div>
 
               {/* Author row */}
-              <div className="relative z-[1] flex items-center gap-3 border-t border-white/10 pt-4">
+              <div className="relative z-[1] flex items-center gap-3 border-t border-white/10 pt-4 transition duration-500 group-hover:border-white/20">
                 {/* Gradient avatar */}
                 <span
-                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} font-display text-sm font-semibold text-white shadow-lg`}
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} font-display text-sm font-semibold text-white shadow-lg transition duration-500 group-hover:scale-110 group-hover:shadow-[0_12px_30px_rgba(0,0,0,0.28)]`}
                 >
                   {t.initials}
                 </span>
                 <div className="min-w-0">
-                  <p className="truncate text-sm font-medium text-white">
+                  <p className="truncate text-sm font-medium text-white transition duration-500 group-hover:text-[#F8D8FF]">
                     {t.role}
                   </p>
-                  <p className="text-xs text-zinc-500">{t.flag}</p>
+                  <p className="text-xs text-zinc-500 transition duration-500 group-hover:text-zinc-300">
+                    {t.flag}
+                  </p>
                 </div>
               </div>
             </div>

@@ -97,4 +97,12 @@ export function getNavDockItems(locale: Locale): DockNavItem[] {
   }));
 }
 
+export function resolveNavItemHref(href: string, pathname?: string | null) {
+  if (pathname === "/" && href.startsWith("/#")) {
+    return href.slice(1);
+  }
+
+  return href;
+}
+
 export const navDockItems = getNavDockItems("en");

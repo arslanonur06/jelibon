@@ -135,8 +135,16 @@ export default function BlogPostPage({ params }: Props) {
                   <Link
                     key={relatedPost.slug}
                     href={`/blog/${relatedPost.slug}`}
-                    className="glass-panel group relative overflow-hidden rounded-2xl border border-white/10 bg-transparent p-5 transition hover:-translate-y-1 hover:border-[#A78BFA]/40"
+                    className="glass-panel group relative overflow-hidden rounded-2xl border border-white/10 bg-transparent p-5 shadow-[0_16px_36px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-1.5 hover:border-[#A78BFA]/40 hover:shadow-[0_24px_50px_rgba(0,0,0,0.28)]"
                   >
+                    <div
+                      className="pointer-events-none absolute inset-x-[-16%] top-[-24%] h-24 rounded-full bg-[radial-gradient(circle,rgba(167,139,250,0.18)_0%,rgba(167,139,250,0)_68%)] opacity-0 blur-2xl transition duration-500 group-hover:translate-y-2 group-hover:opacity-100"
+                      aria-hidden
+                    />
+                    <div
+                      className="pointer-events-none absolute inset-y-0 left-[-35%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[120%] group-hover:opacity-100"
+                      aria-hidden
+                    />
                     <div
                       className="pointer-events-none absolute inset-[-8%] bg-cover bg-center opacity-[0.98] saturate-[1.15] brightness-[1.18] contrast-[1.28] transition duration-500 group-hover:scale-[1.04]"
                       style={{
@@ -151,19 +159,19 @@ export default function BlogPostPage({ params }: Props) {
                       className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,5,16,0.36)_0%,rgba(5,5,16,0.64)_100%)]"
                       aria-hidden
                     />
-                    <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-[#C4B5FD]">
+                    <p className="relative z-[1] text-xs font-semibold uppercase tracking-widest text-[#C4B5FD] transition duration-500 group-hover:text-[#E9D5FF]">
                       {dict.blog.categoryLabelsByKey[relatedPost.categoryKey] ??
                         relatedPost.categoryKey}
                     </p>
-                    <h3 className="relative z-[1] mt-2 text-lg font-semibold text-white">
+                    <h3 className="relative z-[1] mt-2 text-lg font-semibold text-white transition duration-500 group-hover:translate-y-[-1px] group-hover:text-[#F8D8FF]">
                       {relatedPost.title}
                     </h3>
-                    <p className="relative z-[1] mt-2 line-clamp-2 text-sm text-zinc-300">
+                    <p className="relative z-[1] mt-2 line-clamp-2 text-sm text-zinc-300 transition duration-500 group-hover:text-white">
                       {relatedPost.excerpt}
                     </p>
-                    <div className="relative z-[1] mt-3 flex items-center justify-between text-xs text-zinc-400">
+                    <div className="relative z-[1] mt-3 flex items-center justify-between text-xs text-zinc-400 transition duration-500 group-hover:text-zinc-300">
                       <span>{relatedPost.readTime}</span>
-                      <span className="font-semibold text-[#F9A8D4]">
+                      <span className="font-semibold text-[#F9A8D4] transition duration-500 group-hover:translate-x-1">
                         {relatedCta} →
                       </span>
                     </div>

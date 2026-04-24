@@ -49,29 +49,29 @@ export const DEFAULT_OG_IMAGE_PATH = "/assets/jelibon-brand.png";
 export const FAVICON_PATH = "/icon.png";
 
 // ─── SEO copy (layout + fallbacks) ───────────────────────────────────────────
-export const SEO_DEFAULT_TITLE = "Jelibon Marketing | iGaming Growth Türkiye";
+export const SEO_DEFAULT_TITLE = "Jelibon Marketing | Online Casino Growth Türkiye";
 
 export const SEO_DEFAULT_DESCRIPTION =
-  "Türkiye iGaming için trafik ve yazılım: Telegram, PornHub, arama (deneme bonusu, freespin, yatırımsız, doğum günü), kreatif, DMCA, özel uygulamalar. Soru ve teklif: Telegram @jelibonmarketing.";
+  "Türkiye odaklı online casino büyümesi: Telegram, Adult Ads, deneme bonusu SEO, guvenilir siteler odakli icerik, kreatif, DMCA ve ozel yazilim. Soru ve teklif: Telegram @jelibonmarketing.";
 
 export const SEO_OG_DESCRIPTION =
-  "iGaming in Türkiye—traffic + topical SEO for bonus demand (freespin, no-deposit, birthday promos), AI, and full-stack growth.";
+  "Online casino growth in Türkiye: deneme bonusu SEO, trusted casino site content, AI systems, traffic operations, and full-stack growth.";
 
 /** Homepage titles (layout `SEO_TITLE_TEMPLATE` appends “| Jelibon Marketing”). */
-export const SEO_HOME_TITLE_TR = "Türkiye iGaming trafiği & SEO";
+export const SEO_HOME_TITLE_TR = "Türkiye online casino trafiği & SEO";
 
 export const SEO_HOME_DESCRIPTION_TR =
-  "Deneme bonusu, freespin, yatırımsız ve doğum günü gibi aramalarda içerik ve teknik; Telegram ve PornHub reklam, kreatif, DMCA, ihtiyaca özel kod. Bize yine de Telegram @jelibonmarketing üzerinden yazın, net konuşalım.";
+  "Deneme bonusu, hos geldin bonusu ve guvenilir siteler gibi aramalarda icerik ve teknik SEO; Telegram, Adult Ads, kreatif, DMCA ve ihtiyaca ozel yazilim tek yapida.";
 
-export const SEO_HOME_TITLE_EN = "Trial-Bonus SEO & iGaming Growth Türkiye";
+export const SEO_HOME_TITLE_EN = "Trial-Bonus SEO & Online Casino Growth Türkiye";
 
 export const SEO_HOME_DESCRIPTION_EN =
-  "iGaming growth in Türkiye: SEO for high-volume Turkish bonus intent (freespins, birthday bonuses, no-deposit queries), plus Telegram & PornHub, AI, creative, DMCA, and custom software.";
+  "Online casino growth in Türkiye: SEO for deneme bonusu and trusted casino site intent, plus Telegram, Adult Ads, AI systems, creative, DMCA, and custom software.";
 
-export const SEO_HOME_TITLE_RU = "SEO под конкурентные iGaming-запросы в Турции";
+export const SEO_HOME_TITLE_RU = "SEO под online casino-запросы в Турции";
 
 export const SEO_HOME_DESCRIPTION_RU =
-  "Рост iGaming в Турции: SEO под массовый бонусный спрос (фриспины, бездепозит, день рождения), трафик Telegram и PornHub, AI, креатив, DMCA и кастомная разработка.";
+  "Рост online casino в Турции: SEO под deneme bonusu и trusted casino site спрос, трафик Telegram и Adult Ads, AI, креатив, DMCA и кастомная разработка.";
 
 export const SEO_KEYWORDS = [
   "iGaming marketing",
@@ -91,19 +91,25 @@ export const SEO_KEYWORDS = [
   "hoş geldin bonusu",
   "hosgeldin bonusu",
   "casino bonusları",
+  "güvenilir siteler",
+  "guvenilir siteler",
+  "güvenilir casino siteleri",
+  "guvenilir casino siteleri",
+  "online casino Türkiye",
+  "online casino marketing",
   "slot bonusu",
   "yüksek niyetli casino sorguları",
   "deneme bonusu pazarlama",
   "trial bonus SEO",
   "no deposit bonus Turkey",
   "casino marketing Turkey",
-  "Telegram ads iGaming",
+  "Telegram ads online casino",
   "Telegram Web App casino",
   "Telegram mini app onboarding",
-  "iGaming SEO",
+  "online casino SEO",
   "Google Search Console iGaming",
   "PornHub advertising",
-  "iGaming growth agency",
+  "online casino growth agency",
   "DMCA brand protection",
   "iGaming influencer marketing",
   "affiliate growth",
