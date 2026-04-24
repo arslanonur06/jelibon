@@ -23,9 +23,8 @@ const baseClass = (
   );
 
 /**
- * Desktop (md+): animated `webseker.gif` — pure <img>, no JS needed, autoplays.
- * Mobile  (<md) : `kaplanvideo.mp4`    — muted looping <video>.
- * Both rendered in static HTML; CSS hides the unused element per breakpoint.
+ * Optimized animated hero GIF. Kept as a plain image to avoid JS/video runtime
+ * work while still preserving the animated visual.
  */
 export function HeroVideoBackground({
   className,
@@ -33,37 +32,14 @@ export function HeroVideoBackground({
   objectPositionClassName = "max-lg:object-[center_68%]",
 }: Props) {
   return (
-    <>
-      {/* ── Desktop: GIF ── shown md and up, hidden on mobile */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/assets/webseker.gif"
-        alt=""
-        aria-hidden
-        decoding="async"
-        fetchPriority="low"
-        className={cn(
-          baseClass(objectFit, objectPositionClassName, className),
-          "hidden md:block",
-        )}
-      />
-
-      {/* ── Mobile: video ── shown below md, hidden on desktop */}
-      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-      <video
-        src="/assets/kaplanvideo.mp4"
-        poster="/assets/jelibon-brand.png"
-        className={cn(
-          baseClass(objectFit, objectPositionClassName, className),
-          "block md:hidden",
-        )}
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        aria-hidden
-      />
-    </>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/assets/webseker.gif"
+      alt=""
+      aria-hidden
+      decoding="async"
+      fetchPriority="high"
+      className={baseClass(objectFit, objectPositionClassName, className)}
+    />
   );
 }

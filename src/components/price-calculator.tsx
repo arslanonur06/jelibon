@@ -61,7 +61,7 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
   return (
     <section
       id="calculator"
-      className="relative scroll-mt-44 border-t border-white/10 bg-gradient-to-b from-[#050510]/60 to-[#080818]/80 py-16 sm:py-20"
+      className="cv-auto relative scroll-mt-44 border-t border-white/10 bg-gradient-to-b from-[#050510]/60 to-[#080818]/80 py-16 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
@@ -136,7 +136,7 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
           </div>
 
           {/* Total panel */}
-          <div className="glass-panel isolate sticky top-28 flex flex-col gap-5 rounded-3xl p-6">
+          <div className="glass-panel isolate flex flex-col gap-5 rounded-3xl p-6">
             <p className="text-sm font-medium text-zinc-400">
               {calc.totalLabel}
             </p>

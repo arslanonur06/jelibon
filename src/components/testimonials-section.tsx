@@ -27,7 +27,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="relative scroll-mt-44 border-t border-white/10 bg-[#050510]/30 py-16 sm:py-20"
+      className="cv-auto relative scroll-mt-44 border-t border-white/10 bg-[#050510]/30 py-16 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
@@ -42,8 +42,8 @@ export function TestimonialsSection() {
         </div>
 
         {/* SiGMA & industry recognition */}
-        <div className="glass-panel group relative mt-10 max-w-3xl overflow-hidden rounded-2xl border border-white/12 bg-white/[0.04] px-4 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:px-6">
-          <div className="pointer-events-none absolute inset-x-[-12%] top-[-45%] h-28 rounded-full bg-[radial-gradient(circle,rgba(233,168,255,0.2)_0%,rgba(233,168,255,0)_70%)] opacity-70 blur-2xl" />
+        <div className="glass-panel group relative mt-10 max-w-3xl overflow-hidden rounded-2xl border border-white/12 bg-[#12121f]/95 px-4 py-5 shadow-[0_18px_36px_rgba(0,0,0,0.16)] sm:px-6">
+          <div className="pointer-events-none absolute inset-x-[-12%] top-[-45%] h-24 rounded-full bg-[radial-gradient(circle,rgba(233,168,255,0.16)_0%,rgba(233,168,255,0)_70%)] opacity-50 blur-xl" />
           <div className="pointer-events-none absolute inset-y-0 left-[-35%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[120%] group-hover:opacity-100" />
           <p className="font-display text-xs uppercase tracking-[0.25em] text-[#E9A8FF]/80">
             {dict.testimonials.sigmaHeading}
@@ -69,14 +69,14 @@ export function TestimonialsSection() {
           {items.map((t, index) => (
             <div
               key={t.id}
-              className="glass-panel group relative isolate flex flex-col gap-5 overflow-hidden rounded-3xl border border-white/12 bg-white/[0.05] p-6 shadow-[0_22px_50px_rgba(0,0,0,0.18)] backdrop-blur-xl transition duration-500 hover:-translate-y-1.5 hover:border-white/20 hover:bg-white/[0.07] hover:shadow-[0_30px_70px_rgba(0,0,0,0.28)]"
+              className="glass-panel group relative isolate flex flex-col gap-5 overflow-hidden rounded-3xl border border-white/12 bg-[#12121f]/95 p-6 shadow-[0_18px_36px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:bg-[#171727] hover:shadow-[0_22px_44px_rgba(0,0,0,0.22)]"
             >
               <div
                 className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))]"
                 aria-hidden
               />
               <div
-                className="pointer-events-none absolute inset-x-[-10%] top-[-26%] h-28 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.18)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-2xl transition duration-500 group-hover:translate-y-2 group-hover:opacity-100"
+                className="pointer-events-none absolute inset-x-[-10%] top-[-26%] h-24 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.14)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-xl transition duration-500 group-hover:translate-y-2 group-hover:opacity-100"
                 aria-hidden
               />
               <div

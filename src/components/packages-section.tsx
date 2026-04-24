@@ -91,16 +91,7 @@ export function PackagesSection() {
   const isSilverTier = (id: string) => id === "growth";
   const isGoldTier = (id: string) => id === "scale";
   const isDiamondTier = (id: string) => id === "domination";
-  const getGrowthTierMotionClass = (id: string) =>
-    isBronzeTier(id)
-      ? "animate-growth-tier-bronze"
-      : isSilverTier(id)
-        ? "animate-growth-tier-silver"
-        : isGoldTier(id)
-          ? "animate-growth-tier-gold"
-          : isDiamondTier(id)
-            ? "animate-growth-tier-diamond"
-            : "animate-growth-tier-red";
+  const getGrowthTierMotionClass = () => "";
   const isImagePriorityCard = (id: string) =>
     isTelegramCard(id) ||
     isAdultAdsCard(id) ||
@@ -113,7 +104,7 @@ export function PackagesSection() {
   const isFullBleedImageCard = (id: string) => isDmcaCard(id) || isSeoBlogCard(id);
 
   return (
-    <section id="packages" className="relative scroll-mt-44 py-12 sm:py-16 md:py-20">
+    <section id="packages" className="cv-auto relative scroll-mt-44 py-12 sm:py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
           <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
@@ -149,7 +140,7 @@ export function PackagesSection() {
               className="glass-panel group relative isolate flex scroll-mt-52 flex-col overflow-hidden rounded-2xl border border-white/10 bg-transparent p-4 shadow-[0_18px_40px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.28)] sm:rounded-3xl sm:p-6"
             >
               <div
-                className="pointer-events-none absolute inset-x-[-12%] top-[-24%] h-32 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.18)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-2xl transition duration-500 group-hover:opacity-100 group-hover:translate-y-2"
+                className="pointer-events-none absolute inset-x-[-12%] top-[-24%] h-28 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.14)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-xl transition duration-500 group-hover:opacity-100 group-hover:translate-y-2"
                 aria-hidden
               />
               <div
@@ -323,7 +314,7 @@ export function PackagesSection() {
                 className="glass-panel group relative isolate flex min-h-0 flex-col overflow-hidden rounded-xl border border-white/10 bg-transparent p-3 shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition duration-500 hover:-translate-y-1.5 hover:border-white/20 hover:shadow-[0_24px_44px_rgba(0,0,0,0.28)] sm:rounded-2xl sm:p-5"
               >
                 <div
-                  className="pointer-events-none absolute inset-x-[-15%] top-[-20%] h-24 rounded-full bg-[radial-gradient(circle,rgba(196,181,253,0.2)_0%,rgba(196,181,253,0)_68%)] opacity-0 blur-2xl transition duration-500 group-hover:opacity-100 group-hover:translate-y-2"
+                  className="pointer-events-none absolute inset-x-[-15%] top-[-20%] h-20 rounded-full bg-[radial-gradient(circle,rgba(196,181,253,0.14)_0%,rgba(196,181,253,0)_68%)] opacity-0 blur-xl transition duration-500 group-hover:opacity-100 group-hover:translate-y-2"
                   aria-hidden
                 />
                 <div
@@ -331,9 +322,7 @@ export function PackagesSection() {
                   aria-hidden
                 />
                 <div
-                  className={`pointer-events-none absolute inset-0 bg-cover bg-no-repeat opacity-[0.9] transition duration-500 group-hover:scale-[1.03] ${getGrowthTierMotionClass(
-                    tier.id,
-                  )}`}
+                  className={`pointer-events-none absolute inset-0 bg-cover bg-no-repeat opacity-[0.9] transition duration-500 group-hover:scale-[1.03] ${getGrowthTierMotionClass()}`}
                   style={{
                     backgroundImage: isBronzeTier(tier.id)
                       ? BRONZE_TIER_BACKGROUND

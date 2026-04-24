@@ -99,7 +99,7 @@ export default function RootLayout({
   return (
     <html
       lang={locale}
-      className="scroll-smooth dark"
+      className="dark"
       suppressHydrationWarning
     >
       <body

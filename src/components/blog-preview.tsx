@@ -12,7 +12,7 @@ export function BlogPreview() {
   return (
     <section
       id="blog"
-      className="relative scroll-mt-44 border-t border-white/10 bg-[#050510]/30 py-16 sm:py-20"
+      className="cv-auto relative scroll-mt-44 border-t border-white/10 bg-[#050510]/30 py-16 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -36,10 +36,10 @@ export function BlogPreview() {
           {featured.map((post, index) => (
             <article
               key={post.slug}
-              className="glass-panel group relative isolate flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-transparent p-6 shadow-[0_18px_40px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-1.5 hover:border-[#A020F0]/35 hover:shadow-[0_26px_60px_rgba(0,0,0,0.28)]"
+              className="glass-panel group relative isolate flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-transparent p-6 shadow-[0_16px_32px_rgba(0,0,0,0.14)] transition duration-500 hover:-translate-y-1 hover:border-[#A020F0]/35 hover:shadow-[0_20px_42px_rgba(0,0,0,0.22)]"
             >
               <div
-                className="pointer-events-none absolute inset-x-[-16%] top-[-24%] h-28 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.18)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-2xl transition duration-500 group-hover:translate-y-2 group-hover:opacity-100"
+                className="pointer-events-none absolute inset-x-[-16%] top-[-24%] h-24 rounded-full bg-[radial-gradient(circle,rgba(255,105,180,0.14)_0%,rgba(255,105,180,0)_68%)] opacity-0 blur-xl transition duration-500 group-hover:translate-y-2 group-hover:opacity-100"
                 aria-hidden
               />
               <div

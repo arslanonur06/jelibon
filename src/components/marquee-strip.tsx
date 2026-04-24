@@ -1,4 +1,3 @@
-import { VelocityMarquee } from "@/components/ui/velocity-marquee";
 import { DICTIONARIES } from "@/lib/i18n/dictionaries";
 
 /**
@@ -7,15 +6,10 @@ import { DICTIONARIES } from "@/lib/i18n/dictionaries";
 export function MarqueeStrip() {
   return (
     <div className="pointer-events-none w-full border-t border-white/[0.08] bg-[#08081a]">
-      <div className="mx-auto max-w-[100vw] py-2 sm:py-2.5">
-        <VelocityMarquee
-          baseVelocity={-1.15}
-          scrollDependent={false}
-          delay={80}
-          textClassName="font-sans text-xs font-semibold uppercase tracking-[0.14em] sm:text-sm md:text-[15px] bg-gradient-to-r from-[#FF69B4] via-[#E9D5FF] to-[#22D3EE] bg-clip-text text-transparent [filter:drop-shadow(0_0_12px_rgba(255,105,180,0.35))]"
-        >
+      <div className="mx-auto max-w-7xl overflow-hidden px-4 py-2 text-center sm:px-6 sm:py-2.5">
+        <p className="truncate bg-gradient-to-r from-[#FF69B4] via-[#E9D5FF] to-[#22D3EE] bg-clip-text font-sans text-xs font-semibold uppercase tracking-[0.14em] text-transparent sm:text-sm md:text-[15px]">
           {DICTIONARIES.en.marquee.copy}
-        </VelocityMarquee>
+        </p>
       </div>
     </div>
   );

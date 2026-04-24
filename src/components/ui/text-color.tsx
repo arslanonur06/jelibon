@@ -26,25 +26,25 @@ export function TextColor({ lines, className }: TextColorProps) {
 
               <span
                 data-content={line1}
-                className="before:animate-gradient-background-1 relative before:absolute before:bottom-4 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] before:text-center before:text-white/20 sm:before:top-0"
+                className="relative before:absolute before:bottom-4 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] before:text-center before:text-white/20 sm:before:top-0"
               >
-                <span className="from-gradient-1-start to-gradient-1-end animate-gradient-foreground-1 bg-gradient-to-r bg-clip-text px-1 text-transparent sm:px-5">
+                <span className="from-gradient-1-start to-gradient-1-end bg-gradient-to-r bg-clip-text px-1 text-transparent sm:px-5">
                   {line1}
                 </span>
               </span>
               <span
                 data-content={line2}
-                className="before:animate-gradient-background-2 relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] before:text-center before:text-white/20 sm:before:top-0"
+                className="relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] before:text-center before:text-white/20 sm:before:top-0"
               >
-                <span className="from-gradient-2-start to-gradient-2-end animate-gradient-foreground-2 bg-gradient-to-r bg-clip-text px-1 text-transparent sm:px-5">
+                <span className="from-gradient-2-start to-gradient-2-end bg-gradient-to-r bg-clip-text px-1 text-transparent sm:px-5">
                   {line2}
                 </span>
               </span>
               <span
                 data-content={line3}
-                className="before:animate-gradient-background-3 relative before:absolute before:bottom-1 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] before:text-center before:text-white/20 sm:before:top-0"
+                className="relative before:absolute before:bottom-1 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] before:text-center before:text-white/20 sm:before:top-0"
               >
-                <span className="from-gradient-3-start to-gradient-3-end animate-gradient-foreground-3 bg-gradient-to-r bg-clip-text px-1 text-transparent sm:px-5">
+                <span className="from-gradient-3-start to-gradient-3-end bg-gradient-to-r bg-clip-text px-1 text-transparent sm:px-5">
                   {line3}
                 </span>
               </span>

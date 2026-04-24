@@ -64,8 +64,8 @@ export function HeroSection() {
 
         <div className="order-1 flex flex-col gap-6 lg:order-2">
           <div className="glass-panel relative rounded-3xl border border-white/12 p-6 sm:p-8">
-            <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[#FF69B4]/20 blur-2xl" />
-            <div className="absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-[#00D4FF]/15 blur-3xl" />
+            <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#FF69B4]/14 blur-xl" />
+            <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-[#00D4FF]/10 blur-xl" />
             <p className="font-display text-sm font-semibold uppercase tracking-widest text-[#C4B5FD]">
               {dict.hero.whyUsHeading}
             </p>

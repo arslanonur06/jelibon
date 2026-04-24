@@ -37,7 +37,7 @@ export function GrowthPillars() {
   return (
     <section
       id="solutions"
-      className="relative scroll-mt-44 bg-[#050510]/50 py-16 sm:py-20"
+      className="cv-auto relative scroll-mt-44 bg-[#050510]/50 py-16 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="max-w-3xl">
@@ -74,7 +74,7 @@ export function GrowthPillars() {
                 aria-hidden
               />
               <div
-                className={`pointer-events-none absolute -right-10 -top-10 z-0 h-40 w-40 rounded-full bg-gradient-to-br ${pillar.accent} opacity-25 blur-3xl transition group-hover:opacity-40`}
+                className={`pointer-events-none absolute -right-10 -top-10 z-0 h-32 w-32 rounded-full bg-gradient-to-br ${pillar.accent} opacity-18 blur-xl transition group-hover:opacity-30`}
               />
               <h3 className="relative z-[1] font-display text-lg font-semibold text-white">
                 {pillar.title}
