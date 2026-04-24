@@ -6,6 +6,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Menu, X } from "lucide-react";
 import type { Locale } from "@/lib/i18n/locales";
+import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getNavDockItems, resolveNavItemHref } from "@/data/nav-dock-items";
 
 type SiteMobileNavProps = {
@@ -14,6 +15,7 @@ type SiteMobileNavProps = {
 
 export function SiteMobileNav({ locale }: SiteMobileNavProps) {
   const items = getNavDockItems(locale);
+  const dict = getDictionary(locale);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -48,7 +50,7 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
       <button
         type="button"
         className="inline-flex h-10 w-10 touch-manipulation items-center justify-center rounded-xl border border-white/12 bg-white/[0.06] text-zinc-100 shadow-[0_2px_12px_rgba(0,0,0,0.2)] transition hover:bg-white/10 lg:hidden"
-        aria-label="Open navigation menu"
+        aria-label={dict.header.openMenu}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen(true)}
@@ -62,7 +64,7 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
               <button
                 type="button"
                 className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"
-                aria-label="Close menu"
+                aria-label={dict.header.closeMenu}
                 onClick={() => setOpen(false)}
               />
               <aside
@@ -84,13 +86,13 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                       id="site-mobile-nav-heading"
                       className="bg-gradient-to-r from-[#F9A8D4] via-[#E9D5FF] to-[#7DD3FC] bg-clip-text text-xs font-semibold uppercase tracking-[0.2em] text-transparent"
                     >
-                      Menu
+                      {dict.header.menu}
                     </h2>
                     <button
                       ref={closeRef}
                       type="button"
                       className="rounded-xl p-2 text-zinc-300 ring-1 ring-white/10 transition hover:bg-white/10 hover:text-white"
-                      aria-label="Close navigation menu"
+                      aria-label={dict.header.closeMenu}
                       onClick={() => setOpen(false)}
                     >
                       <X className="h-5 w-5" aria-hidden />

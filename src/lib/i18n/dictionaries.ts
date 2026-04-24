@@ -3,6 +3,9 @@ import type { Locale } from "./locales";
 export type Dictionary = {
   header: {
     telegram: string;
+    menu: string;
+    openMenu: string;
+    closeMenu: string;
   };
   marquee: {
     copy: string;
@@ -120,6 +123,7 @@ export type Dictionary = {
     statusPending: string;
   };
   testimonials: {
+    eyebrow: string;
     heading: string;
     subheading: string;
     sigmaHeading: string;
@@ -146,7 +150,12 @@ export type Dictionary = {
 
 export const DICTIONARIES: Record<Locale, Dictionary> = {
   en: {
-    header: { telegram: "Telegram" },
+    header: {
+      telegram: "Telegram",
+      menu: "Menu",
+      openMenu: "Open navigation menu",
+      closeMenu: "Close navigation menu",
+    },
     marquee: {
       copy:
         "Jelibon Marketing — online casino growth · Telegram Ads + adult channels · Adult Ads · deneme bonusu SEO · trusted casino site content hubs · AI chat + influencer systems · DMCA & brand safety · creative production · custom software & automations — Türkiye & nearby markets · ",
@@ -403,6 +412,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "PENDING",
     },
     testimonials: {
+      eyebrow: "Partners",
       heading: "What operators say",
       subheading: "Recent operator notes and market presence.",
       sigmaHeading: "Seen across the circuit",
@@ -476,7 +486,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
   },
   tr: {
-    header: { telegram: "Telegram" },
+    header: {
+      telegram: "Telegram",
+      menu: "Menü",
+      openMenu: "Gezinme menüsünü aç",
+      closeMenu: "Gezinme menüsünü kapat",
+    },
     marquee: {
       copy:
         "Jelibon Marketing — online casino büyümesi · Telegram reklamları + adult kanallar · Adult Ads · deneme bonusu SEO · güvenilir siteler için içerik ağları · AI sohbet + influencer sistemleri · DMCA ve marka güvenliği · kreatif prodüksiyon · özel yazılım ve otomasyon — Türkiye odaklı büyüme · ",
@@ -739,6 +754,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "BEKLEMEDE",
     },
     testimonials: {
+      eyebrow: "İş ortakları",
       heading: "Sahadaki ses",
       subheading: "Operatör notları ve pazardaki görünürlük.",
       sigmaHeading: "Bulunduğumuz Sahneler",
@@ -805,7 +821,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
   },
   ru: {
-    header: { telegram: "Telegram" },
+    header: {
+      telegram: "Telegram",
+      menu: "Меню",
+      openMenu: "Открыть меню навигации",
+      closeMenu: "Закрыть меню навигации",
+    },
     marquee: {
       copy:
         "Jelibon Marketing · iGaming · Реклама в Telegram и сеть каналов · PornHub · SEO · AI-чатбот и инфлюенсер · DMCA · Креативная студия · Индивидуальная разработка · Масштаб в Турции · ",
@@ -1071,6 +1092,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "В ОЖИДАНИИ",
     },
     testimonials: {
+      eyebrow: "Партнеры",
       heading: "Что говорят операторы",
       subheading: "Заметки операторов и рыночное присутствие.",
       sigmaHeading: "Где нас видят",

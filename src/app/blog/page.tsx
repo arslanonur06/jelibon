@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
 import { SiteFooter } from "@/components/site-footer";
@@ -12,20 +11,60 @@ import {
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
-export const metadata: Metadata = {
-  title: "Blog",
-  description:
-    "Türkiye odaklı online casino pazarlaması, Telegram, SEO ve otomasyon notları. Yuzlerce marka icin giris, bonus ve guncel rehberler. Detay: @jelibonmarketing.",
-  alternates: { canonical: "/blog" },
-  openGraph: {
-    title: "Blog | Jelibon Marketing",
+import type { Metadata } from "next";
+
+export function generateMetadata(): Metadata {
+  const locale = getLocale();
+
+  if (locale === "tr") {
+    return {
+      title: "Yazılar",
+      description:
+        "Türkiye odaklı online casino pazarlaması, Telegram, SEO ve otomasyon notları. Yuzlerce marka icin giris, bonus ve guncel rehberler. Detay: @jelibonmarketing.",
+      alternates: { canonical: "/blog" },
+      openGraph: {
+        title: "Yazılar | Jelibon Marketing",
+        description:
+          "Jelibon yazıları: pazarlama notları, marka rehberleri, güncel giriş ve bonus sayfaları. Telegram: @jelibonmarketing",
+        type: "website",
+        url: "/blog",
+        images: [{ url: "/assets/jelibon-brand.png", alt: "Jelibon Marketing" }],
+      },
+    };
+  }
+
+  if (locale === "ru") {
+    return {
+      title: "Блог",
+      description:
+        "Заметки по online casino-маркетингу в Турции: Telegram, SEO, автоматизация и быстрые гайды по брендам и бонусам.",
+      alternates: { canonical: "/blog" },
+      openGraph: {
+        title: "Блог | Jelibon Marketing",
+        description:
+          "Заметки Jelibon: маркетинг, бренд-гайды, актуальные входы и бонусные страницы. Telegram: @jelibonmarketing",
+        type: "website",
+        url: "/blog",
+        images: [{ url: "/assets/jelibon-brand.png", alt: "Jelibon Marketing" }],
+      },
+    };
+  }
+
+  return {
+    title: "Blog",
     description:
-      "Jelibon blog: pazarlama notları, marka rehberleri, güncel giriş ve bonus sayfaları. Telegram: @jelibonmarketing",
-    type: "website",
-    url: "/blog",
-    images: [{ url: "/assets/jelibon-brand.png", alt: "Jelibon Marketing" }],
-  },
-};
+      "Online casino marketing notes for Türkiye: Telegram, SEO, automation, and quick access to brand and bonus guides.",
+    alternates: { canonical: "/blog" },
+    openGraph: {
+      title: "Blog | Jelibon Marketing",
+      description:
+        "Jelibon blog: marketing notes, brand guides, current access pages, and bonus content. Telegram: @jelibonmarketing",
+      type: "website",
+      url: "/blog",
+      images: [{ url: "/assets/jelibon-brand.png", alt: "Jelibon Marketing" }],
+    },
+  };
+}
 
 export default function BlogPage() {
   const locale = getLocale();

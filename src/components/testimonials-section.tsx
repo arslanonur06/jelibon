@@ -33,7 +33,7 @@ export function TestimonialsSection() {
         {/* Heading */}
         <div className="max-w-2xl">
           <p className="font-display text-xs uppercase tracking-[0.3em] text-[#E9A8FF]/90">
-            Partners
+            {dict.testimonials.eyebrow}
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold text-white sm:text-4xl">
             {dict.testimonials.heading}
