@@ -18,14 +18,6 @@ import {
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getLocale } from "@/lib/i18n/get-locale";
 
-const OrbitalTimelineSection = dynamic(
-  () =>
-    import("@/components/orbital-timeline-section").then((m) => ({
-      default: m.OrbitalTimelineSection,
-    })),
-  { loading: () => <div className="min-h-[560px]" aria-hidden /> },
-);
-
 const PackagesSection = dynamic(
   () =>
     import("@/components/packages-section").then((m) => ({
@@ -130,7 +122,6 @@ export default function Home() {
         <HeroSection />
         <div className="relative -mt-4 overflow-hidden rounded-t-[1.75rem] border-t border-white/[0.08] bg-[#050510]/80 shadow-[0_-12px_48px_rgba(0,0,0,0.4)] sm:-mt-5 sm:rounded-t-[2rem]">
           <GrowthPillars />
-          <OrbitalTimelineSection />
           <PackagesSection />
           <PriceCalculator locale={locale} />
           <ComboSection />

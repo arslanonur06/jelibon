@@ -4,7 +4,6 @@ import {
   CircleHelp,
   Layers,
   MessageCircle,
-  Orbit,
   Package,
   Sparkles,
   Star,
@@ -30,13 +29,6 @@ const navDockItemsBase: Omit<DockNavItem, "name">[] = [
     icon: Layers,
     color: "bg-gradient-to-br from-[#FF69B4] to-[#A020F0]",
     colorHover: "bg-gradient-to-br from-[#FFA8D8] to-[#C084FC]",
-  },
-  {
-    id: "orbital",
-    href: "/#orbital",
-    icon: Orbit,
-    color: "bg-gradient-to-br from-[#A020F0] to-[#6366f1]",
-    colorHover: "bg-gradient-to-br from-[#C084FC] to-[#818CF8]",
   },
   {
     id: "packages",

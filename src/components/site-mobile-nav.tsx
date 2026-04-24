@@ -63,7 +63,7 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
             <div className="fixed inset-0 z-[500] lg:hidden">
               <button
                 type="button"
-                className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"
+                className="absolute inset-0 bg-black/72"
                 aria-label={dict.header.closeMenu}
                 onClick={() => setOpen(false)}
               />
@@ -72,7 +72,7 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="site-mobile-nav-heading"
-                className="absolute inset-y-0 right-0 flex w-[min(20.5rem,92vw)] flex-col overflow-hidden rounded-l-[2.25rem] border-l border-white/25 bg-[#08081c]/70 shadow-[-20px_0_48px_rgba(255,105,180,0.18)] backdrop-blur-2xl backdrop-saturate-150"
+                className="absolute inset-y-0 right-0 flex w-[min(20.5rem,92vw)] flex-col overflow-hidden rounded-l-[2.25rem] border-l border-white/18 bg-[#08081c]/94 shadow-[-16px_0_36px_rgba(255,105,180,0.14)]"
               >
                 <div
                   className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-95"
@@ -81,7 +81,7 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-l from-[#050510]/60 via-[#050510]/34 to-[#050510]/18" />
                 <div className="relative z-10 flex min-h-0 flex-1 flex-col bg-gradient-to-b from-white/[0.12] via-transparent to-white/[0.04]">
-                  <div className="flex items-center justify-between border-b border-white/[0.12] px-4 py-3.5">
+                  <div className="flex items-center justify-between border-b border-white/[0.1] px-4 py-3.5">
                     <h2
                       id="site-mobile-nav-heading"
                       className="bg-gradient-to-r from-[#F9A8D4] via-[#E9D5FF] to-[#7DD3FC] bg-clip-text text-xs font-semibold uppercase tracking-[0.2em] text-transparent"
@@ -111,10 +111,10 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                             <Link
                               href={href}
                               prefetch
-                              className="flex items-center gap-3 rounded-2xl px-3 py-3 text-sm font-medium text-zinc-100 transition hover:bg-white/[0.14] hover:shadow-[0_0_20px_rgba(255,105,180,0.12)] active:scale-[0.99]"
+                              className="flex items-center gap-3 rounded-2xl px-3 py-3 text-sm font-medium text-zinc-100 transition hover:bg-white/[0.12] hover:shadow-[0_0_16px_rgba(255,105,180,0.1)] active:scale-[0.99]"
                               onClick={() => setOpen(false)}
                             >
-                              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#F9A8D4] ring-1 ring-white/15 backdrop-blur-sm">
+                              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#F9A8D4] ring-1 ring-white/15">
                                 <Icon
                                   className="h-[1.125rem] w-[1.125rem]"
                                   strokeWidth={1.75}

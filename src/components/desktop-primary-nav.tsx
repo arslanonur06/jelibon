@@ -18,7 +18,7 @@ export function DesktopPrimaryNav({ locale }: DesktopPrimaryNavProps) {
       aria-label="Primary"
       className="hidden lg:flex lg:flex-1 lg:justify-center"
     >
-      <ul className="flex items-center gap-1 rounded-full border border-white/12 bg-white/[0.05] px-2 py-2 shadow-[0_14px_34px_rgba(0,0,0,0.24)] backdrop-blur-xl">
+      <ul className="flex items-center gap-1 rounded-full border border-white/12 bg-[#12121f]/95 px-2 py-2 shadow-[0_12px_24px_rgba(0,0,0,0.18)]">
         {navItems.map((item) => {
           const href = resolveNavItemHref(item.href, pathname);
           const isBlogItem = item.href === "/blog";

@@ -85,10 +85,10 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
                   key={svc.id}
                   onClick={() => toggle(svc.id)}
                   className={cn(
-                    "group relative isolate flex items-center gap-3 overflow-hidden rounded-2xl border p-4 text-left shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-xl transition duration-500 hover:-translate-y-0.5",
+                    "group relative isolate flex items-center gap-3 overflow-hidden rounded-2xl border p-4 text-left shadow-[0_12px_24px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-0.5",
                     active
-                      ? "border-[#FF69B4]/40 bg-white/[0.12] shadow-[0_0_24px_rgba(255,105,180,0.14)]"
-                      : "border-white/12 bg-white/[0.06] hover:border-white/20 hover:bg-white/[0.09]",
+                      ? "border-[#FF69B4]/40 bg-[#1a1a2b]/96 shadow-[0_0_18px_rgba(255,105,180,0.12)]"
+                      : "border-white/12 bg-[#12121f]/94 hover:border-white/20 hover:bg-[#171727]",
                   )}
                   aria-pressed={active}
                 >
@@ -175,7 +175,7 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl border border-white/14 bg-white/[0.07] px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_34px_rgba(0,0,0,0.18)] backdrop-blur-xl transition duration-500 hover:-translate-y-0.5 hover:border-white/22 hover:bg-white/[0.1]"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl border border-white/14 bg-[#171727]/96 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_28px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-0.5 hover:border-white/22 hover:bg-[#1b1b2d]"
             >
               <span
                 className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))]"

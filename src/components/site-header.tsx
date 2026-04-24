@@ -14,7 +14,7 @@ function TelegramHeaderLink({ label }: { label: string }) {
       href={TELEGRAM_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex h-10 w-10 shrink-0 touch-manipulation items-center justify-center rounded-full border border-white/12 bg-white/[0.08] text-[#8FDBFF] shadow-[0_12px_28px_rgba(0,0,0,0.2)] backdrop-blur-xl transition hover:border-white/20 hover:bg-white/[0.12] hover:text-[#B7E8FF]"
+      className="inline-flex h-10 w-10 shrink-0 touch-manipulation items-center justify-center rounded-full border border-white/12 bg-[#141425]/95 text-[#8FDBFF] shadow-[0_10px_22px_rgba(0,0,0,0.18)] transition hover:border-white/20 hover:bg-[#1a1a30] hover:text-[#B7E8FF]"
       aria-label={label}
     >
       <svg
@@ -34,12 +34,12 @@ export function SiteHeader() {
   const dict = getDictionary(locale);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-[100] flex flex-col shadow-[0_8px_40px_rgba(0,0,0,0.45)]">
-      <div className="border-b border-white/[0.1] bg-[#050510]/95 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-[100] flex flex-col shadow-[0_8px_28px_rgba(0,0,0,0.32)]">
+      <div className="border-b border-white/[0.08] bg-[#050510]/98">
         <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-3 py-2.5 sm:px-6 lg:gap-5">
           <Link
             href="/"
-            className="flex shrink-0 items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1.5 shadow-[0_12px_30px_rgba(0,0,0,0.18)] backdrop-blur-xl"
+            className="flex shrink-0 items-center gap-3 rounded-full border border-white/10 bg-[#12121f]/95 px-2.5 py-1.5 shadow-[0_10px_22px_rgba(0,0,0,0.16)]"
             aria-label="Jelibon Marketing"
           >
             <span className="relative block h-9 w-9 overflow-hidden rounded-xl ring-1 ring-white/20 shadow-[0_0_14px_rgba(255,105,180,0.4)] sm:h-10 sm:w-10">
@@ -61,7 +61,7 @@ export function SiteHeader() {
 
           <div className="flex min-w-0 flex-1 lg:hidden" aria-hidden />
 
-          <div className="flex shrink-0 items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-2 py-1.5 shadow-[0_12px_28px_rgba(0,0,0,0.18)] backdrop-blur-xl">
+          <div className="flex shrink-0 items-center gap-2 rounded-full border border-white/10 bg-[#12121f]/95 px-2 py-1.5 shadow-[0_10px_22px_rgba(0,0,0,0.16)]">
             <TelegramHeaderLink label={dict.header.telegram} />
             <LanguageSwitcher initialLocale={locale} />
             <SiteMobileNav locale={locale} />
