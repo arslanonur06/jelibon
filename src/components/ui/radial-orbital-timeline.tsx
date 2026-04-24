@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
   Bot,
@@ -30,9 +31,7 @@ import type { Locale } from "@/lib/i18n/locales";
 import { DICTIONARIES } from "@/lib/i18n/dictionaries";
 
 /** Degrees per second — tuned for smoother/faster perceived motion. */
-const ORBIT_ROTATION_DPS = 5;
-/** Update cadence (ms). Keeps motion fluid without excessive rerenders. */
-const ORBIT_TICK_MS = 80;
+const ORBIT_ROTATION_DPS = 9;
 
 interface TimelineItem {
   id: number;
@@ -137,23 +136,26 @@ export default function RadialOrbitalTimeline({
   };
 
   useEffect(() => {
-    let rotationTimer: ReturnType<typeof setInterval>;
+    if (!autoRotate || viewMode !== "orbital") return;
 
-    if (autoRotate && viewMode === "orbital") {
-      const step = (ORBIT_ROTATION_DPS * ORBIT_TICK_MS) / 1000;
-      rotationTimer = setInterval(() => {
-        setRotationAngle((prev) => {
-          const next = (prev + step) % 360;
-          return Number(next.toFixed(4));
-        });
-      }, ORBIT_TICK_MS);
-    }
+    let frameId = 0;
+    let lastTimestamp: number | null = null;
 
-    return () => {
-      if (rotationTimer) {
-        clearInterval(rotationTimer);
+    const animateOrbit = (timestamp: number) => {
+      if (lastTimestamp === null) {
+        lastTimestamp = timestamp;
       }
+
+      const elapsedMs = timestamp - lastTimestamp;
+      lastTimestamp = timestamp;
+
+      setRotationAngle((prev) => (prev + ORBIT_ROTATION_DPS * (elapsedMs / 1000)) % 360);
+      frameId = window.requestAnimationFrame(animateOrbit);
     };
+
+    frameId = window.requestAnimationFrame(animateOrbit);
+
+    return () => window.cancelAnimationFrame(frameId);
   }, [autoRotate, viewMode]);
 
   const centerViewOnNode = (nodeId: number) => {
@@ -163,7 +165,7 @@ export default function RadialOrbitalTimeline({
     const totalNodes = timelineData.length;
     const targetAngle = (nodeIndex / totalNodes) * 360;
 
-    setRotationAngle(270 - targetAngle);
+    setRotationAngle(((270 - targetAngle) % 360 + 360) % 360);
   };
 
   const getRelatedItems = (itemId: number): number[] => {
@@ -230,7 +232,7 @@ export default function RadialOrbitalTimeline({
 
       <div className="relative z-[1] flex h-full w-full max-w-4xl items-center justify-center contain-layout">
         <div
-          className="absolute w-full h-full flex items-center justify-center"
+          className="absolute flex h-full w-full items-center justify-center will-change-transform"
           ref={orbitRef}
           style={{
             perspective: "1000px",
@@ -285,10 +287,10 @@ export default function RadialOrbitalTimeline({
                   nodeRefs.current[item.id] = el;
                 }}
                 className={cn(
-                  "absolute cursor-pointer",
+                  "absolute cursor-pointer transform-gpu",
                   autoRotate
                     ? "transition-none"
-                    : "transition-transform duration-200",
+                    : "transition-transform duration-300 ease-out",
                 )}
                 style={nodeStyle}
                 onClick={(e) => {
@@ -311,7 +313,7 @@ export default function RadialOrbitalTimeline({
 
                 <div
                   className={`
-                  w-10 h-10 rounded-full flex items-center justify-center overflow-hidden
+                  h-10 w-10 transform-gpu rounded-full flex items-center justify-center overflow-hidden
                   ${
                     hasImage
                       ? isExpanded
@@ -333,8 +335,8 @@ export default function RadialOrbitalTimeline({
                       ? "border-white animate-pulse"
                       : "border-white/40"
                   }
-                  transition-all duration-300 transform
-                  ${isExpanded ? "scale-150" : ""}
+                  transition-all duration-500 ease-out
+                  ${isExpanded ? "scale-[1.42] shadow-[0_0_28px_rgba(255,255,255,0.2)]" : ""}
                 `}
                 >
                   {hasImage && item.iconImage ? (
@@ -352,96 +354,113 @@ export default function RadialOrbitalTimeline({
 
                 <div
                   className={`
-                  absolute top-12  whitespace-nowrap
+                  absolute top-12 whitespace-nowrap
                   text-xs font-semibold tracking-wider
-                  transition-all duration-300
-                  ${isExpanded ? "text-white scale-125" : "text-white/70"}
+                  transform-gpu transition-all duration-500 ease-out
+                  ${isExpanded ? "translate-y-1 scale-110 text-white" : "text-white/70"}
                 `}
                 >
                   {item.title}
                 </div>
 
-                {isExpanded && (
-                  <Card className="absolute top-20 left-1/2 -translate-x-1/2 w-64 border-white/30 bg-[#0a0a12] shadow-xl shadow-white/10 overflow-visible">
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-px h-3 bg-white/50"></div>
-                    <CardHeader className="pb-2">
-                      <div className="flex justify-between items-center">
-                        <Badge
-                          className={`px-2 text-xs ${getStatusStyles(
-                            item.status
-                          )}`}
-                        >
-                          {item.status === "completed"
-                            ? dict.orbitalUI.statusCompleted
-                            : item.status === "in-progress"
-                            ? dict.orbitalUI.statusInProgress
-                            : dict.orbitalUI.statusPending}
-                        </Badge>
-                        <span className="text-xs font-mono text-white/50">
-                          {item.date}
-                        </span>
-                      </div>
-                      <CardTitle className="text-sm mt-2">
-                        {item.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-xs text-white/80">
-                      <p>{item.content}</p>
-
-                      <div className="mt-4 pt-3 border-t border-white/10">
-                        <div className="flex justify-between items-center text-xs mb-1">
-                          <span className="flex items-center">
-                            <Zap size={10} className="mr-1" />
-                              {dict.orbitalUI.energyLevel}
-                          </span>
-                          <span className="font-mono">{item.energy}%</span>
-                        </div>
-                        <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
-                            style={{ width: `${item.energy}%` }}
-                          ></div>
-                        </div>
-                      </div>
-
-                      {item.relatedIds.length > 0 && (
-                        <div className="mt-4 pt-3 border-t border-white/10">
-                          <div className="flex items-center mb-2">
-                            <LinkIcon size={10} className="text-white/70 mr-1" />
-                            <h4 className="text-xs uppercase tracking-wider font-medium text-white/70">
-                              {dict.orbitalUI.connectedNodes}
-                            </h4>
+                <AnimatePresence initial={false}>
+                  {isExpanded ? (
+                    <motion.div
+                      initial={{ opacity: 0, y: -12, scale: 0.94 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -10, scale: 0.96 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 260,
+                        damping: 22,
+                        mass: 0.9,
+                      }}
+                      className="absolute left-1/2 top-20 w-64 -translate-x-1/2 transform-gpu"
+                    >
+                      <Card className="overflow-visible border-white/30 bg-[#0a0a12]/95 shadow-[0_18px_48px_rgba(0,0,0,0.38)] shadow-white/10 backdrop-blur-xl">
+                        <div className="absolute -top-3 left-1/2 h-3 w-px -translate-x-1/2 bg-white/50"></div>
+                        <CardHeader className="pb-2">
+                          <div className="flex items-center justify-between">
+                            <Badge
+                              className={`px-2 text-xs ${getStatusStyles(
+                                item.status
+                              )}`}
+                            >
+                              {item.status === "completed"
+                                ? dict.orbitalUI.statusCompleted
+                                : item.status === "in-progress"
+                                  ? dict.orbitalUI.statusInProgress
+                                  : dict.orbitalUI.statusPending}
+                            </Badge>
+                            <span className="text-xs font-mono text-white/50">
+                              {item.date}
+                            </span>
                           </div>
-                          <div className="flex flex-wrap gap-1">
-                            {item.relatedIds.map((relatedId) => {
-                              const relatedItem = timelineData.find(
-                                (i) => i.id === relatedId
-                              );
-                              return (
-                                <Button
-                                  key={relatedId}
-                                  variant="outline"
-                                  size="sm"
-                                  className="flex items-center h-6 px-2 py-0 text-xs rounded-none border-white/20 bg-transparent hover:bg-white/10 text-white/80 hover:text-white transition-all"
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    toggleItem(relatedId);
-                                  }}
-                                >
-                                  {relatedItem?.title}
-                                  <ArrowRight
-                                    size={8}
-                                    className="ml-1 text-white/60"
-                                  />
-                                </Button>
-                              );
-                            })}
+                          <CardTitle className="mt-2 text-sm">
+                            {item.title}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-xs text-white/80">
+                          <p>{item.content}</p>
+
+                          <div className="mt-4 border-t border-white/10 pt-3">
+                            <div className="mb-1 flex items-center justify-between text-xs">
+                              <span className="flex items-center">
+                                <Zap size={10} className="mr-1" />
+                                {dict.orbitalUI.energyLevel}
+                              </span>
+                              <span className="font-mono">{item.energy}%</span>
+                            </div>
+                            <div className="h-1 w-full overflow-hidden rounded-full bg-white/10">
+                              <motion.div
+                                className="h-full bg-gradient-to-r from-blue-500 to-purple-500"
+                                initial={{ width: 0 }}
+                                animate={{ width: `${item.energy}%` }}
+                                transition={{ duration: 0.45, ease: "easeOut" }}
+                              />
+                            </div>
                           </div>
-                        </div>
-                      )}
-                    </CardContent>
-                  </Card>
-                )}
+
+                          {item.relatedIds.length > 0 && (
+                            <div className="mt-4 border-t border-white/10 pt-3">
+                              <div className="mb-2 flex items-center">
+                                <LinkIcon size={10} className="mr-1 text-white/70" />
+                                <h4 className="text-xs font-medium uppercase tracking-wider text-white/70">
+                                  {dict.orbitalUI.connectedNodes}
+                                </h4>
+                              </div>
+                              <div className="flex flex-wrap gap-1">
+                                {item.relatedIds.map((relatedId) => {
+                                  const relatedItem = timelineData.find(
+                                    (i) => i.id === relatedId
+                                  );
+                                  return (
+                                    <Button
+                                      key={relatedId}
+                                      variant="outline"
+                                      size="sm"
+                                      className="flex h-6 items-center rounded-none border-white/20 bg-transparent px-2 py-0 text-xs text-white/80 transition-all duration-300 hover:bg-white/10 hover:text-white"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        toggleItem(relatedId);
+                                      }}
+                                    >
+                                      {relatedItem?.title}
+                                      <ArrowRight
+                                        size={8}
+                                        className="ml-1 text-white/60"
+                                      />
+                                    </Button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          )}
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
               </div>
             );
           })}
