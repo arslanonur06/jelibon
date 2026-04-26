@@ -11,8 +11,8 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden pb-10 pt-28 sm:pb-16 sm:pt-32">
       <div className="relative z-0 mx-auto w-full max-w-[min(100%,1920px)] px-0 sm:px-3 lg:px-5">
-        {/* Taller hero video — less empty vertical space above the fold */}
-        <div className="relative h-[min(40vh,360px)] overflow-hidden rounded-xl bg-[#050510] sm:h-[min(45vh,420px)] sm:rounded-2xl md:h-[min(86vh,1000px)] lg:h-[min(88vh,1080px)] lg:rounded-[2rem]">
+        {/* md+: GIF daha az piksel + daha alçak kutu = hem ekran hem decode yükü */}
+        <div className="relative mx-auto h-[min(40vh,360px)] w-full max-w-[min(100%,1100px)] overflow-hidden rounded-xl bg-[#050510] sm:h-[min(45vh,420px)] sm:rounded-2xl md:h-[min(52vh,520px)] md:max-w-[min(100%,880px)] md:rounded-2xl lg:h-[min(54vh,560px)] lg:max-w-[min(100%,920px)] lg:rounded-[2rem]">
           <HeroVideoBackground
             objectFit="cover"
             className="opacity-95 brightness-[1.15] contrast-[1.05] saturate-[1.2]"

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X } from "lucide-react";
+import { NavDockItemIcon } from "@/components/nav-dock-item-icon";
 import type { Locale } from "@/lib/i18n/locales";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { getNavDockItems, resolveNavItemHref } from "@/data/nav-dock-items";
@@ -55,7 +55,18 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
         aria-controls={panelId}
         onClick={() => setOpen(true)}
       >
-        <Menu className="h-5 w-5" aria-hidden />
+        <svg
+          viewBox="0 0 24 24"
+          className="h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden
+        >
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
       </button>
 
       {open && typeof document !== "undefined"
@@ -95,7 +106,18 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                       aria-label={dict.header.closeMenu}
                       onClick={() => setOpen(false)}
                     >
-                      <X className="h-5 w-5" aria-hidden />
+                      <svg
+                        viewBox="0 0 24 24"
+                        className="h-5 w-5"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden
+                      >
+                        <path d="M18 6 6 18M6 6l12 12" />
+                      </svg>
                     </button>
                   </div>
                   <nav
@@ -104,7 +126,6 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                   >
                     <ul className="space-y-1">
                       {items.map((item) => {
-                        const Icon = item.icon;
                         const href = resolveNavItemHref(item.href, pathname);
                         return (
                           <li key={item.id}>
@@ -115,10 +136,7 @@ export function SiteMobileNav({ locale }: SiteMobileNavProps) {
                               onClick={() => setOpen(false)}
                             >
                               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#F9A8D4] ring-1 ring-white/15">
-                                <Icon
-                                  className="h-[1.125rem] w-[1.125rem]"
-                                  strokeWidth={1.75}
-                                />
+                                <NavDockItemIcon navId={item.id} />
                               </span>
                               <span className="leading-snug">{item.name}</span>
                             </Link>

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ChevronDown } from "lucide-react";
 import type { Locale } from "@/lib/i18n/locales";
 import { LOCALE_COOKIE_NAME, LOCALES } from "@/lib/i18n/locales";
 import { DICTIONARIES } from "@/lib/i18n/dictionaries";
@@ -74,13 +73,21 @@ export function LanguageSwitcher({ initialLocale }: LanguageSwitcherProps) {
         )}
       >
         <span className="min-w-[1.75rem] tabular-nums">{short}</span>
-        <ChevronDown
+        <svg
+          viewBox="0 0 24 24"
           className={cn(
             "h-3.5 w-3.5 shrink-0 text-zinc-300 transition-transform duration-200 sm:h-4 sm:w-4",
             open && "rotate-180",
           )}
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
           aria-hidden
-        />
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
       </button>
 
       {open ? (
