@@ -2,14 +2,24 @@ import type { Locale } from "./locales";
 
 export type Dictionary = {
   header: {
-    emailUs: string;
     telegram: string;
+    menu: string;
+    openMenu: string;
+    closeMenu: string;
   };
   marquee: {
     copy: string;
   };
   nav: Record<
-    "solutions" | "orbital" | "packages" | "combo" | "blog" | "contact",
+    | "solutions"
+    | "orbital"
+    | "packages"
+    | "calculator"
+    | "combo"
+    | "testimonials"
+    | "blog"
+    | "faq"
+    | "contact",
     string
   >;
   language: {
@@ -74,7 +84,6 @@ export type Dictionary = {
     flagship: string;
     description: string;
     getStarted: string;
-    messageTelegram: string;
     fullGrowthSuiteByLocale: {
       title: string;
       subtitle: string;
@@ -86,12 +95,18 @@ export type Dictionary = {
   blog: {
     heading: string;
     description: string;
+    articlesHeading: string;
     viewAllPosts: string;
+    listEyebrow: string;
     breadcrumbs: {
       home: string;
       blog: string;
     };
-    categoryLabelsByName: Record<string, string>;
+    categoryLabelsByKey: {
+      strategy: string;
+      performance: string;
+      compliance: string;
+    };
   };
   footer: {
     heading: string;
@@ -108,8 +123,12 @@ export type Dictionary = {
     statusPending: string;
   };
   testimonials: {
+    eyebrow: string;
     heading: string;
     subheading: string;
+    sigmaHeading: string;
+    sigmaSubtext: string;
+    sigmaAwards: readonly [string, string, string];
   };
   faq: {
     heading: string;
@@ -131,16 +150,25 @@ export type Dictionary = {
 
 export const DICTIONARIES: Record<Locale, Dictionary> = {
   en: {
-    header: { emailUs: "Email us", telegram: "Telegram" },
+    header: {
+      telegram: "Telegram",
+      menu: "Menu",
+      openMenu: "Open navigation menu",
+      closeMenu: "Close navigation menu",
+    },
     marquee: {
-      copy: "Jelibon Marketing · iGaming acquisition · Telegram Ads & network · PornHub · SEO · AI chatbot & influencer · DMCA · Creative studio · Custom dev · Scale in Türkiye · ",
+      copy:
+        "Jelibon Marketing — online casino growth · Telegram Ads + adult channels · Adult Ads · deneme bonusu SEO · trusted casino site content hubs · AI chat + influencer systems · DMCA & brand safety · creative production · custom software & automations — Türkiye & nearby markets · ",
     },
     nav: {
       solutions: "Solutions",
-      orbital: "Orbit",
+      orbital: "Stack",
       packages: "Packages",
-      combo: "Full suite",
+      calculator: "Estimator",
+      combo: "All-in",
+      testimonials: "Clients",
       blog: "Blog",
+      faq: "FAQ",
       contact: "Contact",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
@@ -148,10 +176,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       tagline: "Premium growth & software · Türkiye",
       textColorLines: ["Acquire.", "Scale.", "Dominate."],
       description:
-        "Traffic acquisition through long-term SEO, Telegram & PornHub; AI automation, AI Influencer, creative studio, DMCA, and custom software—built for the Turkish market.",
+        "Telegram, Adult Ads, SEO, AI, DMCA, creative, and custom software for online casino brands in Türkiye.",
       viewPackages: "View packages",
       readBlog: "Read the blog",
-      tags: "Telegram · PornHub · SEO · AI · DMCA",
+      tags:
+        "deneme bonusu · trusted casino sites · SEO · Telegram · Adult Ads",
       whyUsHeading: "Why us",
       whyUsBullets: [
         "iGaming-focused expertise & multi-channel traffic.",
@@ -161,13 +190,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     growthPillars: {
       heading: "Full-stack iGaming infrastructure",
-      description:
-        "From traffic and SEO to automation and custom software—aligned for operators targeting Türkiye.",
+      description: "Traffic, SEO, automation, and software for operators in Türkiye.",
     },
     orbitalSection: {
       heading: "Growth orbit",
-      description:
-        "Full growth stack—click nodes to explore how modules connect.",
+      description: "Click nodes to view the stack.",
     },
     packages: {
       heading: "Services & pricing",
@@ -180,8 +207,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       moSuffix: " / mo",
       serviceNavLabelsById: {
         "telegram-ads": "Telegram Ads",
-        "telegram-network": "TG network",
-        "pornhub-ads": "PornHub",
+        "telegram-network": "Telegram Adult Channels",
+        "pornhub-ads": "Adult Ads",
         "ai-chatbot": "AI chatbot",
         dmca: "DMCA",
         "creative-funnel": "Creative",
@@ -202,7 +229,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "telegram-network": {
-          title: "Telegram Channel Network",
+          title: "Telegram Adult Channels",
           billingNote: "Monthly retainer",
           features: [
             "Channel research & negotiation",
@@ -212,7 +239,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "pornhub-ads": {
-          title: "PornHub Ads Management",
+          title: "Adult Ads Management",
           billingNote: "Monthly retainer · ad spend billed separately",
           features: [
             "Full campaign management",
@@ -250,12 +277,13 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "seo-blog-network": {
           title: "SEO & Blog Network",
           badge: "SEO",
-          priceHeadline: "From $1,100 / month",
+          priceHeadline: "From $1,320 / month",
           billingNote:
             "Long-term growth system (typically 3–6 months) · scope affects pricing",
           features: [
             "SEO blog site setup",
             "Keyword targeting strategy",
+            "Clusters for bonus intent (freespins, no-deposit, birthday promos)",
             "Content production",
             "Backlink structure",
           ],
@@ -286,11 +314,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       },
       growthPackageTiersById: {
         starter: {
-          name: "Starter Package",
+          name: "Bronze",
           features: ["Telegram Ads", "Basic creatives", "Funnel setup"],
         },
         growth: {
-          name: "Growth Package",
+          name: "Silver",
           features: [
             "Telegram Ads + Network",
             "Creative production",
@@ -298,9 +326,9 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         scale: {
-          name: "Scale Package",
+          name: "Gold",
           features: [
-            "Telegram + PornHub Ads",
+            "Telegram + Adult Ads",
             "Advanced creatives",
             "Funnel & CRO",
             "Basic SEO support",
@@ -308,7 +336,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         domination: {
-          name: "Domination Package",
+          name: "Diamond",
           features: [
             "All traffic channels",
             "AI Chatbot",
@@ -337,10 +365,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     combo: {
       flagship: "Flagship",
-      description:
-        "Our top monthly stack: traffic, AI, SEO, protection, and hands-on support—built for serious scale in Türkiye.",
+      description: "Traffic, AI, SEO, protection, and support in one stack.",
       getStarted: "Get started today",
-      messageTelegram: "Message on Telegram",
       fullGrowthSuiteByLocale: {
         title: "Full Growth Suite",
         subtitle: "All-in-one iGaming growth infrastructure",
@@ -360,20 +386,20 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
     blog: {
       heading: "Blog",
-      description:
-        "Notes on performance, automation, and brand safety—built for teams shipping in competitive markets.",
+      description: "Performance, automation, and brand safety.",
+      articlesHeading: "Editorial posts",
       viewAllPosts: "View all posts",
+      listEyebrow: "Insights",
       breadcrumbs: { home: "Home", blog: "Blog" },
-      categoryLabelsByName: {
-        Strategy: "Strategy",
-        Performance: "Performance",
-        Compliance: "Compliance",
+      categoryLabelsByKey: {
+        strategy: "Strategy",
+        performance: "Performance",
+        compliance: "Compliance",
       },
     },
     footer: {
       heading: "Jelibon Marketing",
-      about:
-        "Growth & software for iGaming in Türkiye—Telegram, PornHub, SEO, AI, DMCA, and custom stacks. Start on Telegram or email.",
+      about: "Growth & software for iGaming in Türkiye.",
       getStarted: "Get started",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. All rights reserved.",
@@ -386,14 +412,20 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "PENDING",
     },
     testimonials: {
-      heading: "Results, Not Promises",
-      subheading:
-        "Our partners share what changed after working with us.",
+      eyebrow: "Partners",
+      heading: "What operators say",
+      subheading: "Recent operator notes and market presence.",
+      sigmaHeading: "Seen across the circuit",
+      sigmaSubtext: "Regular touchpoints with the same rooms operators already know.",
+      sigmaAwards: [
+        "ICE Barcelona — operator and affiliate meetings",
+        "SBC Summit Lisbon — sportsbook and casino teams",
+        "SiGMA Europe Malta — traffic, CRM, and SEO rounds",
+      ],
     },
     faq: {
       heading: "Frequently Asked Questions",
-      subheading:
-        "Everything you need to know before getting started.",
+      subheading: "Short answers.",
       items: [
         {
           question: "Which markets do you specialise in?",
@@ -425,6 +457,18 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           answer:
             "We operate exclusively in the iGaming vertical. Our creative, compliance, and technical work is built around casino and betting norms—not adapted from e-commerce playbooks. That specialisation cuts onboarding time and improves every KPI from day one.",
         },
+        {
+          question:
+            'Do you support SEO for competitive Turkish queries like "deneme bonusu"?',
+          answer:
+            "Yes. Our SEO & blog network is built for competitive iGaming SERPs in Türkiye: intent mapping, hub-and-spoke architecture, and sustained publishing—always within your brand and compliance rules. We treat these topics as commercial-intent landscapes, not spam farms.",
+        },
+        {
+          question:
+            "Do you cover high-volume Turkish bonus SERPs—freespins, birthday bonuses, and no-deposit offers?",
+          answer:
+            "Yes. We model those demand clusters with hub pages, supporting articles, and internal linking—written in your approved tone with compliance guardrails and editorial quality, so organic growth compounds without thin affiliate spam.",
+        },
       ] as const,
     },
     calculator: {
@@ -434,7 +478,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       totalLabel: "Monthly estimate",
       selectedLabel: "services selected",
       estimateNote:
-        "Final pricing is scoped to your volume and goals. Contact us for a custom quote.",
+        "Final pricing depends on scope and volume.",
       getQuote: "Get a custom quote",
       customLabel: "Custom pricing",
       noneSelected: "Select services above to see your estimate.",
@@ -442,92 +486,102 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
     },
   },
   tr: {
-    header: { emailUs: "Bize e-posta", telegram: "Telegram" },
+    header: {
+      telegram: "Telegram",
+      menu: "Menü",
+      openMenu: "Gezinme menüsünü aç",
+      closeMenu: "Gezinme menüsünü kapat",
+    },
     marquee: {
-      copy: "Jelibon Marketing · iGaming büyümesi · Telegram Reklamları & ağ · PornHub · SEO · AI sohbet botu & influencer · DMCA · Kreatif stüdyo · Özel geliştirme · Türkiye'de ölçek · ",
+      copy:
+        "Jelibon Marketing — online casino büyümesi · Telegram reklamları + adult kanallar · Adult Ads · deneme bonusu SEO · güvenilir siteler için içerik ağları · AI sohbet + influencer sistemleri · DMCA ve marka güvenliği · kreatif prodüksiyon · özel yazılım ve otomasyon — Türkiye odaklı büyüme · ",
     },
     nav: {
-      solutions: "Çözümler",
-      orbital: "Yörünge",
+      solutions: "Hizmetler",
+      orbital: "Modüller",
       packages: "Paketler",
-      combo: "Eksiksiz paket",
+      calculator: "Teklif",
+      combo: "Tam paket",
+      testimonials: "Müşteriler",
       blog: "Blog",
+      faq: "S.S.S.",
       contact: "İletişim",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
     hero: {
-      tagline: "Türkiye'ye özel büyüme & yazılım",
-      textColorLines: ["Trafik.", "Ölçek.", "Kazan."],
+      tagline: "Büyüme ve yazılım, Türkiye pazarına göre",
+      textColorLines: ["7 Kez", "Düş", "8 Kez Kalk"],
       description:
-        "Uzun vadeli SEO, Telegram ve PornHub ile trafik kazanımı; yapay zeka otomasyonu, AI influencer, kreatif stüdyo, DMCA ve özel yazılım—Türkiye pazarına uygun şekilde tasarlandı.",
-      viewPackages: "Paketleri görüntüle",
-      readBlog: "Blogu oku",
-      tags: "Telegram · PornHub · SEO · AI · DMCA",
-      whyUsHeading: "Neden Biz",
+        "Online casino markaları için Telegram, Adult Ads, SEO, AI, DMCA, kreatif üretim ve özel yazılım tarafını tek ekipte yönetiyoruz.",
+      viewPackages: "Paketleri İncele",
+      readBlog: "Yazılar",
+      tags:
+        "deneme bonusu · güvenilir siteler · SEO · Telegram · Adult Ads",
+      whyUsHeading: "Neden Jelibon?",
       whyUsBullets: [
-        "iGaming odaklı uzmanlık & çok kanallı trafik.",
-        "Uzun vadeli SEO & blog ağı sistemleri.",
-        "Tek pakette otomasyon, ölçeklenebilirlik ve marka koruması.",
+        "Sektörde çalışan global ortaklarla aynı ritimde ilerliyoruz.",
+        "Trend değiştiğinde geç kalan değil, hızlı pozisyon alan tarafta oluyoruz.",
+        "Viral içerik üretimini sadece görünürlük için değil, doğrudan performans için kurguluyoruz.",
+        "Özel yazılım, alternatif reklam opsiyonları ve operasyon otomasyonunu tek çatı altında topluyoruz.",
       ],
     },
     growthPillars: {
-      heading: "Tam kapsamlı iGaming altyapısı",
+      heading: "Neleri yönetiyoruz",
       description:
-        "Trafikten SEO'ya, otomasyondan özel yazılıma kadar—Türkiye'ye odaklanan operatörlerle uyumlu.",
+        "Trafikten kreatife, otomasyondan özel yazılıma kadar tüm büyüme hattı tek merkezden ilerler.",
     },
     orbitalSection: {
-      heading: "Büyüme yörüngesi",
-      description:
-        "Eksiksiz büyüme ekosistemi—modüllerin nasıl bağlandığını keşfetmek için düğümlere tıklayın.",
+      heading: "Operasyon akışı",
+      description: "Aşağıdaki modüllere tıklayıp yapının nasıl çalıştığını incele.",
     },
     packages: {
       heading: "Hizmetler ve fiyatlar",
       description:
-        "Belirtilmedikçe USD üzerinden aylık retainer. Telegram, PornHub, SEO, AI, kreatif, DMCA, özel yazılım—aşağıdan modül veya paket seçin. Paketler kapsamla ölçeklenir (trafik + kreatif hacim).",
+        "Aksi belirtilmedikçe fiyatlar aylık ve USD bazındadır. İstersen tek modülle başlar, istersen hazır paketle ilerlersin.",
       growthPackagesHeading: "Büyüme paketleri",
       growthPackagesDescription:
-        "Hazır paketler—her modülü tek tek birleştirmek yerine bir paket seviyesi seçin.",
+        "Tek tek servis toplamak yerine doğrudan ihtiyacına uygun paketle başlayabilirsin.",
       monthSuffix: " / ay",
       moSuffix: " / ay",
       serviceNavLabelsById: {
         "telegram-ads": "Telegram Reklamları",
-        "telegram-network": "TG ağı",
-        "pornhub-ads": "PornHub",
-        "ai-chatbot": "AI sohbet botu",
+        "telegram-network": "Telegram Adult Kanallar",
+        "pornhub-ads": "Adult Ads",
+        "ai-chatbot": "AI Sohbet",
         dmca: "DMCA",
         "creative-funnel": "Kreatif",
-        "seo-blog-network": "SEO & bloglar",
+        "seo-blog-network": "SEO ve Blog",
         "custom-software": "Özel yazılım",
-        "ai-influencer": "AI influencer",
+        "ai-influencer": "AI Influencer",
       },
       servicePackagesById: {
         "telegram-ads": {
           title: "Telegram Reklam Yönetimi",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
             "Kampanya kurulumu & hedefleme",
-            "Funnel oluşturma",
-            "Kreatif prodüksiyon",
+            "Akış ve yönlendirme kurgusu",
+            "Kreatif üretimi",
             "A/B testleri",
             "Haftalık raporlama",
           ],
         },
         "telegram-network": {
-          title: "Telegram Kanal Ağı",
-          billingNote: "Aylık retainer",
+          title: "Telegram Adult Kanallar",
+          billingNote: "Aylık yönetim bedeli",
           features: [
-            "Kanal araştırması & müzakere",
-            "Natif içerik prodüksiyonu",
+            "Kanal araştırması & satın alma",
+            "Natif içerik üretimi",
             "ROI takibi",
-            "Ölçekleme stratejisi",
+            "Büyüme planı",
           ],
         },
         "pornhub-ads": {
-          title: "PornHub Reklam Yönetimi",
-          billingNote: "Aylık retainer · reklam harcaması ayrı faturalandırılır",
+          title: "Adult Ads Yönetimi",
+          billingNote: "Aylık yönetim bedeli · medya bütçesi ayrı geçer",
           features: [
             "Tam kampanya yönetimi",
-            "Banner & video kreatifler",
+            "Banner ve video kreatifleri",
             "Hedefleme optimizasyonu",
             "Dönüşüm takibi",
           ],
@@ -535,17 +589,17 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "ai-chatbot": {
           title: "AI Sohbet Botu Sistemi",
           subtitle: "7/24 dönüşüm sistemi",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
             "GPT destekli görüşmeler",
             "Çok dilli destek",
-            "Funnel yönlendirme",
+            "Akış yönlendirmesi",
             "Temel CRM entegrasyonu",
           ],
         },
         dmca: {
           title: "DMCA ve Kopya Koruması",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
             "Klon tespiti",
             "Kaldırma süreçleri",
@@ -553,143 +607,142 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "creative-funnel": {
-          title: "Kreatif ve Funnel Prodüksiyonu",
-          billingNote: "Aylık retainer",
+          title: "Kreatif ve Akış Prodüksiyonu",
+          billingNote: "Aylık yönetim bedeli",
           features: [
             "Reklam kreatifleri",
-            "Landing sayfaları",
-            "Funnel tasarımı",
-            "Sürekli optimizasyon",
+            "Açılış sayfaları",
+            "Akış kurgusu",
+            "Sürekli iyileştirme",
           ],
         },
         "seo-blog-network": {
           title: "SEO ve Blog Ağı",
           badge: "SEO",
-          priceHeadline: "Aylık $1,100'dan başlayan fiyatlar",
+          priceHeadline: "$1,320 / ay'dan başlar",
           billingNote:
-            "Uzun vadeli büyüme sistemi (genellikle 3–6 ay) · kapsam fiyatı etkiler",
+            "Uzun vadeli organik büyüme çalışması · kapsam fiyatı belirler",
           features: [
-            "SEO blog site kurulumu",
-            "Anahtar kelime hedefleme stratejisi",
+            "SEO site ve blog kurulumu",
+            "Anahtar kelime planı",
+            "Bonus odaklı içerik kümeleri",
             "İçerik üretimi",
-            "Backlink yapısı",
+            "Link kurgusu",
           ],
         },
         "custom-software": {
           title: "Özel Yazılım Çözümleri",
           priceHeadline: "Özel fiyatlandırma",
-          billingNote: "Takip, otomasyon ve API ihtiyaçlarınıza göre kapsamlanır",
+          billingNote: "Takip, otomasyon ve API ihtiyaçlarına göre ayrı kapsamlanır",
           features: [
             "Takip sistemleri",
             "Otomasyon araçları",
-            "Özel funnel’lar",
+            "Özel akışlar",
             "API entegrasyonları",
           ],
         },
         "ai-influencer": {
           title: "AI Influencer Sistemi",
           badge: "AI",
-          billingNote: "Aylık retainer",
+          billingNote: "Aylık yönetim bedeli",
           features: [
-            "AI tarafından üretilen influencer modelleri",
-            "Özel persona oluşturma (casino nişi)",
-            "Günlük içerik (Telegram & sosyal medya)",
-            "Etkileşim ve funnel entegrasyonu",
-            "Tekliflere trafik yönlendirme",
+            "Markaya özel AI karakterler",
+            "Markaya özel persona kurgusu",
+            "Günlük içerik akışı",
+            "Etkileşim ve akış entegrasyonu",
+            "Teklif sayfalarına yönlendirme",
           ],
         },
       },
       growthPackageTiersById: {
         starter: {
-          name: "Başlangıç Paketi",
-          features: ["Telegram Reklamları", "Temel kreatifler", "Funnel kurulumu"],
+          name: "Bronz",
+          features: ["Telegram Reklamları", "Temel kreatif seti", "İlk akış kurulumu"],
         },
         growth: {
-          name: "Büyüme Paketi",
+          name: "Silver",
           features: [
             "Telegram Reklamları + Ağ",
-            "Kreatif prodüksiyon",
-            "Funnel optimizasyonu",
+            "Kreatif üretimi",
+            "Akış iyileştirmesi",
           ],
         },
         scale: {
-          name: "Ölçek Paketi",
+          name: "Gold",
           features: [
-            "Telegram + PornHub Reklamları",
+            "Telegram + Adult Ads",
             "Gelişmiş kreatifler",
-            "Funnel & CRO",
+            "Akış ve dönüşüm iyileştirmesi",
             "Temel SEO desteği",
-            "AI Influencer (lite)",
+            "AI Influencer başlangıç paketi",
           ],
         },
         domination: {
-          name: "Hakimiyet Paketi",
+          name: "Diamond",
           features: [
             "Tüm trafik kanalları",
             "AI Sohbet Botu",
-            "AI Influencer (tam)",
-            "Kreatif stüdyo",
-            "Funnel optimizasyonu",
+            "AI Influencer tam kurulum",
+            "Kreatif stüdyo desteği",
+            "Akış optimizasyonu",
           ],
         },
       },
       fullGrowthSuiteByLocale: {
         title: "Tam Büyüme Paketi",
-        subtitle: "Tek noktada iGaming büyüme altyapısı",
-        billingNote: "Aylık yatırım · öncelik & özel destek",
+        subtitle: "Tek merkezden yönetilen büyüme kurgusu",
+        billingNote: "Aylık yatırım · öncelikli operasyon desteği",
         includes: [
-          "Tüm temel trafik & kreatif hizmetleri",
+          "Tüm temel trafik ve kreatif hizmetleri",
           "AI Influencer Sistemi",
           "SEO Blog Ağı",
           "DMCA Koruması",
-          "Özel destek",
+          "Öncelikli destek",
         ],
         extras: [
-          "Türkiye ve komşu pazarlarda ölçekleyen operatörler için",
-          "Tek pakette çok kanallı trafik + uzun vadeli SEO + otomasyon",
+          "Türkiye ve yakın pazarlarda ölçekleyen markalar için",
+          "Çok kanallı trafik, organik büyüme ve otomasyon tek pakette",
         ],
       },
     },
     combo: {
-      flagship: "Öne çıkan",
-      description:
-        "Aylık öne çıkan paketimiz: trafik, AI, SEO, koruma ve birebir operasyonel destek—Türkiye'de ciddi ölçek için tasarlandı.",
-      getStarted: "Bugün başlayın",
-      messageTelegram: "Telegram'dan mesaj",
+      flagship: "Ana paket",
+      description: "Trafik, AI, SEO, koruma ve destek tek pakette.",
+      getStarted: "Hemen başla",
       fullGrowthSuiteByLocale: {
         title: "Tam Büyüme Paketi",
-        subtitle: "Tek noktada iGaming büyüme altyapısı",
-        billingNote: "Aylık yatırım · öncelik & özel destek",
+        subtitle: "Tek merkezden yönetilen büyüme kurgusu",
+        billingNote: "Aylık yatırım · öncelikli operasyon desteği",
         includes: [
-          "Tüm temel trafik & kreatif hizmetleri",
+          "Tüm temel trafik ve kreatif hizmetleri",
           "AI Influencer Sistemi",
           "SEO Blog Ağı",
           "DMCA Koruması",
-          "Özel destek",
+          "Öncelikli destek",
         ],
         extras: [
-          "Türkiye ve komşu pazarlarda ölçekleyen operatörler için",
-          "Tek pakette çok kanallı trafik + uzun vadeli SEO + otomasyon",
+          "Türkiye ve yakın pazarlarda ölçekleyen markalar için",
+          "Çok kanallı trafik, organik büyüme ve otomasyon tek pakette",
         ],
       },
     },
     blog: {
       heading: "Blog",
-      description:
-        "Performans, otomasyon ve marka güvenliği üzerine notlar—rekabetçi pazarlarda ilerleyen ekipler için.",
+      description: "Performans, SEO, otomasyon ve operasyon tarafından kısa notlar.",
+      articlesHeading: "Yazılar",
       viewAllPosts: "Tüm yazıları gör",
+      listEyebrow: "Sahadan notlar",
       breadcrumbs: { home: "Ana Sayfa", blog: "Blog" },
-      categoryLabelsByName: {
-        Strategy: "Strateji",
-        Performance: "Performans",
-        Compliance: "Uyumluluk",
+      categoryLabelsByKey: {
+        strategy: "Strateji",
+        performance: "Performans",
+        compliance: "Uyumluluk",
       },
     },
     footer: {
       heading: "Jelibon Marketing",
-      about:
-        "Türkiye'de iGaming için büyüme & yazılım—Telegram, PornHub, SEO, AI, DMCA ve özel paketler. Telegram'dan başlayın ya da e-posta gönderin.",
-      getStarted: "Hemen başlayın",
+      about: "Casinonuzu beraber büyütelim ",
+      getStarted: "Hemen Başla",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
     },
@@ -701,63 +754,79 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "BEKLEMEDE",
     },
     testimonials: {
-      heading: "Söz Değil, Sonuç",
-      subheading:
-        "Partnerlerimiz birlikte çalıştıktan sonra ne değiştiğini anlatıyor.",
+      eyebrow: "İş ortakları",
+      heading: "Sahadaki ses",
+      subheading: "Operatör notları ve pazardaki görünürlük.",
+      sigmaHeading: "Bulunduğumuz Sahneler",
+      sigmaSubtext: "Operatörlerin zaten takip ettiği ana etkinlikler ve çevreler.",
+      sigmaAwards: [
+        "ICE Barcelona — operatör ve affiliate görüşmeleri",
+        "SBC Summit Lisbon — sportsbook ve casino ekipleri",
+        "SiGMA Europe Malta — trafik, CRM ve SEO turları",
+      ],
     },
     faq: {
-      heading: "Sık Sorulan Sorular",
-      subheading:
-        "Başlamadan önce bilmeniz gereken her şey.",
+      heading: "Sık sorulanlar",
+      subheading: "En çok gelen sorulara net cevaplar.",
       items: [
         {
-          question: "Hangi pazarlarda uzmanlaşıyorsunuz?",
+          question: "Hangi pazarlarda çalışıyorsunuz?",
           answer:
-            "Öncelikli odağımız Türkiye—platform kuralları, kitle davranışı ve uyumluluk gereksinimleri konusunda derin yerel bilgiye sahibiz. Rusya, BDT ve Doğu Avrupa'da da başarılı şekilde hizmet veriyoruz.",
+            "Ana odağımız Türkiye. Bunun yanında Rusça konuşan pazarlar ve yakın coğrafyada da iş açıyoruz ama ana operasyon merkezimiz Türkiye.",
         },
         {
-          question: "Retainer modeli nasıl çalışır?",
+          question: "Aylık çalışma modeli nasıl ilerliyor?",
           answer:
-            "Tüm hizmetler aylık retainer olarak faturalandırılır. Kapsam, kanallar ve çıktı hacmi önceden belirlenir. Ücretli medya (Telegram, PornHub) için reklam harcaması ayrı faturalandırılır; böylece tam şeffaflık sağlanır.",
+            "Aylık sabit bedelle çalışıyoruz. İlk etapta seçilen paketi ve çıkacak işleri netleştiriyoruz; ardından aylık ücret sabitleniyor. Reklam bütçesi varsa yönetim bedelinden ayrı ilerliyor.",
         },
         {
-          question: "Sonuçları ne zaman görmeye başlarım?",
+          question: "Ne zaman sonuç görürüm?",
           answer:
-            "Ücretli kanallar (Telegram, PornHub) genellikle 4–6 hafta içinde ölçülebilir trafik sağlar. SEO ve blog ağları uzun vadeli yatırımlardır—organik hacmin birikmesi için 3–6 ay öngörün. AI sohbet botu ve DMCA koruması ilk aydan itibaren etki gösterir.",
+            "Bu tamamen seçtiğiniz pakete göre değişir. Ücretli tarafta hareket daha erken görünür; SEO, içerik ve organik büyüme tarafı ise biraz daha zaman ister.",
         },
         {
-          question: "Yeni operatörlerle çalışıyor musunuz?",
+          question: "Sıfırdan çıkan markayla da çalışıyor musunuz?",
           answer:
-            "Evet. Türkiye pazarına sıfırdan giren operatörler için düzenli olarak lansman paketleri oluşturuyoruz. Bu; marka kurulumu, funnel mimarisi, kreatif prodüksiyon ve ilk harcama öncesi uyumluluk temellerini kapsar.",
+            "Evet, çalışıyoruz. Şu an da birçok marka ile aktif işbirliği yürütüyoruz. Bazısında sadece trafik tarafını alıyoruz, bazısında sayfa, içerik, kreatif ve yazılım da bizden çıkıyor. Sıfırdan başlayan markalarda önce temel yapıyı kurup sonra ölçekliyoruz.",
         },
         {
-          question: "Tek bir hizmetle başlayabilir miyim?",
+          question: "Jelibon'u diğer ajanslardan ne ayırıyor?",
           answer:
-            "Kesinlikle. Çoğu müşteri Telegram Reklamları veya SEO ile başlar ve büyüdükçe hizmet ekler. Kanalları birleştirmek verimliliği artırır, ancak minimum paket zorunluluğu yoktur.",
+            "Biz doğrudan bu dikeyde çalışıyoruz. Bu yüzden trafik tarafını, bonus dilini, kreatif tonu ve operasyon riskini aynı çerçevede okuyabiliyoruz. Genel ajans refleksiyle değil, sektörün içinden bakıyoruz.",
         },
         {
-          question: "Jelibon'u genel bir performans ajansından ayıran ne?",
+          question: "Verilerimiz başka markalarla paylaşılır mı?",
           answer:
-            "Yalnızca iGaming sektöründe faaliyet gösteriyoruz. Kreatif, uyumluluk ve teknik çalışmalarımız casino ve bahis normları üzerine inşa edilmiştir—e-ticaret playbook'larından uyarlanmamıştır. Bu uzmanlaşma, onboarding süresini kısaltır ve birinci günden itibaren tüm KPI'ları iyileştirir.",
+            "Hayır. Çalıştığımız markaların gelen-giden trafik, kayıt ve dönüşüm verileri tamamen kendi içinde kalır. NDA tarafında net çalışıyoruz; sizin veriniz başka markayla paylaşılmaz, başka markanın verisi de sizinle paylaşılmaz.",
+        },
+        {
+          question: '"Deneme bonusu" gibi kelimelerde SEO yapıyor musunuz?',
+          answer:
+            "Evet. Bu tarafta iş sadece bir kelimeyi sayfaya serpmek değil. Kullanıcının ne aradığını ayırıyoruz: deneme bonusu mu arıyor, hoş geldin bonusu mu, çevrim şartını mı görmek istiyor? Ona göre sayfa yapısını, içerik kümelerini ve iç link akışını kuruyoruz. Metin tarafında da şartları görünür ve anlaşılır yazıyoruz.",
         },
       ] as const,
     },
     calculator: {
       heading: "Paketinizi Oluşturun",
       description:
-        "İhtiyacınız olan hizmetleri seçin ve aylık tahmininizi anında görün.",
+        "İhtiyacın olan hizmetleri seç, aylık tahmini anında gör.",
       totalLabel: "Aylık tahmini",
       selectedLabel: "hizmet seçildi",
       estimateNote:
-        "Nihai fiyatlandırma hacminize ve hedeflerinize göre belirlenir. Özel teklif için bize ulaşın.",
-      getQuote: "Özel teklif alın",
+        "Fiyat kapsam ve hacme göre netleşir.",
+      getQuote: "Özel teklif al",
       customLabel: "Özel fiyatlandırma",
       noneSelected: "Tahmininizi görmek için yukarıdan hizmet seçin.",
       monthSuffix: " / ay",
     },
   },
   ru: {
-    header: { emailUs: "Написать нам", telegram: "Telegram" },
+    header: {
+      telegram: "Telegram",
+      menu: "Меню",
+      openMenu: "Открыть меню навигации",
+      closeMenu: "Закрыть меню навигации",
+    },
     marquee: {
       copy:
         "Jelibon Marketing · iGaming · Реклама в Telegram и сеть каналов · PornHub · SEO · AI-чатбот и инфлюенсер · DMCA · Креативная студия · Индивидуальная разработка · Масштаб в Турции · ",
@@ -766,8 +835,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       solutions: "Решения",
       orbital: "Орбита",
       packages: "Пакеты",
+      calculator: "Калькулятор",
       combo: "Полный комплект",
+      testimonials: "Отзывы",
       blog: "Блог",
+      faq: "FAQ",
       contact: "Контакты",
     },
     language: { en: "English", tr: "Türkçe", ru: "Русский" },
@@ -778,7 +850,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "Привлечение трафика через долгосрочное SEO, Telegram и PornHub; AI-автоматизация, AI-influencer, креативная студия, DMCA и кастомная разработка—для турецкого рынка.",
       viewPackages: "Смотреть пакеты",
       readBlog: "Читать блог",
-      tags: "Telegram · PornHub · SEO · AI · DMCA",
+      tags:
+        "Фриспины · бездепозит · день рождения · SEO · Telegram · PornHub",
       whyUsHeading: "Почему мы",
       whyUsBullets: [
         "Экспертиза в iGaming и многоканальный трафик.",
@@ -807,8 +880,8 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       moSuffix: " / мес.",
       serviceNavLabelsById: {
         "telegram-ads": "Реклама Telegram",
-        "telegram-network": "TG сеть",
-        "pornhub-ads": "PornHub",
+        "telegram-network": "Telegram Adult Channels",
+        "pornhub-ads": "Adult Ads",
         "ai-chatbot": "AI-чатбот",
         dmca: "DMCA",
         "creative-funnel": "Креатив",
@@ -829,7 +902,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "telegram-network": {
-          title: "Сеть каналов Telegram",
+          title: "Telegram Adult Channels",
           billingNote: "Ежемесячный ретейнер",
           features: [
             "Исследование каналов и переговоры",
@@ -839,7 +912,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         "pornhub-ads": {
-          title: "Управление рекламой PornHub",
+          title: "Управление Adult Ads",
           billingNote: "Ежемесячный ретейнер · рекламный бюджет отдельно",
           features: [
             "Полное управление кампаниями",
@@ -881,12 +954,13 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         "seo-blog-network": {
           title: "SEO и блог-сеть",
           badge: "SEO",
-          priceHeadline: "От $1,100 / мес.",
+          priceHeadline: "От $1,320 / мес.",
           billingNote:
             "Долгосрочная система роста (обычно 3–6 месяцев) · объем влияет на цену",
           features: [
             "Настройка SEO-блогов",
             "Стратегия таргетинга по ключам",
+            "Кластеры под бонусный спрос (фриспины, бездепозит, birthday)",
             "Производство контента",
             "Структура бэклинков",
           ],
@@ -917,11 +991,11 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       },
       growthPackageTiersById: {
         starter: {
-          name: "Стартовый пакет",
+          name: "Bronze",
           features: ["Реклама Telegram", "Базовые креативы", "Настройка воронки"],
         },
         growth: {
-          name: "Пакет роста",
+          name: "Silver",
           features: [
             "Реклама Telegram + сеть",
             "Производство креативов",
@@ -929,9 +1003,9 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         scale: {
-          name: "Пакет масштабирования",
+          name: "Gold",
           features: [
-            "Реклама Telegram + PornHub",
+            "Реклама Telegram + Adult Ads",
             "Продвинутые креативы",
             "Воронка и CRO",
             "Базовая поддержка SEO",
@@ -939,7 +1013,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           ],
         },
         domination: {
-          name: "Пакет доминирования",
+          name: "Diamond",
           features: [
             "Все каналы трафика",
             "AI-чатбот",
@@ -971,7 +1045,6 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       description:
         "Лучший ежемесячный комплект: трафик, AI, SEO, защита и прямое операционное сопровождение—для серьёзного масштаба в Турции.",
       getStarted: "Начните сегодня",
-      messageTelegram: "Написать в Telegram",
       fullGrowthSuiteByLocale: {
         title: "Полный комплект роста",
         subtitle: "Единая iGaming-инфраструктура роста",
@@ -993,18 +1066,20 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       heading: "Блог",
       description:
         "Заметки о производительности, автоматизации и бренд-безопасности—для команд, работающих в конкурентных рынках.",
+      articlesHeading: "Статьи блога",
       viewAllPosts: "Все статьи",
+      listEyebrow: "Инсайты",
       breadcrumbs: { home: "Главная", blog: "Блог" },
-      categoryLabelsByName: {
-        Strategy: "Стратегия",
-        Performance: "Эффективность",
-        Compliance: "Соответствие",
+      categoryLabelsByKey: {
+        strategy: "Стратегия",
+        performance: "Эффективность",
+        compliance: "Соответствие",
       },
     },
     footer: {
       heading: "Jelibon Marketing",
       about:
-        "Рост и софт для iGaming в Турции — Telegram, PornHub, SEO, AI, DMCA и кастомные стеки. Начните в Telegram или напишите на email.",
+        "Рост и софт для iGaming в Турции — Telegram, PornHub, SEO, AI, DMCA и кастомные стеки. Свяжитесь с нами в Telegram.",
       getStarted: "Начать",
       telegramLink: "Telegram: @jelibonmarketing",
       rightsTemplate: "© {year} Jelibon Marketing. Все права защищены.",
@@ -1017,9 +1092,16 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       statusPending: "В ОЖИДАНИИ",
     },
     testimonials: {
-      heading: "Результаты, не обещания",
-      subheading:
-        "Наши партнёры рассказывают, что изменилось после работы с нами.",
+      eyebrow: "Партнеры",
+      heading: "Что говорят операторы",
+      subheading: "Заметки операторов и рыночное присутствие.",
+      sigmaHeading: "Где нас видят",
+      sigmaSubtext: "Ключевые ивенты и залы, которые и так знает рынок.",
+      sigmaAwards: [
+        "ICE Barcelona — встречи с операторами и аффилиатами",
+        "SBC Summit Lisbon — команды sportsbook и casino",
+        "SiGMA Europe Malta — трафик, CRM и SEO-круги",
+      ],
     },
     faq: {
       heading: "Часто задаваемые вопросы",
@@ -1055,6 +1137,18 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
           question: "Чем Jelibon отличается от обычного performance-агентства?",
           answer:
             "Мы работаем исключительно в вертикали iGaming. Наши креативы, комплаенс и техническая часть построены на нормах казино и ставок — а не адаптированы из e-commerce. Эта специализация сокращает время онбординга и улучшает все KPI с первого дня.",
+        },
+        {
+          question:
+            "Помогаете ли вы с SEO под конкурентные турецкие запросы (вроде бонусных и триал-кластеров)?",
+          answer:
+            "Да. Наша SEO- и блог-сеть заточена под конкурентные iGaming SERP в Турции: карта интентов, структура хабов и кластеров и регулярная публикация — строго в рамках вашего бренда и комплаенса. Мы работаем с такими нишами как с высоким коммерческим спросом, без массового спама.",
+        },
+        {
+          question:
+            "Делаете ли SEO под массовые турецкие бонусные запросы: фриспины, бездепозит, день рождения?",
+          answer:
+            "Да. Мы выстраиваем коммерческие кластеры в рамках вашего tone of voice и комплаенса: хабы, поддерживающие статьи и перелинковка — с упором на устойчивый органический рост и качество текста, а не на тонкий doorway-спам.",
         },
       ] as const,
     },

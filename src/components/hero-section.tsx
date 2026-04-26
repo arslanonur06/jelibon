@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { HeroVideoBackground } from "@/components/hero-video-background";
 import { TextColor } from "@/components/ui/text-color";
@@ -10,35 +9,21 @@ export function HeroSection() {
   const dict = getDictionary(locale);
 
   return (
-    <section className="relative overflow-hidden pb-14 pt-32 sm:pb-20 sm:pt-36">
-      <div className="relative z-0 mx-auto w-full max-w-[min(100%,1680px)] px-0 sm:px-4">
-        {/* No letterbox: `object-cover` fills the container, cropping from the top (object-bottom). */}
-        <div className="relative h-[min(70vh,900px)] overflow-hidden rounded-[1.75rem] bg-[#050510] sm:rounded-[2rem] sm:h-[min(62vh,980px)]">
+    <section className="relative overflow-hidden pb-10 pt-28 sm:pb-16 sm:pt-32">
+      <div className="relative z-0 mx-auto w-full max-w-[min(100%,1920px)] px-0 sm:px-3 lg:px-5">
+        {/* md+: GIF daha az piksel + daha alçak kutu = hem ekran hem decode yükü */}
+        <div className="relative mx-auto h-[min(40vh,360px)] w-full max-w-[min(100%,1100px)] overflow-hidden rounded-xl bg-[#050510] sm:h-[min(45vh,420px)] sm:rounded-2xl md:h-[min(52vh,520px)] md:max-w-[min(100%,880px)] md:rounded-2xl lg:h-[min(54vh,560px)] lg:max-w-[min(100%,920px)] lg:rounded-[2rem]">
           <HeroVideoBackground
             objectFit="cover"
-            objectPositionClassName="object-[center_68%]"
             className="opacity-95 brightness-[1.15] contrast-[1.05] saturate-[1.2]"
           />
 
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#050510]/18 via-transparent to-[#050510]/12" />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_65%_at_50%_42%,rgba(255,105,180,0.04),transparent_58%)]" />
-
-          {/* `jelibonbackpng.png` on top of the tiger area */}
-          <div className="pointer-events-none absolute left-1/2 top-[7%] z-20 w-[min(34vw,12rem)] -translate-x-1/2 drop-shadow-[0_14px_30px_rgba(0,0,0,0.7)]">
-            <span className="relative block aspect-square w-full">
-              <Image
-                src="/assets/jelibonbackpng.png"
-                alt="Jelibon Marketing"
-                fill
-                className="object-contain"
-                sizes="(max-width: 640px) 42vw, (max-width: 1024px) 24vw, 12rem"
-              />
-            </span>
-          </div>
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-8 px-4 pt-8 sm:gap-10 sm:px-6 sm:pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl gap-6 px-4 pt-6 sm:gap-8 sm:px-6 sm:pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10">
         <div className="order-2 lg:order-1">
           <p className="font-display text-xs uppercase tracking-[0.35em] text-[#E9A8FF]/90">
             {dict.hero.tagline}
@@ -52,13 +37,22 @@ export function HeroSection() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/#packages"
-              className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_32px_rgba(160,32,240,0.45)] transition hover:brightness-110"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl border border-white/15 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_32px_rgba(160,32,240,0.28)] transition hover:-translate-y-0.5"
             >
-              {dict.hero.viewPackages}
+              <span
+                className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.9] transition duration-300 group-hover:scale-[1.04]"
+                style={{ backgroundImage: "url('/assets/button-cta-bg.png')" }}
+                aria-hidden
+              />
+              <span
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(8,8,24,0.18)_0%,rgba(8,8,24,0.34)_100%)]"
+                aria-hidden
+              />
+              <span className="relative z-[1]">{dict.hero.viewPackages}</span>
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/90 backdrop-blur-md transition hover:border-[#22D3EE]/40 hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-[#141428] px-6 py-3 text-sm font-semibold text-white transition hover:border-[#22D3EE]/40 hover:bg-[#1a1a32]"
             >
               {dict.hero.readBlog}
             </Link>
@@ -69,9 +63,9 @@ export function HeroSection() {
         </div>
 
         <div className="order-1 flex flex-col gap-6 lg:order-2">
-          <div className="glass-panel relative rounded-3xl border border-white/12 bg-white/[0.06] p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset] backdrop-blur-2xl sm:p-8">
-            <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[#FF69B4]/20 blur-2xl" />
-            <div className="absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-[#00D4FF]/15 blur-3xl" />
+          <div className="glass-panel relative rounded-3xl border border-white/12 p-6 sm:p-8">
+            <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#FF69B4]/14 blur-xl" />
+            <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-[#00D4FF]/10 blur-xl" />
             <p className="font-display text-sm font-semibold uppercase tracking-widest text-[#C4B5FD]">
               {dict.hero.whyUsHeading}
             </p>

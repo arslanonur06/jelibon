@@ -103,7 +103,7 @@ export const VelocityMarquee = forwardRef<HTMLDivElement, VelocityMarqueeProps>(
             <span
               key={i}
               className={cn(
-                "inline-block shrink-0 px-6 font-display text-xs font-semibold uppercase tracking-[0.18em] sm:px-10 sm:text-sm md:text-base",
+                "inline-block shrink-0 px-8 font-display text-xs font-semibold uppercase tracking-[0.18em] sm:px-12 sm:text-sm md:text-base",
                 textClassName,
               )}
             >

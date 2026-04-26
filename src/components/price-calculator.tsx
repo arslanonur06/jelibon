@@ -23,6 +23,8 @@ function formatUSD(n: number): string {
 export function PriceCalculator({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const calc = dict.calculator;
+  const eyebrow =
+    locale === "tr" ? "Fiyatlandırma" : locale === "ru" ? "Стоимость" : "Pricing";
 
   /* Localise service names using existing serviceNavLabelsById dict */
   const services = servicePackages.map((pkg) => ({
@@ -59,13 +61,13 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
   return (
     <section
       id="calculator"
-      className="relative scroll-mt-44 border-t border-white/10 bg-gradient-to-b from-[#050510]/60 to-[#080818]/80 py-16 sm:py-20"
+      className="cv-auto relative scroll-mt-44 border-t border-white/10 bg-gradient-to-b from-[#050510]/60 to-[#080818]/80 py-16 sm:py-20"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
         <div className="max-w-2xl">
           <p className="font-display text-xs uppercase tracking-[0.3em] text-[#E9A8FF]/90">
-            Pricing
+            {eyebrow}
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold text-white sm:text-4xl">
             {calc.heading}
@@ -83,33 +85,44 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
                   key={svc.id}
                   onClick={() => toggle(svc.id)}
                   className={cn(
-                    "flex items-center gap-3 rounded-2xl border p-4 text-left transition",
+                    "group relative isolate flex items-center gap-3 overflow-hidden rounded-2xl border p-4 text-left shadow-[0_12px_24px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-0.5",
                     active
-                      ? "border-[#FF69B4]/50 bg-[#FF69B4]/10 shadow-[0_0_18px_rgba(255,105,180,0.15)]"
-                      : "border-white/10 bg-white/[0.03] hover:border-white/20 hover:bg-white/[0.06]",
+                      ? "border-[#FF69B4]/40 bg-[#1a1a2b]/96 shadow-[0_0_18px_rgba(255,105,180,0.12)]"
+                      : "border-white/12 bg-[#12121f]/94 hover:border-white/20 hover:bg-[#171727]",
                   )}
                   aria-pressed={active}
                 >
+                  <span
+                    className={cn(
+                      "pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] transition duration-500",
+                      active ? "opacity-100" : "opacity-80 group-hover:opacity-100",
+                    )}
+                    aria-hidden
+                  />
+                  <span
+                    className="pointer-events-none absolute inset-y-0 left-[-38%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.12)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[122%] group-hover:opacity-100"
+                    aria-hidden
+                  />
                   {/* Checkbox */}
                   <span
                     className={cn(
-                      "flex h-5 w-5 shrink-0 items-center justify-center rounded-md border transition",
+                      "relative z-[1] flex h-5 w-5 shrink-0 items-center justify-center rounded-md border transition",
                       active
                         ? "border-[#FF69B4] bg-[#FF69B4]"
-                        : "border-white/25 bg-transparent",
+                        : "border-white/25 bg-white/[0.06]",
                     )}
                   >
                     {active && <Check className="h-3 w-3 text-white" strokeWidth={3} />}
                   </span>
 
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-medium text-white">
+                  <div className="relative z-[1] min-w-0 flex-1">
+                    <p className="truncate text-sm font-medium text-white transition duration-500 group-hover:text-[#FCE7F3]">
                       {svc.fullName}
                     </p>
                     <p
                       className={cn(
-                        "mt-0.5 text-xs",
-                        active ? "text-[#F9A8D4]" : "text-zinc-500",
+                        "mt-0.5 text-xs transition duration-500",
+                        active ? "text-[#F9A8D4]" : "text-zinc-400 group-hover:text-zinc-300",
                       )}
                     >
                       {svc.price !== null
@@ -123,7 +136,7 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
           </div>
 
           {/* Total panel */}
-          <div className="glass-panel sticky top-28 flex flex-col gap-5 rounded-3xl p-6">
+          <div className="glass-panel isolate flex flex-col gap-5 rounded-3xl p-6">
             <p className="text-sm font-medium text-zinc-400">
               {calc.totalLabel}
             </p>
@@ -162,9 +175,17 @@ export function PriceCalculator({ locale }: { locale: Locale }) {
               href={TELEGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-5 py-3 text-sm font-semibold text-white shadow-[0_0_24px_rgba(255,105,180,0.3)] transition hover:brightness-110"
+              className="group relative inline-flex items-center justify-center overflow-hidden rounded-2xl border border-white/14 bg-[#171727]/96 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_28px_rgba(0,0,0,0.16)] transition duration-500 hover:-translate-y-0.5 hover:border-white/22 hover:bg-[#1b1b2d]"
             >
-              {calc.getQuote}
+              <span
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))]"
+                aria-hidden
+              />
+              <span
+                className="pointer-events-none absolute inset-y-0 left-[-38%] w-1/2 -skew-x-12 bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.14)_50%,rgba(255,255,255,0)_100%)] opacity-0 blur-xl transition duration-700 group-hover:left-[122%] group-hover:opacity-100"
+                aria-hidden
+              />
+              <span className="relative z-[1]">{calc.getQuote}</span>
             </Link>
           </div>
         </div>

@@ -16,7 +16,7 @@ export const servicePackages: ServicePackage[] = [
   {
     id: "telegram-ads",
     title: "Telegram Ads Management",
-    price: "$2,300",
+    price: "$2,760",
     billingNote: "Monthly retainer",
     features: [
       "Campaign setup & targeting",
@@ -29,7 +29,7 @@ export const servicePackages: ServicePackage[] = [
   {
     id: "telegram-network",
     title: "Telegram Channel Network",
-    price: "$3,800",
+    price: "$4,560",
     billingNote: "Monthly retainer",
     features: [
       "Channel research & negotiation",
@@ -40,8 +40,8 @@ export const servicePackages: ServicePackage[] = [
   },
   {
     id: "pornhub-ads",
-    title: "PornHub Ads Management",
-    price: "$4,000",
+    title: "Adult Ads Management",
+    price: "$4,800",
     billingNote: "Monthly retainer · ad spend billed separately",
     features: [
       "Full campaign management",
@@ -54,7 +54,7 @@ export const servicePackages: ServicePackage[] = [
     id: "ai-chatbot",
     title: "AI Chatbot System",
     subtitle: "24/7 conversion system",
-    price: "$1,300",
+    price: "$1,560",
     billingNote: "Monthly retainer",
     features: [
       "GPT-powered conversations",
@@ -66,7 +66,7 @@ export const servicePackages: ServicePackage[] = [
   {
     id: "dmca",
     title: "DMCA & Clone Protection",
-    price: "$1,600",
+    price: "$1,920",
     billingNote: "Monthly retainer",
     features: [
       "Clone detection",
@@ -77,7 +77,7 @@ export const servicePackages: ServicePackage[] = [
   {
     id: "creative-funnel",
     title: "Creative & Funnel Production",
-    price: "$2,700",
+    price: "$3,240",
     billingNote: "Monthly retainer",
     features: [
       "Ad creatives",
@@ -89,7 +89,7 @@ export const servicePackages: ServicePackage[] = [
   {
     id: "seo-blog-network",
     title: "SEO & Blog Network",
-    priceHeadline: "From $1,100 / month",
+    priceHeadline: "From $1,320 / month",
     billingNote:
       "Long-term growth system (typically 3–6 months) · scope affects pricing",
     badge: "SEO",
@@ -115,7 +115,7 @@ export const servicePackages: ServicePackage[] = [
   {
     id: "ai-influencer",
     title: "AI Influencer System",
-    price: "$2,000",
+    price: "$2,400",
     billingNote: "Monthly retainer",
     badge: "AI",
     features: [
@@ -140,13 +140,13 @@ export const growthPackageTiers: GrowthPackageTier[] = [
   {
     id: "starter",
     name: "Starter Package",
-    price: "$3,000",
+    price: "$3,600",
     features: ["Telegram Ads", "Basic creatives", "Funnel setup"],
   },
   {
     id: "growth",
     name: "Growth Package",
-    price: "$6,200",
+    price: "$7,440",
     features: [
       "Telegram Ads + Network",
       "Creative production",
@@ -156,9 +156,9 @@ export const growthPackageTiers: GrowthPackageTier[] = [
   {
     id: "scale",
     name: "Scale Package",
-    price: "$9,500",
+    price: "$11,400",
     features: [
-      "Telegram + PornHub Ads",
+      "Telegram + Adult Ads",
       "Advanced creatives",
       "Funnel & CRO",
       "Basic SEO support",
@@ -168,7 +168,7 @@ export const growthPackageTiers: GrowthPackageTier[] = [
   {
     id: "domination",
     name: "Domination Package",
-    price: "$12,500",
+    price: "$15,000",
     features: [
       "All traffic channels",
       "AI Chatbot",
@@ -183,7 +183,7 @@ export const growthPackageTiers: GrowthPackageTier[] = [
 export const fullGrowthSuite = {
   title: "Full Growth Suite",
   subtitle: "All-in-one iGaming growth infrastructure",
-  price: "$15,300",
+  price: "$18,360",
   billingNote: "Monthly investment · priority & custom support",
   includes: [
     "All core traffic & creative services",
@@ -198,5 +198,3 @@ export const fullGrowthSuite = {
   ],
 };
 
-/** @deprecated use fullGrowthSuite */
-export const fullCombo = fullGrowthSuite;
