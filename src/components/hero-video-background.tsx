@@ -51,7 +51,7 @@ export function HeroVideoBackground({
       />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/assets/webseker-hero.gif"
+        src="/assets/webseker.gif"
         alt=""
         aria-hidden
         decoding="async"
