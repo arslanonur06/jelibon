@@ -6,6 +6,22 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/blog/rehber",
+        destination: "/giris-bonuslari",
+        permanent: true,
+      },
+      {
+        source: "/blog/rehber/:slug",
+        destination: "/giris-bonuslari/:slug",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jelibon.app" }],
+        destination: "https://jelibon.app/:path*",
+        permanent: true,
+      },
+      {
         source: "/favicon.ico",
         destination: "/icon.png",
         permanent: false,

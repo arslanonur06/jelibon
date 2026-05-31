@@ -8,6 +8,7 @@ import {
   bonusBrandGuides,
   popularBonusBrandGuides,
 } from "@/data/bonus-guides";
+import { toCanonicalUrl } from "@/lib/seo";
 
 function toHashTag(value: string): string {
   const compact = value.replace(/[^a-zA-Z0-9]/g, "");
@@ -25,16 +26,18 @@ const BONUS_KEYWORDS = [
   "hoş geldin bonusu",
 ] as const;
 
+const hubCanonical = toCanonicalUrl("/giris-bonuslari");
+
 export const metadata: Metadata = {
   title: "Güncel giriş bonusu rehberi",
   description: "Marka marka güncel giriş, adres ve bonus rehberleri.",
-  alternates: { canonical: "/giris-bonuslari" },
+  alternates: { canonical: hubCanonical },
   openGraph: {
     title: "Güncel giriş bonusu rehberi | Jelibon Marketing",
     description:
       "Marka marka giriş, adres ve bonus rehberleri.",
     type: "website",
-    url: "/giris-bonuslari",
+    url: hubCanonical,
   },
 };
 
