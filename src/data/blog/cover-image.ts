@@ -10,6 +10,11 @@ const COVER_BY_CATEGORY = {
 const COVER_BY_SLUG_KEYWORD: Array<{ keyword: string; image: string }> = [
   { keyword: "telegram", image: "/assets/telegramicon.png" },
   { keyword: "bonus", image: "/assets/pinkadam.jpg" },
+  { keyword: "deneme-bonusu", image: "/assets/seo-blog-card-bg.png" },
+  { keyword: "banka-gibi", image: "/assets/bonus-directory-bg.png" },
+  { keyword: "guvenilir", image: "/assets/morlines-blog-card-bg.png" },
+  { keyword: "bet-haber", image: "/assets/morlines-blog-card-bg.png" },
+  { keyword: "viral-casino", image: "/assets/seo-blog-card-bg.png" },
 ];
 
 /**

@@ -15,8 +15,13 @@ import { inpCoreWebVitalsCasino2026 } from "./posts/inp-core-web-vitals-casino-2
 import { pornhubAdsIgamingOperators } from "./posts/pornhub-ads-igaming-operators";
 import { searchDemandEditorialCalendar2026 } from "./posts/search-demand-editorial-calendar-2026";
 import { seoBlogNetworkIgamingTurkey } from "./posts/seo-blog-network-igaming-turkey";
+import { bankaGibiSitelerSeoTurkey2026 } from "./posts/banka-gibi-siteler-seo-turkey-2026";
+import { betHaberleriSeoTurkey2026 } from "./posts/bet-haberleri-seo-turkey-2026";
 import { denemeBonusuSeoTurkey2026 } from "./posts/deneme-bonusu-seo-turkey-2026";
 import { denemeBonusuFreespinSeoTurkey2026 } from "./posts/deneme-bonusu-freespin-seo-turkey-2026";
+import { denemeBonusuVerenSiteler2026 } from "./posts/deneme-bonusu-veren-siteler-2026";
+import { guvenilirSitelerRehberSeo2026 } from "./posts/guvenilir-siteler-rehber-seo-2026";
+import { turkiyeViralCasinoKelimeler2026 } from "./posts/turkiye-viral-casino-kelimeler-2026";
 import { dogumGunuBonusuSeoTurkey2026 } from "./posts/dogum-gunu-bonusu-seo-turkey-2026";
 import { yatirimsizBonusSeoTurkey2026 } from "./posts/yatirimsiz-bonus-seo-turkey-2026";
 import { telegramAdsCreativeTesting } from "./posts/telegram-ads-creative-testing";
@@ -28,6 +33,11 @@ import { topicalAuthorityIgamingSeo2026 } from "./posts/topical-authority-igamin
 import { zeroClickBrandSerpIgaming2026 } from "./posts/zero-click-brand-serp-igaming-2026";
 
 export const blogEntries: BlogPostEntry[] = [
+  turkiyeViralCasinoKelimeler2026,
+  betHaberleriSeoTurkey2026,
+  guvenilirSitelerRehberSeo2026,
+  bankaGibiSitelerSeoTurkey2026,
+  denemeBonusuVerenSiteler2026,
   searchDemandEditorialCalendar2026,
   internalLinkingHubSpokeCasino2026,
   googleSearchConsoleIgamingWorkflow2026,
