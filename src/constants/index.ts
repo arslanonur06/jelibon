@@ -9,6 +9,7 @@ export const BRAND_TAGLINE = "Premium growth & software · Türkiye";
 
 // ─── Links ───────────────────────────────────────────────────────────────────
 export const TELEGRAM_URL = "https://t.me/jelibonmarketing";
+export const EMOJISTAR_BOT_URL = "https://t.me/emojistarbot";
 
 // ─── SEO / metadata ─────────────────────────────────────────────────────────
 // Prefer NEXT_PUBLIC_SITE_URL in Vercel env so sitemap / canonical / OG match the main domain.

@@ -4,6 +4,7 @@ import { DM_Sans, Orbitron } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SiteGradientBackground } from "@/components/site-gradient-background";
+import { SiteSideBanners } from "@/components/site-side-banners";
 import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteJsonLd } from "@/components/site-json-ld";
 import {
@@ -112,6 +113,7 @@ export default function RootLayout({
         <SiteJsonLd />
         <SiteAnalytics />
         <SiteGradientBackground />
+        <SiteSideBanners />
         <div className="relative z-10">{children}</div>
         <VercelAnalytics />
       </body>
