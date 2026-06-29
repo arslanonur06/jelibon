@@ -48,6 +48,12 @@ const navDockItemsBase: Omit<DockNavItem, "name">[] = [
     colorHover: "bg-gradient-to-br from-[#F0ABFC] to-[#FB7185]",
   },
   {
+    id: "bonus",
+    href: "/giris-bonuslari",
+    color: "bg-gradient-to-br from-amber-400 to-yellow-500",
+    colorHover: "bg-gradient-to-br from-[#FDE68A] to-[#FACC15]",
+  },
+  {
     id: "faq",
     href: "/#faq",
     color: "bg-gradient-to-br from-violet-500 to-purple-700",
@@ -75,6 +81,13 @@ export function resolveNavItemHref(href: string, pathname?: string | null) {
   }
 
   return href;
+}
+
+export function isNavItemActive(href: string, pathname?: string | null) {
+  if (!pathname) return false;
+  if (href === "/blog") return pathname.startsWith("/blog");
+  if (href === "/giris-bonuslari") return pathname.startsWith("/giris-bonuslari");
+  return false;
 }
 
 export const navDockItems = getNavDockItems("en");

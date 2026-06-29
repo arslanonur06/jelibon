@@ -34,6 +34,23 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col gap-3 text-sm">
           <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+            {dict.footer.resourcesHeading}
+          </span>
+          <Link className="text-zinc-300 transition hover:text-white" href="/">
+            {dict.footer.homeLink}
+          </Link>
+          <Link className="text-zinc-300 transition hover:text-white" href="/blog">
+            {dict.footer.blogLink}
+          </Link>
+          <Link
+            className="text-zinc-300 transition hover:text-white"
+            href="/giris-bonuslari"
+          >
+            {dict.footer.bonusLink}
+          </Link>
+        </div>
+        <div className="flex flex-col gap-3 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
             {dict.footer.getStarted}
           </span>
           <Link

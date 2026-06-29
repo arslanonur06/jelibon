@@ -18,6 +18,7 @@ export type Dictionary = {
     | "combo"
     | "testimonials"
     | "blog"
+    | "bonus"
     | "faq"
     | "contact",
     string
@@ -108,11 +109,23 @@ export type Dictionary = {
       compliance: string;
     };
   };
+  bonusDirectory: {
+    heading: string;
+    description: string;
+    brandsHeading: string;
+    blogHeading: string;
+    viewAllBrands: string;
+    viewAllPosts: string;
+  };
   footer: {
     heading: string;
     about: string;
     getStarted: string;
     telegramLink: string;
+    resourcesHeading: string;
+    homeLink: string;
+    blogLink: string;
+    bonusLink: string;
     rightsTemplate: string;
   };
   orbitalUI: {
@@ -168,6 +181,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       combo: "All-in",
       testimonials: "Clients",
       blog: "Blog",
+      bonus: "Bonus guides",
       faq: "FAQ",
       contact: "Contact",
     },
@@ -397,11 +411,24 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         compliance: "Compliance",
       },
     },
+    bonusDirectory: {
+      heading: "Bonus & SEO directory",
+      description:
+        "Crawlable links to every brand guide and blog article — helps search engines discover indexed URLs from the homepage.",
+      brandsHeading: "Brand bonus guides",
+      blogHeading: "Blog articles",
+      viewAllBrands: "Full bonus catalog",
+      viewAllPosts: "All blog posts",
+    },
     footer: {
       heading: "Jelibon Marketing",
       about: "Growth & software for iGaming in Türkiye.",
       getStarted: "Get started",
       telegramLink: "Telegram: @jelibonmarketing",
+      resourcesHeading: "Site map",
+      homeLink: "Home",
+      blogLink: "Blog",
+      bonusLink: "Bonus guides",
       rightsTemplate: "© {year} Jelibon Marketing. All rights reserved.",
     },
     orbitalUI: {
@@ -504,6 +531,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       combo: "Tam paket",
       testimonials: "Müşteriler",
       blog: "Blog",
+      bonus: "Giriş bonusları",
       faq: "S.S.S.",
       contact: "İletişim",
     },
@@ -739,11 +767,24 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         compliance: "Uyumluluk",
       },
     },
+    bonusDirectory: {
+      heading: "Bonus ve SEO dizini",
+      description:
+        "Tüm marka rehberleri ve blog yazılarına ana sayfadan doğrudan link — Google’ın bekleyen URL’leri keşfetmesine yardımcı olur.",
+      brandsHeading: "Marka bonus rehberleri",
+      blogHeading: "Blog yazıları",
+      viewAllBrands: "Tüm bonus kataloğu",
+      viewAllPosts: "Tüm blog yazıları",
+    },
     footer: {
       heading: "Jelibon Marketing",
       about: "Casinonuzu beraber büyütelim ",
       getStarted: "Hemen Başla",
       telegramLink: "Telegram: @jelibonmarketing",
+      resourcesHeading: "Site haritası",
+      homeLink: "Ana sayfa",
+      blogLink: "Blog",
+      bonusLink: "Giriş bonusları",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
     },
     orbitalUI: {
@@ -839,6 +880,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       combo: "Полный комплект",
       testimonials: "Отзывы",
       blog: "Блог",
+      bonus: "Бонусы",
       faq: "FAQ",
       contact: "Контакты",
     },
@@ -1076,12 +1118,25 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
         compliance: "Соответствие",
       },
     },
+    bonusDirectory: {
+      heading: "Каталог бонусов и SEO",
+      description:
+        "Ссылки на все бренд-гайды и статьи блога с главной — помогает поисковикам находить URL из sitemap.",
+      brandsHeading: "Брендовые гайды",
+      blogHeading: "Статьи блога",
+      viewAllBrands: "Полный каталог бонусов",
+      viewAllPosts: "Все статьи",
+    },
     footer: {
       heading: "Jelibon Marketing",
       about:
         "Рост и софт для iGaming в Турции — Telegram, PornHub, SEO, AI, DMCA и кастомные стеки. Свяжитесь с нами в Telegram.",
       getStarted: "Начать",
       telegramLink: "Telegram: @jelibonmarketing",
+      resourcesHeading: "Карта сайта",
+      homeLink: "Главная",
+      blogLink: "Блог",
+      bonusLink: "Бонусы",
       rightsTemplate: "© {year} Jelibon Marketing. Все права защищены.",
     },
     orbitalUI: {

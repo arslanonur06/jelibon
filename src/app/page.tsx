@@ -58,6 +58,14 @@ const BlogPreview = dynamic(
   { loading: () => <div className="min-h-[260px]" aria-hidden /> },
 );
 
+const BonusDirectoryPreview = dynamic(
+  () =>
+    import("@/components/bonus-directory-preview").then((m) => ({
+      default: m.BonusDirectoryPreview,
+    })),
+  { loading: () => <div className="min-h-[320px]" aria-hidden /> },
+);
+
 const FaqSection = dynamic(
   () =>
     import("@/components/faq-section").then((m) => ({
@@ -127,6 +135,7 @@ export default function Home() {
           <ComboSection />
           <TestimonialsSection />
           <BlogPreview />
+          <BonusDirectoryPreview />
           <FaqSection locale={locale} />
         </div>
       </main>

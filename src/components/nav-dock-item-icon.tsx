@@ -72,6 +72,16 @@ export function NavDockItemIcon({
           <path d="M22 3h-6a4 4 0 0 0-4 4v14a2 2 0 0 1 2-2h8V3Z" />
         </S>
       );
+    case "bonus":
+      return (
+        <S {...rest}>
+          <path d="M20 12v8H4v-8" />
+          <path d="M22 7H2v5h20V7Z" />
+          <path d="M12 22V7" />
+          <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7Z" />
+          <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z" />
+        </S>
+      );
     case "faq":
       return (
         <S {...rest}>
