@@ -203,6 +203,17 @@ export const bonusGuideBySlug = new Map(
   bonusBrandGuides.map((item) => [item.slug, item] as const),
 );
 
+/** e.g. mercobahis → merco-bahis (matches how users search without spaces/hyphens) */
+export const bonusGuideByCompactSlug = new Map(
+  bonusBrandGuides.map((item) => [item.slug.replace(/-/g, ""), item] as const),
+);
+
+export function resolveBonusBrandBySlug(slug: string): BonusBrandGuide | undefined {
+  const direct = bonusGuideBySlug.get(slug);
+  if (direct) return direct;
+  return bonusGuideByCompactSlug.get(slug.replace(/-/g, ""));
+}
+
 export const popularBonusBrandGuides = POPULAR_BONUS_BRAND_SLUGS.flatMap(
   (slug) => {
     const brand = bonusGuideBySlug.get(slug);

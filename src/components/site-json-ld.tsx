@@ -3,10 +3,10 @@ import {
   DEFAULT_OG_IMAGE_PATH,
   getSiteUrl,
   SEO_DEFAULT_DESCRIPTION,
+  SEO_KEYWORDS,
   SEO_SITE_LANGUAGES,
   TELEGRAM_URL,
 } from "@/constants";
-import { getAllSeoKeywords } from "@/data/seo-all-keywords";
 
 /**
  * Organization + WebSite structured data (no email — contact via Telegram).
@@ -16,10 +16,7 @@ export function SiteJsonLd() {
   const logoUrl = `${url}${DEFAULT_OG_IMAGE_PATH}`;
   const langs = [...SEO_SITE_LANGUAGES];
 
-  const knowsAbout = [
-    ...getAllSeoKeywords().filter((k) => k.length <= 48),
-    "iGaming performance marketing",
-  ].slice(0, 80);
+  const knowsAbout = [...SEO_KEYWORDS].slice(0, 80);
 
   const graph = [
     {

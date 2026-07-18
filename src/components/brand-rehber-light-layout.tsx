@@ -89,12 +89,21 @@ export function BrandRehberLightLayout({
       <header className="border-b border-[#dac7a4] bg-[#f8f4eb]">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6">
           <Link
-            href={`${relatedHrefBase}/${brand.slug}`}
+            href="/"
             className="text-lg font-bold tracking-tight text-[#1f2a22] sm:text-xl"
           >
-            {brand.name} Rehberi.
+            Jelibon
+          </Link>
+          <Link
+            href={`${relatedHrefBase}/${brand.slug}`}
+            className="text-sm font-semibold text-[#31443b] transition hover:text-[#7f5c22]"
+          >
+            {brand.name} Rehberi
           </Link>
           <nav className="hidden flex-wrap items-center gap-5 lg:flex" aria-label="Ana menü">
+            <Link href="/" className={navLinkClass}>
+              Ana sayfa
+            </Link>
             <Link href="/blog" className={navLinkClass}>
               Yazılar
             </Link>
@@ -214,6 +223,24 @@ export function BrandRehberLightLayout({
                   </Link>
                 ))}
               </div>
+            </section>
+
+            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
+              <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
+                Sık sorulan sorular
+              </h2>
+              <dl className="mt-5 space-y-5">
+                {article.faqs.map((faq) => (
+                  <div key={faq.question}>
+                    <dt className="text-base font-semibold text-[#17382d]">
+                      {faq.question}
+                    </dt>
+                    <dd className="mt-2 text-base leading-relaxed text-[#455248]">
+                      {faq.answer}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
             </section>
           </div>
 

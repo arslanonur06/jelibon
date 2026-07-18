@@ -7,6 +7,6 @@ export function getLocale(): Locale {
   const value = cookieStore.get(LOCALE_COOKIE_NAME)?.value;
 
   if (value && LOCALES.includes(value as Locale)) return value as Locale;
-  return "en";
+  return "tr";
 }
 

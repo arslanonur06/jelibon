@@ -14,6 +14,7 @@ function normalizeKeyword(value: string): string {
 export function getBonusBrandSeoKeywords(brand: BonusBrandGuide): string[] {
   const base = brand.name;
   const slugName = brand.slug.replace(/-/g, " ");
+  const compactName = brand.name.replace(/\s+/g, "").toLocaleLowerCase("tr-TR");
 
   return [
     `${base} giriş`,
@@ -26,6 +27,9 @@ export function getBonusBrandSeoKeywords(brand: BonusBrandGuide): string[] {
     `${slugName} giriş`,
     `${slugName} güncel adres`,
     `${slugName} bonus`,
+    `${compactName} giriş`,
+    `${compactName} güncel giriş`,
+    `${compactName} güncel adres`,
   ];
 }
 

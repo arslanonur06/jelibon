@@ -8,6 +8,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
 import { BlogPostJsonLd } from "@/components/blog-post-json-ld";
 import { BRAND_NAME, DEFAULT_OG_IMAGE_PATH } from "@/constants";
+import { toCanonicalUrl } from "@/lib/seo";
 import { getLocale } from "@/lib/i18n/get-locale";
 
 type Props = { params: { slug: string } };
@@ -22,17 +23,18 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!post) return { title: "Post not found" };
 
   const path = `/blog/${params.slug}`;
+  const canonicalUrl = toCanonicalUrl(path);
 
   return {
     title: post.title,
     description: post.excerpt,
     authors: [{ name: BRAND_NAME }],
-    alternates: { canonical: path },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: `${post.title} | Jelibon Marketing`,
       description: post.excerpt,
       type: "article",
-      url: path,
+      url: canonicalUrl,
       publishedTime: post.date,
       modifiedTime: post.date,
       images: [{ url: DEFAULT_OG_IMAGE_PATH, alt: post.title }],
