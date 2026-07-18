@@ -18,14 +18,14 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isProductionHost = PRODUCTION_HOSTS.has(host);
 
-  const bonusMatch = pathname.match(/^\/giris-bonuslari\/([^/]+)\/?$/);
+  const bonusMatch = pathname.match(/^\/guvenilir-siteler\/([^/]+)\/?$/);
   if (bonusMatch) {
     const slug = decodeURIComponent(bonusMatch[1]);
     const compact = slug.replace(/-/g, "");
     const canonicalSlug = compactSlugToCanonical.get(compact);
     if (canonicalSlug && canonicalSlug !== slug) {
       const url = request.nextUrl.clone();
-      url.pathname = `/giris-bonuslari/${canonicalSlug}`;
+      url.pathname = `/guvenilir-siteler/${canonicalSlug}`;
       const redirect = NextResponse.redirect(url, 308);
       if (!isProductionHost) return withNoIndex(redirect);
       return redirect;

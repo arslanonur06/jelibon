@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${base}/giris-bonuslari`,
+      url: `${base}/guvenilir-siteler`,
       lastModified: now,
       changeFrequency: "daily",
       priority: 0.93,
@@ -61,7 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   const bonusRoutes: MetadataRoute.Sitemap = bonusBrandGuides.map((entry) => ({
-    url: `${base}/giris-bonuslari/${entry.slug}`,
+    url: `${base}/guvenilir-siteler/${entry.slug}`,
     lastModified: now,
     changeFrequency: "daily",
     priority: 0.82,

@@ -3,7 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { BonusTopicBrandDirectory } from "@/components/bonus-topic-brand-directory";
 import { getAllSlugs, getLocalizedPost, getPostsForLocale } from "@/data/blog";
+import { bonusBrandGuides } from "@/data/bonus-guides";
+import { getBonusTopicByBlogSlug } from "@/data/bonus-search-topics-tr";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
 import { BlogPostJsonLd } from "@/components/blog-post-json-ld";
@@ -68,6 +71,8 @@ export default function BlogPostPage({ params }: Props) {
     (entry) => entry.categoryKey !== post.categoryKey,
   );
   const relatedPosts = [...sameCategoryPosts, ...fallbackPosts].slice(0, 3);
+  const bonusTopic =
+    locale === "tr" ? getBonusTopicByBlogSlug(params.slug) : undefined;
 
   return (
     <div className="relative min-h-screen">
@@ -127,6 +132,14 @@ export default function BlogPostPage({ params }: Props) {
               ))}
             </div>
           </div>
+          {bonusTopic ? (
+            <div className="mt-12 rounded-3xl border border-white/10 bg-[#0c0c18]/60 p-6 sm:p-8">
+              <BonusTopicBrandDirectory
+                topic={bonusTopic}
+                brands={bonusBrandGuides}
+              />
+            </div>
+          ) : null}
           {relatedPosts.length > 0 ? (
             <section className="mt-12">
               <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">

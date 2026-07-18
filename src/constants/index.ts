@@ -10,6 +10,9 @@ export const BRAND_TAGLINE = "Premium growth & software · Türkiye";
 // ─── Links ───────────────────────────────────────────────────────────────────
 export const TELEGRAM_URL = "https://t.me/jelibonmarketing";
 
+/** Marka dizini hub + marka rehber URL kökü */
+export const TRUSTED_SITES_PATH = "/guvenilir-siteler";
+
 // ─── SEO / metadata ─────────────────────────────────────────────────────────
 // Prefer NEXT_PUBLIC_SITE_URL in Vercel env so sitemap / canonical / OG match the main domain.
 // We intentionally avoid VERCEL_URL because preview deployments leak *.vercel.app into canonicals.
@@ -102,6 +105,19 @@ export const SEO_KEYWORDS = [
   "bahis siteleri",
   "casino siteleri",
   "deneme bonusu veren siteler",
+  "kayıp bonusu veren siteler",
+  "kayip bonusu veren siteler",
+  "haftalık kayıp bonusu",
+  "haftalik kayip bonusu",
+  "yatırım bonusu veren siteler",
+  "yatirim bonusu veren siteler",
+  "jest bonusu veren siteler",
+  "doğum günü bonusu veren siteler",
+  "dogum gunu bonusu veren siteler",
+  "özel oran",
+  "ozel oran",
+  "kredi kartı ile yatırım alan siteler",
+  "kredi karti ile yatirim alan siteler",
   "güncel giriş",
   "guncel giris",
   "güncel adres",

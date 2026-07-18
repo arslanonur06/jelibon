@@ -15,7 +15,7 @@ export const guvenilirSitelerRehberSeo2026: BlogPostEntry = {
       body: [
         "‘Güvenilir siteler’ and ‘güvenilir casino siteleri’ are YMYL-adjacent: Google expects who runs the product, how money moves, and how disputes resolve. A bullet list of superlatives without sources will not sustain rankings.",
         "Build a trust rubric users can scan: licence jurisdiction, company name, support hours, average withdrawal window (with sample size), and responsible-gaming tools. Score brands against the rubric instead of calling everyone ‘#1 güvenilir.’",
-        "Separate editorial ‘how we evaluate trust’ from commercial brand pages. The guide should link to /giris-bonuslari/{slug} entries with unique intros—never paste the same güvenilir paragraph on 100 URLs.",
+        "Separate editorial ‘how we evaluate trust’ from commercial brand pages. The guide should link to /guvenilir-siteler/{slug} entries with unique intros—never paste the same güvenilir paragraph on 100 URLs.",
         "User-generated proof helps when moderated: redacted withdrawal receipts, support ticket IDs, and dated policy PDFs. Unmoderated comment spam with keyword stuffing hurts more than it helps.",
         "Search Console clusters: güvenilir, guvenilir (ASCII), güvenilir casino, güvenilir bahis. Watch duplicate queries across spellings—merge reporting so you do not optimize for the wrong variant.",
         "Cross-intent linking: güvenilir siteler readers often search deneme bonusu next. Place a ‘bonus terms after trust check’ module with links to verified trial-bonus explainers and the brand directory.",
@@ -33,7 +33,7 @@ export const guvenilirSitelerRehberSeo2026: BlogPostEntry = {
       body: [
         "‘Güvenilir siteler’ ve ‘güvenilir casino siteleri’ YMYL’e yakındır: Google ürünü kimin işlettiğini, paranın nasıl aktığını ve uyuşmazlıkların nasıl çözüldüğünü bekler. Kaynaksız üstünlük listesi sıralamayı sürdürmez.",
         "Kullanıcının tarayabileceği bir güven rubriği kurun: lisans bölgesi, şirket unvanı, destek saatleri, ortalama çekim penceresi (örneklemle) ve sorumlu oyun araçları. Herkesi ‘#1 güvenilir’ demek yerine markaları rubriğe göre puanlayın.",
-        "‘Güveni nasıl değerlendiriyoruz’ editoryal rehberini ticari marka sayfalarından ayırın. Rehber /giris-bonuslari/{slug} sayfalarına özgün girişlerle bağlansın—100 URL’ye aynı güvenilir paragrafı yapıştırmayın.",
+        "‘Güveni nasıl değerlendiriyoruz’ editoryal rehberini ticari marka sayfalarından ayırın. Rehber /guvenilir-siteler/{slug} sayfalarına özgün girişlerle bağlansın—100 URL’ye aynı güvenilir paragrafı yapıştırmayın.",
         "Moderasyonlu kullanıcı kanıtı işe yarar: sansürlü çekim dekontları, destek talep numaraları ve tarihli politika PDF’leri. Moderasyonsuz yorum spam’i zarar verir.",
         "Search Console kümeleri: güvenilir, guvenilir (ASCII), güvenilir casino, güvenilir bahis. Yazım varyantlarını birleştirerek raporlayın—yanlış varyanta optimizasyon yapmayın.",
         "Çapraz niyet: güvenilir siteler okuyucusu sıklıkla sonra deneme bonusu arar. ‘Güven kontrolünden sonra bonus şartları’ modülü ve doğrulanmış deneme bonusu anlatımlarına link ekleyin.",
@@ -51,7 +51,7 @@ export const guvenilirSitelerRehberSeo2026: BlogPostEntry = {
       body: [
         "Güvenilir siteler — YMYL: кто оператор, как выводятся деньги, как решаются споры. Списки «лучший» без источников не держат позиции.",
         "Рубрика: лицензия, юрлицо, поддержка, срок вывода, ответственная игра. Оценка вместо ярлыка «#1 güvenilir».",
-        "Редакционный гайд отдельно от коммерческих /giris-bonuslari/{slug} с уникальными интро.",
+        "Редакционный гайд отдельно от коммерческих /guvenilir-siteler/{slug} с уникальными интро.",
         "UGC с модерацией (чеки, тикеты) — да; спам ключей в комментариях — нет.",
         "Search Console: güvenilir / guvenilir / güvenilir casino / güvenilir bahis — единый отчёт.",
         "Связка с deneme bonusu после блока доверия.",

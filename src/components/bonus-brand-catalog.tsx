@@ -184,7 +184,7 @@ export function BonusBrandCatalog({
                 {popularBrands.map((brand) => (
                   <Link
                     key={brand.slug}
-                    href={`/giris-bonuslari/${brand.slug}`}
+                    href={`/guvenilir-siteler/${brand.slug}`}
                     className="group inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-zinc-100 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F472B6]/45 hover:bg-white/[0.08] hover:text-white"
                   >
                     <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[#F472B6] to-[#22D3EE] text-[10px] font-bold text-white">
@@ -232,9 +232,8 @@ export function BonusBrandCatalog({
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {filteredBrands.map((brand, index) => (
-          <Link
+          <article
             key={brand.slug}
-            href={`/giris-bonuslari/${brand.slug}`}
             className="group glass-panel relative overflow-hidden rounded-[26px] border border-white/10 p-5 text-zinc-100 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#F472B6]/35 hover:shadow-[0_18px_60px_rgba(0,0,0,0.34)]"
           >
             <div
@@ -256,11 +255,13 @@ export function BonusBrandCatalog({
               </div>
 
               <div className="mt-5">
-                <h3 className="text-xl font-semibold text-white transition-colors duration-300 group-hover:text-[#FCE7F3]">
-                  {brand.name}
-                </h3>
+                <Link href={`/guvenilir-siteler/${brand.slug}`}>
+                  <h3 className="text-xl font-semibold text-white transition-colors duration-300 group-hover:text-[#FCE7F3]">
+                    {brand.name} güncel giriş adresi
+                  </h3>
+                </Link>
                 <p className="mt-2 text-sm text-zinc-400">
-                  Güncel giriş, adres ve bonus akışı.
+                  Güvenilir site, giriş ve kampanya rehberi.
                 </p>
               </div>
 
@@ -276,16 +277,24 @@ export function BonusBrandCatalog({
                 </span>
               </div>
 
-              <div className="mt-6 flex items-center justify-between gap-3">
-                <span className="text-sm font-semibold text-[#A5F3FC] transition duration-300 group-hover:text-white">
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+                <Link
+                  href={`/guvenilir-siteler/${brand.slug}`}
+                  className="text-sm font-semibold text-[#A5F3FC] transition duration-300 hover:text-white"
+                >
                   Rehberi aç
-                </span>
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-lg transition-all duration-300 group-hover:border-[#F472B6]/40 group-hover:bg-white/[0.08] group-hover:translate-x-1">
-                  →
-                </span>
+                </Link>
+                <Link
+                  href={TELEGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex rounded-full border border-[#F472B6]/40 bg-white/[0.06] px-3 py-2 text-xs font-semibold text-white transition hover:bg-white/[0.1]"
+                >
+                  Telegram
+                </Link>
               </div>
             </div>
-          </Link>
+          </article>
         ))}
       </div>
 

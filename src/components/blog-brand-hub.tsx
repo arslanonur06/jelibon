@@ -100,7 +100,7 @@ export function BlogBrandHub({
         </div>
         <div className="flex shrink-0 flex-wrap gap-2">
           <Link
-            href="/giris-bonuslari"
+            href="/guvenilir-siteler"
             className="rounded-xl border border-[#22D3EE]/40 bg-[#141428] px-4 py-2.5 text-xs font-semibold text-[#22D3EE] transition hover:border-[#22D3EE]/70 sm:text-sm"
           >
             {copy.index} →
@@ -112,7 +112,7 @@ export function BlogBrandHub({
         {popularBrands.map((brand) => (
           <Link
             key={brand.slug}
-            href={`/giris-bonuslari/${brand.slug}`}
+            href={`/guvenilir-siteler/${brand.slug}`}
             className="rounded-full border border-white/12 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-zinc-100 transition hover:-translate-y-0.5 hover:border-[#F472B6]/35 hover:bg-white/[0.08]"
           >
             {brand.name}
@@ -162,7 +162,7 @@ export function BlogBrandHub({
               <p className="font-semibold text-white">{brand.name}</p>
               <div className="mt-2 text-xs font-medium">
                 <Link
-                  href={`/giris-bonuslari/${brand.slug}`}
+                  href={`/guvenilir-siteler/${brand.slug}`}
                   className="text-[#22D3EE] transition hover:underline"
                 >
                   {copy.guide}

@@ -15,7 +15,7 @@ export const turkiyeViralCasinoKelimeler2026: BlogPostEntry = {
       body: [
         "Viral Turkish casino keywords share one trait: they spike on social before Search Console shows demand. Pre-build canonical homes for freespin, güncel giriş, bahis siteleri, casino siteleri, and çevrimsiz bonus so you are not publishing doorway pages during the spike.",
         "Freespin vs deneme bonusu: freespin is game-level; deneme bonusu is account-level. Split URLs or H2 sections—merging both on one overloaded landing page confuses Google’s intent clustering and hurts CTR.",
-        "Güncel giriş and güncel adres queries want freshness signals: visible ‘last checked’ time, status line (open/blocked), and links to the brand directory—not a wall of keywords. Programmatic /giris-bonuslari/{slug} pages should share one template with unique first paragraphs.",
+        "Güncel giriş and güncel adres queries want freshness signals: visible ‘last checked’ time, status line (open/blocked), and links to the brand directory—not a wall of keywords. Programmatic /guvenilir-siteler/{slug} pages should share one template with unique first paragraphs.",
         "Bahis siteleri vs casino siteleri: sportsbook-first vs slots-first positioning differs. If you serve both, use hub tabs or separate spokes; do not rank two identical guides on different URLs.",
         "Çevrimsiz bonus and yatırımsız bonus attract policy scrutiny. Pair every viral headline with wagering contribution table and KYC gate description. Telegram ‘çevrimsiz 500 TL’ posts must match on-page numbers.",
         "Search Console regex starter: (freespin|güncel giriş|guncel giris|bahis siteleri|casino siteleri|çevrimsiz|yatırımsız|deneme bonusu). Export weekly; assign rising queries to existing spokes before creating new URLs.",
@@ -33,7 +33,7 @@ export const turkiyeViralCasinoKelimeler2026: BlogPostEntry = {
       body: [
         "Viral Türkçe casino kelimeleri ortaktır: talep önce sosyalde patlar, Search Console sonra görür. Freespin, güncel giriş, bahis siteleri, casino siteleri ve çevrimsiz bonus için kanonik yuva önceden kurun; spike anında kapı sayfası açmayın.",
         "Freespin ile deneme bonusu ayrıdır: freespin oyun düzeyi, deneme bonusu hesap düzeyi. URL veya H2 ayırın—ikisini tek şişirilmiş landing’de birleştirmek Google niyet kümesini ve CTR’yi düşürür.",
-        "Güncel giriş ve güncel adres tazelik ister: görünür ‘son kontrol’ saati, durum satırı ve marka dizinine link—kelime duvarı değil. /giris-bonuslari/{slug} sayfaları tek şablon + özgün ilk paragraf kullanmalı.",
+        "Güncel giriş ve güncel adres tazelik ister: görünür ‘son kontrol’ saati, durum satırı ve marka dizinine link—kelime duvarı değil. /guvenilir-siteler/{slug} sayfaları tek şablon + özgün ilk paragraf kullanmalı.",
         "Bahis siteleri ile casino siteleri konumlandırması farklıdır: spor öncelikli vs slot öncelikli. İkisini de sunuyorsanız hub sekmeleri veya ayrı spoke; iki özdeş rehberi farklı URL’de sıralamayın.",
         "Çevrimsiz ve yatırımsız bonus politika baskısı çeker. Her viral başlığı çevrime katkı tablosu ve KYC kapısı ile eşleştirin. Telegram ‘çevrimsiz 500 TL’ ile sayfa rakamları örtüşmeli.",
         "Search Console regex: (freespin|güncel giriş|guncel giris|bahis siteleri|casino siteleri|çevrimsiz|yatırımsız|deneme bonusu). Haftalık dışa aktarın; yükselen sorguyu yeni URL açmadan mevcut spoke’a atayın.",
@@ -51,7 +51,7 @@ export const turkiyeViralCasinoKelimeler2026: BlogPostEntry = {
       body: [
         "Viral TR-запросы вспыхивают в соцсетях раньше Search Console. Заранее создайте canonical для freespin, güncel giriş, bahis/casino siteleri, çevrimsiz bonus.",
         "Freespin ≠ deneme bonusu — разные URL или H2.",
-        "Güncel giriş: время проверки, статус, ссылки на /giris-bonuslari/{slug} с уникальным интро.",
+        "Güncel giriş: время проверки, статус, ссылки на /guvenilir-siteler/{slug} с уникальным интро.",
         "Bahis siteleri vs casino siteleri — разные spoke, не дубли.",
         "Çevrimsiz/yatırımsız — таблица вейджера и KYC; паритет с Telegram.",
         "Regex в GSC для кластера; новые URL — только если нет spoke.",

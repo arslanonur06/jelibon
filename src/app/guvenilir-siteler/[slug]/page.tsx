@@ -20,9 +20,9 @@ export function generateStaticParams() {
 }
 
 function getBrandMeta(brand: NonNullable<ReturnType<typeof resolveBonusBrandBySlug>>) {
-  const title = `${brand.name} güncel giriş, adres ve bonus rehberi`;
-  const description = `${brand.name} güncel giriş, güncel adres, deneme bonusu ve kampanya rehberi. ${brand.name} site bilgileri ve SSS.`;
-  const canonicalUrl = toCanonicalUrl(`/giris-bonuslari/${brand.slug}`);
+  const title = `${brand.name} güvenilir site, güncel giriş adresi rehberi`;
+  const description = `${brand.name} güvenilir site rehberi: güncel giriş adresi, giriş ve kampanya bilgisi. Canlı yönlendirme: @jelibonmarketing Telegram.`;
+  const canonicalUrl = toCanonicalUrl(`/guvenilir-siteler/${brand.slug}`);
   return { title, description, canonicalUrl };
 }
 
@@ -38,7 +38,7 @@ export function generateMetadata({ params }: Props): Metadata {
     keywords: getBonusBrandSeoKeywords(brand),
     alternates: { canonical: canonicalUrl },
     openGraph: {
-      title: `${brand.name} bonus rehberi | Jelibon Marketing`,
+      title: `${brand.name} güvenilir site rehberi | Jelibon Marketing`,
       description,
       url: canonicalUrl,
       type: "article",
@@ -53,7 +53,7 @@ export default function BonusBrandPage({ params }: Props) {
   if (!brand) notFound();
 
   if (params.slug !== brand.slug) {
-    permanentRedirect(`/giris-bonuslari/${brand.slug}`);
+    permanentRedirect(`/guvenilir-siteler/${brand.slug}`);
   }
 
   const article = buildBonusArticle(brand);
@@ -69,17 +69,17 @@ export default function BonusBrandPage({ params }: Props) {
       <BreadcrumbJsonLd
         items={[
           { name: "Ana sayfa", path: "/" },
-          { name: "Giriş bonusları", path: "/giris-bonuslari" },
-          { name: brand.name, path: `/giris-bonuslari/${brand.slug}` },
+          { name: "Güvenilir siteler", path: "/guvenilir-siteler" },
+          { name: brand.name, path: `/guvenilir-siteler/${brand.slug}` },
         ]}
       />
       <FaqJsonLd items={article.faqs} pageUrl={canonicalUrl} />
       <BrandRehberLightLayout
         brand={brand}
         article={article}
-        directoryHref="/giris-bonuslari"
-        directoryLabel="Tüm bonus rehberleri"
-        relatedHrefBase="/giris-bonuslari"
+        directoryHref="/guvenilir-siteler"
+        directoryLabel="Tüm güvenilir siteler"
+        relatedHrefBase="/guvenilir-siteler"
       />
     </>
   );

@@ -2,6 +2,9 @@ import Link from "next/link";
 import { TELEGRAM_URL } from "@/constants";
 import type { BonusArticleContent } from "@/data/bonus-article";
 import type { BonusBrandGuide } from "@/data/bonus-guides";
+import { BONUS_SEARCH_TOPICS_TR } from "@/data/bonus-search-topics-tr";
+import { getBrandHashtags } from "@/data/brand-hashtags";
+import { BRAND_SEARCH_INTENTS } from "@/data/brand-seo-intents";
 
 type BrandRehberLightLayoutProps = {
   brand: BonusBrandGuide;
@@ -21,14 +24,7 @@ const HERO_LINKS = [
   "Mobil giriş",
 ] as const;
 
-const SEARCH_LINKS = [
-  "site",
-  "güncel adres",
-  "güncel giriş",
-  "bulunan bonuslar",
-  "deneme bonusu freespin",
-  "yatırımsız bonus",
-] as const;
+const SEARCH_LINKS = BRAND_SEARCH_INTENTS.slice(0, 12);
 
 function getBrandMonogram(brandName: string) {
   const parts = brandName
@@ -78,6 +74,7 @@ export function BrandRehberLightLayout({
   relatedHrefBase,
 }: BrandRehberLightLayoutProps) {
   const monogram = getBrandMonogram(brand.name);
+  const brandHashtags = getBrandHashtags(brand);
   const navLinkClass =
     "text-sm font-medium text-[#31443b] transition hover:text-[#7f5c22]";
 
@@ -164,7 +161,7 @@ export function BrandRehberLightLayout({
               className="mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl"
               style={{ color: PRIMARY }}
             >
-              {brand.name} Giriş
+              {brand.name} güncel giriş adresi
             </h1>
             <p className="mt-5 text-base leading-relaxed text-[#e7e1d3] sm:text-lg">
               {article.intro[0]}
@@ -227,6 +224,24 @@ export function BrandRehberLightLayout({
 
             <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
               <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
+                Popüler bonus aramaları
+              </h2>
+              <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+                {BONUS_SEARCH_TOPICS_TR.map((topic) => (
+                  <li key={topic.id}>
+                    <Link
+                      href={topic.href}
+                      className="block rounded-xl border border-[#e3d7c2] bg-[#fcfaf5] px-4 py-3 text-sm font-medium text-[#234336] transition hover:border-[#c9a35f] hover:bg-[#f8f2e7]"
+                    >
+                      {topic.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
+              <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
                 Sık sorulan sorular
               </h2>
               <dl className="mt-5 space-y-5">
@@ -245,6 +260,25 @@ export function BrandRehberLightLayout({
           </div>
 
           <aside className="space-y-6">
+            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
+              <h2 className="font-display text-xl font-semibold text-[#17382d]">
+                {brand.name} hashtagleri
+              </h2>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {brandHashtags.map((tag) => (
+                  <Link
+                    key={tag}
+                    href={TELEGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-xl border border-[#d2b178] bg-[#f8f0de] px-3 py-2 text-xs font-semibold text-[#6f4f18] transition hover:bg-[#f1e4c6]"
+                  >
+                    {tag}
+                  </Link>
+                ))}
+              </div>
+            </section>
+
             <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
               <h2 className="font-display text-xl font-semibold text-[#17382d]">
                 Tıklanan kelimeler

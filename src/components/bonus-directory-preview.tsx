@@ -41,7 +41,7 @@ export function BonusDirectoryPreview() {
               <h3 className="text-sm font-semibold uppercase tracking-widest text-[#E9A8FF]">
                 {dict.bonusDirectory.brandsHeading}
               </h3>
-              <Link href="/giris-bonuslari" className={linkClass}>
+              <Link href="/guvenilir-siteler" className={linkClass}>
                 {dict.bonusDirectory.viewAllBrands}
               </Link>
             </div>
@@ -53,7 +53,7 @@ export function BonusDirectoryPreview() {
                 {brands.map((brand) => (
                   <li key={brand.slug}>
                     <Link
-                      href={`/giris-bonuslari/${brand.slug}`}
+                      href={`/guvenilir-siteler/${brand.slug}`}
                       className={`block ${linkClass}`}
                     >
                       {brand.name}

@@ -8,7 +8,7 @@ type Props = {
 };
 
 export function BonusBrandJsonLd({ slug, title, description }: Props) {
-  const pageUrl = toCanonicalUrl(`/giris-bonuslari/${slug}`);
+  const pageUrl = toCanonicalUrl(`/guvenilir-siteler/${slug}`);
   const site = getSiteUrl();
 
   const payload = {

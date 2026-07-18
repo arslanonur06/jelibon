@@ -181,7 +181,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       combo: "All-in",
       testimonials: "Clients",
       blog: "Blog",
-      bonus: "Bonus guides",
+      bonus: "Trusted sites",
       faq: "FAQ",
       contact: "Contact",
     },
@@ -412,12 +412,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       },
     },
     bonusDirectory: {
-      heading: "Bonus & SEO directory",
+      heading: "Trusted sites directory",
       description:
         "Crawlable links to every brand guide and blog article — helps search engines discover indexed URLs from the homepage.",
-      brandsHeading: "Brand bonus guides",
+      brandsHeading: "Brand site guides",
       blogHeading: "Blog articles",
-      viewAllBrands: "Full bonus catalog",
+      viewAllBrands: "All trusted sites",
       viewAllPosts: "All blog posts",
     },
     footer: {
@@ -428,7 +428,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       resourcesHeading: "Site map",
       homeLink: "Home",
       blogLink: "Blog",
-      bonusLink: "Bonus guides",
+      bonusLink: "Trusted sites",
       rightsTemplate: "© {year} Jelibon Marketing. All rights reserved.",
     },
     orbitalUI: {
@@ -531,7 +531,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       combo: "Tam paket",
       testimonials: "Müşteriler",
       blog: "Blog",
-      bonus: "Giriş bonusları",
+      bonus: "Güvenilir siteler",
       faq: "S.S.S.",
       contact: "İletişim",
     },
@@ -768,12 +768,12 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       },
     },
     bonusDirectory: {
-      heading: "Bonus ve SEO dizini",
+      heading: "Güvenilir siteler dizini",
       description:
         "Tüm marka rehberleri ve blog yazılarına ana sayfadan doğrudan link — Google’ın bekleyen URL’leri keşfetmesine yardımcı olur.",
-      brandsHeading: "Marka bonus rehberleri",
+      brandsHeading: "Marka güvenilir site rehberleri",
       blogHeading: "Blog yazıları",
-      viewAllBrands: "Tüm bonus kataloğu",
+      viewAllBrands: "Tüm güvenilir siteler",
       viewAllPosts: "Tüm blog yazıları",
     },
     footer: {
@@ -784,7 +784,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       resourcesHeading: "Site haritası",
       homeLink: "Ana sayfa",
       blogLink: "Blog",
-      bonusLink: "Giriş bonusları",
+      bonusLink: "Güvenilir siteler",
       rightsTemplate: "© {year} Jelibon Marketing. Tüm hakları saklıdır.",
     },
     orbitalUI: {
@@ -880,7 +880,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       combo: "Полный комплект",
       testimonials: "Отзывы",
       blog: "Блог",
-      bonus: "Бонусы",
+      bonus: "Надёжные сайты",
       faq: "FAQ",
       contact: "Контакты",
     },
@@ -1136,7 +1136,7 @@ export const DICTIONARIES: Record<Locale, Dictionary> = {
       resourcesHeading: "Карта сайта",
       homeLink: "Главная",
       blogLink: "Блог",
-      bonusLink: "Бонусы",
+      bonusLink: "Надёжные сайты",
       rightsTemplate: "© {year} Jelibon Marketing. Все права защищены.",
     },
     orbitalUI: {

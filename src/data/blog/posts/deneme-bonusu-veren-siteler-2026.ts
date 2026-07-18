@@ -15,7 +15,7 @@ export const denemeBonusuVerenSiteler2026: BlogPostEntry = {
       body: [
         "“Deneme bonusu veren siteler” is a list intent query: users want operators, amounts, and eligibility—not a single paragraph repeating the phrase. Structure the page as a filterable directory with short unique blurbs per brand, not 40 identical templates.",
         "Pair every list row with trust signals: licence note, KYC summary, max withdrawal cap, and last-reviewed date. If you cannot verify a number today, say “check cashier” instead of inventing a headline bonus.",
-        "Canonical strategy: one hub URL (e.g. /giris-bonuslari) plus deep brand pages (/giris-bonuslari/{slug}). List pages should link out; brand pages should link back to the hub. Avoid publishing the same copy on /blog/rehber-style legacy paths.",
+        "Canonical strategy: one hub URL (e.g. /guvenilir-siteler) plus deep brand pages (/guvenilir-siteler/{slug}). List pages should link out; brand pages should link back to the hub. Avoid publishing the same copy on /blog/rehber-style legacy paths.",
         "Turkish query variants to cover in H2s and FAQs: deneme bonusu, deneme bonusları, çevrimsiz deneme bonusu, yeni üye bonusu, hoş geldin bonusu. Use each where it matches a subsection, not in every sentence.",
         "Search Console: create a regex filter for (deneme|bonus|çevrimsiz|freespin). Compare CTR on list URLs vs brand URLs—if the hub steals impressions, strengthen hub intro copy and FAQ; if brand URLs win, feed more internal links from blog clusters.",
         "Viral social posts often promise “500 TL deneme” without terms. Your SEO page must mirror only what the product team approves. Mismatch between Telegram copy and on-page terms is a common manual-action trigger in YMYL niches.",
@@ -33,7 +33,7 @@ export const denemeBonusuVerenSiteler2026: BlogPostEntry = {
       body: [
         "“Deneme bonusu veren siteler” liste niyetli bir sorgudur: kullanıcı operatör, tutar ve uygunluk ister—aynı cümleyi tekrarlayan tek paragraf değil. Sayfayı marka başına kısa özgün özetlerle filtrelenebilir bir dizin olarak kurun; 40 aynı şablon kullanmayın.",
         "Her satırı güven sinyalleriyle eşleştirin: lisans notu, KYC özeti, çekim üst sınırı ve son gözden geçirme tarihi. Bugün doğrulayamıyorsanız uydurma başlık bonusu yerine “kasada kontrol edin” deyin.",
-        "Kanonik strateji: tek hub URL (ör. /giris-bonuslari) ve derin marka sayfaları (/giris-bonuslari/{slug}). Liste sayfaları dışarı bağlansın; marka sayfaları hub’a geri bağlansın. Aynı metni eski /blog/rehber yollarında yayınlamayın.",
+        "Kanonik strateji: tek hub URL (ör. /guvenilir-siteler) ve derin marka sayfaları (/guvenilir-siteler/{slug}). Liste sayfaları dışarı bağlansın; marka sayfaları hub’a geri bağlansın. Aynı metni eski /blog/rehber yollarında yayınlamayın.",
         "H2 ve SSS’te kapsanacak Türkçe varyantlar: deneme bonusu, deneme bonusları, çevrimsiz deneme bonusu, yeni üye bonusu, hoş geldin bonusu. Her biri ilgili alt bölümde doğal kullanılsın; her cümlede değil.",
         "Search Console: (deneme|bonus|çevrimsiz|freespin) için regex filtresi açın. Liste URL’leri ile marka URL’lerinin CTR’sini karşılaştırın—hub gösterim çalıyorsa giriş metni ve SSS güçlendirin; marka kazanıyorsa blog kümelerinden daha fazla iç link verin.",
         "Viral Telegram paylaşımları çoğu zaman şartsız “500 TL deneme” vaat eder. SEO sayfanız yalnızca ürün ekibinin onayladığını yansıtmalıdır. Topluluk metni ile sayfa şartları uyumsuzluğu YMYL alanlarında manuel işlem tetikler.",
@@ -51,7 +51,7 @@ export const denemeBonusuVerenSiteler2026: BlogPostEntry = {
       body: [
         "Запрос «deneme bonusu veren siteler» — листинговый интент: пользователю нужны операторы, суммы и правила, а не абзац с повтором ключа. Стройте фильтруемый каталог с уникальными карточками брендов, а не 40 одинаковых шаблонов.",
         "К каждой строке добавляйте доверие: лицензия, KYC, лимит вывода, дата проверки. Если цифру нельзя подтвердить сегодня — пишите «уточните в кассе», а не выдумывайте бонус в title.",
-        "Каноник: один хаб (/giris-bonuslari) и глубокие страницы бренда (/giris-bonuslari/{slug}). Списки ссылаются наружу, бренд-страницы — на хаб. Не дублируйте копию на legacy-путях вроде /blog/rehber.",
+        "Каноник: один хаб (/guvenilir-siteler) и глубокие страницы бренда (/guvenilir-siteler/{slug}). Списки ссылаются наружу, бренд-страницы — на хаб. Не дублируйте копию на legacy-путях вроде /blog/rehber.",
         "Турецкие варианты в H2/FAQ: deneme bonusu, deneme bonusları, çevrimsiz deneme bonusu, yeni üye bonusu, hoş geldin bonusu — по смыслу секции, без переспама.",
         "В Search Console — regex (deneme|bonus|çevrimsiz|freespin), сравнение CTR хаба и брендов. Расхождение Telegram-обещаний и on-page условий — частая причина санкций в YMYL.",
         "Обновляйте строки списка в день окончания акции и sitemap. Устаревшие deneme-страницы теряют доверие быстрее обычных статей.",

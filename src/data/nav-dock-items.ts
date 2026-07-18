@@ -49,7 +49,7 @@ const navDockItemsBase: Omit<DockNavItem, "name">[] = [
   },
   {
     id: "bonus",
-    href: "/giris-bonuslari",
+    href: "/guvenilir-siteler",
     color: "bg-gradient-to-br from-amber-400 to-yellow-500",
     colorHover: "bg-gradient-to-br from-[#FDE68A] to-[#FACC15]",
   },
@@ -86,7 +86,7 @@ export function resolveNavItemHref(href: string, pathname?: string | null) {
 export function isNavItemActive(href: string, pathname?: string | null) {
   if (!pathname) return false;
   if (href === "/blog") return pathname.startsWith("/blog");
-  if (href === "/giris-bonuslari") return pathname.startsWith("/giris-bonuslari");
+  if (href === "/guvenilir-siteler") return pathname.startsWith("/guvenilir-siteler");
   return false;
 }
 

@@ -23,6 +23,11 @@ import { denemeBonusuVerenSiteler2026 } from "./posts/deneme-bonusu-veren-sitele
 import { guvenilirSitelerRehberSeo2026 } from "./posts/guvenilir-siteler-rehber-seo-2026";
 import { turkiyeViralCasinoKelimeler2026 } from "./posts/turkiye-viral-casino-kelimeler-2026";
 import { dogumGunuBonusuSeoTurkey2026 } from "./posts/dogum-gunu-bonusu-seo-turkey-2026";
+import { krediKartiYatirimSiteler2026 } from "./posts/kredi-karti-yatirim-siteler-2026";
+import { kayipBonusuVerenSiteler2026 } from "./posts/kayip-bonusu-veren-siteler-2026";
+import { jestBonusuVerenSiteler2026 } from "./posts/jest-bonusu-veren-siteler-2026";
+import { ozelOranSeoTurkey2026 } from "./posts/ozel-oran-seo-turkey-2026";
+import { yatirimBonusuVerenSiteler2026 } from "./posts/yatirim-bonusu-veren-siteler-2026";
 import { yatirimsizBonusSeoTurkey2026 } from "./posts/yatirimsiz-bonus-seo-turkey-2026";
 import { telegramAdsCreativeTesting } from "./posts/telegram-ads-creative-testing";
 import { telegramIgamingGrowthChannel2026 } from "./posts/telegram-igaming-growth-channel-2026";
@@ -38,6 +43,11 @@ export const blogEntries: BlogPostEntry[] = [
   guvenilirSitelerRehberSeo2026,
   bankaGibiSitelerSeoTurkey2026,
   denemeBonusuVerenSiteler2026,
+  kayipBonusuVerenSiteler2026,
+  yatirimBonusuVerenSiteler2026,
+  jestBonusuVerenSiteler2026,
+  ozelOranSeoTurkey2026,
+  krediKartiYatirimSiteler2026,
   searchDemandEditorialCalendar2026,
   internalLinkingHubSpokeCasino2026,
   googleSearchConsoleIgamingWorkflow2026,

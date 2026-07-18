@@ -44,7 +44,7 @@ export function SiteFooter() {
           </Link>
           <Link
             className="text-zinc-300 transition hover:text-white"
-            href="/giris-bonuslari"
+            href="/guvenilir-siteler"
           >
             {dict.footer.bonusLink}
           </Link>
