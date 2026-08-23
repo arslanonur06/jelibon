@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { BonusBrandGuide } from "@/data/bonus-guides";
-import { TELEGRAM_URL } from "@/constants";
+import { EMOJISTAR_TELEGRAM_URL } from "@/constants";
 
 type BonusBrandCatalogProps = {
   brands: BonusBrandGuide[];
@@ -107,7 +107,7 @@ export function BonusBrandCatalog({
                 </p>
               </div>
               <Link
-                href={TELEGRAM_URL}
+                href={EMOJISTAR_TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-11 items-center justify-center rounded-2xl border border-[#A855F7]/35 bg-white/[0.04] px-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#F472B6]/45 hover:bg-white/[0.07]"
@@ -285,7 +285,7 @@ export function BonusBrandCatalog({
                   Rehberi aç
                 </Link>
                 <Link
-                  href={TELEGRAM_URL}
+                  href={EMOJISTAR_TELEGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex rounded-full border border-[#F472B6]/40 bg-white/[0.06] px-3 py-2 text-xs font-semibold text-white transition hover:bg-white/[0.1]"

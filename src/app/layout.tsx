@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { SiteGradientBackground } from "@/components/site-gradient-background";
 import { SiteAnalytics } from "@/components/site-analytics";
 import { SiteJsonLd } from "@/components/site-json-ld";
+import { EmojiStarEntryPopup } from "@/components/emojistar-entry-popup";
 import {
   BRAND_NAME,
   DEFAULT_OG_IMAGE_PATH,
@@ -113,6 +114,7 @@ export default function RootLayout({
         <SiteAnalytics />
         <SiteGradientBackground />
         <div className="relative z-10">{children}</div>
+        <EmojiStarEntryPopup />
         <VercelAnalytics />
       </body>
     </html>

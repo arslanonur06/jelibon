@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { TELEGRAM_URL } from "@/constants";
+import {
+  EMOJISTAR_TELEGRAM_HANDLE,
+  EMOJISTAR_TELEGRAM_URL,
+} from "@/constants";
 import type { BonusBrandGuide } from "@/data/bonus-guides";
 import { getBrandHashtags } from "@/data/brand-hashtags";
 import type { BonusSearchTopic } from "@/data/bonus-search-topics-tr";
@@ -26,9 +29,9 @@ export function BonusTopicBrandDirectory({
         {topic.title} — tüm markalar ({sorted.length})
       </h2>
       <p className="mt-3 max-w-3xl text-sm text-zinc-400 sm:text-base">
-        Her marka için güncel giriş adresi ve bonus bilgisi @jelibonmarketing
-        Telegram kanalından paylaşılır. Rehber sayfası SEO içindir; canlı
-        yönlendirme Telegram üzerindedir.
+        Her marka için güncel giriş adresi ve bonus bilgisi{" "}
+        {EMOJISTAR_TELEGRAM_HANDLE} Telegram botundan paylaşılır. Rehber sayfası
+        SEO içindir; canlı yönlendirme Telegram üzerindedir.
       </p>
       <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {sorted.map((brand) => {
@@ -59,7 +62,7 @@ export function BonusTopicBrandDirectory({
                 ))}
               </div>
               <Link
-                href={TELEGRAM_URL}
+                href={EMOJISTAR_TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex w-fit rounded-lg bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-3 py-2 text-xs font-semibold text-white"

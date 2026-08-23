@@ -34,7 +34,7 @@ function buildSections(brand: string): BonusArticleSection[] {
     {
       heading: `${brand} güncel giriş adresi`,
       paragraphs: [
-        `${brand} güncel giriş ve güncel giriş adresi bilgisi bu sayfada özetlenir. Adres ve giriş akışı değişebileceği için en güncel yönlendirme Telegram kanalı @jelibonmarketing üzerinden paylaşılır.`,
+        `${brand} güncel giriş ve güncel giriş adresi bilgisi bu sayfada özetlenir. Adres ve giriş akışı değişebileceği için en güncel yönlendirme Telegram botu @emojistarbot üzerinden paylaşılır.`,
         `${brand} mobil giriş ve masaüstü giriş aynı hesap akışına bağlanır; sayfa yalnızca bilgilendirme amaçlıdır.`,
       ],
     },
@@ -65,7 +65,7 @@ function buildFaqs(brand: string): BonusArticleFaqItem[] {
     {
       question: `${brand} güncel giriş adresi nereden alınır?`,
       answer:
-        "Güncel giriş ve adres bilgisi @jelibonmarketing Telegram kanalında paylaşılır. İş birliği ve doğrulanmış yönlendirme için aynı kanala yazabilirsiniz.",
+        "Güncel giriş ve adres bilgisi @emojistarbot Telegram botunda paylaşılır. Doğrulanmış yönlendirme için bot üzerinden ilerleyin.",
     },
     {
       question: `${brand} deneme bonusu şartları nerede görülür?`,
@@ -75,7 +75,7 @@ function buildFaqs(brand: string): BonusArticleFaqItem[] {
     {
       question: `${brand} kayıp bonusu ve haftalık kayıp bonusu var mı?`,
       answer:
-        "Kayıp bonusu ve haftalık kayıp bonusu operatör kampanyasına bağlıdır. Detay için @jelibonmarketing ile iletişime geçin.",
+        "Kayıp bonusu ve haftalık kayıp bonusu operatör kampanyasına bağlıdır. Detay için @emojistarbot ile iletişime geçin.",
     },
     {
       question: `${brand} yatırım bonusu ile yatırımsız bonus farkı nedir?`,
@@ -85,7 +85,7 @@ function buildFaqs(brand: string): BonusArticleFaqItem[] {
     {
       question: `${brand} için jest bonusu ve doğum günü bonusu nasıl takip edilir?`,
       answer:
-        "Jest bonusu ve doğum günü bonusu CRM kampanyalarına bağlıdır. @jelibonmarketing üzerinden güncel liste isteyebilirsiniz.",
+        "Jest bonusu ve doğum günü bonusu CRM kampanyalarına bağlıdır. @emojistarbot üzerinden güncel liste isteyebilirsiniz.",
     },
   ];
 }
@@ -109,7 +109,7 @@ export function buildBonusArticle(brand: BonusBrandGuide): BonusArticleContent {
   return {
     title: `${brand.name} güncel giriş adresi ve bonus rehberi`,
     intro: [
-      `${brand.name} güncel giriş adresi, giriş, deneme bonusu ve diğer kampanya başlıkları — bilgilendirme rehberi. Güncel yönlendirme: @jelibonmarketing.`,
+      `${brand.name} güncel giriş adresi, giriş, deneme bonusu ve diğer kampanya başlıkları — bilgilendirme rehberi. Güncel yönlendirme: @emojistarbot.`,
     ],
     sections: buildSections(brand.name),
     checklist: buildChecklist(),

@@ -1,4 +1,4 @@
-import { TELEGRAM_URL } from "@/constants";
+import { EMOJISTAR_TELEGRAM_URL } from "@/constants";
 
 export type BonusBrandGuide = {
   name: string;
@@ -192,7 +192,7 @@ for (const name of RAW_BONUS_BRANDS) {
   uniqueGuides.set(slug, {
     name,
     slug,
-    telegramUrl: TELEGRAM_URL,
+    telegramUrl: EMOJISTAR_TELEGRAM_URL,
   });
 }
 

@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { TELEGRAM_URL } from "@/constants";
+import {
+  EMOJISTAR_TELEGRAM_HANDLE,
+  EMOJISTAR_TELEGRAM_URL,
+  TELEGRAM_URL,
+} from "@/constants";
 import type { BonusArticleContent } from "@/data/bonus-article";
 import type { BonusBrandGuide } from "@/data/bonus-guides";
 import { BONUS_SEARCH_TOPICS_TR } from "@/data/bonus-search-topics-tr";
@@ -45,10 +49,10 @@ function HeroPills({ brandName }: { brandName: string }) {
       {HERO_LINKS.map((label, index) => (
         <Link
           key={label}
-          href={TELEGRAM_URL}
+          href={EMOJISTAR_TELEGRAM_URL}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`${brandName} ${label} bilgisi için Telegram`}
+          aria-label={`${brandName} ${label} için Telegram ${EMOJISTAR_TELEGRAM_HANDLE}`}
           className={
             index === 0
               ? "rounded-xl border px-4 py-2 text-sm font-semibold text-[#1f2a22] shadow-sm transition hover:opacity-90"
@@ -123,7 +127,7 @@ export function BrandRehberLightLayout({
             </Link>
           </nav>
           <Link
-            href={TELEGRAM_URL}
+            href={EMOJISTAR_TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full px-5 py-2 text-sm font-semibold text-[#1f2a22] shadow-sm transition hover:opacity-90"
@@ -268,7 +272,7 @@ export function BrandRehberLightLayout({
                 {brandHashtags.map((tag) => (
                   <Link
                     key={tag}
-                    href={TELEGRAM_URL}
+                    href={EMOJISTAR_TELEGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-xl border border-[#d2b178] bg-[#f8f0de] px-3 py-2 text-xs font-semibold text-[#6f4f18] transition hover:bg-[#f1e4c6]"
@@ -287,7 +291,7 @@ export function BrandRehberLightLayout({
                 {SEARCH_LINKS.map((item) => (
                   <Link
                     key={item}
-                    href={TELEGRAM_URL}
+                    href={EMOJISTAR_TELEGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-xl border border-[#d2b178] bg-[#f8f0de] px-3 py-2 text-sm font-medium text-[#6f4f18] transition hover:bg-[#f1e4c6]"
@@ -319,7 +323,7 @@ export function BrandRehberLightLayout({
                 className="mt-5 inline-flex rounded-xl px-4 py-3 text-sm font-semibold text-[#1f2a22] transition hover:opacity-90"
                 style={{ backgroundColor: PRIMARY }}
               >
-                Telegram: @jelibonmarketing
+                Telegram: {EMOJISTAR_TELEGRAM_HANDLE}
               </Link>
             </section>
           </aside>

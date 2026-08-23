@@ -21,7 +21,7 @@ export function generateStaticParams() {
 
 function getBrandMeta(brand: NonNullable<ReturnType<typeof resolveBonusBrandBySlug>>) {
   const title = `${brand.name} güvenilir site, güncel giriş adresi rehberi`;
-  const description = `${brand.name} güvenilir site rehberi: güncel giriş adresi, giriş ve kampanya bilgisi. Canlı yönlendirme: @jelibonmarketing Telegram.`;
+  const description = `${brand.name} güvenilir site rehberi: güncel giriş adresi, giriş ve kampanya bilgisi. Canlı yönlendirme: @emojistarbot Telegram.`;
   const canonicalUrl = toCanonicalUrl(`/guvenilir-siteler/${brand.slug}`);
   return { title, description, canonicalUrl };
 }

@@ -10,6 +10,11 @@ export const BRAND_TAGLINE = "Premium growth & software · Türkiye";
 // ─── Links ───────────────────────────────────────────────────────────────────
 export const TELEGRAM_URL = "https://t.me/jelibonmarketing";
 
+/** Oyuncu / bonus yönlendirme (marka sayfaları + giriş popup) */
+export const EMOJISTAR_TELEGRAM_URL = "https://t.me/emojistarbot";
+export const EMOJISTAR_TELEGRAM_HANDLE = "@emojistarbot";
+export const EMOJISTAR_POPUP_IMAGE_PATH = "/assets/emojistar-gunluk-bonus.png";
+
 /** Marka dizini hub + marka rehber URL kökü */
 export const TRUSTED_SITES_PATH = "/guvenilir-siteler";
 

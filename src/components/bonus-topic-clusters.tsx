@@ -16,7 +16,7 @@ export function BonusTopicClusters() {
       <p className="mt-3 max-w-3xl text-sm text-zinc-400 sm:text-base">
         Deneme bonusu, kayıp bonusu, yatırım bonusu ve diğer konular için blog
         rehberleri — her yazının altında tüm marka listesi. Güncel giriş:{" "}
-        @jelibonmarketing.
+        @emojistarbot.
       </p>
       <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {BONUS_SEARCH_TOPICS_TR.map((topic) => (

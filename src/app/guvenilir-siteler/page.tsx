@@ -4,7 +4,7 @@ import { BonusBrandCatalog } from "@/components/bonus-brand-catalog";
 import { BonusTopicClusters } from "@/components/bonus-topic-clusters";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { TELEGRAM_URL } from "@/constants";
+import { EMOJISTAR_TELEGRAM_HANDLE, EMOJISTAR_TELEGRAM_URL } from "@/constants";
 import { BONUS_HUB_KEYWORDS } from "@/data/bonus-search-topics-tr";
 import {
   bonusBrandGuides,
@@ -62,15 +62,15 @@ export default function GuvenilirSitelerPage() {
           </h1>
           <p className="mt-4 max-w-2xl text-sm text-zinc-300 sm:text-base">
             Tüm markalar tek katalogda. Güncel giriş adresi ve site bilgisi için
-            Telegram: @jelibonmarketing.
+            Telegram: {EMOJISTAR_TELEGRAM_HANDLE}.
           </p>
           <Link
-            href={TELEGRAM_URL}
+            href={EMOJISTAR_TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex rounded-xl bg-gradient-to-r from-[#FF69B4] via-[#A020F0] to-[#00D4FF] px-5 py-3 text-sm font-semibold text-white"
           >
-            Telegram: @jelibonmarketing
+            Telegram: {EMOJISTAR_TELEGRAM_HANDLE}
           </Link>
 
           <section className="mt-8">
