@@ -1,0 +1,358 @@
+import type { BlogPostEntry } from "../../types";
+
+export const casinoGamesEduBatch: BlogPostEntry[] = [
+  {
+    slug: "poker-texas-holdem-baslangic-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/haribo.jpg",
+    locales: {
+      en: {
+        title: "Texas Hold'em for Beginners: Rules, Hand Rankings, and First-Table Etiquette",
+        excerpt:
+          "Learn Texas Hold'em from scratch: blinds, betting rounds, hand rankings, position, and how online poker lobbies differ from casino cash games—education only.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Texas Hold'em is the most played poker variant online and in live rooms. Each player receives two private hole cards; five community cards are dealt face-up in stages (flop, turn, river). You make the best five-card hand from any combination of your two cards and the five on the board. The pot goes to the last remaining player after all betting, or to the best hand at showdown.",
+          "Hand rankings from highest to lowest: Royal Flush (A-K-Q-J-10 same suit), Straight Flush, Four of a Kind, Full House, Flush, Straight, Three of a Kind, Two Pair, One Pair, High Card. Example: hole cards A♠ K♠ with board Q♠ J♠ 10♠ 2♦ 7♣ is a Royal Flush. Two players with the same category compare kickers—pair of Kings with Ace kicker beats pair of Kings with Queen kicker.",
+          "A hand proceeds in four betting rounds. Preflop: after blinds are posted, action starts left of the big blind. Flop: three community cards; betting starts left of the dealer button. Turn: fourth community card. River: fifth and final card. On each street you can fold (forfeit), check (pass if no bet), call (match), raise (increase), or all-in (bet remaining chips).",
+          "Blinds and antes force action. The player left of the dealer posts the small blind; next player posts the big blind (typically double). In a 1/2 TL cash game, SB = 1 TL, BB = 2 TL. Preflop, the minimum raise is usually one big blind on top of the current bet. Tournament structures add antes later and increase blind levels on a clock.",
+          "Position matters enormously. Acting last (on the button or cutoff) lets you see opponents' decisions before committing chips—this is called having position. Early position (under the gun) requires tighter starting hands because many players act after you. Example: pocket 7-7 is playable on the button against one caller; under the gun with eight players left to act, folding is often correct.",
+          "Starting hand selection for beginners: play strong pairs (AA, KK, QQ, JJ), big suited connectors (A-K suited, A-Q suited), and premium broadways. Avoid weak offsuit hands like J-4 or 9-3 from early position—they lose money long-term even when you occasionally hit a lucky flop. Online hand-history tools help review leaks after sessions.",
+          "Common beginner mistakes: calling too wide preflop, chasing draws without pot odds, and overvaluing top pair weak kicker. If the pot is 100 TL and you must call 50 TL to see the river, you need to win more than 33% of the time to break even on that call—count outs and compare to price before calling.",
+          "Online vs live: online lobbies offer micro-stakes (0.01/0.02), multi-tabling, and timed action clocks. Live casino poker has physical tells, slower pace, and higher minimums. RNG online poker uses certified shuffle algorithms; live uses physical decks shuffled by the dealer. Both follow the same hand-ranking rules.",
+          "Table etiquette: act in turn, do not string-bet (announcing raise then adding more chips without declaring amount first in live play), and protect your cards. Online, avoid chat abuse—moderators mute accounts. Tipping the dealer is customary in live cash games in some jurisdictions; online has no dealer tip.",
+          "Responsible play: poker is skill-influenced but still carries variance—short-term results swing wildly. Set a bankroll separate from living expenses; typical guidance for cash games is 20–30 buy-ins for the stake you play. Educational content should never promise income; link licensed operators from /guvenilir-siteler/{slug} with unique copy per brand when comparing poker lobbies.",
+        ],
+      },
+      tr: {
+        title: "Texas Hold'em Başlangıç Rehberi 2026: Kurallar, El Sıralaması ve Masa Adabı",
+        excerpt:
+          "Texas Hold'em sıfırdan öğrenin: blind'ler, bahis turları, el sıralaması, pozisyon ve online poker lobileri ile casino cash oyunları farkı.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Texas Hold'em, online ve canlı odalarda en çok oynanan poker varyantıdır. Her oyuncuya iki kapalı hole kart dağıtılır; beş community kart aşamalı açılır (flop, turn, river). En iyi beş kartlı elinizi iki kartınız ile masadaki beş karttan oluşturursunuz. Pot, tüm bahislerden sonra kalan son oyuncuya veya showdown'da en iyi ele gider.",
+          "El sıralaması yüksekten düşüğe: Royal Flush (A-K-Q-J-10 aynı renk), Straight Flush, Four of a Kind, Full House, Flush, Straight, Three of a Kind, Two Pair, One Pair, High Card. Örnek: hole A♠ K♠, masa Q♠ J♠ 10♠ 2♦ 7♣ = Royal Flush. Aynı kategoride kicker karşılaştırılır—As kicker'lı K çifti, Kız kicker'lı K çiftini yener.",
+          "El dört bahis turunda ilerler. Preflop: blind'ler konduktan sonra büyük blind'in solundan aksiyon başlar. Flop: üç community kart; bahis dealer button'ın solundan. Turn: dördüncü kart. River: beşinci ve son kart. Her street'te fold, check, call, raise veya all-in seçenekleri vardır.",
+          "Blind ve ante aksiyon zorunluluğu yaratır. Dealer'ın solundaki küçük blind, sonraki büyük blind (genelde iki kat) koyar. 1/2 TL cash oyunda SB = 1 TL, BB = 2 TL. Preflop minimum raise genelde mevcut bahsin üstüne bir BB'dir. Turnuvalarda ante eklenir ve blind seviyeleri saatle artar.",
+          "Pozisyon çok önemlidir. Son konuşmak (button veya cutoff) rakiplerin kararını görmeden chip taahhüt etmenizi sağlar—buna pozisyon avantajı denir. Erken pozisyon (under the gun) daha sıkı starting hand gerektirir. Örnek: 7-7 çifti button'da tek caller'a karşı oynanabilir; sekiz oyuncu gerideyken fold sıklıkla doğrudur.",
+          "Yeni başlayanlar için starting hand: güçlü çiftler (AA, KK, QQ, JJ), büyük suited connector'lar (A-K suited, A-Q suited), premium broadway'ler. Erken pozisyonda J-4 veya 9-3 gibi zayıf offsuit ellerden kaçının—şanslı flop vursanız bile uzun vadede kaybettirir. Online hand history ile oturum sonrası hataları inceleyin.",
+          "Yaygın yeni başlayan hataları: preflop'ta çok geniş call, pot odds olmadan draw kovalamak, zayıf kicker'lı top pair'i fazla değerlendirmek. Pot 100 TL ve river için 50 TL call gerekiyorsa, call'un karlı olması için >%33 kazanma gerekir—out sayısını fiyatla kıyaslayın.",
+          "Online vs canlı: online mikro stake (0,01/0,02), multi-table ve zamanlı aksiyon sunar. Canlı casino poker fiziksel tell, yavaş tempo ve daha yüksek minimum içerir. Online RNG sertifikalı karıştırma; canlıda krupiye karıştırır. El sıralama kuralları aynıdır.",
+          "Masa adabı: sıra sizdeyken oynayın, string-bet yapmayın (canlıda raise miktarını söylemeden chip eklemek), kartlarınızı koruyun. Online sohbette kötüye kullanım susturulur. Canlı cash'te bazı bölgelerde krupiye bahşişi yaygındır; online'da yoktur.",
+          "Sorumlu oyun: poker beceri içerir ancak varyans taşır—kısa vadede sonuçlar sert salınır. Yaşam giderlerinden ayrı bankroll ayırın; cash için genelde oynadığınız stake'te 20–30 buy-in önerilir. Eğitim içeriği gelir vaat etmemeli; poker lobisi karşılaştırmasında /guvenilir-siteler/{slug} marka başına özgün cümleyle bağlayın.",
+        ],
+      },
+      ru: {
+        title: "Texas Hold'em для начинающих: правила и ранги рук",
+        excerpt:
+          "Blinds, четыре улицы ставок, комбинации от Royal Flush до High Card, позиция и типичные ошибки новичков.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Два hole-карта + пять community (flop/turn/river). Лучшая комбинация из семи карт забирает pot. Ранги: Royal Flush → High Card; при равенстве — kicker.",
+          "Четыре раунда: preflop (после SB/BB), flop, turn, river. Fold/check/call/raise/all-in. Позиция на button — видите действия оппонентов; UTG — tighter range.",
+          "Старт для новичков: AA–JJ, AKs, AQs; не коллируйте J4o из ранней позиции. Pot odds: call 50 в pot 100 нужен >33% equity.",
+          "Online: микролимиты, таймер; live — медленнее, физические tells. RNG vs колода дилера; правила рангов одинаковы.",
+          "Bankroll 20–30 buy-in; variance высокая. Образование без обещания дохода; /guvenilir-siteler/{slug} для сравнения лицензированных покер-лobby.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "rulet-strateji-martingale-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/haribo.jpg",
+    locales: {
+      en: {
+        title: "Roulette Strategies Explained: Martingale, Risks, and Why No System Beats the Edge",
+        excerpt:
+          "Martingale and other roulette progressions demystified: how they work in practice, table limits that break them, and the math behind European vs American wheels.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Roulette is a negative-expectation game: the house edge comes from the zero pockets. European single-zero wheels give ~2.7% edge on even-money bets; American double-zero wheels ~5.26%. No betting pattern changes that long-run math—strategies only reshape how variance hits your bankroll across a session.",
+          "Martingale is the best-known progression: double your stake after every loss on an even-money bet (red/black, odd/even, high/low) until you win once, then reset to base unit. Example with 10 TL base: lose 10 → bet 20 → lose → bet 40 → lose → bet 80 → win pays 160 TL, netting 10 TL profit over the four-loss sequence plus recovery.",
+          "Why Martingale fails in real casinos: table maximum caps the doubling chain. Starting at 10 TL, seven consecutive losses require a 1,280 TL bet on the eighth spin—many tables max outside bets at 500–2,000 TL. One long losing streak wipes the session bankroll even before hitting the cap.",
+          "The gambler's fallacy fuels Martingale emotionally: 'Red hit five times, black is due.' Each spin is independent; the wheel has no memory. Probability of seven reds in a row on European roulette is (18/37)^7 ≈ 0.77%—rare but guaranteed to occur across millions of spins globally every day.",
+          "Reverse Martingale (Paroli): double after wins, reset after loss. It caps downside at one base unit per sequence but leaves profit vulnerable when a win streak ends. Less catastrophic than classic Martingale but still does not alter house edge.",
+          "D'Alembert and Fibonacci progressions increase stakes more slowly—add one unit after loss, subtract after win, or follow 1-1-2-3-5 sequence. Slower growth means longer survival but same negative expectation. Flat betting (same stake every spin) is mathematically equivalent in expected value—often psychologically healthier.",
+          "Inside bets (straight-up, splits) carry higher payout multiples but worse probability per unit staked. Covering 24 numbers with 24 separate straight-ups costs more than one dozen bet with similar coverage—house edge percentage stays ~2.7% European; absolute TL volatility rises.",
+          "Live and RNG roulette share the same odds if rules match. Lightning and multiplier variants change payout math—read published RTP. Speed roulette increases spins per hour, which accelerates expected loss rate in TL per hour even though edge percentage is unchanged.",
+          "Responsible gaming copy belongs on every strategy spoke: set loss limits before playing, never chase with money earmarked for bills, and recognize that 'systems' are bankroll management styles—not edge beaters. Licensed sites offer session timers and reality checks.",
+          "Educational SEO: separate Martingale explainer from 'best roulette casino' brand pages. Link verified operators at /guvenilir-siteler/{slug} with notes on table limits and single-zero availability—unique sentences per brand. Track queries (martingale rulet|rulet stratejisi|rulet nasıl oynanır) without promising winning formulas.",
+        ],
+      },
+      tr: {
+        title: "Rulet Stratejileri 2026: Martingale Nasıl Çalışır, Riskler ve Sistem Gerçeği",
+        excerpt:
+          "Martingale ve diğer rulet progresyonları: pratikte işleyiş, masayı bozan limitler ve Avrupa vs Amerikan çark matematiği.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Rulet negatif beklenen değer oyunudur: kasa avantajı sıfır ceplerinden gelir. Avrupa tek sıfırda çift şans bahislerinde ~%2,7; Amerikan çift sıfırda ~%5,26 ev avantajı vardır. Hiçbir bahis düzeni uzun vadeli matematiği değiştirmez—stratejiler yalnızca varyansın oturum boyunca bankroll'a nasıl vurduğunu şekillendirir.",
+          "Martingale en bilinen progresyondur: çift şans bahisinde (kırmızı/siyah, tek/çift, 1–18/19–36) her kayıptan sonra bahsi ikiye katla, bir kez kazanınca taban birime dön. 10 TL taban örneği: 10 kaybet → 20 bahis → kaybet → 40 → kaybet → 80 → kazanç 160 TL; dört kayıp dizisinin ardından 10 TL net artı geri kazanım.",
+          "Martingale gerçek casinoda neden çöker: masa maximum'u katlama zincirini keser. 10 TL ile başlayıp yedi ardışık kayıp sekizinci spinde 1.280 TL bahis gerektirir—birçok masa dış bahis max'ini 500–2.000 TL'de tutar. Uzun kayıp serisi limit öncesi bile oturum bankroll'unu siler.",
+          "Kumarbaz yanılgısı Martingale'i duygusal besler: 'Kırmızı beş kez geldi, siyah sıra.' Her spin bağımsızdır; çarkın hafızası yoktur. Avrupa ruletinde yedi kırmızı üst üste olasılığı (18/37)^7 ≈ %0,77—nadir ama günlük milyonlarca spinde kaçınılmaz görülür.",
+          "Ters Martingale (Paroli): kazançtan sonra ikiye katla, kayıpta sıfırla. Aşağı yön tek taban birimle sınırlı; kazanç serisi bitince kar uçar. Klasik Martingale kadar felaket değil; yine ev avantajını değiştirmez.",
+          "D'Alembert ve Fibonacci daha yavaş artırır—kayıpta bir birim ekle, kazançta çıkar veya 1-1-2-3-5 dizisi. Daha yavaş büyüme daha uzun hayatta kalma; beklenen değer aynı negatif. Flat betting (her spin aynı stake) matematiksel olarak eşdeğer—psikolojik olarak sıklıkla daha sağlıklı.",
+          "İç bahisler (straight-up, split) daha yüksek ödeme çarpanı ama birim başına daha kötü olasılık taşır. 24 sayıyı 24 straight-up ile kaplamak bir düzine bahisten pahalı—ev avantajı yüzdesi ~%2,7 Avrupa'da aynı; TL volatilitesi artar.",
+          "Canlı ve RNG rulet kurallar aynıysa olasılıklar eşittir. Lightning ve çarpanlı varyantlar ödeme matematiğini değiştirir—yayınlanan RTP'yi okuyun. Speed rulet saatte spin sayısını artırır; yüzde edge değişmese de saatlik beklenen TL kaybı hızlanır.",
+          "Her strateji spoke'unda sorumlu oyun metni: oyuna girmeden kayıp limiti, fatura parası kovalamama, 'sistemlerin' edge yenmediği gerçeği. Lisanslı sitelerde oturum zamanlayıcı ve reality check vardır.",
+          "Eğitim SEO: Martingale açıklayıcısını 'en iyi rulet casino' marka sayfalarından ayırın. Doğrulanmış operatörleri /guvenilir-siteler/{slug} ile masa limiti ve tek sıfır notuyla—marka başına özgün cümle. (martingale rulet|rulet stratejisi) sorgularını kazanma formülü vaadi olmadan izleyin.",
+        ],
+      },
+      ru: {
+        title: "Стратегии рулетки: Martingale, риски и house edge",
+        excerpt:
+          "Как работает удвоение после проигрыша, лимиты стола, fallacy «due» и почему прогрессии не меняют математику.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "European ~2.7% edge, American ~5.26% на even-money. Стратегии перераспределяют variance, не edge. Martingale: x2 после loss до win; при base 10 цепочка 7 loss → ставка 1280 — упирается в table max.",
+          "Колесо без памяти; 7 red подряд ~0.77% — случается. Paroli (x2 после win), D'Alembert, Fibonacci — та же negative EV. Flat bet эквивалентен по expectation.",
+          "Inside bets: выше payout, та же % edge, больше swing. Lightning меняет RTP — читайте rules. Speed roulette ускоряет TL/hour loss rate.",
+          "Responsible gaming: лимиты, не chase. Образование без «выигрышных систем».",
+          "SEO: отдельный URL от brand review; /guvenilir-siteler/{slug} с лимитами и single-zero.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "blackjack-temel-strateji-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/haribo.jpg",
+    locales: {
+      en: {
+        title: "Blackjack Basic Strategy: Decision Charts, House Edge, and Common Rule Variations",
+        excerpt:
+          "Intro to blackjack basic strategy: when to hit, stand, double, and split by dealer upcard—plus how S17, 3:2 blackjack, and deck count change the math.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Blackjack basic strategy is a set of mathematically optimal decisions for every player total vs every dealer upcard, given published table rules. It does not guarantee winning sessions—it minimizes house edge on the main bet, typically to roughly 0.5% on favorable rules vs 2%+ when playing by gut.",
+          "Card values: 2–10 face value; J, Q, K = 10; Ace = 1 or 11 (whichever helps without busting). Goal: beat dealer without exceeding 21. Dealer usually must hit to 16 and stand on 17; whether soft 17 is hit (H17) or stand (S17) changes edge by ~0.2%.",
+          "Hard totals vs dealer upcard examples (S17, DAS allowed): hard 12 vs dealer 2–3 → hit; vs 4–6 → stand. Hard 16 vs dealer 7–Ace → hit; vs 2–6 → stand. Hard 11 → double vs dealer 2–10. These patterns come from billions of simulated hands—memorize via chart or in-game hint, not hunches.",
+          "Soft hands contain an Ace counted as 11: soft 18 (A-7) vs dealer 9, 10, Ace → hit; vs 3–6 → double; vs 2, 7, 8 → stand. Soft 13–17 often double vs dealer 5–6 when double-after-split is allowed—small edge gains compound over volume.",
+          "Pairs: always split Aces and 8s. Never split 5s or 10s (treat 10-10 as hard 20—stand). Split 2s, 3s, 7s vs dealer 2–7 depending on DAS. Split 9s vs 2–6 and 8–9; stand vs 7, 10, Ace. Splitting opens two hands—each receives one card; some tables restrict resplit Aces to one card each.",
+          "Double Down: double stake, receive exactly one card. Best spots: hard 9 vs 3–6, hard 10 vs 2–9, hard 11 vs 2–10 (sometimes vs Ace on S17). Surrender (late): forfeit half on hard 16 vs 10 or hard 15 vs 10 when offered—saves expected value vs playing out.",
+          "Blackjack payout 3:2 vs 6:5 is critical. On a 10 TL bet, 3:2 pays 15 TL on natural blackjack; 6:5 pays only 12 TL. That single rule change adds ~1.4% to house edge—often wipes basic strategy gains. Always read the felt text before sitting.",
+          "Side bets (Perfect Pairs, 21+3, Match the Dealer) carry 4–10%+ house edge. Basic strategy applies to the main hand only. Educational spokes should show contrast: 'low edge game' refers to main bet with correct play—not every wager on the layout.",
+          "RNG online blackjack and live dealer tables share strategy charts if rules match. Continuous shufflers and 8-deck shoes make card counting impractical for most recreational players; basic strategy remains the correct baseline.",
+          "Cross-link to live blackjack rules, responsible gaming limits, and /guvenilir-siteler/{slug} for licensed lobbies listing S17, 3:2, and minimum stakes—unique copy per operator. Track (blackjack temel strateji|blackjack nasıl oynanır|basic strategy chart) in Search Console.",
+        ],
+      },
+      tr: {
+        title: "Blackjack Temel Strateji 2026: Karar Tablosu, Ev Avantajı ve Kural Farkları",
+        excerpt:
+          "Blackjack temel strateji girişi: krupiye açık kartına göre hit, stand, double, split—S17, 3:2 blackjack ve deste sayısının etkisi.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Blackjack temel strateji, yayınlanan masa kurallarına göre her oyuncu toplamı ve krupiye açık kartı için matematiksel optimum karar setidir. Kazanma garantisi vermez—ana bahiste ev avantajını minimize eder; uygun kurallarda ~%0,5, sezgisel oyunda %2+ olabilir.",
+          "Kart değerleri: 2–10 yüz değeri; J, Q, K = 10; As = 1 veya 11 (bust olmadan). Amaç: 21'i geçmeden krupiyeyi yenmek. Krupiye genelde 16'ya kadar çeker, 17'de durur; yumuşak 17 çekilir mi (H17) durulur mu (S17) edge'i ~%0,2 değiştirir.",
+          "Sert total vs krupiye açık kart örnekleri (S17, DAS): sert 12 vs 2–3 → hit; vs 4–6 → stand. Sert 16 vs 7–As → hit; vs 2–6 → stand. Sert 11 → 2–10'a double. Kalıplar milyarlarca simülasyondan gelir—sezgi değil tablo veya oyun ipucu.",
+          "Yumuşak eller As'ı 11 sayar: soft 18 (A-7) vs 9, 10, As → hit; vs 3–6 → double; vs 2, 7, 8 → stand. Soft 13–17 çoğu masada 5–6'ya DAS ile double—küçük edge kazanımları hacimde birikir.",
+          "Çiftler: As ve 8 her zaman split. 5 ve 10 asla split (10-10 = sert 20, stand). 2, 3, 7 çiftleri DAS ile 2–7'ye göre split. 9 çifti 2–6 ve 8–9'a split; 7, 10, As'a stand. Split iki el açar—bazı masalar As resplit'te tek kart verir.",
+          "Double Down: bahsi ikiye katla, tek kart al. En iyi: sert 9 vs 3–6, sert 10 vs 2–9, sert 11 vs 2–10 (S17'de bazen As). Surrender (late): sert 16 vs 10 veya sert 15 vs 10'da yarısından vazgeç—oynamaya göre beklenen değer kurtarır.",
+          "Blackjack ödemesi 3:2 vs 6:5 kritiktir. 10 TL bahiste 3:2 doğal blackjack 15 TL; 6:5 yalnızca 12 TL. Tek kural ~%1,4 edge ekler—temel strateji kazancını siler. Oturmadan felt metnini okuyun.",
+          "Yan bahisler (Perfect Pairs, 21+3) %4–10+ ev avantajı taşır. Temel strateji yalnızca ana ele uygulanır. Eğitim spoke'u kontrast göstermeli: 'düşük edge oyun' doğru ana bahis içindir—layout'taki her bahis değil.",
+          "RNG online ve canlı krupiye kurallar aynıysa aynı tablo. Sürekli karıştırıcı ve 8 deste kart saymayı zorlaştırır; gündelik oyuncu için temel strateji doğru tabandır.",
+          "Canlı blackjack kuralları, sorumlu oyun limitleri ve /guvenilir-siteler/{slug} lisanslı lobiler (S17, 3:2, min bahis)—marka başına özgün metin. (blackjack temel strateji|blackjack nasıl oynanır) Search Console izleme.",
+        ],
+      },
+      ru: {
+        title: "Basic strategy в blackjack: таблица решений",
+        excerpt:
+          "Hit/stand/double/split по upcard дилера; S17 vs H17, выплата 3:2 vs 6:5 и side bets с высоким edge.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Basic strategy — оптимум по правилам стола; ~0.5% edge на main bet vs 2%+ интуиция. As 1/11; цель ≤21. Dealer H17 vs S17 меняет ~0.2%.",
+          "Примеры S17: hard 16 vs 10 — hit; vs 6 — stand. 11 — double. Split AA, 88; never 55, TT. Soft 18 vs 9/A — hit.",
+          "3:2 blackjack vs 6:5 добавляет ~1.4% house edge — проверяйте felt. Side bets 4–10%+ — не путать с main hand.",
+          "RNG и live — один chart при одинаковых rules. Continuous shuffle — counting impractical; basic strategy baseline.",
+          "Cross-link live rules, RG limits, /guvenilir-siteler/{slug} с S17 и 3:2.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "aviator-crash-oyunlari-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/haribo.jpg",
+    locales: {
+      en: {
+        title: "Aviator and Crash Games Explained: Multipliers, Provably Fair, and Risk Reality",
+        excerpt:
+          "How crash and Aviator-style games work: rising multiplier curve, cash-out timing, RNG vs provably fair seeds, and why 'signals' and bots do not beat the house.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Crash games (Aviator, JetX, Spaceman, and clones) show a multiplier that starts at 1.00× and rises until the round 'crashes' at a random point. You stake before takeoff and choose when to cash out; if you cash out at 2.50× before crash, a 100 TL bet returns 250 TL. If the round crashes before you cash out, the stake is lost.",
+          "Each round's crash point is determined by a random number before players bet—outcomes are not influenced by previous rounds. A crash at 1.01× immediately after ten rounds above 10× is normal variance, not a 'due' pattern. The gambler's fallacy applies as strongly here as in roulette.",
+          "Provably fair implementations (common on crypto-facing platforms) publish server seed hashes before the round and reveal seeds after, letting players verify the crash point was pre-set. Licensed fiat casinos use certified RNG from providers like Spribe, SmartSoft, or in-house labs audited by GLI or iTech—check the operator's fairness page.",
+          "House edge is built into the crash distribution: not every multiplier range is equally likely. Published RTP for Aviator-class games is often ~97%—meaning ~3% of total handle retained long-term. Short sessions can spike far above or below that; volatility is extreme compared to even-money roulette.",
+          "Auto cash-out lets you preset a multiplier (e.g. always exit at 1.80×). This removes timing stress but does not improve expected value—you simply lock a fixed risk-reward profile. Dual bets (two stakes same round with different auto targets) split bankroll exposure—still negative EV overall.",
+          "Social features—live bet feed, chat, 'top wins' leaderboard—create herd behavior. Watching others cash at 50× does not mean the next round will reach 50×. Some UIs highlight big wins prominently while small crashes scroll quickly—awareness reduces FOMO-driven chasing.",
+          "Telegram 'signals,' predictor apps, and Martingale-on-crash systems are scams or mislabeled variance tools. The crash point is fixed before bets close; no external signal changes it. Doubling stake after a low crash hits table limits and bankroll the same way as roulette Martingale.",
+          "Bonus wagering on crash games varies: many operators exclude them entirely or count 0–10%. Educational content should state contribution rates—users often deposit for a sports bonus then find crash play does not clear rollover.",
+          "Mobile UX: one-tap cash-out latency matters on slow networks—a crash at 2.00× may register while your tap is in flight. Some apps show estimated network delay disclaimers. Play on stable connections; treat near-miss animations as engagement design, not predictive hints.",
+          "Responsible gaming: crash pace is faster than table games—set strict session loss caps. Link licensed operators with published RTP and self-exclusion tools at /guvenilir-siteler/{slug}. Track (aviator nasıl oynanır|crash oyunu|aviator strateji) without promoting guaranteed profit schemes.",
+        ],
+      },
+      tr: {
+        title: "Aviator ve Crash Oyunları 2026: Çarpan, Provably Fair ve Risk Gerçeği",
+        excerpt:
+          "Crash ve Aviator tarzı oyunlar nasıl çalışır: yükselen çarpan, cash-out zamanlaması, RNG vs provably fair ve 'sinyal' gerçeği.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Crash oyunları (Aviator, JetX, Spaceman ve klonları) 1,00×'den başlayıp rastgele noktada 'crash' olan çarpan gösterir. Kalkış öncesi bahis yapar, cash-out zamanını seçersiniz; crash önce 2,50×'de çıkarsanız 100 TL bahis 250 TL döner. Crash siz cash-out etmeden olursa stake kaybolur.",
+          "Her turun crash noktası oyuncular bahis yapmadan önce rastgele belirlenir—önceki turlar sonucu etkilemez. On tur 10× üstünden sonra 1,01× crash normal varyanstır, 'sıra geldi' değildir. Kumarbaz yanılgısı ruletteki kadar burada da geçerlidir.",
+          "Provably fair (kripto platformlarda yaygın) tur öncesi server seed hash, sonrası seed açıklama ile crash noktasının önceden sabitlendiğini doğrulatır. Lisanslı fiat casinolar Spribe, SmartSoft vb. GLI/iTech denetimli RNG kullanır—operatör adillik sayfasını kontrol edin.",
+          "Ev avantajı crash dağılımına gömülüdür: her çarpan aralığı eşit olasılıklı değildir. Aviator sınıfı RTP genelde ~%97—uzun vadede toplam handle'ın ~%3'ü kalır. Kısa oturumlar çok üstüne/altına sapar; volatilite çift şans ruletinden aşırıdır.",
+          "Otomatik cash-out çarpanı önceden kilitler (ör. her zaman 1,80×). Zamanlama stresini azaltır; beklenen değeri iyileştirmez—sabit risk-ödül profili seçersiniz. Çift bahis (aynı tur iki stake, farklı auto hedef) bankroll'u böler—yine negatif EV.",
+          "Sosyal özellikler—canlı bahis akışı, sohbet, 'en büyük kazanç'—sürü davranışı yaratır. Başkasının 50× cash-out'u sonraki turun 50× göreceği anlamına gelmez. Bazı UI büyük kazançları öne çıkarır, küçük crash'leri hızlı kaydırır—FOMO kovalamayı azaltır.",
+          "Telegram 'sinyalleri,' tahmin uygulamaları ve crash'te Martingale dolandırıcılık veya yanlış etiketli varyans aracıdır. Crash noktası bahis kapanmadan sabittir; dış sinyal değiştirmez. Düşük crash sonrası ikiye katlama rulet Martingale gibi limit ve bankroll'u yer.",
+          "Crash'te bonus çevrimi değişir: çoğu operatör hariç tutar veya %0–10 sayar. Katkı oranını yazın—spor bonusu yatırıp crash'in çevrime girmediğini gören kullanıcı sık görülür.",
+          "Mobil UX: tek dokunuş cash-out yavaş ağda gecikir—2,00× crash sırasında tap uçuşta kalabilir. Bazı uygulamalar ağ gecikmesi uyarısı gösterir. Stabil bağlantı; near-miss animasyonları ipucu değil engagement tasarımıdır.",
+          "Sorumlu oyun: crash temposu masa oyunlarından hızlı—sıkı oturum kayıp tavanı. RTP ve kendini dışlama araçları olan lisanslı operatörleri /guvenilir-siteler/{slug} ile bağlayın. (aviator nasıl oynanır|crash oyunu) sorgularını garanti kâr vaadi olmadan izleyin.",
+        ],
+      },
+      ru: {
+        title: "Aviator и crash-игры: множитель и provably fair",
+        excerpt:
+          "Как растёт multiplier до crash, cash-out, RNG/seed verification и почему «сигналы» не работают.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Stake до старта; multiplier растёт до random crash. Cash-out 2.5× на 100 → 250 TL; поздний cash-out = loss. Каждый раунд независим; fallacy «due» не применима.",
+          "Provably fair: hash seed до раунда, reveal после. Fiat — certified RNG Spribe/SmartSoft, RTP ~97%. Auto cash-out фиксирует профиль, не edge.",
+          "Telegram signals и Martingale-on-crash — scam; точка crash зафиксирована до ставок. Bonus wagering часто 0–10% или exclude.",
+          "Mobile latency на cash-out; near-miss — UX, не прогноз. Быстрый tempo — жёсткие loss limits.",
+          "/guvenilir-siteler/{slug} с RTP и self-exclusion; без обещаний profit.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "sanal-spor-bahis-rehber-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/haribo.jpg",
+    locales: {
+      en: {
+        title: "Virtual Sports Betting Guide: How Simulated Matches Work and What to Expect",
+        excerpt:
+          "Virtual football, horse racing, and tennis explained: RNG outcomes, short event cycles, odds structure, and differences from live sports betting.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Virtual sports are computer-generated sporting events with graphics resembling real stadiums or tracks. Outcomes are determined by random number generators (RNG) certified by test labs—not by athletes on a field. Events run continuously: a virtual football match may last 90 simulated seconds with betting windows before kickoff; new seasons start every few minutes.",
+          "Major product families include virtual football (league and cup formats), horse and greyhound racing, tennis, basketball, and motor racing. Providers such as Inspired, Golden Race, Betradar Virtuals, and Kiron supply white-label feeds to operators. Visual quality and stat overlays vary; underlying math is provider-defined RTP and odds compilation.",
+          "Bet types mirror live sports: match winner (1X2), over/under goals, correct score, forecast/tricast in racing, and accumulators across consecutive virtual events. Odds look like live markets but are fixed when you submit the slip—there is no line movement from team news because there are no real teams.",
+          "RNG fairness: each outcome has a published probability band. Favorite teams win more often but pay lower odds; long-shot scores pay high multiples with low hit rate. Over thousands of events, return aligns with configured margin (~90–95% RTP typical depending on bet type and provider). Individual bettors experience high short-term variance.",
+          "Virtual vs live betting: no form research, injuries, or weather—information edge from statistics does not exist. Pace is the defining trait: you can place ten virtual football bets in an hour vs one live match day. Faster cycle increases exposure unless strict time and stake limits are set.",
+          "Live-streamed virtuals (video of CGI match) vs number-draw style (racing silks with RNG result) are presentation differences. Some jurisdictions classify virtuals under casino/RNG rather than sportsbook license—operators must label product category correctly for compliance.",
+          "Accumulator promotions on virtuals are common: boosted acca if four consecutive virtual winners hit. Margin on accas compounds—four legs at 5% edge each approximates far worse combined edge than singles. Educational content should explain multi-leg math without discouraging entertainment bets responsibly.",
+          "Responsible gaming: 24/7 availability with no kickoff schedule removes natural pause points. Use deposit limits, reality checks, and self-exclusion. Virtual sports appeal during live sports off-hours—monitor play time separately from weekend live fixtures.",
+          "Bonus wagering: virtuals often count 100% toward sports rollover on some sites, 0% on others—identical to esoteric live market rules. Always read promotion terms; 'sports bonus' may exclude virtual outright.",
+          "SEO and operator linking: separate virtual sports education from live football preview content to avoid cannibalization. Link licensed books with virtual lobbies at /guvenilir-siteler/{slug} noting provider name and minimum stake—unique intro per brand. Track (sanal spor bahis|virtual football betting|sanal futbol nasıl oynanır).",
+        ],
+      },
+      tr: {
+        title: "Sanal Spor Bahis Rehberi 2026: Simülasyon Maçları Nasıl Çalışır?",
+        excerpt:
+          "Sanal futbol, at yarışı ve tenis: RNG sonuçları, kısa etkinlik döngüsü, oran yapısı ve canlı spor bahisinden farklar.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Sanal sporlar, gerçek stadyum veya pist görünümlü bilgisayar üretimi etkinliklerdir. Sonuçlar sahadaki sporcularla değil, test laboratuvarlarınca sertifikalı RNG ile belirlenir. Etkinlikler sürekli akar: sanal futbol maçı ~90 saniye simüle sürebilir; birkaç dakikada yeni sezon başlar.",
+          "Başlıca ürün aileleri: sanal futbol (lig ve kupa), at ve tazı yarışı, tenis, basketbol, motor yarışı. Inspired, Golden Race, Betradar Virtuals, Kiron operatörlere white-label feed sağlar. Görsel kalite değişir; altta yatan math sağlayıcı RTP ve oran derlemesidir.",
+          "Bahis türleri canlı sporu yansıtır: maç sonucu (1X2), gol alt/üst, skor tahmini, yarışta forecast/tricast ve ardışık sanal etkinlik kombineleri. Oranlar canlı gibi görünür ancak kupon onayında sabitlenir—gerçek takım olmadığı için kadro haberiyle line hareket etmez.",
+          "RNG adilliği: her sonucun yayınlanmış olasılık bandı vardır. Favori daha sık kazanır, düşük oran öder; uzun skor yüksek çarpan, düşük isabet. Binlerce etkinlikte dönüş yapılandırılmış marja uygun (~%90–95 RTP tipik). Bireysel oyuncuda kısa vadede yüksek varyans.",
+          "Sanal vs canlı: form araştırması, sakatlık, hava yok—istatistikten bilgi avantajı oluşmaz. Tempo belirleyicidir: bir saatte on sanal futbol bahsi vs bir canlı maç günü. Döngü hızlıysa süre ve stake limiti şart.",
+          "Canlı yayın sanal (CGI maç videosu) vs numara çekilişi (RNG sonuçlu yarış silkleri) sunum farkıdır. Bazı lisanslarda sanal casino/RNG sınıfına girer—operatör ürün etiketini uyumluluk için doğru koymalı.",
+          "Sanal kombine promosyonları yaygın: dört ardışık sanal kazanan acca boost. Kombinede marj birikir—dört bacak %5 edge kabaca teklilerden kötü birleşik edge. Çok bacak matematiğini eğlence bahsi bağlamında anlatın.",
+          "Sorumlu oyun: 7/24 erişim doğal durak noktası kaldırır. Yatırım limiti, reality check, kendini dışlama kullanın. Canlı spor kapalı saatlerde sanal cazip—hafta sonu canlı fikstürden ayrı süre izleyin.",
+          "Bonus çevrimi: bazı siteler sanalı %100 spor sayar, bazıları %0—canlı pazar kuralları gibi değişken. Promosyon şartını okuyun; 'spor bonusu' sanalı hariç tutabilir.",
+          "SEO: sanal spor eğitimini canlı maç önizlemesinden ayırın. Sanal lobili lisanslı bookmaker'ları /guvenilir-siteler/{slug} ile sağlayıcı ve min bahis notu—marka başına özgün giriş. (sanal spor bahis|sanal futbol nasıl oynanır) izleme.",
+        ],
+      },
+      ru: {
+        title: "Sanal spor bahis: виртуальный футбол и RNG",
+        excerpt:
+          "Как работают симulated events, типы ставок, RTP ~90–95% и отличие от live betting.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Virtual sports — CGI события, outcome = certified RNG. Матч ~90 с, новый сезон каждые минуты. Inspired, Betradar Virtuals, Kiron — white-label feeds.",
+          "Ставки как live: 1X2, O/U, correct score, acca на серии virtual events. Odds фиксируются в slip; нет line movement от новостей.",
+          "Information edge отсутствует; tempo быстрый — ten bets/hour возможно. Acca margin compound хуже singles.",
+          "Bonus wagering: 100% или 0% — читать terms. RG: 24/7 без пауз — лимиты обязательны.",
+          "SEO отдельно от live previews; /guvenilir-siteler/{slug} с provider и min stake.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "bingo-loto-casino-rehber-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/haribo.jpg",
+    locales: {
+      en: {
+        title: "Bingo and Lottery-Style Casino Games: Rooms, Cards, Keno, and Scratch Mechanics",
+        excerpt:
+          "Online bingo halls, 75/90-ball formats, keno draws, and instant scratch cards in casino lobbies—how RNG drives outcomes and what players should check before buying.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Bingo in online casinos adapts the social hall game to RNG-drawn numbers. You buy cards with random number grids; a caller (animated or live-host hybrid) draws balls until someone completes a pattern—line, two lines, full house. Multiple players share the same draw in synchronized rooms; prizes split if several cards hit simultaneously.",
+          "75-ball bingo (common in North America) uses a 5×5 grid with center free space; patterns include lines, letters, and coverall. 90-ball bingo (UK and Europe) uses three rows of nine numbers per card; prizes for one line, two lines, and full house in sequence. Turkish-facing sites may localize room names and chat but math is provider-standard.",
+          "Card price and prize pool structure vary: fixed jackpot per game vs progressive linked across network. Cheap cards (0.10–1 TL) with many participants mean shared wins—hitting full house might pay 50 TL split among three winners. Read room info panel for guaranteed vs progressive pots.",
+          "Speed bingo runs draws every few minutes; auto-daub marks your cards so you never miss a number. Manual daub rooms exist for players who prefer engagement. Auto-daub is convenience, not edge—it does not change which numbers are drawn.",
+          "Keno is lottery-style: pick 1–10 numbers from 1–80 (typical); 20 numbers drawn randomly. Payout scales with matches—catching 4 of 6 picks pays per published paytable. House edge on keno is often 25–30%, higher than blackjack or European roulette—fast draws make it entertainment-priced, not value-priced.",
+          "Online scratch cards replicate foil-scratch tickets: click to reveal symbols; three matching icons win per paytable. RTP is fixed per title (often 85–95%). Bulk buy discounts are marketing—expected return percentage stays the same. Physical scratch parity is visual only.",
+          "Slingo (slots + bingo hybrid) spins a reel under a bingo card; marked numbers advance toward lines with slot-style bonus features. Volatility and RTP differ per title—classify as slot-family for bonus wagering, not bingo room contribution.",
+          "Chat moderation and community features drive retention in bingo rooms. Promo codes for free cards carry wagering on winnings sometimes—read terms. Free cards still expose time and optional side purchases.",
+          "Compliance: age verification, spending caps, and clear RNG certification links should appear on bingo and keno spokes. Some regulators treat keno under lottery license thresholds separately from casino—operators disclose product class.",
+          "Educational clusters link bingo basics to keno paytables and scratch RTP without promising 'hot rooms.' Verified operators at /guvenilir-siteler/{slug} with notes on 75 vs 90 ball availability, keno draw interval, and chat language—unique copy per brand. Track (online bingo|keno nasıl oynanır|casino loto oyunları).",
+        ],
+      },
+      tr: {
+        title: "Bingo ve Loto Tarzı Casino Oyunları 2026: Salon, Keno ve Kazı Kazan",
+        excerpt:
+          "Online bingo salonları, 75/90 top formatları, keno çekilişleri ve anlık kazı kazan—RNG sonuçları ve satın almadan önce kontrol listesi.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Online casino bingo, sosyal salon oyununu RNG ile çekilen numaralara uyarlar. Rastgele sayı ızgaralı kart satın alırsınız; sunucu (animasyon veya hibrit host) bir desen tamamlanana kadar top çeker—çizgi, iki çizgi, full house. Senkron odalarda aynı çekiliş paylaşılır; aynı anda birden fazla kart vurursa ödül bölünür.",
+          "75 top bingo (Kuzey Amerika) 5×5 ızgara, orta free space; desenler çizgi, harf, coverall. 90 top bingo (UK/Avrupa) kart başına üç sıra dokuz numara; sırayla tek çizgi, iki çizgi, full house ödülleri. Türkiye odaklı siteler oda adı ve sohbeti yerelleştirir; math sağlayıcı standarttır.",
+          "Kart fiyatı ve ödül havuzu değişir: oyun başına sabit jackpot vs ağ genelinde progresif. Ucuz kart (0,10–1 TL) ve çok katılımcı paylaşımlı kazanç—full house üç kazanan arasında 50 TL olabilir. Garantili vs progresif pot için oda bilgi panelini okuyun.",
+          "Speed bingo birkaç dakikada bir çekiliş; auto-daub kartları işaretler, numara kaçırmazsınız. Manuel daub odaları etkileşim isteyen içindir. Auto-daub kolaylıktır, edge değildir—çekilen numaraları değiştirmez.",
+          "Keno loto tarzıdır: tipik 1–80'den 1–10 numara seçin; 20 numara rastgele çekilir. Ödeme eşleşmeyle ölçeklenir—6 seçimden 4 isabet paytable'a göre öder. Keno ev avantajı sıklıkla %25–30, blackjack veya Avrupa ruletinden yüksek—hızlı çekiliş eğlence fiyatlıdır, değer fiyatlı değil.",
+          "Online kazı kazan fiziksel biletleri taklit eder: tıklayınca sembol açılır; üç eşleşen ikon paytable kazandırır. RTP başlık başına sabit (genelde %85–95). Toplu alım indirimi pazarlama—beklenen dönüş yüzdesi aynı. Fiziksel kazı görsel benzerliktir.",
+          "Slingo (slot + bingo hibrit) bingo kartı altında makara çevirir; işaretli numaralar çizgiye ilerler, slot bonusları devreye girer. Volatilite ve RTP başlığa göre değişir—bonus çevriminde slot ailesi sayılır, bingo oda katkısı değil.",
+          "Sohbet moderasyonu ve topluluk bingo odalarında tutundurma sağlar. Ücretsiz kart promosyonlarında kazanç çevrimi olabilir—şartları okuyun. Ücretsiz kart yine zaman ve isteğe bağlı yan harcama demektir.",
+          "Uyumluluk: yaş doğrulama, harcama tavanı, RNG sertifika linki bingo ve keno spoke'larında olmalı. Bazı düzenleyiciler keno'yu casino'dan ayrı loto eşiğinde sınıflar—operatör ürün sınıfını açıklar.",
+          "Eğitim kümeleri bingo temellerini keno paytable ve scratch RTP'ye bağlar; 'sıcak oda' vaadi yok. Doğrulanmış operatörler /guvenilir-siteler/{slug} — 75 vs 90 top, keno aralığı, sohbet dili notu, marka başına özgün. (online bingo|keno nasıl oynanır|casino loto) izleme.",
+        ],
+      },
+      ru: {
+        title: "Bingo, keno и scratch в online casino",
+        excerpt:
+          "75/90-ball комнаты, auto-daub, keno paytable с высоким edge и механика scratch cards.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Online bingo: RNG-drawn numbers, shared room, patterns line/two lines/full house. 75-ball (5×5) vs 90-ball (UK) — разные prize stages. Cheap cards → split pots.",
+          "Auto-daub — удобство, не edge. Keno: pick 1–10 из 80, draw 20; house edge часто 25–30%. Scratch RTP 85–95% per title.",
+          "Slingo = slot+bingo hybrid; bonus wagering как slots. Chat и free-card promos — читать terms на winnings.",
+          "Compliance: age, limits, RNG cert. Keno иногда lottery class отдельно от casino.",
+          "/guvenilir-siteler/{slug}: 75 vs 90 ball, keno interval; без «hot room» promises.",
+        ],
+      },
+    },
+  },
+];

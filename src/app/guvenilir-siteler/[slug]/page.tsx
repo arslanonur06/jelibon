@@ -19,9 +19,16 @@ export function generateStaticParams() {
   return bonusBrandGuides.map((item) => ({ slug: item.slug }));
 }
 
-function getBrandMeta(brand: NonNullable<ReturnType<typeof resolveBonusBrandBySlug>>) {
-  const title = `${brand.name} güvenilir site, güncel giriş adresi rehberi`;
-  const description = `${brand.name} güvenilir site rehberi: güncel giriş adresi, giriş ve kampanya bilgisi. Canlı yönlendirme: @emojistarbot Telegram.`;
+function getBrandMeta(
+  brand: NonNullable<ReturnType<typeof resolveBonusBrandBySlug>>,
+  article?: ReturnType<typeof buildBonusArticle>,
+) {
+  const title =
+    article?.metaTitle ??
+    `${brand.name} güvenilir site, güncel giriş adresi rehberi`;
+  const description =
+    article?.metaDescription ??
+    `${brand.name} güvenilir site rehberi: güncel giriş adresi, giriş ve kampanya bilgisi. Canlı yönlendirme: @emojistarbot Telegram.`;
   const canonicalUrl = toCanonicalUrl(`/guvenilir-siteler/${brand.slug}`);
   return { title, description, canonicalUrl };
 }
@@ -30,7 +37,8 @@ export function generateMetadata({ params }: Props): Metadata {
   const brand = resolveBonusBrandBySlug(params.slug);
   if (!brand) return { title: "Sayfa bulunamadı", robots: { index: false } };
 
-  const { title, description, canonicalUrl } = getBrandMeta(brand);
+  const article = buildBonusArticle(brand);
+  const { title, description, canonicalUrl } = getBrandMeta(brand, article);
 
   return {
     title,
@@ -57,7 +65,7 @@ export default function BonusBrandPage({ params }: Props) {
   }
 
   const article = buildBonusArticle(brand);
-  const { title, description, canonicalUrl } = getBrandMeta(brand);
+  const { title, description, canonicalUrl } = getBrandMeta(brand, article);
 
   return (
     <>
@@ -65,6 +73,7 @@ export default function BonusBrandPage({ params }: Props) {
         slug={brand.slug}
         title={title}
         description={description}
+        pagePath={`/guvenilir-siteler/${brand.slug}`}
       />
       <BreadcrumbJsonLd
         items={[

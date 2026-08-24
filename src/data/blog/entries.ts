@@ -36,8 +36,26 @@ import { telegramTurkeyMemberAcquisition2026 } from "./posts/telegram-turkey-mem
 import { telegramWebAppOnboarding2026 } from "./posts/telegram-web-app-onboarding-2026";
 import { topicalAuthorityIgamingSeo2026 } from "./posts/topical-authority-igaming-seo-2026";
 import { zeroClickBrandSerpIgaming2026 } from "./posts/zero-click-brand-serp-igaming-2026";
+import { iddaaNasilOynanirRehber2026 } from "./posts/iddaa-nasil-oynanir-rehber-2026";
+import { bahisTurleriRehberi2026 } from "./posts/bahis-turleri-rehberi-2026";
+import { canliBahisRehberi2026 } from "./posts/canli-bahis-rehberi-2026";
+import { sistemKuponuKombineRehber2026 } from "./posts/sistem-kuponu-kombine-rehber-2026";
+import { iddaaTerimleriSozluk2026 } from "./posts/iddaa-terimleri-sozluk-2026";
+import { futbolBahisleriRehberi2026 } from "./posts/futbol-bahisleri-rehberi-2026";
+import { serviceContentBatch } from "./posts/batch";
+import { serviceContentBatch2 } from "./posts/batch2";
+import { sportsByDisciplineBatch } from "./posts/batch3";
 
 export const blogEntries: BlogPostEntry[] = [
+  ...sportsByDisciplineBatch,
+  ...serviceContentBatch2,
+  ...serviceContentBatch,
+  iddaaNasilOynanirRehber2026,
+  bahisTurleriRehberi2026,
+  canliBahisRehberi2026,
+  sistemKuponuKombineRehber2026,
+  iddaaTerimleriSozluk2026,
+  futbolBahisleriRehberi2026,
   turkiyeViralCasinoKelimeler2026,
   betHaberleriSeoTurkey2026,
   guvenilirSitelerRehberSeo2026,

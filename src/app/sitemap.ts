@@ -2,6 +2,12 @@ import type { MetadataRoute } from "next";
 import { blogEntries } from "@/data/blog/entries";
 import { getSiteUrl } from "@/constants";
 import { bonusBrandGuides } from "@/data/bonus-guides";
+import {
+  ALL_GEO_MARKET_IDS,
+  GEO_MARKET_CONFIGS,
+  getAllGeoBrandRoutes,
+} from "@/data/geo/markets";
+import { sigmaExhibitors } from "@/data/geo/brands/sigma";
 
 const MS_PER_DAY = 86_400_000;
 
@@ -44,6 +50,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 0.93,
     },
+    {
+      url: `${base}/rehber/spor-bahisleri`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${base}/rehber/hizmetler`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.92,
+    },
+    {
+      url: `${base}/rehber/igaming`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.91,
+    },
   ];
 
   const blogRoutes: MetadataRoute.Sitemap = blogEntries.map((entry) => {
@@ -67,5 +91,55 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.82,
   }));
 
-  return [...staticRoutes, ...blogRoutes, ...bonusRoutes];
+  const geoHubRoutes: MetadataRoute.Sitemap = ALL_GEO_MARKET_IDS.map((id) => ({
+    url: `${base}${GEO_MARKET_CONFIGS[id].hubPath}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.88,
+  }));
+
+  const geoBrandRoutes: MetadataRoute.Sitemap = getAllGeoBrandRoutes().map(
+    ({ marketId, slug }) => ({
+      url: `${base}${GEO_MARKET_CONFIGS[marketId].hubPath}/${slug}`,
+      lastModified: now,
+      changeFrequency: "daily",
+      priority: 0.8,
+    }),
+  );
+
+  const marketsIndex: MetadataRoute.Sitemap = [
+    {
+      url: `${base}/markets`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+  ];
+
+  const sigmaHub: MetadataRoute.Sitemap = [
+    {
+      url: `${base}/igaming/sigma`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.87,
+    },
+  ];
+
+  const sigmaRoutes: MetadataRoute.Sitemap = sigmaExhibitors.map((entry) => ({
+    url: `${base}/igaming/sigma/${entry.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.78,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...marketsIndex,
+    ...geoHubRoutes,
+    ...blogRoutes,
+    ...bonusRoutes,
+    ...geoBrandRoutes,
+    ...sigmaHub,
+    ...sigmaRoutes,
+  ];
 }

@@ -1,0 +1,358 @@
+import type { BlogPostEntry } from "../../types";
+
+export const dmcaBrandBatch: BlogPostEntry[] = [
+  {
+    slug: "clone-site-detection-igaming-2026",
+    date: "2026-08-25",
+    coverImage: "/assets/jelibon-marketing-logo.png",
+    locales: {
+      en: {
+        title: "Clone Site Detection Methods for Casino Brands in 2026",
+        excerpt:
+          "How operators combine DNS monitoring, visual fingerprinting, and search-intent signals to find impersonator domains before they steal signups.",
+        readTime: "10 min read",
+        categoryKey: "compliance",
+        body: [
+          "Clone sites do not announce themselves. They mirror your landing pages, reuse bonus headlines, and register look-alike domains that rank for branded queries within days. Detection has to run continuously—not as a quarterly audit when a partner complains.",
+          "Start with domain intelligence: typosquats, homoglyphs, and new registrations that contain your brand stem or common affiliate misspellings. Pair registrar alerts with passive DNS feeds so you see infrastructure before the clone goes live on paid search.",
+          "Visual and structural fingerprinting catches what WHOIS misses. Compare hero banners, favicon hashes, CSS class patterns, and checkout flows against your canonical assets. Clones often lift entire page trees but leave telltale hosting footprints.",
+          "Search Console and paid-search monitoring add intent signals. Branded impression spikes on URLs you do not own, or affiliate tags appearing on unknown domains, are early warnings. Map those domains to hosting and CDN providers for faster escalation.",
+          "Telegram and social surfaces matter in Türkiye and RU cohorts. Scammers push fake support bots and mirror domains in channel bios. Include messaging-app keyword alerts alongside web crawlers so impersonation is caught where users actually click.",
+          "Cluster related clones by shared nameservers, SSL issuers, and ad account fingerprints. One takedown on shared infrastructure can collapse a network of five look-alikes—if your evidence pack ties them together clearly.",
+          "Prioritize by harm: active phishing beats parked typosquats. Score clones on whether they collect credentials, run fake deposit flows, or only scrape SEO traffic. Your response playbook should differ by tier.",
+          "Document every detection in a timestamped evidence log: screenshots, DNS records, redirect chains, and trademark references. Hosting abuse teams act faster when complaints arrive complete—not as angry paragraphs.",
+          "Weekly reporting turns raw detections into stakeholder signal: new clones found, median time-to-takedown, residual domains still resolving, and repeat offenders. That cadence is what separates brand protection from one-off firefighting.",
+          "Jelibon’s DMCA & Clone Protection retainer ($1,920/mo) bundles continuous clone detection, structured takedown workflows, and weekly reporting so your team spends less time in abuse inboxes and more time on growth.",
+        ],
+      },
+      tr: {
+        title: "2026'da Casino Markaları İçin Klon Site Tespit Yöntemleri",
+        excerpt:
+          "Operatörlerin kimlik avı domainlerini kayıt çalmadan önce bulmak için DNS izleme, görsel parmak izi ve arama niyeti sinyallerini nasıl birleştirdiği.",
+        readTime: "10 dk okuma",
+        categoryKey: "compliance",
+        body: [
+          "Klon siteler kendilerini duyurmaz. Landing sayfalarınızı ayneler, bonus başlıklarınızı kopyalar ve birkaç gün içinde markalı sorgularda sıralanan benzer domainler kaydeder. Tespit sürekli çalışmalı—ortak şikayet ettiğinde yapılan üç ayda bir denetim değil.",
+          "Domain istihbaratıyla başlayın: yazım hataları, homoglyph'ler ve marka kökünüzü veya yaygın affiliate yanlış yazımlarını içeren yeni kayıtlar. Kayıt kuruluşu uyarılarını pasif DNS akışlarıyla eşleştirin; klon ücretli aramaya çıkmadan altyapıyı görün.",
+          "Görsel ve yapısal parmak izi, WHOIS'in kaçırdıklarını yakalar. Hero banner'ları, favicon hash'lerini, CSS sınıf kalıplarını ve ödeme akışlarını kanonik varlıklarınızla karşılaştırın. Klonlar genelde tüm sayfa ağaçlarını kaldırır ama barındırma ayak izlerini bırakır.",
+          "Search Console ve ücretli arama izleme niyet sinyali ekler. Sahip olmadığınız URL'lerde markalı gösterim artışları veya bilinmeyen domainlerde görünen affiliate etiketleri erken uyarıdır. Bu domainleri barındırma ve CDN sağlayıcılarına eşleyerek yükseltmeyi hızlandırın.",
+          "Türkiye ve RU kohortlarında Telegram ve sosyal yüzeyler önemlidir. Dolandırıcılar sahte destek botları ve kanal biyolarında ayna domainler kullanır. Web tarayıcılarının yanına mesajlaşma uygulaması anahtar kelime uyarılarını ekleyin; kullanıcıların gerçekten tıkladığı yerde sahtekarlık yakalanır.",
+          "Paylaşılan nameserver, SSL veren ve reklam hesabı parmak izleriyle ilişkili klonları kümeleyin. Paylaşılan altyapıda tek bir kaldırma, beş benzer görünümlü siteyi çökertebilir—kanıt paketiniz bunları net biçimde bağlıyorsa.",
+          "Zarara göre önceliklendirin: aktif kimlik avı, park edilmiş typosquat'tan ağır basar. Klonları kimlik bilgisi topluyor mu, sahte yatırım akışı mı çalıştırıyor yoksa yalnızca SEO trafiği mi kazıyor diye puanlayın. Yanıt oyun kitabınız katmana göre değişmeli.",
+          "Her tespiti zaman damgalı kanıt günlüğüne yazın: ekran görüntüleri, DNS kayıtları, yönlendirme zincirleri ve marka referansları. Barındırma kötüye kullanım ekipleri, şikayetler öfkeli paragraflar değil eksiksiz geldiğinde daha hızlı hareket eder.",
+          "Haftalık raporlama ham tespitleri paydaş sinyaline çevirir: bulunan yeni klonlar, medyan kaldırma süresi, hâlâ çözümlenen artık domainler ve tekrarlayan suçlular. Bu ritim marka korumayı tek seferlik yangın söndürmeden ayırır.",
+          "Jelibon'un DMCA ve Kopya Koruması retainer'ı ($1,920/ay) sürekli klon tespiti, yapılandırılmış kaldırma iş akışları ve haftalık raporlamayı bir arada sunar; ekibiniz kötüye kullanım gelen kutularında daha az, büyümede daha çok zaman harcar.",
+        ],
+      },
+      ru: {
+        title: "Методы обнаружения клонов для casino-брендов в 2026",
+        excerpt:
+          "Как операторы сочетают мониторинг DNS, визуальные отпечатки и сигналы поискового спроса, чтобы находить поддельные домены до кражи регистраций.",
+        readTime: "8 мин чтения",
+        categoryKey: "compliance",
+        body: [
+          "Клоны не объявляют о себе: копируют лендинги, бонусные заголовки и регистрируют похожие домены, которые за дни попадают в брендовую выдачу. Детекция должна работать непрерывно, а не раз в квартал после жалобы партнёра.",
+          "Начните с domain intelligence: typosquat, homoglyph и новые регистрации с вашим брендовым стемом. Сопоставьте алерты регистраторов с passive DNS, чтобы видеть инфраструктуру до запуска платного трафика.",
+          "Визуальный и структурный fingerprint ловит то, что пропускает WHOIS: hero-баннеры, favicon, CSS-паттерны и checkout-flow. Кластеризуйте клоны по nameserver, SSL-issuer и отпечаткам рекламных аккаунтов — один takedown может снять сеть из пяти зеркал.",
+          "Search Console и мониторинг paid search дают intent-сигналы: рост брендовых показов на чужих URL или affiliate-теги на неизвестных доменах. В TR/RU-когортах добавьте алерты по Telegram и соцсетям — пользователи кликают там.",
+          "Jelibon DMCA & Clone Protection ($1,920/мес) объединяет непрерывную детекцию, структурированные takedown-процессы и еженедельную отчётность — меньше времени в abuse-инбоксах, больше на рост.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "dmca-takedown-workflow-operators-2026",
+    date: "2026-08-25",
+    coverImage: "/assets/jelibon-marketing-logo.png",
+    locales: {
+      en: {
+        title: "DMCA Takedown Workflow for iGaming Operators",
+        excerpt:
+          "A repeatable escalation path from evidence collection through hosting abuse, registrar complaints, and search-engine delisting—without burning legal hours on every clone.",
+        readTime: "10 min read",
+        categoryKey: "compliance",
+        body: [
+          "A takedown is not a single email—it is a workflow with owners, SLAs, and evidence standards. Operators that treat every clone as a bespoke crisis spend legal budget on problems automation and templates should handle.",
+          "Stage one is preservation: capture the clone at discovery time with full-page archives, HTTP headers, redirect chains, and WHOIS snapshots. Courts and hosts care about what existed when—not what changed after your first notice.",
+          "Stage two is classification. Copyright infringement (lifted creative), trademark confusion (brand impersonation), and phishing (credential theft) follow different abuse channels. Sending a copyright notice to a phishing page wastes a day.",
+          "Hosting abuse is usually fastest when the evidence pack includes your trademark registration or licence reference, infringing URLs, and a clear statement of unauthorized use. Generic angry letters get queued; structured complaints get action.",
+          "Registrar escalation works for typosquats still in grace periods. Include the confusing similarity argument and link the clone to your official domain list. Some registries suspend faster than hosts when bad faith is obvious.",
+          "Search-engine delisting is a secondary lane—useful when the clone persists on new infrastructure. Document the relationship between removed domains and reappearing mirrors so repeat filers are not treated as noise.",
+          "Track time-to-takedown per provider. You will learn which hosts stall, which registrars require follow-ups, and where a phone escalation through your compliance partner helps. That map is operational gold.",
+          "Maintain a clone registry: domain, first seen, escalation history, resolution date, and infrastructure fingerprint. Repeat offenders often rotate TLDs but keep the same ad tracker or payment snippet.",
+          "Legal should review templates quarterly—not every ticket. Pre-approved language for DMCA, trademark, and phishing paths lets ops move at speed while staying defensible.",
+          "Jelibon’s $1,920/mo DMCA & Clone Protection retainer runs this workflow end-to-end: detection, evidence packs, takedown execution, and weekly reporting with median resolution times your stakeholders can trust.",
+        ],
+      },
+      tr: {
+        title: "iGaming Operatörleri İçin DMCA Kaldırma İş Akışı",
+        excerpt:
+          "Kanıt toplamadan barındırma kötüye kullanımı, kayıt kuruluşu şikayetleri ve arama motoru delisting'e kadar tekrarlanabilir yükseltme yolu—her klon için hukuk saatlerini yakmadan.",
+        readTime: "10 dk okuma",
+        categoryKey: "compliance",
+        body: [
+          "Kaldırma tek bir e-posta değildir; sahipleri, SLA'ları ve kanıt standartları olan bir iş akışıdır. Her klonu özel kriz gibi gören operatörler, otomasyon ve şablonların halletmesi gereken sorunlara hukuk bütçesi harcar.",
+          "Birinci aşama koruma: keşif anında klonu tam sayfa arşivleri, HTTP başlıkları, yönlendirme zincirleri ve WHOIS anlık görüntüleriyle kaydedin. Mahkemeler ve barındırıcılar ilk bildirimden sonra değişeni değil, o anda ne olduğunu önemser.",
+          "İkinci aşama sınıflandırmadır. Telif ihlali (kaldırılmış kreatif), marka karışıklığı (marka taklit) ve kimlik avı (kimlik bilgisi hırsızlığı) farklı kötüye kullanım kanallarını izler. Kimlik avı sayfasına telif bildirimi göndermek bir gün kaybettirir.",
+          "Barındırma kötüye kullanımı, kanıt paketi marka tescilinizi veya lisans referansınızı, ihlal URL'lerini ve yetkisiz kullanımın net ifadesini içerdiğinde genelde en hızlıdır. Genel öfkeli mektuplar kuyruğa girer; yapılandırılmış şikayetler işlem görür.",
+          "Kayıt kuruluşu yükseltmesi, hâlâ grace period'daki typosquat'lar için işe yarar. Karıştırıcı benzerlik argümanını ekleyin ve klonu resmi domain listenize bağlayın. Bazı kayıt defterleri kötü niyet barizken barındırıcıdan hızlı askıya alır.",
+          "Arama motoru delisting ikincil şerittir—klon yeni altyapıda devam ettiğinde faydalıdır. Kaldırılan domainler ile yeniden beliren aynalar arasındaki ilişkiyi belgeleyin; tekrarlayan başvurular gürültü sayılmasın.",
+          "Sağlayıcı başına kaldırma süresini izleyin. Hangi barındırıcıların oyalandığını, hangi kayıt kuruluşlarının takip gerektirdiğini ve uyum ortağınız üzerinden telefon yükseltmesinin nerede işe yaradığını öğrenirsiniz.",
+          "Klon kaydı tutun: domain, ilk görülme, yükseltme geçmişi, çözüm tarihi ve altyapı parmak izi. Tekrarlayan suçlular genelde TLD değiştirir ama aynı reklam izleyiciyi veya ödeme snippet'ini korur.",
+          "Hukuk şablonları üç ayda bir gözden geçirmeli—her bilette değil. DMCA, marka ve kimlik avı yolları için önceden onaylı dil, operasyonun hızlı ve savunulabilir kalmasını sağlar.",
+          "Jelibon'un aylık $1,920 DMCA ve Kopya Koruması retainer'ı bu iş akışını uçtan uca yürütür: tespit, kanıt paketleri, kaldırma yürütme ve paydaşların güvenebileceği medyan çözüm süreleriyle haftalık raporlama.",
+        ],
+      },
+      ru: {
+        title: "DMCA takedown workflow для iGaming-операторов",
+        excerpt:
+          "Повторяемый путь эскалации: от сбора доказательств до abuse у хостера, жалоб регистратору и delisting в поиске — без сжигания legal-часов на каждый клон.",
+        readTime: "8 мин чтения",
+        categoryKey: "compliance",
+        body: [
+          "Takedown — не одно письмо, а workflow с владельцами, SLA и стандартами доказательств. Операторы, treating каждый клон как уникальный кризис, тратят legal-бюджет на то, что должны закрывать шаблоны и автоматизация.",
+          "Этап 1 — preservation: full-page archive, HTTP headers, redirect chains, WHOIS snapshot в момент обнаружения. Этап 2 — классификация: copyright, trademark confusion и phishing идут разными каналами abuse.",
+          "Hosting abuse быстрее всего с пакетом: регистрация TM, licence reference, infringing URLs и чёткое заявление о несанкционированном использовании. Registrar escalation работает для typosquat в grace period.",
+          "Ведите реестр клонов: domain, first seen, escalation history, resolution, infrastructure fingerprint. Legal пересматривает шаблоны раз в квартал — не каждый тикет.",
+          "Retainer Jelibon DMCA & Clone Protection ($1,920/мес): detection, evidence packs, takedown execution и еженедельная отчётность с median time-to-takedown для стейкхолдеров.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "phishing-impersonation-response-2026",
+    date: "2026-08-25",
+    coverImage: "/assets/jelibon-marketing-logo.png",
+    locales: {
+      en: {
+        title: "Incident Response for Impersonation and Phishing Clones",
+        excerpt:
+          "When a fake site collects credentials or pushes a counterfeit app, speed and communication matter as much as takedown—here is the operator playbook.",
+        readTime: "10 min read",
+        categoryKey: "compliance",
+        body: [
+          "Phishing clones are brand emergencies. Unlike passive SEO mirrors, they actively harm users—and your trust score with payment partners and regulators. Treat them as incidents with a defined response team, not as slow-track copyright tickets.",
+          "The first hour is containment communication: alert customer support, freeze outbound promos that might drive traffic to the wrong domain, and prepare a holding statement for affiliates who will ask whether the clone is yours.",
+          "Parallel technical work: preserve evidence, identify payment or wallet addresses on the clone, and file hosting abuse under phishing—not DMCA. Many providers have faster lanes for credential theft than for copyright.",
+          "Notify payment processors and fraud teams if the clone mimics deposit flows. Even failed phishing attempts create chargeback noise when confused users dispute legitimate transactions.",
+          "Telegram and WhatsApp impersonation often precede web clones. Monitor for fake support accounts using your logo in channel names. A takedown on the website does little if users are already in a scam bot chat.",
+          "User-facing remediation: publish a short FAQ on your official channels listing verified domains and app store links. Do not over-explain the incident—clarity beats length when users are anxious about their balances.",
+          "After resolution, run a post-incident review: how the clone was discovered, time to first action, time to full takedown, and whether detection rules should have caught it earlier. Feed findings back into monitoring keywords.",
+          "Regulators and licence auditors increasingly ask about impersonation response. Weekly trend reports that show detection volume and resolution SLAs demonstrate operational maturity—not just reactive PR.",
+          "Coordinate with affiliate managers: compromised tracking links and fake landing pages damage partner trust. Give affiliates a single contact and a verified domain list during active incidents.",
+          "Jelibon’s DMCA & Clone Protection service ($1,920/mo) includes impersonation monitoring, prioritized phishing escalation, and weekly incident summaries so leadership sees risk trends before they become headlines.",
+        ],
+      },
+      tr: {
+        title: "Taklit ve Kimlik Avı Klonları İçin Olay Müdahale Rehberi",
+        excerpt:
+          "Sahte site kimlik bilgisi topladığında veya sahte uygulama ittiğinde hız ve iletişim, kaldırma kadar önemlidir—operatör oyun kitabı.",
+        readTime: "10 dk okuma",
+        categoryKey: "compliance",
+        body: [
+          "Kimlik avı klonları marka acil durumlarıdır. Pasif SEO aynalarının aksine kullanıcıya aktif zarar verir—ve ödeme ortakları ile düzenleyiciler nezdinde güven puanınızı düşürür. Bunları tanımlı müdahale ekibi olan olaylar olarak ele alın, yavaş telif biletleri değil.",
+          "İlk saat containment iletişimidir: müşteri desteğini uyarın, trafiği yanlış domaine yönlendirebilecek promosyonları dondurun ve klonun sizin olup olmadığını soracak affiliate'ler için hazır açıklama hazırlayın.",
+          "Paralel teknik iş: kanıt koruyun, klon üzerindeki ödeme veya cüzdan adreslerini belirleyin ve barındırma kötüye kullanımını kimlik avı kapsamında—DMCA değil—bildirin. Birçok sağlayıcının kimlik hırsızlığı için teliften hızlı şeritleri vardır.",
+          "Klon yatırım akışını taklit ediyorsa ödeme işlemcilerini ve fraud ekiplerini bilgilendirin. Başarısız kimlik avı girişimleri bile, kafası karışık kullanıcılar meşru işlemlere itiraz ettiğinde chargeback gürültüsü yaratır.",
+          "Telegram ve WhatsApp taklit genelde web klonlarından önce gelir. Kanal adlarında logonuzu kullanan sahte destek hesaplarını izleyin. Web sitesi kaldırıldığında kullanıcı zaten dolandırıcı bot sohbetindeyse az şey değişir.",
+          "Kullanıcıya yönelik düzeltme: resmi kanallarınızda doğrulanmış domainler ve uygulama mağazası bağlantılarını listeleyen kısa SSS yayınlayın. Olayı fazla açıklamayın—kullanıcı bakiyesi endişeliyken netlik uzunluğu yener.",
+          "Çözümden sonra olay sonrası inceleme yapın: klon nasıl keşfedildi, ilk aksiyona kadar geçen süre, tam kaldırmaya kadar geçen süre ve tespit kuralları daha erken yakalamalı mıydı. Bulguları izleme anahtar kelimelerine geri besleyin.",
+          "Düzenleyiciler ve lisans denetçileri giderek taklit müdahalesini soruyor. Tespit hacmi ve çözüm SLA'larını gösteren haftalık trend raporları operasyonel olgunluk gösterir—yalnızca reaktif PR değil.",
+          "Affiliate yöneticileriyle koordine olun: ele geçirilmiş izleme bağlantıları ve sahte landing sayfaları ortak güvenini zedeler. Aktif olaylarda affiliate'lere tek iletişim noktası ve doğrulanmış domain listesi verin.",
+          "Jelibon'un DMCA ve Kopya Koruması hizmeti ($1,920/ay) taklit izleme, öncelikli kimlik avı yükseltmesi ve liderliğin manşet olmadan risk trendlerini görmesini sağlayan haftalık olay özetlerini içerir.",
+        ],
+      },
+      ru: {
+        title: "Incident response при impersonation и phishing-клонах",
+        excerpt:
+          "Когда фейк собирает credentials или пушит поддельное приложение, скорость коммуникации не менее важна takedown — playbook оператора.",
+        readTime: "8 мин чтения",
+        categoryKey: "compliance",
+        body: [
+          "Phishing-клоны — brand emergency. В отличие от SEO-зеркал, они активно вредят пользователям и trust score у payment partners и регуляторов. Это incident с response team, а не медленный copyright-тикет.",
+          "Первый час — containment: alert support, freeze promos на wrong domain, holding statement для affiliates. Параллельно — preservation, phishing abuse (не DMCA), уведомление fraud/payment если клон имитирует deposit flow.",
+          "Impersonation в Telegram/WhatsApp часто опережает web-клон. Мониторьте fake support с вашим лого. После resolution — post-incident review и обновление detection rules.",
+          "Affiliate managers: compromised tracking links и fake landing бьют по partner trust. Единый контакт и verified domain list во время incident.",
+          "Jelibon DMCA & Clone Protection ($1,920/мес): impersonation monitoring, prioritized phishing escalation, weekly incident summaries для leadership.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "affiliate-disclosure-responsible-gambling-2026",
+    date: "2026-08-25",
+    coverImage: "/assets/jelibon-marketing-logo.png",
+    locales: {
+      en: {
+        title: "Affiliate Disclosure and Responsible Gambling Blocks in Content",
+        excerpt:
+          "Compliance-ready content templates that satisfy reviewers, protect users, and reduce the clone surface affiliates accidentally create.",
+        readTime: "10 min read",
+        categoryKey: "compliance",
+        body: [
+          "Affiliate content is where compliance and clone risk overlap. Thin review pages with aggressive bonus claims get copied by impersonators—and flagged by regulators who conflate affiliate tone with operator policy.",
+          "Disclosure must be visible, plain-language, and consistent across locales. Burying “affiliate link” in footer grey text fails reviewer checks in multiple markets. Place disclosure near the first commercial CTA, not only on a separate legal page.",
+          "Responsible gambling (RG) blocks should appear on every money-adjacent page: bonus explainers, comparison tables, and landing variants. Include helpline numbers and self-exclusion links appropriate to the target jurisdiction—not generic copy pasted from another GEO.",
+          "Standardize RG and disclosure modules as reusable components. When affiliates or content partners pull HTML, they should inherit approved blocks automatically rather than rewriting disclaimers from memory.",
+          "Reviewer-ready libraries reduce back-and-forth. Pre-approved EN/TR/RU snippets for disclosure, age gates, and RG warnings let legal sign once while ops scales landing and blog output.",
+          "Clone operators scrape your best-performing affiliate pages because they convert. Watermarking is weak protection; structural compliance and takedown readiness matter more. Document which pages are canonical so DMCA packs reference the right source.",
+          "Bonus tables need claim discipline inline: wagering multiples, expiry, game weighting, and max cashout in the same visual block as the headline offer. Splitting terms across three tabs invites misrepresentation—and clones simplify to fraudulent promises.",
+          "Audit affiliate partners quarterly for disclosure drift. A partner who removes RG blocks to improve CTR creates regulatory exposure that attaches to your brand in consumer complaints.",
+          "Align blog editorial with the same standards. Educational posts that link to operators still need disclosure and RG context when discussing real-money play.",
+          "Jelibon’s compliance-oriented content work pairs with DMCA & Clone Protection ($1,920/mo): reviewer-ready libraries, weekly clone reporting, and takedown when scrapers mirror your approved templates.",
+        ],
+      },
+      tr: {
+        title: "İçerikte Affiliate Açıklaması ve Sorumlu Oyun Blokları",
+        excerpt:
+          "İncelemecileri tatmin eden, kullanıcıları koruyan ve affiliate'lerin yanlışlıkla oluşturduğu klon yüzeyini azaltan uyum odaklı içerik şablonları.",
+        readTime: "10 dk okuma",
+        categoryKey: "compliance",
+        body: [
+          "Affiliate içeriği uyum ile klon riskinin kesiştiği yerdir. Agresif bonus iddialı ince inceleme sayfaları taklitçiler tarafından kopyalanır—ve düzenleyiciler tarafından affiliate tonu operatör politikası sanılarak işaretlenir.",
+          "Açıklama görünür, sade dilde ve locale'ler arası tutarlı olmalıdır. Footer gri metninde “affiliate bağlantısı” gömmek birçok pazarda inceleme kontrollerini geçemez. Açıklamayı ilk ticari CTA'nın yanına koyun, yalnızca ayrı hukuk sayfasında değil.",
+          "Sorumlu oyun (RG) blokları her para-adjacent sayfada olmalı: bonus açıklayıcıları, karşılaştırma tabloları ve landing varyantları. Hedef yargı alanına uygun yardım hattı numaraları ve kendi kendini dışlama bağlantıları ekleyin—başka GEO'dan yapıştırılmış genel metin değil.",
+          "RG ve açıklama modüllerini yeniden kullanılabilir bileşenler olarak standartlaştırın. Affiliate'ler veya içerik ortakları HTML çektiğinde, hatırdan feragatname yazmak yerine onaylı blokları otomatik alsın.",
+          "İncelemeye hazır kütüphaneler gidip gelmeyi azaltır. Açıklama, yaş kapıları ve RG uyarıları için önceden onaylı EN/TR/RU snippet'ler hukukun bir kez imzalamasına, operasyonun landing ve blog çıktısını ölçeklemesine izin verir.",
+          "Klon operatörleri en iyi performanslı affiliate sayfalarınızı kazır çünkü dönüştürürler. Filigran zayıf koruma; yapısal uyum ve kaldırmaya hazırlık daha önemli. DMCA paketlerinin doğru kaynağa referans vermesi için hangi sayfaların kanonik olduğunu belgeleyin.",
+          "Bonus tabloları satır içi iddia disiplini gerektirir: çevrim katları, son kullanma, oyun ağırlığı ve max cashout, başlık teklifiyle aynı görsel blokta. Şartları üç sekmeye bölmek yanlış temsil davet eder—klonlar sahte vaatlere indirger.",
+          "Affiliate ortaklarında üç ayda bir açıklama sapması denetimi yapın. RG bloklarını CTR için kaldıran ortak, tüketici şikayetlerinde markanıza yapışan düzenleyici maruziyet yaratır.",
+          "Blog editoryalini aynı standartlarla hizalayın. Operatörlere bağlantı veren eğitim yazıları, gerçek paralı oyunu tartışırken hâlâ açıklama ve RG bağlamı gerektirir.",
+          "Jelibon'un uyum odaklı içerik çalışması, DMCA ve Kopya Koruması ($1,920/ay) ile eşleşir: incelemeye hazır kütüphaneler, haftalık klon raporlaması ve kazıyıcılar onaylı şablonlarınızı aynelediğinde kaldırma.",
+        ],
+      },
+      ru: {
+        title: "Affiliate disclosure и блоки ответственной игры в контенте",
+        excerpt:
+          "Compliance-ready шаблоны: удовлетворяют reviewers, защищают пользователей и снижают clone surface от affiliate-контента.",
+        readTime: "8 мин чтения",
+        categoryKey: "compliance",
+        body: [
+          "Affiliate-контент — пересечение compliance и clone risk. Тонкие review-страницы с агрессивными bonus claims копируют impersonators и попадают в фокус регуляторов.",
+          "Disclosure: visible, plain language, near first commercial CTA — не только в footer. RG blocks на каждой money-adjacent странице с helpline и self-exclusion для target jurisdiction.",
+          "Стандартизируйте RG/disclosure как reusable components. Reviewer-ready EN/TR/RU libraries — legal sign once, ops scales. Bonus tables: claim discipline inline (wagering, expiry, max cashout).",
+          "Quarterly audit affiliates на disclosure drift. Clone operators scrape best-performing pages — document canonical sources for DMCA packs.",
+          "Jelibon: compliance content + DMCA & Clone Protection ($1,920/мес), weekly clone reporting и takedown зеркал approved templates.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "reviewer-ready-ad-copy-libraries-2026",
+    date: "2026-08-25",
+    coverImage: "/assets/jelibon-marketing-logo.png",
+    locales: {
+      en: {
+        title: "Reviewer-Ready Ad Copy Libraries for Regulated iGaming",
+        excerpt:
+          "How pre-approved headline, body, and CTA sets cut approval cycles—and give DMCA teams a clean canonical source when clones steal your ads.",
+        readTime: "10 min read",
+        categoryKey: "compliance",
+        body: [
+          "Ad copy chaos is a compliance tax. Every freelancer rewrite triggers legal review, delays campaigns, and produces variants that clones copy because they perform—without the disclaimers attached.",
+          "A reviewer-ready library is a versioned set of approved strings: headlines, primary text, CTAs, and mandatory disclaimer lines per GEO and product (sportsbook vs casino vs live). Nothing ships outside the library without an explicit exception ticket.",
+          "Structure libraries by intent—not only by channel. Welcome bonus, no-deposit trial, live casino, and retention offers need different claim boundaries. Mixing them in one template invites overclaiming.",
+          "Pair each copy variant with its landing URL and UTM schema. Reviewers approve message and destination together. Clones that lift copy but point to phishing domains are easier to escalate when the canonical pairing is documented.",
+          "Localization is not translation alone. TR and RU strings need jurisdiction-appropriate RG lines and offer framing that matches local licence reality—not literal EN swaps that sound native but misstate terms.",
+          "Include negative examples in the library docs: phrases legal rejected and why. Creatives stop reinventing forbidden claims when the “do not use” list is searchable.",
+          "Sync libraries with creative production. Static and video briefs should reference library IDs, not free-text claims. That traceability helps when a clone steals a banner—you know exactly which approved asset was infringed.",
+          "Refresh libraries on a schedule tied to promo changes—not ad hoc. Expired offer copy sitting in a shared drive becomes the most copied text on impersonator sites.",
+          "Measure library health: approval turnaround, exception rate, and which variants affiliates request most. High exception rates signal unclear rules or outdated offers, not “creative freedom.”",
+          "Jelibon builds and maintains reviewer-ready libraries alongside DMCA & Clone Protection ($1,920/mo)—so your approved copy is both fast to ship and fast to defend when clones mirror it.",
+        ],
+      },
+      tr: {
+        title: "Düzenlemeye Tabi iGaming İçin İncelemeye Hazır Reklam Metni Kütüphaneleri",
+        excerpt:
+          "Önceden onaylı başlık, gövde ve CTA setlerinin onay döngülerini nasıl kısalttığı—ve klonlar reklamlarınızı çaldığında DMCA ekiplerine temiz kanonik kaynak verdiği.",
+        readTime: "10 dk okuma",
+        categoryKey: "compliance",
+        body: [
+          "Reklam metni kaosu bir uyum vergisidir. Her freelancer yeniden yazımı hukuk incelemesi tetikler, kampanyaları geciktirir ve feragatnameler olmadan performans gösterdiği için klonların kopyaladığı varyantlar üretir.",
+          "İncelemeye hazır kütüphane, onaylı dizelerin sürümlü setidir: başlıklar, birincil metin, CTA'lar ve GEO ile ürün başına (spor bahis vs casino vs canlı) zorunlu feragatname satırları. Açık istisna bileti olmadan kütüphane dışında hiçbir şey yayınlanmaz.",
+          "Kütüphaneleri yalnızca kanala değil niyete göre yapılandırın. Hoş geldin bonusu, yatırımsız deneme, canlı casino ve elde tutma teklifleri farklı iddia sınırları gerektirir. Tek şablonda karıştırmak aşırı iddiayı davet eder.",
+          "Her metin varyantını landing URL'si ve UTM şemasıyla eşleştirin. İncelemeciler mesaj ve hedefi birlikte onaylar. Metni kaldırıp kimlik avı domainlerine yönlendiren klonlar, kanonik eşleşme belgelendiğinde yükseltmesi daha kolaydır.",
+          "Yerelleştirme yalnızca çeviri değildir. TR ve RU dizeleri, yerel lisans gerçekliğine uyan yargı alanına uygun RG satırları ve teklif çerçevesi gerektirir—native duyulan ama şartları yanlış aktaran kelimesi kelimesine EN takasları değil.",
+          "Kütüphane dokümanlarına olumsuz örnekler ekleyin: hukukun reddettiği ifadeler ve nedenleri. “Kullanma” listesi aranabilir olduğunda kreatifler yasak iddiaları yeniden icat etmeyi bırakır.",
+          "Kütüphaneleri kreatif prodüksiyonla senkronize edin. Statik ve video brief'leri serbest metin iddiaları değil kütüphane ID'lerine referans versin. Klon bir banner çaldığında hangi onaylı varlığın ihlal edildiğini tam olarak bilirsiniz.",
+          "Kütüphaneleri promo değişikliklerine bağlı takvimle yenileyin—ad hoc değil. Paylaşımlı sürücüdeki süresi dolmuş teklif metni, taklitçi sitelerde en çok kopyalanan metin olur.",
+          "Kütüphane sağlığını ölçün: onay dönüş süresi, istisna oranı ve affiliate'lerin en çok talep ettiği varyantlar. Yüksek istisna oranları “yaratıcı özgürlük” değil belirsiz kurallar veya güncel olmayan teklifler işaretidir.",
+          "Jelibon, DMCA ve Kopya Koruması ($1,920/ay) ile birlikte incelemeye hazır kütüphaneler oluşturur ve sürdürür—onaylı metniniz hem hızlı yayınlanır hem klonlar aynelediğinde hızlı savunulur.",
+        ],
+      },
+      ru: {
+        title: "Reviewer-ready библиотеки ad copy для regulated iGaming",
+        excerpt:
+          "Как pre-approved headline/body/CTA сокращают approval cycles и дают DMCA-команде чистый canonical source при краже креативов.",
+        readTime: "8 мин чтения",
+        categoryKey: "compliance",
+        body: [
+          "Ad copy chaos — compliance tax. Каждый freelancer rewrite = legal review, delayed campaigns, variants без disclaimers, которые копируют клоны.",
+          "Reviewer-ready library: versioned approved strings per GEO/product, mandatory disclaimer lines. Structure by intent (welcome, no-deposit, live casino). Pair copy with landing URL + UTM — reviewers approve message + destination together.",
+          "Localization ≠ translation: TR/RU need jurisdiction RG lines. Include rejected phrases in docs. Sync with creative via library IDs. Refresh on promo schedule, not ad hoc.",
+          "Measure: approval turnaround, exception rate, top affiliate requests. High exceptions = unclear rules, not creative freedom.",
+          "Jelibon строит libraries + DMCA & Clone Protection ($1,920/мес) — fast to ship, fast to defend when clones mirror approved copy.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "claim-discipline-bonus-marketing-2026",
+    date: "2026-08-25",
+    coverImage: "/assets/jelibon-marketing-logo.png",
+    locales: {
+      en: {
+        title: "Claim Discipline for Bonus Marketing Copy",
+        excerpt:
+          "Tight offer framing reduces regulatory friction, affiliate misquotes, and the exaggerated headlines impersonators love to copy.",
+        readTime: "10 min read",
+        categoryKey: "compliance",
+        body: [
+          "Bonus marketing walks a narrow line: excitement drives CTR, but overclaiming drives complaints, licence scrutiny, and clone sites that promise what you never offered.",
+          "Claim discipline starts with a single source of truth for active promos: amount, wagering, eligible games, expiry, max bet, and max cashout. Marketing pulls from that record—never from a chat message or an old deck slide.",
+          "Headlines should state the primary benefit and the main constraint in one breath. “100% welcome bonus up to ₺5,000 · 35x wagering · 7 days” beats “MEGA BONUS UNLIMITED” that compliance will reject and clones will amplify.",
+          "Visual hierarchy matters. If the hero number is large, the wagering line must be legible at mobile width—not 8px grey text. Regulators screenshot ads; so do competitors filing complaints.",
+          "Segment claims by audience maturity. Acquisition creatives can emphasize trial mechanics; retention mail must not reuse no-deposit language that implies free money without conditions.",
+          "Affiliate briefs need claim ceilings: maximum superlatives, forbidden words (“guaranteed,” “risk-free”), and required suffix lines. When affiliates exceed ceilings, enforcement is a brand protection issue—not only compliance.",
+          "Clones strip fine print and keep headlines. That is why disciplined primary copy helps DMCA and phishing escalation: the gap between clone promise and your real terms proves bad faith impersonation.",
+          "Run pre-flight checks before every burst: does this variant exist in the approved library? Does the landing match the ad? Are RG blocks present? Automate checks where possible; human review for exceptions only.",
+          "Post-campaign, scrape branded SERP and Telegram for misquotes. Correct affiliates quickly; escalate domains that fabricate terms you never published.",
+          "Jelibon’s creative and compliance stack—including DMCA & Clone Protection at $1,920/mo—keeps bonus claims reviewer-clean, monitors for impersonator exaggeration, and executes takedowns with weekly trend reports.",
+        ],
+      },
+      tr: {
+        title: "Bonus Pazarlama Metni İçin İddia Disiplini",
+        excerpt:
+          "Sıkı teklif çerçevesi düzenleyici sürtünmeyi, affiliate yanlış alıntılarını ve taklitçilerin kopyalamayı sevdiği abartılı başlıkları azaltır.",
+        readTime: "10 dk okuma",
+        categoryKey: "compliance",
+        body: [
+          "Bonus pazarlaması dar bir çizgide yürür: heyecan CTR'yi artırır, aşırı iddia şikayetleri, lisans incelemesi ve hiç sunmadığınızı vaat eden klon siteleri getirir.",
+          "İddia disiplini aktif promolar için tek doğruluk kaynağıyla başlar: tutar, çevrim, uygun oyunlar, son kullanma, max bahis ve max cashout. Pazarlama sohbet mesajından veya eski slayt sunumundan değil, bu kayıttan çeker.",
+          "Başlıklar birincil faydayı ve ana kısıtı tek nefeste söylemelidir. “%100 hoş geldin bonusu ₺5.000'e kadar · 35x çevrim · 7 gün”, uyumun reddedeceği ve klonların yükselteceği “MEGA BONUS SINIRSIZ”dan iyidir.",
+          "Görsel hiyerarşi önemlidir. Hero rakam büyükse çevrim satırı mobil genişlikte okunabilir olmalı—8px gri metin değil. Düzenleyiciler reklam ekran görüntüsü alır; şikayet dosylayan rakipler de.",
+          "İddiaları kitle olgunluğuna göre segmentleyin. Edinim kreatifleri deneme mekaniğini vurgulayabilir; elde tutma maili koşulsuz bedava para ima eden yatırımsız dili yeniden kullanmamalı.",
+          "Affiliate brief'leri iddia tavanları gerektirir: maksimum üstünlük ifadeleri, yasak kelimeler (“garantili,” “ risksiz”) ve zorunlu sonek satırları. Affiliate'ler tavanı aştığında uygulama yalnızca uyum değil marka koruma meselesidir.",
+          "Klonlar ince yazıyı sıyırır, başlıkları tutar. Disiplinli birincil metin bu yüzden DMCA ve kimlik avı yükseltmesine yardım eder: klon vaadi ile gerçek şartlarınız arasındaki fark kötü niyetli taklidi kanıtlar.",
+          "Her patlama öncesi ön uçuş kontrolü: bu varyant onaylı kütüphanede var mı? Landing reklamla eşleşiyor mu? RG blokları mevcut mu? Mümkün olduğunca otomatikleştirin; yalnızca istisnalar için insan incelemesi.",
+          "Kampanya sonrası markalı SERP ve Telegram'ı yanlış alıntılar için tarayın. Affiliate'leri hızlı düzeltin; hiç yayınlamadığınız şartları uyduran domainleri yükseltin.",
+          "Jelibon'un kreatif ve uyum yığını—aylık $1,920 DMCA ve Kopya Koruması dahil—bonus iddialarını inceleme-temiz tutar, taklitçi abartısını izler ve haftalık trend raporlarıyla kaldırma yürütür.",
+        ],
+      },
+      ru: {
+        title: "Claim discipline для bonus marketing copy",
+        excerpt:
+          "Жёсткое framing офферов снижает regulatory friction, affiliate misquotes и заголовки-преувеличения, которые копируют impersonators.",
+        readTime: "8 мин чтения",
+        categoryKey: "compliance",
+        body: [
+          "Bonus marketing — узкая линия: excitement vs overclaiming → complaints, licence scrutiny, clones с обещаниями, которых вы не давали.",
+          "Single source of truth: amount, wagering, games, expiry, max bet, max cashout. Headlines: benefit + main constraint в одном breath. Visual hierarchy — wagering line legible on mobile.",
+          "Affiliate briefs: claim ceilings, forbidden words (“guaranteed,” “risk-free”). Clones strip fine print — disciplined copy helps DMCA/phishing prove bad faith.",
+          "Pre-flight: library variant? landing match? RG blocks? Post-campaign SERP/Telegram scrape for misquotes.",
+          "Jelibon creative + compliance + DMCA & Clone Protection ($1,920/мес): reviewer-clean claims, impersonator monitoring, takedowns, weekly trends.",
+        ],
+      },
+    },
+  },
+];

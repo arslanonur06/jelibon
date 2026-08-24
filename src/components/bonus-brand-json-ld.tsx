@@ -5,10 +5,12 @@ type Props = {
   slug: string;
   title: string;
   description: string;
+  /** e.g. /guvenilir-siteler/casibom or /markets/az/melbet */
+  pagePath: string;
 };
 
-export function BonusBrandJsonLd({ slug, title, description }: Props) {
-  const pageUrl = toCanonicalUrl(`/guvenilir-siteler/${slug}`);
+export function BonusBrandJsonLd({ title, description, pagePath }: Props) {
+  const pageUrl = toCanonicalUrl(pagePath);
   const site = getSiteUrl();
 
   const payload = {

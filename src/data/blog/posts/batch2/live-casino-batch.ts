@@ -1,0 +1,358 @@
+import type { BlogPostEntry } from "../../types";
+
+export const liveCasinoBatch: BlogPostEntry[] = [
+  {
+    slug: "canli-casino-nedir-rehber-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/morlines-blog-card-bg.png",
+    locales: {
+      en: {
+        title: "What Is Live Casino? How Live Dealer Games Work in 2026",
+        excerpt:
+          "Live casino explained for players and operators: studio streams, OCR betting, latency, game types, and how to connect educational content to verified brand pages.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Live casino (canlı casino) is real-time table gaming streamed from a studio or land-based floor to your device. A human dealer runs blackjack, roulette, baccarat, or game-show wheels while you place bets through a digital interface. The outcome is physical—cards dealt, wheel spun—not a random number generator drawing pixels on a static table.",
+          "The technical stack: multiple HD cameras, optical character recognition (OCR) on cards and wheel results, and a game control unit (GCU) that encodes video and syncs bet windows. When the dealer says 'no more bets,' the software locks your stake; the result is read from the table and settlements hit your balance in seconds.",
+          "Latency matters for player trust. Top providers (Evolution, Pragmatic Live, Playtech Live) target sub-second result delivery, but mobile networks and VPN routing can add delay. Operators should disclose that live streams are not identical to being on the casino floor—connection quality affects the experience, not the certified outcome.",
+          "Game categories inside live casino: classic tables (blackjack, roulette, baccarat), localized tables (Turkish-speaking dealers, TRY chip denominations where licensed), and hybrid game shows (Crazy Time, Monopoly Live) that blend RNG bonus rounds with a live presenter.",
+          "Bet limits span micro-stakes (1 TRY / 0.10 EUR) to VIP salons with five-figure max bets. Side bets—Perfect Pairs in blackjack, Lightning multipliers in roulette—inflate house edge. Educational spokes should explain default RTP on the main bet vs optional side wagers so users compare offers rationally.",
+          "For Türkiye-facing operators and affiliates, live casino is a high-trust vertical: users search canlı casino, canlı rulet, and canlı blackjack with strong commercial intent. Separate educational URLs from brand review pages. Link verified operators from spokes to /guvenilir-siteler/{slug} with one unique sentence per brand—never duplicate the same live-casino intro across fifty slugs.",
+          "Compliance copy belongs on every live-casino spoke: age gating, responsible gaming limits, and clear disclaimers that availability depends on license jurisdiction. Live games often contribute less to bonus wagering (10% or excluded)—state that upfront to reduce support tickets.",
+          "Jelibon builds live-casino education clusters for operators entering TR and CIS markets: structured H2s for studio mechanics, provider comparison, and mobile UX, plus internal links to game-specific spokes (blackjack rules, roulette variants, game shows).",
+          "SEO monitoring: track (canlı casino|live casino|canlı krupiye) separately from branded queries. Rising impressions on generic terms indicate the hub is forming; pair with Search Console landing-page reports to catch thin duplicates early.",
+          "Refresh when providers launch new tables or retire legacy streams. Stale 'Turkish roulette' pages pointing to discontinued tables erode trust. Tie update cadence to provider changelogs and operator lobby snapshots.",
+        ],
+      },
+      tr: {
+        title: "Canlı Casino Nedir? 2026 Rehberi: Krupiye, Yayın ve Nasıl Çalışır",
+        excerpt:
+          "Canlı casino (live dealer) nedir, stüdyo yayını ve OCR ile bahis nasıl işler? Oyuncu ve operatör odaklı eğitim rehberi.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Canlı casino, stüdyo veya fiziksel casino katından cihazınıza aktarılan gerçek zamanlı masa oyunlarıdır. İnsan krupiye blackjack, rulet, baccarat veya game-show çarkını yönetir; siz dijital arayüzden bahis yaparsınız. Sonuç fizikseldir—kart dağıtılır, çark döner—statik masada RNG ile çizilen piksel değildir.",
+          "Teknik altyapı: çoklu HD kamera, kart ve rulet sonuçlarında optik karakter tanıma (OCR) ve video ile bahis pencerelerini senkronlayan oyun kontrol ünitesi (GCU). Krupiye 'bahisler kapandı' dediğinde yazılım stake'inizi kilitler; masa sonucu okunur ve bakiye saniyeler içinde güncellenir.",
+          "Gecikme (latency) oyuncu güvenini etkiler. Evolution, Pragmatic Live, Playtech Live gibi sağlayıcılar saniyenin altında sonuç hedefler; mobil ağ ve VPN rotası gecikme ekleyebilir. Operatörler canlı yayının fiziksel casino ile birebir olmadığını, bağlantı kalitesinin deneyimi etkilediğini ancak sertifikalı sonucu değiştirmediğini belirtmelidir.",
+          "Canlı casino içindeki kategoriler: klasik masalar (blackjack, rulet, baccarat), yerelleştirilmiş masalar (Türkçe konuşan krupiye, lisanslı bölgelerde TRY jeton), RNG bonus turları ile canlı sunucuyu birleştiren hibrit game-show'lar (Crazy Time, Monopoly Live).",
+          "Bahis limitleri mikro bahisten (1 TRY / 0,10 EUR) VIP salonlara kadar uzanır. Yan bahisler—blackjack'te Perfect Pairs, rulette Lightning çarpanları—ev avantajını artırır. Eğitim spoke'ları ana bahis RTP'si ile yan bahis farkını anlatmalı; kullanıcı teklifleri rasyonel kıyaslasın.",
+          "Türkiye odaklı operatör ve affiliate'ler için canlı casino yüksek güven dikeyidir: canlı casino, canlı rulet, canlı blackjack sorguları güçlü ticari niyet taşır. Eğitim URL'lerini marka inceleme sayfalarından ayırın. Doğrulanmış operatörleri spoke'lardan /guvenilir-siteler/{slug} sayfalarına marka başına tek özgün cümleyle bağlayın.",
+          "Her canlı casino spoke'unda uyumluluk metni şart: yaş doğrulama, sorumlu oyun limitleri, lisans bölgesine göre erişim uyarısı. Canlı oyunlar bonus çevrimine genelde düşük katkı (%10 veya hariç) sağlar—bunu önceden yazın, destek talebini azaltın.",
+          "Jelibon TR ve BDT pazarlarına giren operatörler için canlı casino eğitim kümeleri üretir: stüdyo mekaniği, sağlayıcı karşılaştırması, mobil UX için yapılandırılmış H2'ler; oyun bazlı spoke'lara iç link (blackjack kuralları, rulet çeşitleri, game-show).",
+          "SEO izleme: (canlı casino|live casino|canlı krupiye) sorgularını markalı terimlerden ayrı takip edin. Jenerik terimlerde artan gösterim hub'ın oluştuğunu gösterir; ince kopya sayfaları erken yakalamak için Search Console landing raporlarını kullanın.",
+          "Sağlayıcı yeni masa açtığında veya eski yayını kapattığında güncelleyin. Artık var olmayan 'Türkçe rulet' masasına işaret eden bayat sayfalar güveni aşındırır. Güncelleme ritmini sağlayıcı değişiklik günlükleri ve operatör lobisi anlık görüntülerine bağlayın.",
+        ],
+      },
+      ru: {
+        title: "Canlı casino: как работают live dealer игры в 2026",
+        excerpt:
+          "Студийный стрим, OCR, типы live-игр и связка образовательного контента с /guvenilir-siteler для операторов.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Live casino — трансляция реального стола: дилер, физические карты и колесо; ставки через UI, результат не RNG-графика. Стек: HD-камеры, OCR, GCU синхронизирует окно ставок и settlement.",
+          "Категории: классика (blackjack, roulette, baccarat), локализованные столы (TR-язык, TRY-фишки где лицензировано), game-shows (Crazy Time) с RNG-бонусами.",
+          "Side bets повышают house edge — объясняйте RTP основной ставки vs опций. Live часто 10% или exclude в bonus wagering; disclaimer обязателен.",
+          "SEO: отдельные URL для education vs brand review. Уникальные интро на /guvenilir-siteler/{slug}. Jelibon: кластеры H2 + cross-link к blackjack, roulette, game-show spokes.",
+          "GSC: (canlı casino|live casino|canlı krupiye). Обновляйте при смене столов провайдера; stale «Turkish roulette» URL erode trust.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "canli-blackjack-kurallari-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/morlines-blog-card-bg.png",
+    locales: {
+      en: {
+        title: "Live Blackjack Rules for Beginners: Hit, Stand, Split, and Table Etiquette",
+        excerpt:
+          "How live blackjack works on streaming tables: card values, dealer rules, player decisions, side bets, and what operators should document for SEO.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Live blackjack (canlı blackjack) follows the same core rules as RNG blackjack: beat the dealer without exceeding 21. Cards 2–10 count face value; J, Q, K count 10; Ace counts 1 or 11. The dealer receives one upcard and one hole card; players act in turn before the dealer reveals and draws.",
+          "Player options on most live tables: Hit (take another card), Stand (keep total), Double Down (double stake, one card only), Split (pair into two hands), and sometimes Surrender (forfeit half on bad starting totals). Buttons appear on screen; the dealer executes physically. Late decisions may default to stand—watch the countdown timer.",
+          "Dealer rules vary by table and are printed on the felt or info panel. Common live variants: dealer stands on soft 17 (S17) or hits soft 17 (H17); blackjack pays 3:2 or 6:5 (avoid 6:5 where possible—house edge jumps). Number of decks (6 or 8) and continuous shuffler vs shoe affect card counting viability but not basic strategy for casual players.",
+          "Basic strategy is mathematically optimal for the published rules—not a guarantee of winning sessions. Example: hard 16 vs dealer 10 → hit on most S17 tables; pair of 8s → always split. Live tables often include a strategy hint overlay; use it for learning, not as a substitute for reading the rule card.",
+          "Side bets (Perfect Pairs, 21+3, Bet Behind) carry much higher house edge than the main hand—often 4–10%+ vs ~0.5% on main bet with perfect basic strategy. Educational content should show this contrast so users do not confuse 'low house edge game' with 'any bet on the table.'",
+          "Bet Behind lets you stake on another player's hand when seats are full. You do not control hit/stand—the seated player does. Popular on busy Turkish-facing lobbies during peak hours; document that Bet Behind follows the active player's decisions.",
+          "Live etiquette: chat is moderated; abusive messages get muted. Do not ask the dealer for illegal advice ('what should I hit?'). Tips (toke) are optional in some jurisdictions. Stream delay means the result you see may arrive 1–2 seconds after the physical deal—normal, not rigged.",
+          "Mobile UX: portrait mode shrinks the betting grid; confirm stake before double-tap errors. Auto-decisions on disconnect vary by operator—some stand, some refund open bets. Publish disconnect policy on brand spokes linked from /guvenilir-siteler.",
+          "Jelibon templates for operators include structured FAQ: 'Does live blackjack count toward bonus wagering?' (often 10% or excluded), 'Minimum bet?' and 'S17 vs H17?'—unique answers per licensed brand, not copy-paste.",
+          "Cross-link this spoke to live casino overview, live dealer vs RNG comparison, and responsible gaming limits. Track queries (canlı blackjack|live blackjack kuralları|blackjack nasıl oynanır) in Search Console separately from branded live blackjack lobbies.",
+        ],
+      },
+      tr: {
+        title: "Canlı Blackjack Kuralları 2026: Hit, Stand, Split ve Masa Adabı",
+        excerpt:
+          "Canlı blackjack nasıl oynanır? Kart değerleri, krupiye kuralları, oyuncu seçenekleri, yan bahisler ve operatör dokümantasyonu.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Canlı blackjack (live blackjack), RNG blackjack ile aynı temel kuralları izler: 21'i geçmeden krupiyeyi yenmek. 2–10 kartlar yüz değeri; J, Q, K = 10; As = 1 veya 11. Krupiyenin açık ve kapalı kartı vardır; oyuncular krupiye açmadan sırayla hamle yapar.",
+          "Çoğu canlı masada oyuncu seçenekleri: Hit (kart çek), Stand (dur), Double Down (bahsi ikiye katla, tek kart), Split (çifti iki ele böl), bazı masalarda Surrender (kötü elde yarısından vazgeç). Düğmeler ekranda; krupiye fiziksel uygular. Süre dolunca varsayılan genelde stand—geri sayımı izleyin.",
+          "Krupiye kuralları masaya göre değişir; felt veya bilgi panelinde yazar. Yaygın varyantlar: krupiye yumuşak 17'de durur (S17) veya çeker (H17); blackjack 3:2 veya 6:5 öder (6:5 mümkünse kaçının—ev avantajı sıçrar). Deste sayısı (6 veya 8) ve sürekli karıştırıcı vs shoe kart saymayı etkiler; gündelik oyuncu için temel strateji yeterlidir.",
+          "Temel strateji, yayınlanan kurallar için matematiksel optimumdur—kazanma garantisi değildir. Örnek: sert 16 vs krupiye 10 → çoğu S17 masada hit; 8 çifti → her zaman split. Canlı masalarda strateji ipucu katmanı olabilir; kural kartının yerine geçmez, öğrenme içindir.",
+          "Yan bahisler (Perfect Pairs, 21+3, Bet Behind) ana elden çok daha yüksek ev avantajı taşır—sıklıkla %4–10+ vs mükemmel temel stratejide ana bahiste ~%0,5. Eğitim içeriği bu kontrastı göstermeli; 'düşük ev avantajlı oyun' ile 'masadaki her bahis' karıştırılmasın.",
+          "Bet Behind, koltuklar doluyken başka oyuncunun eline bahis yapmanızı sağlar. Hit/stand kontrolü sizde değil, oturan oyuncudadır. Yoğun saatlerde Türkiye odaklı lobilerde popülerdir; kararların aktif oyuncuya bağlı olduğunu belirtin.",
+          "Canlı adabı: sohbet moderasyonludur; kötüye kullanım susturulur. Krupiyeden yasadışı tavsiye istemeyin ('ne çekeyim?'). Bahşiş bazı bölgelerde isteğe bağlıdır. Yayın gecikmesi fiziksel dağıtımdan 1–2 saniye sonra sonuç gösterebilir—normaldir, hile değildir.",
+          "Mobil UX: dikey mod bahis ızgarasını küçültür; stake'i onaylamadan çift dokunmayın. Bağlantı kopunca otomatik karar operatöre göre değişir—bazı stand, bazı açık bahsi iade eder. Kopma politikasını /guvenilir-siteler marka spoke'larında yayınlayın.",
+          "Jelibon operatör şablonları yapılandırılmış SSS içerir: 'Canlı blackjack bonus çevrimine girer mi?' (genelde %10 veya hariç), 'Minimum bahis?', 'S17 vs H17?'—lisanslı marka başına özgün cevap, kopyala-yapıştır değil.",
+          "Bu spoke'u canlı casino genel rehberi, canlı krupiye vs RNG karşılaştırması ve sorumlu oyun limitlerine bağlayın. (canlı blackjack|live blackjack kuralları|blackjack nasıl oynanır) sorgularını markalı lobilerden ayrı Search Console'da izleyin.",
+        ],
+      },
+      ru: {
+        title: "Canlı blackjack: правила live-стола для новичков",
+        excerpt:
+          "Hit, stand, split, double; правила дилера S17/H17, side bets и Bet Behind на streaming-столах.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Цель — ближе к 21 без перебора. Дилер: upcard + hole; игрок hit/stand/double/split. S17 vs H17 и выплата blackjack 3:2 vs 6:5 меняют house edge — указывайте на info panel.",
+          "Basic strategy — оптимум по опубликованным правилам, не гарантия сессии. Side bets (Perfect Pairs, 21+3) 4–10%+ edge vs ~0.5% на main hand.",
+          "Bet Behind: ставка на чужую руку без контроля решений. Chat модерируется; задержка стрима 1–2 с — норма.",
+          "Mobile: подтверждайте stake. Disconnect policy — stand или refund; публикуйте на /guvenilir-siteler/{slug}.",
+          "Jelibon FAQ: bonus wagering (часто 10% exclude), min bet, S17. Cross-link к live casino hub и RNG vs live.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "canli-rulet-cesitleri-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/morlines-blog-card-bg.png",
+    locales: {
+      en: {
+        title: "Live Roulette Types: European, American, Lightning, and Speed Tables",
+        excerpt:
+          "Compare live roulette variants—single zero vs double zero, Lightning multipliers, auto and speed formats—and how operators should structure educational URLs.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Live roulette streams a physical wheel with a real dealer (or automated wheel with live presenter on hybrid tables). You bet on numbers, colors, dozens, columns, or outside even-money zones; the ball lands in a pocket; OCR reads the result and pays winners. The variant name describes wheel layout and rule extras—not just marketing.",
+          "European roulette (single zero): pockets 0–36, one green zero. House edge on straight-up red/black ~2.7%. This is the default on most live lobbies aimed at EU and TR players. La Partage or En Prison rules (rare on live) can halve even-money loss on zero—check the rule card.",
+          "American roulette (double zero): adds 00 alongside 0. House edge on even-money bets ~5.26%—nearly double European. Some live catalogs still offer it for US-facing skins; educational spokes should steer comparison shoppers toward single-zero tables unless they explicitly want the 00 layout.",
+          "French roulette live tables label bets in French (Voisins, Tiers, Orphelins) and may offer racetrack betting UI. Same single-zero math as European with presentation geared to experienced players. Beginners should start with outside bets (red/black, odd/even) before learning sector calls.",
+          "Lightning Roulette (Evolution) and similar RNG-augmented live games assign random multipliers (50×–500×) to straight-up numbers each round. A winning straight-up on a lit number pays base 29:1 plus multiplier—but straight-up coverage is expensive; effective RTP is published (~97–99% range depending on provider math). Explain multiplier mechanics clearly; users often think every number carries 500×.",
+          "Speed / Auto roulette: shorter betting windows (10–15 seconds), sometimes no dealer—wheel spins automatically while a host narrates. Higher rounds per hour increases exposure; responsible gaming copy should mention pace, not only odds.",
+          "Inside vs outside bets: straight-up pays 35:1 on European (actual odds 37:1)—the gap is house edge. Outside even-money pays 1:1 but loses entirely on zero. Neighbor and complete bets on racetrack are convenience bundles of multiple straight-ups—stake sums fast.",
+          "Operators publishing canlı rulet content should separate variant URLs: european vs american vs lightning. Combined pages cannibalize intent and confuse users searching specifically for Lightning multiplier rules.",
+          "Link licensed brands with verified live roulette lobbies to /guvenilir-siteler/{slug}. Note table minimums, HD stream quality, and whether VIP salons require invitation. Jelibon builds variant comparison tables without promising 'winning systems'—progression strategies do not change negative-expectation math.",
+          "Track Search Console for (canlı rulet|lightning rulet|avrupa ruleti|amerikan ruleti). Refresh when providers rename tables or change multiplier caps; stale Lightning screenshots from old UI versions hurt CTR.",
+        ],
+      },
+      tr: {
+        title: "Canlı Rulet Çeşitleri 2026: Avrupa, Amerikan, Lightning ve Speed Masalar",
+        excerpt:
+          "Canlı rulet varyantlarını karşılaştırın: tek sıfır vs çift sıfır, Lightning çarpanları, otomatik ve hızlı formatlar.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Canlı rulet fiziksel çarkın yayınlandığı oyundur; gerçek krupiye (veya hibrit masalarda otomatik çark + sunucu) vardır. Sayı, renk, düzine, kolon veya dış even-money bölgelere bahis yaparsınız; top cebe düşer; OCR sonucu okur ve ödeme yapılır. Varyant adı çark düzenini ve ek kuralları anlatır—yalnızca pazarlama değildir.",
+          "Avrupa ruleti (tek sıfır): 0–36 cepler, bir yeşil 0. Kırmızı/siyah straight-up ev avantajı ~%2,7. TR ve AB oyuncularına yönelik çoğu canlı lobinin varsayılanıdır. La Partage veya En Prison (canlıda nadir) sıfırda even-money kaybını yarıya indirebilir—kural kartını okuyun.",
+          "Amerikan ruleti (çift sıfır): 0 yanına 00 eklenir. Even-money bahislerde ev avantajı ~%5,26—Avrupa'nın neredeyse iki katı. Bazı canlı kataloglar ABD skinleri için sunar; eğitim spoke'ları karşılaştırma yapanları açıkça 00 istemedikçe tek sıfır masaya yönlendirmeli.",
+          "Fransız ruleti canlı masalarında bahisler Fransızca etiketlenir (Voisins, Tiers, Orphelins) ve racetrack arayüzü olabilir. Matematik Avrupa ile aynı tek sıfırdır; deneyimli oyuncu sunumuna göre düzenlenmiştir. Yeni başlayanlar sektör çağrılarından önce dış bahislerle (kırmızı/siyah, tek/çift) başlamalı.",
+          "Lightning Roulette (Evolution) ve benzeri oyunlar her turda straight-up sayılara rastgele çarpan (50×–500×) atar. Aydınlatılmış sayıda kazanan straight-up temel 29:1 artı çarpan öder—ancak straight-up maliyeti yüksektir; efektif RTP sağlayıcı matematiğine göre yayınlanır (~%97–99). Çarpan mekaniğini net anlatın; kullanıcılar her sayının 500× taşıdığını sanır.",
+          "Speed / Auto rulet: daha kısa bahis penceresi (10–15 sn), bazen krupiye yok—çark otomatik döner, sunucu anlatır. Saatte daha fazla tur maruziyeti artırır; sorumlu oyun metni tempodan da bahsetmeli, yalnızca oranlardan değil.",
+          "İç vs dış bahis: straight-up Avrupa'da 35:1 öder (gerçek olasılık 37:1)—fark ev avantajıdır. Dış even-money 1:1 öder ama sıfırda tamamen kaybedilir. Racetrack'te komşu ve complete bahisleri birden fazla straight-up paketidir—stake hızla toplanır.",
+          "Canlı rulet içeriği yayımlayan operatörler varyant URL'lerini ayırmalı: avrupa vs amerikan vs lightning. Birleşik sayfa niyeti yamyamlar ve Lightning çarpan kuralları arayan kullanıcıyı şaşırtır.",
+          "Doğrulanmış canlı rulet lobili markaları /guvenilir-siteler/{slug} ile bağlayın. Masa minimumu, HD kalite ve VIP salon davet şartını not edin. Jelibon varyant karşılaştırma tabloları üretir; 'kazanma sistemi' vaat etmez—progresyon stratejileri negatif beklentiyi değiştirmez.",
+          "Search Console'da (canlı rulet|lightning rulet|avrupa ruleti|amerikan ruleti) izleyin. Sağlayıcı masa adını veya çarpan tavanını değiştirince güncelleyin; eski Lightning ekran görüntüsü CTR'yi düşürür.",
+        ],
+      },
+      ru: {
+        title: "Canlı rulet: European, American, Lightning и Speed",
+        excerpt:
+          "Single zero ~2.7% edge vs double zero ~5.26%; Lightning multipliers; racetrack и темп speed/auto столов.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "European (0–36): один zero, edge ~2.7% на even-money. American +00: ~5.26%. French — те же числа, racetrack (Voisins, Tiers).",
+          "Lightning Roulette: random multipliers 50×–500× на straight-up; base 29:1 + multiplier. RTP ~97–99% — не каждый номер «светится».",
+          "Speed/Auto: короткое окно ставок, больше раундов/час — RG copy про темп. Inside 35:1 vs true 37:1 — источник edge.",
+          "Отдельные URL: european vs american vs lightning. /guvenilir-siteler/{slug} с min bet и VIP. Jelibon — сравнительные таблицы без «систем».",
+          "GSC: (canlı rulet|lightning rulet|avrupa ruleti). Обновляйте UI скриншоты при смене caps.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "canli-baccarat-nasil-oynanir-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/morlines-blog-card-bg.png",
+    locales: {
+      en: {
+        title: "How to Play Live Baccarat: Player, Banker, Tie, and Commission Rules",
+        excerpt:
+          "Live baccarat for beginners—card totals, drawing rules, Banker commission, side bets, and operator content tips for high-intent TR searches.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Live baccarat (canlı bakara) is a comparing card game: you bet on which hand—Player or Banker—ends closer to 9, or on Tie. You do not receive 'your' hand to play strategically; the dealer follows fixed drawing rules. That simplicity drives its popularity on VIP and mass-market live floors alike.",
+          "Card values: A=1, 2–9 face value, 10/J/Q/K=0. Totals above 9 drop the tens digit (15 counts as 5). Two cards dealt first to Player then Banker; a third card may draw automatically per tableau rules—memorizing the flow is optional for players because software enforces it.",
+          "Main bets: Player pays 1:1 (~1.24% house edge). Banker pays 1:1 minus 5% commission (~1.06% edge—statistically best main bet). Tie pays 8:1 or 9:1 but carries ~14%+ edge—experienced guides flag Tie as entertainment, not value. Always confirm commission handling: some tables round, some track decimals in a commission box.",
+          "No Pair / Perfect Pair side bets and Dragon Bonus variants add volatility. House edges exceed main bets substantially. Live streams display roadmaps (bead plate, big road) showing past outcomes—past results do not change future odds; educational copy should debunk pattern betting clearly without insulting cultural preferences.",
+          "Speed baccarat compresses betting time; squeeze baccarat slow-reveals cards for drama on premium tables. Same math, different pacing. Responsible gaming notes matter more on speed formats.",
+          "Minimum bets on live baccarat range from 1 TRY/EUR on generic tables to high-limit salons (500+ per hand). TR-facing lobbies often label 'Lightning Baccarat' or multiplier variants—read multiplier fee (sometimes 20% fee on base stake) before joining.",
+          "Etiquette: bet on Player or Banker before 'no more bets.' Late UI clicks reject cleanly. Chat questions about 'what will win' cannot be answered by dealers—regulated scripts only.",
+          "For operators: canlı baccarat and bakara nasıl oynanır are strong SEO intents. Dedicated URL beats a subsection on generic live casino. Include commission example: 100 TRY Banker win → 95 TRY net after 5% commission.",
+          "Link verified baccarat lobbies via /guvenilir-siteler/{slug} with unique intro mentioning table type (speed vs squeeze) and commission policy. Jelibon FAQ blocks cover bonus wagering contribution—live baccarat often 10% or excluded.",
+          "Cross-link to live casino overview, game shows for users wanting spectacle, and live vs RNG comparison. Monitor branded vs generic baccarat queries separately in Search Console.",
+        ],
+      },
+      tr: {
+        title: "Canlı Baccarat Nasıl Oynanır? 2026: Player, Banker, Beraberlik ve Komisyon",
+        excerpt:
+          "Canlı bakara/baccarat kuralları: kart toplamları, üçüncü kart çekimi, Banker komisyonu, yan bahisler ve SEO ipuçları.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Canlı baccarat (bakara), karşılaştırmalı kart oyunudur: Player veya Banker elinin 9'a yakın bitip bitmeyeceğine, veya Beraberlik (Tie) olup olmayacağına bahis yaparsınız. 'Sizin eliniz' yoktur; krupiye sabit çekim kurallarını uygular. Bu sade yapı VIP ve kitlesel canlı salonlarda popülerliğini açıklar.",
+          "Kart değerleri: A=1, 2–9 yüz değeri, 10/J/Q/K=0. Toplam 9'u geçerse onlar basamağı düşer (15 → 5). Önce Player'a iki kart, sonra Banker'a; üçüncü kart tablo kurallarına göre otomatik çekilir—akışı ezberlemek şart değildir, yazılım uygular.",
+          "Ana bahisler: Player 1:1 öder (~%1,24 ev avantajı). Banker 1:1 eksi %5 komisyon (~%1,06—istatistiksel en iyi ana bahis). Tie 8:1 veya 9:1 öder ama ~%14+ ev avantajı taşır; deneyimli rehberler Tie'ı eğlence olarak işaretler. Komisyon yuvarlama veya kutu biriktirme masaya göre değişir—doğrulayın.",
+          "Pair yan bahisleri ve Dragon Bonus varyantları volatilite ekler; ev avantajı ana bahisten çok yüksektir. Canlı yayında roadmap (bead plate, big road) geçmiş sonuçları gösterir—geçmiş gelecek olasılığı değiştirmez; pattern bahisini net çürütün, kültürel tercihlere saygılı kalın.",
+          "Speed baccarat bahis süresini kısaltır; squeeze baccarat premium masalarda kartı yavaş açarak dramatize eder. Matematik aynı, tempo farklı. Hızlı formatta sorumlu oyun notları daha kritiktir.",
+          "Minimum bahisler genel masalarda 1 TRY/EUR'dan yüksek limit salonlarında 500+ el başına çıkar. TR lobilerinde Lightning Baccarat etiketi olabilir—katılmadan önce çarpan ücretini (bazen taban stake üzerinde %20) okuyun.",
+          "Adap: 'bahisler kapandı'dan önce Player veya Banker seçin. Geç UI tıklaması reddedilir. Krupiye 'ne kazanır' sorusuna cevap veremez—regüle script vardır.",
+          "Operatörler için canlı baccarat ve bakara nasıl oynanır güçlü SEO niyetidir. Özel URL, genel canlı casino alt bölümünden üstündür. Komisyon örneği ekleyin: 100 TRY Banker kazancı → %5 komisyon sonrası 95 TRY net.",
+          "Doğrulanmış bakara lobilerini /guvenilir-siteler/{slug} ile bağlayın; masa tipi (speed vs squeeze) ve komisyon politikası tek cümlede. Jelibon SSS: bonus çevrim katkısı—canlı baccarat genelde %10 veya hariç.",
+          "Canlı casino genel rehberi, game-show ve canlı vs RNG karşılaştırmasına çapraz link verin. Markalı vs jenerik bakara sorgularını Search Console'da ayırın.",
+        ],
+      },
+      ru: {
+        title: "Canlı baccarat: как играть на live-столе",
+        excerpt:
+          "Player, Banker, Tie; комиссия 5% на Banker; side bets и roadmap без pattern-myth.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Ставка на Player, Banker или Tie; правила третьей карты фиксированы — игрок не принимает решений. A=1, 2–9 face, 10/K=0; сумма mod 10.",
+          "Banker ~1.06% edge с 5% commission; Player ~1.24%; Tie ~14%+ — entertainment bet. Пример: 100 TRY win Banker → 95 TRY net.",
+          "Roadmaps (bead plate) — прошлые исходы не меняют odds. Speed vs squeeze — темп, не математика. Lightning Baccarat: проверяйте fee на stake.",
+          "URL canlı baccarat / bakara nasıl oynanır отдельно от generic live hub. /guvenilir-siteler/{slug}; bonus wagering часто 10% exclude.",
+          "Jelibon FAQ + cross-link к live casino и RNG vs live. GSC: branded vs generic baccarat.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "canli-casino-game-show-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/morlines-blog-card-bg.png",
+    locales: {
+      en: {
+        title: "Live Casino Game Shows: Crazy Time, Monopoly Live, and How They Work",
+        excerpt:
+          "Hybrid live game shows explained—money wheel, bonus rounds, RNG segments, RTP ranges, and content strategy for operators targeting spectacle seekers.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Live casino game shows blend TV-style entertainment with gambling mechanics. A presenter spins a large physical or virtual wheel; segments trigger cash prizes or RNG bonus games (Coin Flip, Pachinko, Cash Hunt). Crazy Time, Monopoly Live, Dream Catcher, and Mega Ball represent the category leaders from Evolution and competing studios.",
+          "Base game structure: you bet on wheel segments (1, 2, 5, 10, or bonus labels) before the spin. Matching the landed segment pays the multiplier shown. Bonus segments launch embedded mini-games with higher variance—large wins possible, frequent small losses on base bets.",
+          "RNG integration is explicit: once a bonus triggers, computer-generated outcomes (multipliers, paths) determine prizes while the host narrates. Regulatory testing covers both the wheel physics and RNG modules. Players searching canlı casino game show want clarity on where randomness lives—wheel vs bonus board.",
+          "RTP on game shows is published per title—often ~94–96% theoretical, but variance is extreme. A session can drain balance quickly between bonus triggers. Educational spokes should emphasize entertainment budgeting, not 'strategy' to 'time' bonus entry—each spin is independent.",
+          "Monopoly Live maps board squares to 3D bonus walks; Crazy Time stacks four bonus games with multipliers up to 20,000× marketed max—verify whether max refers to total round cap or theoretical marketing ceiling. Read in-game paytable, not only ad banners.",
+          "Chat interaction and side bets (some titles offer Bet on All bonuses) increase engagement and spend rate. Operators should document minimum bets—often higher than classic blackjack—to set accurate expectations for casual TR mobile users.",
+          "Mobile performance: game shows are graphically heavy. Low-end devices may downgrade stream quality or lag on bonus animations. Publish device recommendations on operator spokes; do not promise identical desktop UX on 4G.",
+          "SEO: separate URLs for Crazy Time vs Monopoly Live vs generic game-show hub. Combined 'canlı game show' pages rank poorly for specific title queries and confuse snippet extraction.",
+          "Jelibon builds game-show education with provider-neutral mechanics sections and brand-specific lobby links to /guvenilir-siteler/{slug}. Compliance: age gating, no minors in marketing thumbnails, responsible gaming callouts on high-variance titles.",
+          "Cross-link to live casino overview, live vs RNG (game shows are hybrid), and slot variance guides. Refresh when providers add new segments or retire legacy bonus boards—patch notes should trigger content updates within 48 hours for operator clients.",
+        ],
+      },
+      tr: {
+        title: "Canlı Casino Game Show 2026: Crazy Time, Monopoly Live ve Nasıl Çalışır",
+        excerpt:
+          "Hibrit canlı game-show oyunları: para çarkı, bonus turları, RNG segmentleri, RTP aralıkları ve operatör içerik stratejisi.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Canlı casino game show'ları TV tarzı eğlenceyi kumar mekaniğiyle birleştirir. Sunucu büyük fiziksel veya sanal çarkı çevirir; segmentler nakit ödül veya RNG bonus oyunları (Coin Flip, Pachinko, Cash Hunt) tetikler. Crazy Time, Monopoly Live, Dream Catcher ve Mega Ball Evolution ve rakip stüdyoların kategori liderleridir.",
+          "Temel yapı: çark dönmeden segmentlere (1, 2, 5, 10 veya bonus etiketleri) bahis yaparsınız. İnen segment eşleşirse gösterilen çarpan ödenir. Bonus segmentleri gömülü mini oyunları açar—yüksek varyans; büyük kazanç mümkün, bonus arası sık küçük kayıplar.",
+          "RNG entegrasyonu açıktır: bonus tetiklenince bilgisayar üretimi sonuçlar (çarpan, yol) ödülü belirler; sunucu anlatır. Regülasyon hem çark fizik hem RNG modülünü test eder. Canlı casino game show arayan oyuncu rastgeleliğin nerede olduğunu ister—çark vs bonus tahtası.",
+          "Game show RTP'si başlık başına yayınlanır—genelde ~%94–96 teorik, varyans aşırıdır. Bonus arasında bakiye hızla eriyebilir. Eğitim spoke'ları eğlence bütçesini vurgulasın; bonus 'zamanlama stratejisi' değil—her spin bağımsızdır.",
+          "Monopoly Live tahta karelerini 3D bonus yürüyüşüne map eder; Crazy Time dört bonus oyunu ve 20.000× pazarlanan max çarpan sunar—max'ın tur tavanı mı teorik tavan mı olduğunu doğrulayın. Reklam banner'ı değil, oyun içi ödeme tablosunu okuyun.",
+          "Sohbet etkileşimi ve yan bahisler (bazı başlıklarda tüm bonuslara bahis) etkileşim ve harcama hızını artırır. Operatörler minimum bahsi belgelemeli—klasik blackjack'ten sık yüksek—TR mobil kullanıcı beklentisini doğru kursun.",
+          "Mobil performans: game show grafik ağırdır. Düşük segment cihazlarda kalite düşer veya bonus animasyonunda lag olur. Operatör spoke'larında cihaz önerisi yayınlayın; 4G'de masaüstü UX'i vaat etmeyin.",
+          "SEO: Crazy Time vs Monopoly Live vs genel game-show hub için ayrı URL. Birleşik 'canlı game show' sayfası başlık sorgularında zayıf kalır, snippet karışır.",
+          "Jelibon game-show eğitimini sağlayıcı-nötr mekanik bölüm + marka lobisi linki /guvenilir-siteler/{slug} ile kurar. Uyumluluk: yaş kapısı, küçükleri thumbnail'de göstermeme, yüksek varyans başlıklarda sorumlu oyun.",
+          "Canlı casino genel rehberi, canlı vs RNG (game show hibrittir) ve slot varyans rehberine bağlayın. Sağlayıcı segment ekleyince veya eski bonus tahtasını kapatınca güncelleyin—patch notları operatör müşterilerinde 48 saat içinde içerik güncellemesi tetiklemeli.",
+        ],
+      },
+      ru: {
+        title: "Live game-shows: Crazy Time, Monopoly Live и механика",
+        excerpt:
+          "Гибрид колеса и RNG-бонусов; RTP ~94–96%; высокая дисперсия и контент-стратегия для операторов.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Game-shows: ведущий + money wheel; сегменты 1/2/5/10 или bonus → Cash Hunt, Pachinko, Coin Flip. RNG в bonus; колесо и модули тестируются регулятором.",
+          "RTP по title ~94–96%, variance экстремальная — budget entertainment, не «timing» bonus. Crazy Time max multipliers — читайте in-game paytable, не баннер.",
+          "Min bet часто выше blackjack. Mobile: тяжёлая графика, lag на 4G — device notes на spoke.",
+          "Отдельные URL: Crazy Time vs Monopoly vs hub. /guvenilir-siteler/{slug}; RG на high-variance. Jelibon: neutral mechanics + brand lobby.",
+          "Cross-link live casino, RNG vs live, slot variance. Обновление в 48 ч после patch provider.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "canli-krupiye-vs-rng-2026",
+    date: "2026-08-26",
+    coverImage: "/assets/morlines-blog-card-bg.png",
+    locales: {
+      en: {
+        title: "Live Dealer vs RNG Table Games: Speed, Trust, RTP, and Bonus Weighting",
+        excerpt:
+          "Compare live krupiye tables with software RNG blackjack, roulette, and baccarat—latency, limits, wagering contribution, and operator positioning.",
+        readTime: "10 min read",
+        categoryKey: "strategy",
+        body: [
+          "Players and operators face a fork: live dealer tables stream human-run games; RNG (software) tables simulate cards and wheels with certified random number generators. Both can carry similar theoretical RTP on core bets, but pace, trust perception, bonus treatment, and UX differ materially.",
+          "Trust and transparency: live games show physical outcomes—some users trust eyes over algorithms. RNG games rely on GLI/iTech Labs certificates and in-game fairness logs. Neither is 'more honest' when licensed; the preference is psychological. Marketing should not imply RNG is rigged to push live upsells—that triggers regulatory scrutiny.",
+          "Speed and volume: RNG blackjack resolves in seconds; no waiting for other seats or dealer chatter. Live tables run 40–60 hands per hour on standard blackjack vs 200+ on software. High-volume bonus clearers often prefer RNG for wagering efficiency; experience seekers choose live.",
+          "Bet limits: live floors set min/max per table (VIP salons vs 1 TRY open tables). RNG allows micro-stakes with instant redeal. High rollers may hit RNG max bet caps lower than private live salons—document both on brand pages.",
+          "Bonus wagering weighting: live casino commonly contributes 10% or is excluded from playthrough; RNG slots contribute 100%. A 35× bonus on deposit clears faster on RNG table games (often 10–20% weight) than live (0–10%). Spokes explaining canlı krupiye vs RNG must state operator-specific weighting tables—not generic guesses.",
+          "Side bets and variants: live catalogs push branded side bets and game shows; RNG lobbies offer rule toggles (multi-hand blackjack, turbo roulette). Compare house edge per variant, not category label alone.",
+          "Latency and disconnect: live depends on stream stability; RNG depends on server response. Disconnect mid-hand: RNG usually completes or refunds per rules; live may stand, void, or refund—policy varies. Publish comparison FAQ on /guvenilir-siteler spokes.",
+          "Mobile data usage: live HD streams consume bandwidth; RNG is lightweight. TR mobile users on metered plans may prefer RNG for sessions; live for short entertainment bursts.",
+          "Jelibon operator content maps decision trees: acquisition landing 'live casino' for trust keywords; retention email highlighting RNG for wagering completion where compliant. Internal links from this comparison hub to game-specific rules and bonus T&C readers.",
+          "SEO intent split: (canlı krupiye|live dealer vs rng|rng blackjack) needs dedicated URL. Track conversions separately—users searching comparison are mid-funnel; brand queries are bottom-funnel. Refresh weighting tables when operators renegotiate provider contracts.",
+        ],
+      },
+      tr: {
+        title: "Canlı Krupiye vs RNG 2026: Hız, Güven, RTP ve Bonus Katkısı",
+        excerpt:
+          "Canlı krupiye masaları ile yazılım RNG blackjack, rulet ve baccarat karşılaştırması: gecikme, limitler, çevrim katkısı.",
+        readTime: "10 dk okuma",
+        categoryKey: "strategy",
+        body: [
+          "Oyuncu ve operatörler iki yol görür: canlı krupiye masaları insan yönetimli oyun yayınlar; RNG (yazılım) masaları sertifikalı rastgele sayı üreteçleriyle kart ve çark simüle eder. Ana bahislerde teorik RTP benzer olabilir; tempo, güven algısı, bonus muamelesi ve UX belirgin farklıdır.",
+          "Güven ve şeffaflık: canlı oyun fiziksel sonucu gösterir—bazı kullanıcılar algoritmadan çok göze güvenir. RNG oyunları GLI/iTech Labs sertifikası ve adillik loglarına dayanır. Lisanslı ortamda ikisi de 'daha dürüst' değildir; tercih psikolojiktir. RNG'yi rigged gösterip canlı upsell yapmak regülasyon riski taşır.",
+          "Hız ve hacim: RNG blackjack saniyede sonuçlanır; koltuk veya krupiye sohbeti beklemez. Canlı masada standart blackjack saatte 40–60 el, yazılımda 200+ el. Yüksek hacimli bonus temizleyenler çevrim verimliliği için RNG'yi; deneyim arayanlar canlıyı seçer.",
+          "Bahis limitleri: canlı salonda masa başına min/max (VIP vs 1 TRY açık masa). RNG mikro bahis ve anında yeniden dağıtım sunar. Yüksek roller RNG max bet'te özel canlı salondan düşük kalabilir—marka sayfalarında ikisini de yazın.",
+          "Bonus çevrim katkısı: canlı casino genelde %10 veya çevrimden hariç; RNG slot %100 katkı. 35× yatırım bonusu RNG masa oyunlarında (sıklıkla %10–20 katkı) canlıya göre (0–10%) daha hızlı temizlenir. Canlı krupiye vs RNG spoke'ları operatör katkı tablosunu yazmalı—genel tahmin değil.",
+          "Yan bahis ve varyantlar: canlı katalog markalı yan bahis ve game-show iter; RNG lobisi kural anahtarları (multi-hand blackjack, turbo rulet) sunar. Ev avantajını kategori etiketiyle değil varyant bazında kıyaslayın.",
+          "Gecikme ve kopma: canlı stream stabilitesine bağlı; RNG sunucu yanıtına. El ortasında kopma: RNG genelde tamamlar veya iade; canlı stand, void veya iade—politika değişir. Karşılaştırma SSS'ini /guvenilir-siteler spoke'larında yayınlayın.",
+          "Mobil veri: canlı HD yayın bant genişliği yer; RNG hafiftir. Kotası olan TR mobil kullanıcı uzun oturumda RNG, kısa eğlencede canlı tercih edebilir.",
+          "Jelibon operatör içeriği karar ağacı: edinim landing 'canlı casino' güven anahtar kelimesi; uygunsa çevrim tamamlama için RNG vurgulu retention e-postası. Bu karşılaştırma hub'ından oyun kuralları ve bonus şart okuyucuya iç link.",
+          "SEO niyet ayrımı: (canlı krupiye|live dealer vs rng|rng blackjack) özel URL ister. Dönüşümleri ayırın—karşılaştırma arayan orta huni; marka sorgusu alt huni. Operatör sağlayıcı sözleşmesi değişince katkı tablolarını güncelleyin.",
+        ],
+      },
+      ru: {
+        title: "Canlı krupiye vs RNG: скорость, trust и bonus weighting",
+        excerpt:
+          "Live stream vs software tables; wagering 10% vs 100%; disconnect policy и SEO mid-funnel.",
+        readTime: "6 мин чтения",
+        categoryKey: "strategy",
+        body: [
+          "Live: физический исход, 40–60 hands/h blackjack. RNG: certified RNG, 200+ hands/h, micro limits. RTP core bets может быть близок; различия — tempo, UX, bonus.",
+          "Trust — психология, не «честнее». Не маркетируйте RNG как rigged. Bonus: live 0–10% wagering weight, slots 100%; 35× быстрее на RNG tables (10–20%) чем live.",
+          "Disconnect: RNG complete/refund; live stand/void — policy на FAQ. Mobile: live HD vs лёгкий RNG.",
+          "URL (canlı krupiye|live dealer vs rng). /guvenilir-siteler/{slug} с weighting table. Jelibon: acquisition live, retention RNG где compliant.",
+          "Cross-link game rules, bonus T&C. Обновляйте weighting при смене provider contract.",
+        ],
+      },
+    },
+  },
+];

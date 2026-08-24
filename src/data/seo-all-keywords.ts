@@ -1,4 +1,5 @@
 import { SEO_KEYWORDS } from "@/constants";
+import { getPremiumBrandArticle } from "./brand-premium/registry";
 import { BRAND_SEARCH_INTENTS } from "./brand-seo-intents";
 import type { BonusBrandGuide } from "./bonus-guides";
 import { bonusBrandGuides } from "./bonus-guides";
@@ -24,6 +25,8 @@ export function getBonusBrandSeoKeywords(brand: BonusBrandGuide): string[] {
     `${compactName} ${intent.replace(/\s+/g, "")}`,
   ]);
 
+  const premiumExtra = getPremiumBrandArticle(brand.slug)?.extraKeywords ?? [];
+
   return [
     `${base} giriş`,
     `${base} güncel giriş`,
@@ -37,6 +40,7 @@ export function getBonusBrandSeoKeywords(brand: BonusBrandGuide): string[] {
     `${compactName} güncel adres`,
     `${compactName} deneme bonusu`,
     ...fromIntents,
+    ...premiumExtra,
   ];
 }
 
@@ -53,3 +57,7 @@ export function getAllSeoKeywords(): string[] {
     new Map(allKeywords.map((keyword) => [normalizeKeyword(keyword), keyword])).values(),
   );
 }
+
+import "./brand-premium/herkulbet";
+import "./brand-premium/sezarcasino";
+import "./brand-premium/sezarbet";

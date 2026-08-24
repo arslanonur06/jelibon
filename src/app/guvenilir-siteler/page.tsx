@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BonusBrandCatalog } from "@/components/bonus-brand-catalog";
 import { BonusTopicClusters } from "@/components/bonus-topic-clusters";
+import { SporBahisTopicClusters } from "@/components/spor-bahis-topic-clusters";
+import { JelibonServiceTopicClusters } from "@/components/jelibon-service-topic-clusters";
+import { IgamingContentTopicClusters } from "@/components/igaming-content-topic-clusters";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { EMOJISTAR_TELEGRAM_HANDLE, EMOJISTAR_TELEGRAM_URL } from "@/constants";
@@ -92,6 +95,12 @@ export default function GuvenilirSitelerPage() {
           </section>
 
           <BonusTopicClusters />
+
+          <SporBahisTopicClusters />
+
+          <JelibonServiceTopicClusters showHubLink={false} />
+
+          <IgamingContentTopicClusters showHubLink />
 
           <BonusBrandCatalog
             brands={bonusBrandGuides}

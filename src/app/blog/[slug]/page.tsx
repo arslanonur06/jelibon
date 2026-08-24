@@ -4,9 +4,16 @@ import { notFound } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { BonusTopicBrandDirectory } from "@/components/bonus-topic-brand-directory";
+import { SporBahisTopicClusters } from "@/components/spor-bahis-topic-clusters";
+import { JelibonServiceTopicClusters } from "@/components/jelibon-service-topic-clusters";
+import { IgamingContentTopicClusters } from "@/components/igaming-content-topic-clusters";
 import { getAllSlugs, getLocalizedPost, getPostsForLocale } from "@/data/blog";
 import { bonusBrandGuides } from "@/data/bonus-guides";
 import { getBonusTopicByBlogSlug } from "@/data/bonus-search-topics-tr";
+import { getSporBahisTopicByBlogSlug } from "@/data/spor-bahis-topics-tr";
+import { getSporDaliBySlug } from "@/data/spor-dallari-data";
+import { getServiceTopicByBlogSlug } from "@/data/jelibon-service-topics-data";
+import { getIgamingTopicByBlogSlug } from "@/data/igaming-content-topics-data";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { BreadcrumbJsonLd } from "@/components/site-json-ld";
 import { BlogPostJsonLd } from "@/components/blog-post-json-ld";
@@ -73,6 +80,12 @@ export default function BlogPostPage({ params }: Props) {
   const relatedPosts = [...sameCategoryPosts, ...fallbackPosts].slice(0, 3);
   const bonusTopic =
     locale === "tr" ? getBonusTopicByBlogSlug(params.slug) : undefined;
+  const sporBahisTopic =
+    locale === "tr" ? getSporBahisTopicByBlogSlug(params.slug) : undefined;
+  const sporDali = getSporDaliBySlug(params.slug);
+  const serviceTopic =
+    getServiceTopicByBlogSlug(params.slug);
+  const igamingTopic = getIgamingTopicByBlogSlug(params.slug);
 
   return (
     <div className="relative min-h-screen">
@@ -139,6 +152,26 @@ export default function BlogPostPage({ params }: Props) {
                 brands={bonusBrandGuides}
               />
             </div>
+          ) : null}
+          {(sporBahisTopic || sporDali) ? (
+            <SporBahisTopicClusters
+              showHubLink
+              locale={locale === "en" ? "en" : "tr"}
+            />
+          ) : null}
+          {serviceTopic ? (
+            <JelibonServiceTopicClusters
+              pillar={serviceTopic.pillar}
+              showHubLink
+              locale={locale === "en" ? "en" : "tr"}
+            />
+          ) : null}
+          {igamingTopic ? (
+            <IgamingContentTopicClusters
+              pillar={igamingTopic.pillar}
+              showHubLink
+              locale={locale === "en" ? "en" : "tr"}
+            />
           ) : null}
           {relatedPosts.length > 0 ? (
             <section className="mt-12">

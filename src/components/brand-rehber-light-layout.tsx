@@ -70,6 +70,44 @@ function HeroPills({ brandName }: { brandName: string }) {
   );
 }
 
+function TagPills({ items, ariaPrefix }: { items: readonly string[]; ariaPrefix: string }) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {items.map((item) => (
+        <span
+          key={item}
+          className="rounded-xl border border-[#d2b178] bg-[#f8f0de] px-3 py-2 text-xs font-semibold text-[#6f4f18]"
+          aria-label={`${ariaPrefix}: ${item}`}
+        >
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function HighlightGrid({
+  highlights,
+}: {
+  highlights: NonNullable<BonusArticleContent["highlights"]>;
+}) {
+  return (
+    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {highlights.map((item) => (
+        <div
+          key={item.label}
+          className="rounded-2xl border border-[#e3d7c2] bg-[#fcfaf5] px-4 py-3"
+        >
+          <p className="text-xs font-semibold uppercase tracking-wide text-[#7f5c22]">
+            {item.label}
+          </p>
+          <p className="mt-1 text-sm font-semibold text-[#17382d]">{item.value}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function BrandRehberLightLayout({
   brand,
   article,
@@ -79,6 +117,8 @@ export function BrandRehberLightLayout({
 }: BrandRehberLightLayoutProps) {
   const monogram = getBrandMonogram(brand.name);
   const brandHashtags = getBrandHashtags(brand);
+  const isPremium = Boolean(article.premium);
+  const heroTitle = isPremium && article.title ? article.title : `${brand.name} güncel giriş adresi`;
   const navLinkClass =
     "text-sm font-medium text-[#31443b] transition hover:text-[#7f5c22]";
 
@@ -159,17 +199,29 @@ export function BrandRehberLightLayout({
               className="text-xs font-semibold uppercase tracking-[0.22em] sm:text-sm"
               style={{ color: PRIMARY }}
             >
-              {brand.name.toLocaleUpperCase("tr-TR")} ADRES VE GİRİŞ NOTLARI
+              {isPremium
+                ? `${brand.name.toLocaleUpperCase("tr-TR")} — PREMIUM REHBER`
+                : `${brand.name.toLocaleUpperCase("tr-TR")} ADRES VE GİRİŞ NOTLARI`}
             </p>
             <h1
               className="mt-4 font-display text-4xl font-semibold tracking-tight sm:text-5xl"
               style={{ color: PRIMARY }}
             >
-              {brand.name} güncel giriş adresi
+              {heroTitle}
             </h1>
+            {article.tagline ? (
+              <p className="mt-3 text-sm font-medium text-[#c9b896] sm:text-base">
+                {article.tagline}
+              </p>
+            ) : null}
             <p className="mt-5 text-base leading-relaxed text-[#e7e1d3] sm:text-lg">
               {article.intro[0]}
             </p>
+            {article.intro[1] ? (
+              <p className="mt-3 text-base leading-relaxed text-[#d4cfc3] sm:text-lg">
+                {article.intro[1]}
+              </p>
+            ) : null}
           </div>
         </div>
       </section>
@@ -183,6 +235,17 @@ export function BrandRehberLightLayout({
             <HeroPills brandName={brand.name} />
           </div>
         </section>
+
+        {isPremium && article.highlights?.length ? (
+          <section className="mt-8 rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
+            <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
+              {brand.name} — hızlı özet
+            </h2>
+            <div className="mt-5">
+              <HighlightGrid highlights={article.highlights} />
+            </div>
+          </section>
+        ) : null}
 
         <div className="mt-8 grid gap-8 xl:grid-cols-[minmax(0,1fr)_320px]">
           <div className="space-y-6">
@@ -201,6 +264,31 @@ export function BrandRehberLightLayout({
                 </div>
               </section>
             ))}
+
+            {article.checklist.length > 0 ? (
+              <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
+                <h2 className="font-display text-2xl font-semibold text-[#17382d] sm:text-3xl">
+                  {brand.name} kontrol listesi
+                </h2>
+                <ul className="mt-5 space-y-3">
+                  {article.checklist.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-3 rounded-xl border border-[#e3d7c2] bg-[#fcfaf5] px-4 py-3 text-base text-[#455248]"
+                    >
+                      <span
+                        className="mt-0.5 shrink-0 font-bold"
+                        style={{ color: PRIMARY }}
+                        aria-hidden
+                      >
+                        ✓
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
 
             <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)] sm:p-8">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
@@ -264,6 +352,28 @@ export function BrandRehberLightLayout({
           </div>
 
           <aside className="space-y-6">
+            {isPremium && article.paymentMethods?.length ? (
+              <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
+                <h2 className="font-display text-xl font-semibold text-[#17382d]">
+                  Ödeme yöntemleri
+                </h2>
+                <div className="mt-4">
+                  <TagPills items={article.paymentMethods} ariaPrefix="Ödeme" />
+                </div>
+              </section>
+            ) : null}
+
+            {isPremium && article.gameCategories?.length ? (
+              <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
+                <h2 className="font-display text-xl font-semibold text-[#17382d]">
+                  Oyun / market kategorileri
+                </h2>
+                <div className="mt-4">
+                  <TagPills items={article.gameCategories} ariaPrefix="Kategori" />
+                </div>
+              </section>
+            ) : null}
+
             <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
               <h2 className="font-display text-xl font-semibold text-[#17382d]">
                 {brand.name} hashtagleri

@@ -1,25 +1,20 @@
 import type { BonusBrandGuide } from "./bonus-guides";
 import { bonusBrandGuides } from "./bonus-guides";
 import { BRAND_SEARCH_INTENTS } from "./brand-seo-intents";
+import { getPremiumBrandArticle } from "./brand-premium/registry";
 
-type BonusArticleSection = {
-  heading: string;
-  paragraphs: string[];
-};
+import type {
+  BonusArticleContent,
+  BonusArticleFaqItem,
+  BonusArticleSection,
+} from "./bonus-article-types";
 
-type BonusArticleFaqItem = {
-  question: string;
-  answer: string;
-};
-
-export type BonusArticleContent = {
-  title: string;
-  intro: string[];
-  sections: BonusArticleSection[];
-  checklist: string[];
-  faqs: BonusArticleFaqItem[];
-  relatedBrands: BonusBrandGuide[];
-};
+export type {
+  BonusArticleContent,
+  BonusArticleFaqItem,
+  BonusArticleHighlight,
+  BonusArticleSection,
+} from "./bonus-article-types";
 
 function hashSeed(value: string): number {
   let hash = 0;
@@ -101,6 +96,9 @@ function buildChecklist(): string[] {
 }
 
 export function buildBonusArticle(brand: BonusBrandGuide): BonusArticleContent {
+  const premium = getPremiumBrandArticle(brand.slug);
+  if (premium) return premium;
+
   const seed = hashSeed(brand.slug);
   const relatedBrands = bonusBrandGuides
     .filter((item) => item.slug !== brand.slug)
@@ -117,3 +115,7 @@ export function buildBonusArticle(brand: BonusBrandGuide): BonusArticleContent {
     relatedBrands,
   };
 }
+
+import "./brand-premium/herkulbet";
+import "./brand-premium/sezarcasino";
+import "./brand-premium/sezarbet";

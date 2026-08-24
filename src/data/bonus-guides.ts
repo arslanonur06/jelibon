@@ -1,4 +1,5 @@
 import { EMOJISTAR_TELEGRAM_URL } from "@/constants";
+import { POPULAR_BRAND_SLUGS } from "./brand-search-priority";
 
 export type BonusBrandGuide = {
   name: string;
@@ -73,6 +74,7 @@ const RAW_BONUS_BRANDS = [
   "Golegol",
   "Golden Bahis",
   "Hepbet",
+  "Herkulbet",
   "Hiltonbet",
   "Hitbet",
   "Hizlicasino",
@@ -131,6 +133,7 @@ const RAW_BONUS_BRANDS = [
   "Royalbet",
   "Sahabet",
   "Sezarcasino",
+  "Sezarbet",
   "Siyahbet",
   "Slotioweb",
   "Sortiebet",
@@ -163,16 +166,12 @@ const EXCLUDED_BRAND_SLUGS = new Set([
   "vippark",
 ]);
 
-const POPULAR_BONUS_BRAND_SLUGS = [
-  "casibom",
-  "betticket",
-  "mobilbahis",
-  "superbahis",
-  "rivalo",
-  "onwin",
-  "sahabet",
-  "gettobet",
-] as const;
+/** Eski / alternatif yazım slug → kanonik slug */
+const BRAND_SLUG_ALIASES: Record<string, string> = {
+  herculbet: "herkulbet",
+};
+
+const POPULAR_BONUS_BRAND_SLUGS = POPULAR_BRAND_SLUGS;
 
 function toSeoSlug(value: string): string {
   return value
@@ -211,6 +210,13 @@ export const bonusGuideByCompactSlug = new Map(
 export function resolveBonusBrandBySlug(slug: string): BonusBrandGuide | undefined {
   const direct = bonusGuideBySlug.get(slug);
   if (direct) return direct;
+
+  const aliasTarget = BRAND_SLUG_ALIASES[slug];
+  if (aliasTarget) {
+    const aliased = bonusGuideBySlug.get(aliasTarget);
+    if (aliased) return aliased;
+  }
+
   return bonusGuideByCompactSlug.get(slug.replace(/-/g, ""));
 }
 
