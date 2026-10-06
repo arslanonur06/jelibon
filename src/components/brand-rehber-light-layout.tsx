@@ -7,8 +7,6 @@ import {
 import type { BonusArticleContent } from "@/data/bonus-article";
 import type { BonusBrandGuide } from "@/data/bonus-guides";
 import { BONUS_SEARCH_TOPICS_TR } from "@/data/bonus-search-topics-tr";
-import { getBrandHashtags } from "@/data/brand-hashtags";
-import { BRAND_SEARCH_INTENTS } from "@/data/brand-seo-intents";
 
 type BrandRehberLightLayoutProps = {
   brand: BonusBrandGuide;
@@ -27,8 +25,6 @@ const HERO_LINKS = [
   "Bonus",
   "Mobil giriş",
 ] as const;
-
-const SEARCH_LINKS = BRAND_SEARCH_INTENTS.slice(0, 12);
 
 function getBrandMonogram(brandName: string) {
   const parts = brandName
@@ -116,7 +112,6 @@ export function BrandRehberLightLayout({
   relatedHrefBase,
 }: BrandRehberLightLayoutProps) {
   const monogram = getBrandMonogram(brand.name);
-  const brandHashtags = getBrandHashtags(brand);
   const isPremium = Boolean(article.premium);
   const heroTitle = isPremium && article.title ? article.title : `${brand.name} güncel giriş adresi`;
   const navLinkClass =
@@ -373,44 +368,6 @@ export function BrandRehberLightLayout({
                 </div>
               </section>
             ) : null}
-
-            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
-              <h2 className="font-display text-xl font-semibold text-[#17382d]">
-                {brand.name} hashtagleri
-              </h2>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {brandHashtags.map((tag) => (
-                  <Link
-                    key={tag}
-                    href={EMOJISTAR_TELEGRAM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-xl border border-[#d2b178] bg-[#f8f0de] px-3 py-2 text-xs font-semibold text-[#6f4f18] transition hover:bg-[#f1e4c6]"
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </div>
-            </section>
-
-            <section className="rounded-[28px] border border-[#dbc8a8] bg-[#fffdf8] p-6 shadow-[0_10px_30px_rgba(8,24,18,0.05)]">
-              <h2 className="font-display text-xl font-semibold text-[#17382d]">
-                Tıklanan kelimeler
-              </h2>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {SEARCH_LINKS.map((item) => (
-                  <Link
-                    key={item}
-                    href={EMOJISTAR_TELEGRAM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-xl border border-[#d2b178] bg-[#f8f0de] px-3 py-2 text-sm font-medium text-[#6f4f18] transition hover:bg-[#f1e4c6]"
-                  >
-                    {brand.name} {item}
-                  </Link>
-                ))}
-              </div>
-            </section>
 
             <section
               className="rounded-[28px] border p-6 shadow-[0_16px_40px_rgba(6,43,33,0.14)]"

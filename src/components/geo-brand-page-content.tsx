@@ -35,7 +35,7 @@ export function geoBrandMetadata(
       type: "article",
       locale: market.ogLocale,
     },
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },
   };
 }
 

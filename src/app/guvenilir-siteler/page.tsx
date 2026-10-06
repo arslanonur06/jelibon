@@ -13,7 +13,6 @@ import {
   bonusBrandGuides,
   popularBonusBrandGuides,
 } from "@/data/bonus-guides";
-import { getBrandHashtags } from "@/data/brand-hashtags";
 import { toCanonicalUrl } from "@/lib/seo";
 
 const BONUS_KEYWORDS = BONUS_HUB_KEYWORDS;
@@ -34,14 +33,6 @@ export const metadata: Metadata = {
 };
 
 export default function GuvenilirSitelerPage() {
-  const allBrandTags = bonusBrandGuides.flatMap((brand) =>
-    getBrandHashtags(brand).slice(0, 4).map((tag) => ({
-      slug: brand.slug,
-      tag,
-      name: brand.name,
-    })),
-  );
-
   return (
     <div className="relative min-h-screen">
       <div
@@ -75,24 +66,6 @@ export default function GuvenilirSitelerPage() {
           >
             Telegram: {EMOJISTAR_TELEGRAM_HANDLE}
           </Link>
-
-          <section className="mt-8">
-            <h2 className="text-sm font-semibold uppercase tracking-[0.22em] text-zinc-400">
-              Tüm marka hashtagleri
-            </h2>
-            <div className="mt-4 flex max-h-[420px] flex-wrap gap-2 overflow-y-auto rounded-2xl border border-white/10 bg-white/[0.02] p-4">
-              {allBrandTags.map((item, index) => (
-                <Link
-                  key={`${item.slug}-${item.tag}-${index}`}
-                  href={`/guvenilir-siteler/${item.slug}`}
-                  className="rounded-full border border-white/15 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-[#E9A8FF] transition hover:border-[#A78BFA]/45 hover:text-white"
-                  aria-label={`${item.name} ${item.tag} sayfasina git`}
-                >
-                  {item.tag}
-                </Link>
-              ))}
-            </div>
-          </section>
 
           <BonusTopicClusters />
 

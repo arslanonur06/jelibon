@@ -20,6 +20,16 @@ export const PREMIUM_BRAND_SLUGS = [
   "herkulbet",
   "sezarcasino",
   "sezarbet",
+  "casibom",
+  "holiganbet",
+  "onwin",
+  "sahabet",
+  "mobilbahis",
+  "bets10",
+  "mariobet",
+  "superbahis",
+  "hovarda",
+  "betgit",
 ] as const;
 
 export type PremiumBrandSlug = (typeof PREMIUM_BRAND_SLUGS)[number];

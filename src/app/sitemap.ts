@@ -2,12 +2,11 @@ import type { MetadataRoute } from "next";
 import { blogEntries } from "@/data/blog/entries";
 import { getSiteUrl } from "@/constants";
 import { bonusBrandGuides } from "@/data/bonus-guides";
+import { isIndexableBrandSlug } from "@/data/brand-index-policy";
 import {
   ALL_GEO_MARKET_IDS,
   GEO_MARKET_CONFIGS,
-  getAllGeoBrandRoutes,
 } from "@/data/geo/markets";
-import { sigmaExhibitors } from "@/data/geo/brands/sigma";
 
 const MS_PER_DAY = 86_400_000;
 
@@ -84,12 +83,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  const bonusRoutes: MetadataRoute.Sitemap = bonusBrandGuides.map((entry) => ({
-    url: `${base}/guvenilir-siteler/${entry.slug}`,
-    lastModified: now,
-    changeFrequency: "daily",
-    priority: 0.82,
-  }));
+  const bonusRoutes: MetadataRoute.Sitemap = bonusBrandGuides
+    .filter((entry) => isIndexableBrandSlug(entry.slug))
+    .map((entry) => ({
+      url: `${base}/guvenilir-siteler/${entry.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.82,
+    }));
 
   const geoHubRoutes: MetadataRoute.Sitemap = ALL_GEO_MARKET_IDS.map((id) => ({
     url: `${base}${GEO_MARKET_CONFIGS[id].hubPath}`,
@@ -98,14 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.88,
   }));
 
-  const geoBrandRoutes: MetadataRoute.Sitemap = getAllGeoBrandRoutes().map(
-    ({ marketId, slug }) => ({
-      url: `${base}${GEO_MARKET_CONFIGS[marketId].hubPath}/${slug}`,
-      lastModified: now,
-      changeFrequency: "daily",
-      priority: 0.8,
-    }),
-  );
+  const geoBrandRoutes: MetadataRoute.Sitemap = [];
 
   const marketsIndex: MetadataRoute.Sitemap = [
     {
@@ -125,12 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const sigmaRoutes: MetadataRoute.Sitemap = sigmaExhibitors.map((entry) => ({
-    url: `${base}/igaming/sigma/${entry.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly",
-    priority: 0.78,
-  }));
+  const sigmaRoutes: MetadataRoute.Sitemap = [];
 
   return [
     ...staticRoutes,

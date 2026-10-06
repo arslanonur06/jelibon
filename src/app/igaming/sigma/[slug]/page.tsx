@@ -36,7 +36,7 @@ export function generateMetadata({ params }: Props): Metadata {
       url: canonicalUrl,
       type: "article",
     },
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },
   };
 }
 

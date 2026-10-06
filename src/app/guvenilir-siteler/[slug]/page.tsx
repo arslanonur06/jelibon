@@ -4,6 +4,7 @@ import { BonusBrandJsonLd } from "@/components/bonus-brand-json-ld";
 import { BrandRehberLightLayout } from "@/components/brand-rehber-light-layout";
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/site-json-ld";
 import { buildBonusArticle } from "@/data/bonus-article";
+import { isIndexableBrandSlug } from "@/data/brand-index-policy";
 import {
   bonusBrandGuides,
   resolveBonusBrandBySlug,
@@ -24,11 +25,10 @@ function getBrandMeta(
   article?: ReturnType<typeof buildBonusArticle>,
 ) {
   const title =
-    article?.metaTitle ??
-    `${brand.name} güvenilir site, güncel giriş adresi rehberi`;
+    article?.metaTitle ?? `${brand.name} — katalog kaydı`;
   const description =
     article?.metaDescription ??
-    `${brand.name} güvenilir site rehberi: güncel giriş adresi, giriş ve kampanya bilgisi. Canlı yönlendirme: @emojistarbot Telegram.`;
+    `${brand.name} dizin kaydı. Güncel giriş doğrulaması Telegram @emojistarbot.`;
   const canonicalUrl = toCanonicalUrl(`/guvenilir-siteler/${brand.slug}`);
   return { title, description, canonicalUrl };
 }
@@ -39,11 +39,12 @@ export function generateMetadata({ params }: Props): Metadata {
 
   const article = buildBonusArticle(brand);
   const { title, description, canonicalUrl } = getBrandMeta(brand, article);
+  const indexable = isIndexableBrandSlug(brand.slug);
 
   return {
     title,
     description,
-    keywords: getBonusBrandSeoKeywords(brand),
+    keywords: indexable ? getBonusBrandSeoKeywords(brand) : undefined,
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title: `${brand.name} güvenilir site rehberi | Jelibon Marketing`,
@@ -52,7 +53,7 @@ export function generateMetadata({ params }: Props): Metadata {
       type: "article",
       locale: "tr_TR",
     },
-    robots: { index: true, follow: true },
+    robots: { index: indexable, follow: true },
   };
 }
 
@@ -82,7 +83,9 @@ export default function BonusBrandPage({ params }: Props) {
           { name: brand.name, path: `/guvenilir-siteler/${brand.slug}` },
         ]}
       />
-      <FaqJsonLd items={article.faqs} pageUrl={canonicalUrl} />
+      {article.premium ? (
+        <FaqJsonLd items={article.faqs} pageUrl={canonicalUrl} />
+      ) : null}
       <BrandRehberLightLayout
         brand={brand}
         article={article}
